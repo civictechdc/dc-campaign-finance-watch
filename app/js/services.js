@@ -14,7 +14,7 @@ myAppServices.factory('Data', ['$resource', '$http',
       office: "Mayor",
       cityWideOffices: ['Mayor', 'Council Chairman', 'Council At-Large'],
       districtWideOffices: ['Council Ward1', 'Council Ward2'],
-      api_url: '//rawgit.com/codefordc/finance/master/data'
+      api_url: '//rawgit.com/codefordc/finance/gh-pages/data/output'
     };
 
     // function setProperty(obj, prop, get) {
@@ -27,7 +27,7 @@ myAppServices.factory('Data', ['$resource', '$http',
 
 
     data.fetchCampaigns = function () {
-      $http.get(this.api_url + '/years and offices.json', {
+      $http.get(this.api_url + '/election years and offices.json', {
         cache: true,
       }).success(function (returned) {
         data.campaigns = returned;
