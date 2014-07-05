@@ -7,11 +7,8 @@ angular.module('myApp.controllers', [])
 
     function ($scope, Data, $http) {
       $scope.data = Data;
-      $scope.data.fetchCampaigns();
+      $scope.data.updateCampaigns();
 
-      $scope.officeContended = function (office) {
-        return _.contains($scope.data.offices(), office);
-      }
 
 
       $scope.setOffice = function (office) {
@@ -28,9 +25,8 @@ angular.module('myApp.controllers', [])
   .controller('GraphsController', ['$scope', 'Data',
     function ($scope, Data) {
       $scope.data = Data;
-      $scope._ = _;
-      $scope.$watch('data.office', $scope.data.fetchPieChart);
-      $scope.$watch('data.year', $scope.data.fetchPieChart);
+      $scope.$watch('data.office', $scope.data.fetchContributions);
+      $scope.$watch('data.year', $scope.data.fetchContributions);
 
       function sum(a) {
         return _.reduce(a, function (memo, num) {

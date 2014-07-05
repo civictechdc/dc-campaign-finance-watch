@@ -10,52 +10,46 @@ myAppServices.factory('Data', ['$resource', '$http',
   function ($resource, $http) {
     var data = {
       year: 2014,
-      years: [2014, 2013, 2012, 2011, 2010],
       office: "Mayor",
       cityWideOffices: ['Mayor', 'Council Chairman', 'Council At-Large'],
       districtWideOffices: ['Council Ward1', 'Council Ward2'],
-      api_url: '//rawgit.com/codefordc/finance/gh-pages/data/output'
+      api_url: '//rawgit.com/codefordc/finance/gh-pages/data/output',
+
+      updateCampaigns: function () {
+        var scope = this;
+
+        $http.get(this.api_url + '/election_years_and_offices.json', {
+          cache: true,
+        }).success(function (response) {
+          scope.campaigns = response;
+        })
+      },
+      get years() {
+        if(!this.campaigns) {
+          return [];
+        }
+        return _.chain(this.campaigns)
+          .pluck('Election Year')
+          .uniq(true)
+          .value()
+          .reverse();
+      },
+      get offices() {
+        if(!this.campaigns) {
+          return [];
+        }
+        return _.chain(this.campaigns)
+          .where({
+            'Election Year': this.year
+          })
+          .pluck('Office')
+          .value();
+      },
+      officeContended: function (office) {
+        return _.contains(this.offices, office);
+      }
     };
 
-    // function setProperty(obj, prop, get) {
-    //   Object.defineProperty(obj, prop, {
-    //     configurable: true, // property descriptor may be changed
-    //     enumerable: true, // property shows up during enumeration of the property
-    //     get: get,
-    //   });
-    // }
-
-
-    data.fetchCampaigns = function () {
-      $http.get(this.api_url + '/election_years_and_offices.json', {
-        cache: true,
-      }).success(function (returned) {
-        data.campaigns = returned;
-      });
-    }
-
-    data.years = function () {
-      return Object.keys(this.campaigns).reverse();
-    }
-
-    data.offices = function () {
-      return this.campaigns[this.year];
-    }
-
-
-    data.fetchPieChart = function () {
-      $http.get(data.api_url + '/' + data.year + ' ' + data.office + '.json', {
-        cache: true,
-      }).success(function (returned) {
-        data.pieChart = returned;
-      }).error(function () {
-        data.pieChart = {};
-      })
-    }
-
-    data.candidates = function () {
-      return Object.keys(this.pieChart);
-    }
 
     /*
     Changes the data from `pieChart` to be compatable with a bar chart graph.

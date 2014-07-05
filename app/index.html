@@ -34,20 +34,20 @@
       <div class="row">
         <strong>Years:</strong>
         <div class="btn-group">
-          <button ng-repeat="year in data.years()" type="button" class="btn btn-default" ng-click="setYear(year)" ng-class="{active: year === data.year}">{{year}}</button>
+          <button ng-repeat="year in data.years" type="button" class="btn btn-default" ng-click="setYear(year)" ng-class="{active: year === data.year}">{{year}}</button>
         </div>
       </div>
       <div class="row">
         <strong>City Wide:</strong>
         <div class="btn-group">
-          <button ng-repeat="office in data.cityWideOffices" type="button" class="btn btn-default" ng-click="setOffice(office)" ng-class="{active: office === data.office, disabled: !officeContended(office)}">{{office}}</button>
+          <button ng-repeat="office in data.cityWideOffices" type="button" class="btn btn-default" ng-click="setOffice(office)" ng-class="{active: office === data.office, disabled: !data.officeContended(office)}">{{office}}</button>
         </div>
       </div>
 
       <div class="row">
         <strong>District Wide:</strong>
         <div class="btn-group">
-          <button ng-repeat="office in data.districtWideOffices" type="button" class="btn btn-default" ng-click="setOffice(office)" ng-class="{active: office === data.office, disabled: !officeContended(office)}">{{office}}</button>
+          <button ng-repeat="office in data.districtWideOffices" type="button" class="btn btn-default" ng-click="setOffice(office)" ng-class="{active: office === data.office, disabled: !data.officeContended(office)}">{{office}}</button>
         </div>
       </div>
 
