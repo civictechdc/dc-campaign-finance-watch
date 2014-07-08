@@ -2,27 +2,34 @@
 
 var controllers = angular.module('myApp.controllers', []);
 
-controllers.controller('SelectController', ['$scope', 'Campaigns', '$rootScope',
-  function($scope, Campaigns, $rootScope) {
-    $scope.selectableOffice = {
+controllers.controller('SelectController', ['Campaigns', '$rootScope',
+  function(Campaigns, $rootScope) {
+    this.selectableOffice = {
       'City': ['Mayor', 'Council Chairman', 'Council At-Large'],
       'District': ['Council Ward1', 'Council Ward2']
     };
-    $scope.campaigns = Campaigns;
-    $scope.campaigns.update();
+    Campaigns.update();
+    this.campaigns = Campaigns;
     $rootScope.selected = {
       year: 2014,
       office: 'Council At-Large',
     };
 
-    $scope.setOffice = function(office) {
+    this.setOffice = function(office) {
       $rootScope.selected.office = office;
     };
 
-    $scope.setYear = function(year) {
+    this.setYear = function(year) {
       $rootScope.selected.year = year;
     };
 
+    this.officeIsActive = function(office) {
+      return $rootScope.selected.office === office;
+    };
+
+    this.yearIsActive = function(year) {
+      return $rootScope.selected.year === year;
+    };
 
   }
 ]);
@@ -30,15 +37,12 @@ controllers.controller('SelectController', ['$scope', 'Campaigns', '$rootScope',
 controllers.controller('GraphsController', ['$scope', '$rootScope', 'Records',
   function($scope, $rootScope, Records) {
     $scope.records = Records;
+    $scope.$watch('records.records', _.bind(function() {
+      this.graph = Records.contributionType;
+    }, this));
     $rootScope.$watchCollection('selected', function() {
-      $scope.records.update();
+      Records.update();
     });
-
-    function sum(a) {
-      return _.reduce(a, function(memo, num) {
-        return memo + num;
-      }, 0);
-    }
 
   }
 ]);

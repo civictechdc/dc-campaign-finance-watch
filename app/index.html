@@ -30,25 +30,25 @@
     <![endif]-->
 
     <div class="container">
-        <div ng-controller="SelectController">
+        <div ng-controller="SelectController as c">
             <div class="row">
                 <strong>Years:</strong>
                 <div class="btn-group">
-                    <button ng-repeat="year in campaigns.years" type="button" class="btn btn-default" ng-click="setYear(year)" ng-class="{active: year === selected.year}">{{year}}</button>
+                    <button ng-repeat="year in c.campaigns.years" type="button" class="btn btn-default" ng-click="c.setYear(year)" ng-class="{active: c.yearIsActive(year)}">{{year}}</button>
                 </div>
             </div>
-            <div ng-repeat="(officeType, officeList) in selectableOffice" class="row">
+            <div ng-repeat="(officeType, officeList) in c.selectableOffice" class="row">
                 <strong>{{officeType}}:</strong>
                 <div class="btn-group">
-                    <button ng-repeat="office in officeList" type="button" class="btn btn-default" ng-click="setOffice(office)" ng-class="{active: office === selected.office, disabled: !campaigns.officeContended(office)}">{{office}}</button>
+                    <button ng-repeat="office in officeList" type="button" class="btn btn-default" ng-click="c.setOffice(office)" ng-class="{active: c.officeIsActive(office), disabled: !c.campaigns.officeContended(office)}">{{office}}</button>
                 </div>
             </div>
 
 
 
         </div>
-        <div ng-controller="GraphsController">
-            <nvd3-multi-bar-chart data="records.contributionType" height=400 width=400 showLegend="true" showControls="true" tooltips="true"></nvd3-multi-bar-chart>
+        <div ng-controller="GraphsController as c">
+            <nvd3-multi-bar-chart ng-attr-data="c.graph" height=500 width=500 showLegend="true" showControls="true" tooltips="true"></nvd3-multi-bar-chart>
 
         </div>
 
