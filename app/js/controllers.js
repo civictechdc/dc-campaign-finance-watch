@@ -30,7 +30,9 @@ controllers.controller('SelectController', ['$scope', 'Campaigns', '$rootScope',
 controllers.controller('GraphsController', ['$scope', '$rootScope', 'Records',
   function($scope, $rootScope, Records) {
     $scope.records = Records;
-    $rootScope.$watchCollection('selected', $scope.records.update);
+    $rootScope.$watchCollection('selected', function() {
+      $scope.records.update();
+    });
 
     function sum(a) {
       return _.reduce(a, function(memo, num) {

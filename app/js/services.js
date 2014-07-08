@@ -109,7 +109,7 @@ function contributionsFromRecords(records) {
 
   function pushAndReturn(list, item) {
     list.push(item);
-    return list.last();
+    return _.last(list);
   }
 
   function findWhereOrPush(list, properties) {
@@ -122,25 +122,20 @@ function contributionsFromRecords(records) {
 
   function addRecordData(candidate, category, amount) {
     // We are building up the `returnedData` list,
-
     // First find the object in the list for this type
     // If it doesn't exist, create one
-    _(findWhereOrPush(returnedData, {
-        "key": category,
-      }))
-      // Then make sure that object has a values list
-      .defaults({
-        "values": []
-      })
-      // get that values list for that contribution type
-      .values
-      // Then make sure the values list has an item for the candidate
-      // if not create one
-      .findOrPush(function(i) {
-        return i[0] === candidate;
-      }, [candidate, 0])
-      // get that candidate amount pairing
-      [1] += amount;
+    var donationTypeObject = findWhereOrPush(returnedData, {
+      "key": category,
+    });
+    var donationTypeValues = _.defaults(donationTypeObject, {
+      "values": []
+    }).values;
+
+    // Then make sure the values list has an item for the candidate
+    // if not create one
+    findOrPush(donationTypeValues, function(i) {
+      return i[0] === candidate;
+    }, [candidate, 0])[1] += amount;
   }
   records.map(function(record) {
     addRecordData(
@@ -149,6 +144,8 @@ function contributionsFromRecords(records) {
       accounting.unformat(record['Amount'])
     );
   });
+  console.log(returnedData);
+
   return returnedData;
 }
 
@@ -158,6 +155,7 @@ myAppServices.factory('Records', ['API', '$rootScope',
     return {
       update: function() {
         API.get('/' + $rootScope.selected.year + ' ' + $rootScope.selected.office + '.json').success(_.bind(function(response) {
+          var here = this;
           this.records = response;
         }, this));
       },
