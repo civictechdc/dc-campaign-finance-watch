@@ -48,11 +48,10 @@
 
         </div>
         <div ng-controller="GraphsController as c">
-            <nvd3-multi-bar-horizontal-chart data="c.graph" showXAxis="true" showYAxis="true" height=800 width=800 showLegend="true" tooltips="true"></nvd3-multi-bar-chart>
+            <nvd3-multi-bar-horizontal-chart data="c.graph" showXAxis="true" showYAxis="true" height=700 width=900 margin="{left:150,top:20,bottom:20,right:10}" yAxisLabel="Contributions ($)" showLegend="true" tooltips="true"></nvd3-multi-bar-chart>
 
         </div>
 
-    </div>
     </div>
 
     <script src="bower_components/angular/angular.js "></script>
