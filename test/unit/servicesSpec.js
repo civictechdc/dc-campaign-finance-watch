@@ -7,7 +7,7 @@ describe('service', function() {
 
 
   describe('data', function() {
-    it('should return an object', function() {
+    it('should get basic category values', function() {
       var records = [{
           "Contribution Type": "Check",
           "Zip": "20011",
@@ -32,5 +32,31 @@ describe('service', function() {
 
       expect(contributionsFromRecords(records)).toEqual(expectedOutput);
     });
+    it('should add a second person to that category', function() {
+      var records = [{
+          "Contribution Type": "Check",
+          "Zip": "20011",
+          "Contributor Type": "Individual",
+          "Date of Receipt": "2/1/2014",
+          "Address": "6101 16th St NW 514",
+          "Employer Address": "",
+          "Contributor": "Nicholas, Carolyn",
+          "Committee Name": "Bonds for Council 2014",
+          "Amount": "$50.00",
+          "Candidate Name": "Anita Bonds",
+          "city": "Washington",
+          "state": "DC",
+          "Employer Name": "Long and Foster"
+        }, ],
+        expectedOutput = [{
+          "key": "Individual",
+          "values": [
+            ["Anita Bonds", 50],
+          ]
+        }, ];
+
+      expect(contributionsFromRecords(records)).toEqual(expectedOutput);
+    });
+
   });
 });
