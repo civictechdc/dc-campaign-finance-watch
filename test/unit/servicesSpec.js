@@ -18,7 +18,7 @@ describe('service', function() {
           "Contributor": "Nicholas, Carolyn",
           "Committee Name": "Bonds for Council 2014",
           "Amount": "$50.00",
-          "Candidate Name": "Anita Bonds ",
+          "Candidate Name": "Anita Bonds",
           "city": "Washington",
           "state": "DC",
           "Employer Name": "Long and Foster"
@@ -30,7 +30,7 @@ describe('service', function() {
           ]
         }, ];
 
-      expect(contributionsFromRecords(records)).toBe(expectedOutput);
+      expect(contributionsFromRecords(records)).toEqual(expectedOutput);
     });
   });
 });
