@@ -1,31 +1,38 @@
 'use strict';
 
-/* Services */
-
-
 var myAppServices = angular.module('myApp.services', []);
 
+myAppServices.factory('API', ['$http',
+  function($http) {
+    return {
 
-myAppServices.factory('Data', ['$resource', '$http',
-  function ($resource, $http) {
-    var data = {
-      year: 2014,
-      office: "Mayor",
-      cityWideOffices: ['Mayor', 'Council Chairman', 'Council At-Large'],
-      districtWideOffices: ['Council Ward1', 'Council Ward2'],
-      api_url: '//rawgit.com/codefordc/finance/gh-pages/data/output',
+      url: '//rawgit.com/codefordc/finance/gh-pages/data/output',
 
-      updateCampaigns: function () {
-        var scope = this;
+      get: function(path) {
+        return $http.get(this.url + path, {
+          cache: true
+        });
+      }
 
-        $http.get(this.api_url + '/election_years_and_offices.json', {
-          cache: true,
-        }).success(function (response) {
-          scope.campaigns = response;
-        })
+    };
+  }
+]);
+
+
+
+
+
+myAppServices.factory('Campaigns', ['API', '$rootScope',
+  function(API, $rootScope) {
+    return {
+      update: function() {
+        API.get('/election_years_and_offices.json').success(_.bind(function(response) {
+          this.campaigns = response;
+        }, this));
       },
+
       get years() {
-        if(!this.campaigns) {
+        if (!this.campaigns) {
           return [];
         }
         return _.chain(this.campaigns)
@@ -34,92 +41,133 @@ myAppServices.factory('Data', ['$resource', '$http',
           .value()
           .reverse();
       },
+
       get offices() {
-        if(!this.campaigns) {
+        if (!this.campaigns) {
           return [];
         }
         return _.chain(this.campaigns)
           .where({
-            'Election Year': this.year
+            'Election Year': $rootScope.selected.year
           })
           .pluck('Office')
           .value();
       },
-      officeContended: function (office) {
+
+      officeContended: function(office) {
         return _.contains(this.offices, office);
       }
     };
+  }
+]);
 
+function contributionsFromRecords(records) {
+  /*
+  Changes the data from` can` to be compatable with a bar chart graph.
 
-    /*
-    Changes the data from `pieChart` to be compatable with a bar chart graph.
+  The data format needed is found here: http: //cmaurer.github.io/angularjs-nvd3-directives/multi.bar.chart.html
+  In our
+  case,
+  we need to output data that looks like this:
 
-    The data format needed is found here: http://cmaurer.github.io/angularjs-nvd3-directives/multi.bar.chart.html
-    In our case, we need to output data that looks like this:
+    [{
+        "key": "Corporation",
+        "values": [
+          ["Elissa Silverman", 0],
+          ["Some other Guy", 1000], ...
+        ]
+      }, {
+        "key": "Indivual",
+        "values": [
+          ["Elissa Silverman", 1000],
+          ["Some other Guy", 0], ...
+        ]
+      },
+      ...
+    ]
 
-      [
-        {
-          "key": "Corporation",
-          "values": [ ["Elissa Silverman", 0], ["Some other Guy", 1000], ...]
-        },
-        {
-          "key": "Indivual",
-          "values": [ ["Elissa Silverman", 1000], ["Some other Guy", 0], ...]
-        },
-        ...
-      ]
+    The input pie chart data looks like this:
 
-      The input pie chart data looks like this:
+    [{
+        "Contribution Type": "Check",
+        "Zip": "20011",
+        "Contributor Type": "Individual",
+        "Date of Receipt": "2/1/2014",
+        "Address": "6101 16th St NW 514",
+        "Employer Address": "",
+        "Contributor": "Nicholas, Carolyn",
+        "Committee Name": "Bonds for Council 2014",
+        "Amount": "$50.00",
+        "Candidate Name": "Anita Bonds ",
+        "city": "Washington",
+        "state": "DC",
+        "Employer Name": "Long and Foster"
+      },
+      ...
+  */
+  var returnedData = [];
 
-      {
-        "Elissa Silverman": {"Corporation": null, "Indivual": 1000},
-        "Some other guy": {"Corporation": 1000, "Indivual": null},
-      }
-      */
-    data.barChart = function () {
-      var returnedData = [],
-        candidate,
-        category,
-        amount;
+  function pushAndReturn(list, item) {
+    list.push(item);
+    return list.last();
+  }
 
-      function pushAndReturn(list, item) {
-        list.push(item);
-        return list.last();
-      }
+  function findWhereOrPush(list, properties) {
+    return _.findWhere(list, properties) || pushAndReturn(list, properties);
+  }
 
-      function findWhereOrPush(list, properties) {
-        return _.findWhere(list, properties) || pushAndReturn(list, properties)
-      }
+  function findOrPush(list, predicate, item) {
+    return _.find(list, predicate) || pushAndReturn(list, item);
+  }
 
-      function addData(candidate, category, amount) {
-        // We are building up the `returnedData` list
+  function addRecordData(candidate, category, amount) {
+    // We are building up the `returnedData` list,
 
-        // First find the object in the list for this type
-        /// If it doesn't exist, create one
-        _(findWhereOrPush(this.returnedData, {
-          "key": category,
-        }))
-        // Then make sure that object has a values list
-        .defaults({
-          "values": []
-        })
-        // Then push the candidate, amount pair to the values of that category
-        .values.push([candidate, amount])
-      }
+    // First find the object in the list for this type
+    // If it doesn't exist, create one
+    _(findWhereOrPush(returnedData, {
+        "key": category,
+      }))
+      // Then make sure that object has a values list
+      .defaults({
+        "values": []
+      })
+      // get that values list for that contribution type
+      .values
+      // Then make sure the values list has an item for the candidate
+      // if not create one
+      .findOrPush(function(i) {
+        return i[0] === candidate;
+      }, [candidate, 0])
+      // get that candidate amount pairing
+      [1] += amount;
+  }
+  records.map(function(record) {
+    addRecordData(
+      record['Candidate Name'],
+      record['Contributor Type'],
+      accounting.unformat(record['Amount'])
+    );
+  });
+  return returnedData;
+}
 
-      // First we need to iterate the initial format tree
-      for(candidate in this.pieChart) {
-        for(category in this.pieChart[candidate]) {
-          amount = this.pieChart[candidate][category];
-          // Some of the candidates have `null` for some amounts, in which case
-          // we don't want to add those amounts
-          if(candidate && category && amount) {
-            addData(candidate, category, amount);
-          }
+myAppServices.factory('Records', ['API', '$rootScope',
+  function(API, $rootScope) {
+
+    return {
+      update: function() {
+        API.get('/' + $rootScope.selected.year + ' ' + $rootScope.selected.office + '.json').success(_.bind(function(response) {
+          this.records = response;
+        }, this));
+      },
+
+      get contributionType() {
+        if (!this.records) {
+          return [];
         }
+        return contributionsFromRecords(this.records);
       }
-    }
-
-    return data;
+    };
   }
 ]);

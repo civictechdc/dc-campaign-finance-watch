@@ -1,41 +1,42 @@
 'use strict';
 
-/* Controllers */
+var controllers = angular.module('myApp.controllers', []);
 
-angular.module('myApp.controllers', [])
-  .controller('SelectController', ['$scope', 'Data', '$http',
+controllers.controller('SelectController', ['$scope', 'Campaigns', '$rootScope',
+  function($scope, Campaigns, $rootScope) {
+    $scope.selectableOffice = {
+      'City': ['Mayor', 'Council Chairman', 'Council At-Large'],
+      'District': ['Council Ward1', 'Council Ward2']
+    };
+    $scope.campaigns = Campaigns;
+    $scope.campaigns.update();
+    $rootScope.selected = {
+      year: 2014,
+      office: 'Council At-Large',
+    };
 
-    function ($scope, Data, $http) {
-      $scope.data = Data;
-      $scope.data.updateCampaigns();
+    $scope.setOffice = function(office) {
+      $rootScope.selected.office = office;
+    };
+
+    $scope.setYear = function(year) {
+      $rootScope.selected.year = year;
+    };
 
 
+  }
+]);
 
-      $scope.setOffice = function (office) {
-        $scope.data.office = office;
-      }
+controllers.controller('GraphsController', ['$scope', '$rootScope', 'Records',
+  function($scope, $rootScope, Records) {
+    $scope.records = Records;
+    $rootScope.$watchCollection('selected', $scope.records.update);
 
-      $scope.setYear = function (year) {
-        $scope.data.year = year;
-      }
-
-
+    function sum(a) {
+      return _.reduce(a, function(memo, num) {
+        return memo + num;
+      }, 0);
     }
-  ])
-  .controller('GraphsController', ['$scope', 'Data',
-    function ($scope, Data) {
-      $scope.data = Data;
-      $scope.$watch('data.office', $scope.data.fetchContributions);
-      $scope.$watch('data.year', $scope.data.fetchContributions);
 
-      function sum(a) {
-        return _.reduce(a, function (memo, num) {
-          return memo + num;
-        }, 0);
-      }
-
-      $scope.totalContr = function (candidate) {
-        return sum(_.values($scope.data.pieChart[candidate]));
-      }
-    }
-  ]);
+  }
+]);
