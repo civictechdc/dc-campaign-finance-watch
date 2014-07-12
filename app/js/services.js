@@ -6,7 +6,7 @@ myAppServices.factory('API', ['$http',
   function($http) {
     return {
 
-      url: '//rawgit.com/codefordc/finance/gh-pages/data/output',
+      url: '//rawgit.com/codefordc/finance-data/gh-pages/',
 
       get: function(path) {
         return $http.get(this.url + path, {
