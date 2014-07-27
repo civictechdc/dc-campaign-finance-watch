@@ -6,7 +6,7 @@ myAppServices.factory('API', ['$http',
   function($http) {
     return {
 
-      url: '//rawgit.com/codefordc/dc-campaign-finance-watch/gh-pages/',
+      url: '//rawgit.com/codefordc/dc-campaign-finance-data/master/output',
 
       get: function(path) {
         return $http.get(this.url + path, {
@@ -18,15 +18,11 @@ myAppServices.factory('API', ['$http',
   }
 ]);
 
-
-
-
-
 myAppServices.factory('Campaigns', ['API', '$rootScope',
   function(API, $rootScope) {
     return {
       update: function() {
-        API.get('/election_years_and_offices.json').success(_.bind(function(response) {
+        API.get('/years and offices.json').success(_.bind(function(response) {
           this.campaigns = response;
         }, this));
       },
@@ -61,6 +57,46 @@ myAppServices.factory('Campaigns', ['API', '$rootScope',
   }
 ]);
 
+
+function contributorTypeSums(records) {
+  var returnedData = [];
+
+
+  function sumNum(items) {
+    return _.reduce(items, function(memo, num) {
+      return accounting.unformat(memo) + num;
+    }, 0);
+  }
+
+  var all_types = _.chain(records).pluck('Contributor Type').uniq().value();
+
+  var recordsGroupCandidate = _.groupBy(records, 'Candidate Name');
+  for (var candidateName in recordsGroupCandidate) {
+    var recordsGroupType = _.groupBy(recordsGroupCandidate[candidateName], 'Contributor Type');
+    for (var conType in recordsGroupType) {
+      var totalCont = sumNum(_.pluck(recordsGroupType[conType], "Amount"));
+      returnedData.push({
+        candidate: candidateName,
+        type: conType,
+        amount: totalCont
+      });
+    }
+    // now add an amount of zero for all contribution types that the candidate
+    // did not recieve
+    var blankTypes = _.difference(all_types, _.keys(recordsGroupType));
+    _.map(blankTypes, function(type) {
+      returnedData.push({
+        candidate: candidateName,
+        type: type,
+        amount: 0
+      });
+    });
+  }
+
+  return returnedData;
+}
+
+
 function contributionsFromRecords(records) {
   /*
   Changes the data from` can` to be compatable with a bar chart graph.
@@ -70,21 +106,13 @@ function contributionsFromRecords(records) {
   case,
   we need to output data that looks like this:
 
-    [{
-        "key": "Corporation",
-        "values": [
-          ["Elissa Silverman", 0],
-          ["Some other Guy", 1000], ...
-        ]
-      }, {
-        "key": "Indivual",
-        "values": [
-          ["Elissa Silverman", 1000],
-          ["Some other Guy", 0], ...
-        ]
-      },
-      ...
-    ]
+    {
+      series: [{
+        name: "Individual",
+        data: [50]
+      }],
+      categories: ['Anita Bonds'],
+    }
 
     The input pie chart data looks like this:
 
@@ -105,46 +133,32 @@ function contributionsFromRecords(records) {
       },
       ...
   */
-  var returnedData = [];
+  var returnedData = {
+    series: [],
+    categories: [],
+  };
+  var computedData = contributorTypeSums(records);
 
-  function pushAndReturn(list, item) {
-    list.push(item);
-    return _.last(list);
-  }
+  var all_types = _.chain(computedData).pluck('type').uniq().value();
 
-  function findWhereOrPush(list, properties) {
-    return _.findWhere(list, properties) || pushAndReturn(list, properties);
-  }
-
-  function findOrPush(list, predicate, item) {
-    return _.find(list, predicate) || pushAndReturn(list, item);
-  }
-
-  function addRecordData(candidate, category, amount) {
-    // We are building up the `returnedData` list,
-    // First find the object in the list for this type
-    // If it doesn't exist, create one
-    var donationTypeObject = findWhereOrPush(returnedData, {
-      "key": category,
+  _.map(all_types, function(type) {
+    returnedData.series.push({
+      name: type,
+      data: [],
     });
-    var donationTypeValues = _.defaults(donationTypeObject, {
-      "values": []
-    }).values;
-
-    // Then make sure the values list has an item for the candidate
-    // if not create one
-    findOrPush(donationTypeValues, function(i) {
-      return i[0] === candidate;
-    }, [candidate, 0])[1] += amount;
-  }
-  records.map(function(record) {
-    addRecordData(
-      record['Candidate Name'],
-      record['Contributor Type'],
-      accounting.unformat(record['Amount'])
-    );
   });
-  console.log(returnedData);
+
+  var dataGroupCandidate = _.groupBy(computedData, 'candidate');
+  for (var candidate in dataGroupCandidate) {
+    returnedData.categories.push(candidate);
+
+    var dataGroupType = _.indexBy(dataGroupCandidate[candidate], 'type');
+    for (var type in dataGroupType) {
+      _.findWhere(returnedData.series, {
+        name: type
+      }).data.push(dataGroupType[type].amount);
+    }
+  }
 
   return returnedData;
 }
@@ -160,12 +174,13 @@ myAppServices.factory('Records', ['API', '$rootScope',
         }, this));
       },
 
-      get contributionType() {
+      updateContributionType: function() {
         if (!this.records) {
-          return [];
+          this.contributionType = [];
+        } else {
+          this.contributionType = contributionsFromRecords(this.records);
         }
-        return contributionsFromRecords(this.records);
-      }
+      },
     };
   }
 ]);

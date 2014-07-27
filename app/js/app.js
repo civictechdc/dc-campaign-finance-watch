@@ -8,5 +8,5 @@ angular.module('myApp', [
   'myApp.directives',
   'myApp.controllers',
   'ngResource',
-  'nvd3ChartDirectives'
-])
+  'highcharts-ng',
+]);
