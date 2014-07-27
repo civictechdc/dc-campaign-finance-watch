@@ -34,15 +34,43 @@ controllers.controller('SelectController', ['Campaigns', '$rootScope',
   }
 ]);
 
-controllers.controller('GraphsController', ['$scope', '$rootScope', 'Records',
-  function($scope, $rootScope, Records) {
-    $scope.records = Records;
-    $scope.$watch('records.records', _.bind(function() {
-      this.graph = Records.contributionType;
-    }, this));
+controllers.controller('GraphsController', ['$rootScope', '$scope', 'Records',
+  function($rootScope, $scope, Records) {
     $rootScope.$watchCollection('selected', function() {
       Records.update();
     });
+    $scope.Records = Records;
+    $scope.$watch('Records.records', function() {
+      $scope.Records.updateContributionType();
+    });
 
+    $scope.$watch('Records.contributionType', function(newValue) {
+      $scope.config.series = newValue.series;
+      $scope.config.xAxis = {
+        categories: newValue.categories
+      };
+    });
+
+    $scope.config = {
+      options: {
+        chart: {
+          type: 'bar'
+        },
+        yAxis: {
+          min: 0,
+          title: {
+            text: 'Cash Contributed ($)'
+          }
+        },
+        legend: {
+          reversed: true
+        },
+        plotOptions: {
+          series: {
+            stacking: 'normal'
+          }
+        },
+      }
+    };
   }
 ]);
