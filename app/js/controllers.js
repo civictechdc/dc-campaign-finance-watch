@@ -5,7 +5,7 @@ var controllers = angular.module('myApp.controllers', []);
 controllers.controller('SelectController', ['Campaigns', '$rootScope',
   function(Campaigns, $rootScope) {
     this.selectableOffice = {
-      'City': ['Mayor', 'Council Chairman', 'Council At-Large'],
+      'City': ['Mayor', 'Council Chairman', 'Council At-Large', 'Council Ward 1'],
       'District': ['Council Ward1', 'Council Ward2']
     };
     Campaigns.update();
