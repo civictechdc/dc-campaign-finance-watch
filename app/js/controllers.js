@@ -5,8 +5,8 @@ var controllers = angular.module('myApp.controllers', []);
 controllers.controller('SelectController', ['Campaigns', '$rootScope',
   function(Campaigns, $rootScope) {
     this.selectableOffice = {
-      'City': ['Mayor', 'Council Chairman', 'Council At-Large', 'Council Ward 1'],
-      'District': ['Council Ward1', 'Council Ward2']
+      'Office': ['Mayor', 'Council Chairman', 'Council At-Large', 'Council Ward 1', 'Council Ward 2', 'Council Ward 3', 'Council Ward 4', 'Council Ward 5', 'Council Ward 6', 'Council Ward 7', 'Council Ward 8' ],
+      'District': []
     };
     Campaigns.update();
     this.campaigns = Campaigns;
