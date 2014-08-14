@@ -36,7 +36,7 @@ Just as importantly, the roadmap avoids analyses that are already available or t
 
 ##Goal 1: Grassroots v Corporate Cash
 
-The best combination of positive normative effect and immediate achievability is a ranking, by political race, of corporate cash and grassroots support.  It only requires a single dataset: campaign contributions.  A visitor could choose a specific year and race or, in a specific year, to show all races (my sense is that the latter will be helpful to those who are reporting on politics, as they won’t have to constantly toggle through each race). 
+The best combination of positive normative effect and immediate achievability is a ranking, by political race, of corporate cash and grassroots support.  It only requires a single dataset: campaign contributions.  A visitor could choose a specific year and race or, in a specific year, to show all races (our sense is that the latter will be helpful to those who are reporting on politics, as they won’t have to constantly toggle through each race). 
 Navigation
 
 The menu & “show all” page will rank the races in the following order: 
@@ -69,10 +69,12 @@ It will default to the current year, but will allow selection of all prior years
 ###Charts & Data
 
 ####Grassroot Support
+
 There are several metrics we could use for evaluating grassroot support.  One is the number of individual donors.  Another is the percentage of a candidate’s warchest derived from individual donors.  Finally, we might develop a synthetic measure of, say, number of individual donors minus the number of other donors. 
 
 ####Corporate Influence
-There are two straightforward ways to provide the corporate cash ranking, one is by percent of the candidates warchest derived from corporate interests, the other is by raw dollars from corporate interests.  Showing both side-by-side / above-below is preferable to toggling. 
+
+There are two straightforward ways to provide the corporate cash ranking: number of corporate donors & percent of warchest from coporate donors.  Showing both side-by-side / above-below is preferable to toggling. 
 
 ###Goal 2: Automation
 The next step will not provide more analyses, but rather will increase the automation of data analysis and distribution.  
