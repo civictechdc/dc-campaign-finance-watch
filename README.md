@@ -60,7 +60,8 @@ School Board Ward 8
 US Representative
 US Senator
 +++
-[Party Delegates? There doesn’t seem to be much money there -- most candidates are self-funded. But we could throw them in at the bottom.]
+Party Delegates? Not much money there (most candidates self-funded). 
+But we could throw them in at the bottom.
 ```
 
 It will default to the current year, but will allow selection of all prior years for which data are available. Ian’s design seems to work well to this end, though we really only need two drop-down selectors. 
