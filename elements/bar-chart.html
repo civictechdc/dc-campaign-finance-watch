@@ -12,61 +12,20 @@
                     type: 'bar',
                     renderTo: this.$.container
                 },
-
                 title: {
-                    text: '2014 City Council At-Large'
+                    text: '2014 Council At-Large'
                 },
-
-                subtitle: {
-                    text: ''
-                },
-
-                tooltip: {
-                    pointFormat: '{series.name}: <b>{point.y}</b>'
-                },
-
-                plotOptions: {
-                    bar: {
-                        allowPointSelect: true,
-                        cursor: 'pointer',
-                        dataLabels: {
-                            enabled: true
-                        }
-                    }
-                },
-
                 xAxis: {
-                    categories: ['Elissa Silverman', 'Anita Bonds', 'Khalid Pitts', ],
-                    title: {
-                        text: null
-                    },
-                    labels: {
-                        formatter: function() {
-                            return this.value;
-                        }
-                    }
+                    categories: ["Elissa Silverman","Matthew Frumin","Anita Bonds","Patrick Mara","Perry D Redd","Paul Zukerberg","Michael A Brown","John F Settles","John Capozzi","Diallo Brooks","AJ Cooper"]
                 },
-
                 yAxis: {
-                    min: 0,
                     title: {
-                        text: 'Number of Donors',
-                        align: 'high'
-                    },
-                    labels: {
-                        overflow: 'justify'
+                        text: 'Number of DC Residents Contributing to Each Candidate'
                     }
                 },
-
-
-                series: [{
-                    name: 'Number of DC Contributors',
-                    data: [{"Candidate Name":"Elissa Silverman","dcdonors":280},{"Candidate Name":"Robert White","dcdonors":246},{"Candidate Name":"Anita Bonds","dcdonors":208},{"Candidate Name":"John F Settles","dcdonors":141},{"Candidate Name":"Nate Bennett Fleming","dcdonors":112},{"Candidate Name":"Khalid Pitts","dcdonors":103},{"Candidate Name":"Brian Hart","dcdonors":102},{"Candidate Name":"Graylan Hagler","dcdonors":66},{"Candidate Name":"Eugene Puryear","dcdonors":51},{"Candidate Name":"Kishan Putta","dcdonors":48},{"Candidate Name":"Marc Morgan","dcdonors":36},{"Candidate Name":"Eric Jones","dcdonors":25},{"Candidate Name":"Wendell Felder","dcdonors":7},{"Candidate Name":"Pedro Rubio","dcdonors":5},{"Candidate Name":"Kevin Valentine","dcdonors":2},{"Candidate Name":"Michael D Brown","dcdonors":2}]
-                }]
-
+                series: [{name:"DC Donors",data:[619,488,338,298,55,42,37,34,10,3,2]}]
             };
             var chart = new Highcharts.Chart(options);
-
         }
     });
     </script>
