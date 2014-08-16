@@ -1,12 +1,21 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
-<polymer-element name="bar-chart">
+<script src="../bower_components/underscore/underscore.js"></script>
+<polymer-element name="bar-chart" attributes="data">
     <template>
         <div id="container" style="min-width: 80%; height: 360px;"></div>
+        {{data}}
     </template>
     <script>
     Polymer("bar-chart", {
-        url: "",
+        dataChanged: function() {
+            $(this.$.data).change();
+        },
+        created: function () {
+            this.data = {};
+        },
         ready: function() {
+            candList = _.keys(this.data);
+            numberContrList = _.values(this.data);
             var options = {
                 chart: {
                     type: 'bar',
@@ -36,7 +45,7 @@
                 },
 
                 xAxis: {
-                    categories: ['Elissa Silverman', 'Anita Bonds', 'Khalid Pitts', ],
+                    categories: candList,
                     title: {
                         text: null
                     },
@@ -61,10 +70,11 @@
 
                 series: [{
                     name: 'Number of DC Contributors',
-                    data: [216, 206, 138]
+                    data: numberContrList
                 }]
 
             };
+
             var chart = new Highcharts.Chart(options);
 
         }

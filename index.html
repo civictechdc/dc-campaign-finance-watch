@@ -8,6 +8,7 @@
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/one-chart.js"></script>
+    <link rel="import" href="../bower_components/core-ajax/core-ajax.html">
     <link rel="import" href="elements/elements.html">
     <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -57,8 +58,9 @@
             </core-toolbar>
 
             <div class="content">
-
-                <bar-chart></bar-chart>
+                {{data}}
+                <core-ajax auto url="https://rawgit.com/codefordc/dc-campaign-finance-data/master/json/grass-roots/2014%20Council%20At-Large.json"  handleAs="json" response="{{data}}"></core-ajax>
+                <bar-chart data="{{data}}"></bar-chart>
 
             </div>
         </core-header-panel>
