@@ -1,73 +1,73 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <polymer-element name="bar-chart">
-	<template>
-	    <div id="container" style="min-width: 80%; height: 360px;"></div>
-	</template>
+    <template>
+        <div id="container" style="min-width: 80%; height: 360px;"></div>
+    </template>
     <script>
-        Polymer("bar-chart", {
-            url: "",
-            ready: function () {
-                var options = {
-                    chart: {
-                    	type: 'bar',
-                        renderTo: this.$.container
-                    },
+    Polymer("bar-chart", {
+        url: "",
+        ready: function() {
+            var options = {
+                chart: {
+                    type: 'bar',
+                    renderTo: this.$.container
+                },
 
-                    title: {
-                        text: '2014 City Council At-Large'
-                    },
+                title: {
+                    text: '2014 City Council At-Large'
+                },
 
-                    subtitle: {
-                        text: ''
-                    },
+                subtitle: {
+                    text: ''
+                },
 
-                    tooltip: {
-                        pointFormat: '{series.name}: <b>{point.y}</b>'
-                    },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.y}</b>'
+                },
 
-                    plotOptions: {
-                        bar: {
-                            allowPointSelect: true,
-                            cursor: 'pointer',
-                            dataLabels: {
-                                enabled: true
-                            }
+                plotOptions: {
+                    bar: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true
                         }
+                    }
+                },
+
+                xAxis: {
+                    categories: ['Elissa Silverman', 'Anita Bonds', 'Khalid Pitts', ],
+                    title: {
+                        text: null
                     },
+                    labels: {
+                        formatter: function() {
+                            return this.value;
+                        }
+                    }
+                },
 
-			        xAxis: {
-			            categories: ['Elissa Silverman', 'Anita Bonds', 'Khalid Pitts',],
-			            title: {
-			                text: null
-			            },
-						labels: {
-					        formatter: function() {
-					            return this.value;
-					        }
-					    }
-			        },
-
-			        yAxis: {
-			            min: 0,
-			            title: {
-			                text: 'Number of Donors',
-			                align: 'high'
-			            },
-			            labels: {
-			                overflow: 'justify'
-			            }
-			        },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'Number of Donors',
+                        align: 'high'
+                    },
+                    labels: {
+                        overflow: 'justify'
+                    }
+                },
 
 
-			        series: [{
-			            name: 'Number of DC Contributors',
-			            data: [216, 206, 138]
-			        }]
+                series: [{
+                    name: 'Number of DC Contributors',
+                    data: [216, 206, 138]
+                }]
 
-                };
-                var chart = new Highcharts.Chart(options);
+            };
+            var chart = new Highcharts.Chart(options);
 
-            }
-        });
+        }
+    });
     </script>
 </polymer-element>
