@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Brick: x-slider demos</title>
+
+    <link rel="stylesheet" type="text/css" href="x-tag-components.css"/>
+    <link rel="stylesheet" type="text/css" href="../src/tabbar.css"/>
+
+    <script type="text/javascript" src="x-tag-components.js"></script>
+    <script type="text/javascript" src="../src/tabbar.js"></script>
+
+    <style>
+        .demo {
+            height: 250px;
+            width: 180px;
+            border: solid 1px #ddd;
+        }
+    </style>
+</head>
+<body>
+<article>
+    <header><h1>x-tabbar demo</h1></header>
+
+    <figure class="demo">
+        <x-deck class="component-demo" transition-type="coverDown">
+          <x-card>One</x-card>
+          <x-card>Two</x-card>
+          <x-card>Three</x-card>
+          <x-card>Four</x-card>
+          <x-card>Five</x-card>
+        </x-deck>
+
+        <x-tabbar>
+          <x-tabbar-tab target-selector="x-deck x-card:first-child">
+            <x-iconbutton icon-anchor="top">One</x-iconbutton>
+          </x-tabbar-tab>
+          <x-tabbar-tab target-selector="x-deck x-card:nth-child(2)">
+            <x-iconbutton icon-anchor="top">Two</x-iconbutton>
+          </x-tabbar-tab>
+          <x-tabbar-tab target-selector="x-deck x-card:nth-child(3)">
+            <x-iconbutton icon-anchor="top">Three</x-iconbutton>
+          </x-tabbar-tab>
+          <x-tabbar-tab target-selector="x-deck x-card:nth-child(4)">
+            <x-iconbutton icon-anchor="top">Four</x-iconbutton>
+          </x-tabbar-tab>
+          <x-tabbar-tab target-selector="x-deck x-card:nth-child(5)">
+            <x-iconbutton icon-anchor="top">Five</x-iconbutton>
+          </x-tabbar-tab>
+        </x-tabbar>
+      </figure>
+
+</article>
+
+<script type="text/javascript"></script>
+
+</script>
+</body>
+</html>

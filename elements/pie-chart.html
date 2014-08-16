@@ -1,0 +1,52 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="pie-chart">
+    <template>
+        <div id="container" style="min-width: 80%; height: 360px;"></div>
+    </template>
+    <script>
+        Polymer("pie-chart", {
+            url: "",
+            ready: function () {
+                var options = {
+                    chart: {
+                        plotBackgroundColor: null,
+                        plotBorderWidth: null,
+                        plotShadow: false,
+                        renderTo: this.$.container
+                    },
+                    title: {
+                        text: 'Incident Severity'
+                    },
+                    tooltip: {
+                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                    },
+                    plotOptions: {
+                        pie: {
+                            allowPointSelect: true,
+                            cursor: 'pointer',
+                            dataLabels: {
+                                enabled: true,
+                                color: '#000000',
+                                connectorColor: '#000000',
+                                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                            }
+                        }
+                    },
+                    series: [{
+                        type: 'pie',
+                        name: 'Severity',
+                        data: [
+                            ['Low', 45.0],
+                            ['Medium', 26.8],
+                            ['High', 12.8]
+                        ]
+                    }]
+                };
+                //$("container").highcharts(options);
+                //this.$.container.highcharts(options);
+                var chart = new Highcharts.Chart(options);
+
+            }
+        });
+    </script>
+</polymer-element>

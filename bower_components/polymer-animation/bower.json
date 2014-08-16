@@ -1,0 +1,16 @@
+{
+  "name": "polymer-animation",
+  "private": true,
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.3.0",
+    "web-animations-js": "web-animations/web-animations-js#master",
+    "polymer-ui-menu": "Polymer/polymer-ui-menu#~0.3.0",
+    "polymer-ui-menu-button": "Polymer/polymer-ui-menu-button#~0.3.0",
+    "polymer-ui-menu-item": "Polymer/polymer-ui-menu-item#~0.3.0",
+    "polymer-ui-submenu-item": "Polymer/polymer-ui-submenu-item#~0.3.0",
+    "paper-menu-button": "Polymer/paper-menu-button#~0.3.4",
+    "paper-icon-button": "Polymer/paper-icon-button#~0.3.4",
+    "paper-item": "Polymer/paper-item#~0.3.4",
+    "paper-shadow": "Polymer/paper-shadow#~0.3.4"
+  }
+}

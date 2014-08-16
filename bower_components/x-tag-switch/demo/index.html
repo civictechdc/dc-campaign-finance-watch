@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Switch Demo - X-Tag</title>
+
+    <link rel="stylesheet" type="text/css" href="../src/switch.css"/>
+
+    <script type="text/javascript" src="x-tag-components.js"></script>
+
+    <script type="text/javascript" src="../src/switch.js"></script>
+
+    <style type="text/css">
+
+      h4 {
+        margin: 1rem 0 0.5rem 0;
+      }
+
+      label {
+        display: block;
+
+      }
+
+      input[type="text"] {
+        margin: 0 0 10px;
+      }
+
+      x-switch {
+        margin: 10px 0;
+        border-radius: 24px;
+      }
+
+      .x-switch-text {
+        padding: 2px 8px;
+      }
+
+      .x-switch-knob {
+        border-radius: 24px;
+        background: -webkit-linear-gradient(top, #f0f0f0, #aaa);
+        background: -moz-linear-gradient(top, #f0f0f0, #aaa);
+        background: -ms-linear-gradient(top, #f0f0f0, #aaa);
+        background: -o-linear-gradient(top, #f0f0f0, #aaa);
+        background: linear-gradient(top, #f0f0f0, #aaa);
+        box-shadow: 0 1px 2px 0px rgba(0,0,0,0.7);
+      }
+
+      #tele-demo {
+        border-color: #C2C2C2;
+        color: #e6e6e6;
+        background-color: #E6E6E6;
+        -webkit-transition: background-color 0.25s ease, border-color 0.25s ease;
+        -moz-transition: background-color 0.25s ease, border-color 0.25s ease;
+        transition: background-color 0.25s ease, border-color 0.25s ease;
+        color: white;
+        font-size: 16px;
+      }
+
+      #tele-demo[checked]  {
+        border-color: rgb(0, 172, 206);
+        background-color: #00C3EA;
+        color: #fff;
+      }
+
+      #tele-demo .x-switch-background {
+        background: -moz-linear-gradient(left, #00C3EA 50%, #E6E6E6 50%);
+      }
+
+      #tele-demo .x-switch-text {
+        padding: 0px 6px;
+      }
+
+      #resize-demo {
+        border-radius: 10px;
+        height: 90px;
+      }
+
+      #styled {
+        border-color: #333;
+        border-width: 2px;
+        border-radius: 0;
+        font-family: sans-serif;
+        color: #999;
+        width: 90px;
+        height: 42px;
+      }
+
+      #styled .x-switch-knob {
+        border-radius: 0;
+        width: 30px;
+        background: #e58f33;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+      }
+
+      #styled, #styled[checked], #styled .x-switch-background {
+        background: #555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h4>Custom labels switch</h4>
+    <label for="ontext">Active text</label>
+    <input name="ontext" id="ontext" type="text" value="" />
+    <br/>
+    <label for="offtext">Inactive text</label>
+    <input name="offtext" id="offtext" type="text" value="" />
+    <br/>
+    <x-switch id="demo" onText="Active" offText="Inactive" formName="wifi"></x-switch>
+
+    <h4>Simple switch</h4>
+    <x-switch id="tele-demo" onText="✔" offText=" "></x-switch>
+
+    <h4>Disabled switch</h4>
+    <x-switch disabled></x-switch>
+
+    <h4>Resized switch</h4>
+    <x-switch id="resize-demo" onText="Pizza" offText="CheeseBurger"></x-switch>
+
+    <h4>Restyled switch</h4>
+    <x-switch id="styled" onText="" offText=""></x-switch>
+
+  </body>
+
+  <script type="text/javascript">
+
+    document.addEventListener('DOMComponentsLoaded', function(){
+
+      var demo = document.getElementById('demo'),
+        ontext = document.getElementById('ontext'),
+        offtext = document.getElementById('offtext');
+
+      ontext.value = demo.onText;
+      offtext.value = demo.offText;
+
+      ontext.addEventListener('keyup', function(){
+        demo.onText = this.value;
+      }, false);
+
+      offtext.addEventListener('keyup', function(){
+        demo.offText = this.value;
+      }, false);
+
+    }, false);
+
+  </script>
+
+</html>

@@ -1,0 +1,73 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>DC Campaign Finance Watch</title>
+  <script src="../bower_components/platform/platform.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/one-chart.js"></script>
+  <link rel="import" href="../elements/elements.html">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body fullbleed layout verticle>
+
+
+<core-drawer-panel id="drawerPanel" responsiveWidth="1000px" theme="core-dark-theme">
+  <core-header-panel drawer icon="visibility">
+    <core-toolbar theme="dark"></core-toolbar>
+    <core-menu>
+      <core-submenu icon="visibility" label="grassroot support">
+        <core-item icon="" label="number of donors"></core-item>
+        <core-item icon="" label="percent of donors"></core-item>
+      </core-submenu>
+      <core-submenu icon="visibility" label="corporate cash">
+        <core-item icon="" label="number of donors"></core-item>
+        <core-item icon="" label="percent of donors"></core-item>
+        <core-item icon="" label="percent of warchest"></core-item>
+      </core-submenu>
+      <core-submenu icon="visibility" label="pay-to-play">
+        <core-item icon="" label="by contractors"></core-item>
+        <core-item icon="" label="by officeholder"></core-item>
+      </core-submenu>
+      <core-submenu icon="visibility" label="influential industries">
+        <core-item icon="" label="overall"></core-item>
+        <core-item icon="" label="by officeholder"></core-item>
+      </core-submenu>
+      <core-submenu icon="visibility" label="office holders">
+        <core-item icon="" label="current"></core-item>
+        <core-item icon="" label="all"></core-item>
+      </core-submenu>
+      <core-submenu icon="info-outline" label="about">
+        <core-item icon="" label="mission"></core-item>
+        <core-item icon="" label="contributors"></core-item>
+        <core-item icon="" label="how to help"></core-item>
+        <core-item icon="" label="links"></core-item>
+      </core-submenu>
+    </core-menu>
+  </core-header-panel>
+
+<core-header-panel  main >
+  <core-toolbar id="mainheader" theme="core-dark-theme">
+  <paper-icon-button id="navicon" icon="menu"></paper-icon-button>
+  <span flex>DC Campaign Finance Watch</span>
+  <core-icon-button icon="search"></core-icon-button>
+  </core-toolbar>
+
+  <div class="content">
+
+    <bar-chart></bar-chart>
+
+    </div>
+  </core-header-panel>
+
+</core-drawer-panel>
+
+</body>
+
+</html>
+
+
+
+

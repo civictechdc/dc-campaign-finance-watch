@@ -1,0 +1,30 @@
+@import 'mixins'
+@import 'params'
+
+x-tabbar{
+
+    display: block;
+    flexbox();
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+
+    & > x-tabbar-tab{
+        flex(1);
+
+        box-sizing(border-box);
+        display: inline-block;
+        min-width:auto;
+        min-height:auto;
+
+        vertical-align: middle;
+
+        & > *:only-child{
+            vertical-align: top;
+            height: 100%;
+            width: 100%;
+            margin: 0 !important;
+        }
+    }
+}

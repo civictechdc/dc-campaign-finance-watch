@@ -1,0 +1,25 @@
+{
+  "name": "x-tag-tabbar",
+  "description": "A box in which slides can be cycled and replaced with in a variety of different orders and transitions",
+  "version": "0.1.8",
+  "keywords": [
+    "web-components",
+    "button",
+    "icon",
+    "label",
+    "x-tag"
+  ],
+  "main": [
+    "src/tabbar.js",
+    "src/tabbar.css",
+    "src/tabbar.styl"
+  ],
+  "dependencies": {
+    "x-tag-core": "*",
+    "brick-common": "*"
+  },
+  "devDependencies": {
+    "x-tag-iconbutton": "*",
+    "x-tag-deck": "*"
+  }
+}

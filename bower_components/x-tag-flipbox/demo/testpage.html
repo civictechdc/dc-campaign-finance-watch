@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Flipbox Demo - X-Tag</title>
+
+  <link rel="stylesheet" type="text/css" href="x-tag-components.css"/>
+  <link rel="stylesheet" type="text/css" href="../src/flipbox.css"/>
+
+  <script type="text/javascript" src="x-tag-components.js"></script>
+  <script type="text/javascript" src="../src/flipbox.js"></script>
+
+	<style>
+    x-flipbox{
+      height: 300px;
+      width: 220px;
+      margin-top: 1em;
+    }
+
+    x-flipbox > *:first-child {
+      background-color: red;
+    }
+    x-flipbox > *:last-child {
+      background-color: blue;
+    }
+    button{
+      padding: 1em;
+    }
+	</style>
+</head>
+
+<body>
+
+	<h2>Create a Demo</h2>
+
+  <button data-action-type="toggleFlip">Flip</button>
+  <button data-action-type="toggleDirection">Switch Flip Direction (right)</button>
+  <hr/>
+  <x-flipbox>
+      <img src="birnimal-graph.png"/>
+      <img src="birnimal-settings.png"/>
+  </x-flipbox>
+
+  <x-flipbox>
+      <div><h1>Front</h1></div>
+      <div><h1>Back</h1></div>
+  </x-flipbox>
+
+
+
+
+</body>
+
+<script type="text/javascript">
+document.addEventListener('DOMComponentsLoaded', function(){
+  xtag.addEvent(document, 'click:delegate(button[data-action-type])', function(e) {
+    xtag.query(document, 'x-flipbox').forEach(function(flipbox){
+      var action = e.target;
+      switch(action.getAttribute('data-action-type')) {
+
+        case 'toggleFlip':
+          flipbox.toggle();
+          break;
+
+        case 'toggleDirection':
+          var directions = ['right','left','up','down'];
+          var idx = directions.indexOf(flipbox.direction)+1;
+          idx = idx >= 4 ? 0 : idx;
+          action.innerHTML = action.innerHTML.replace(/\((\w+)\)/, function() {
+            return '(' + directions[idx] + ')';
+          });
+          //flipbox.direction = directions[idx];
+          flipbox.setAttribute("direction", directions[idx]);
+          break;
+      }
+    });
+  });
+
+  xtag.addEvent(document, "flipend:delegate(x-flipbox)", function(e){
+    console.log("flipend detected on", e.target);
+  });
+});
+
+</script>
+
+</html>

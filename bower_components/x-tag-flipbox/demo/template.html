@@ -1,0 +1,54 @@
+{% extends "component-demo-base.html" %}
+
+{% set TAG_NAME="x-flipbox" %}
+{% set COMPONENT_NAME="flipbox" %}
+
+{% block demoContent %}
+    <p>A flipbox acts as an element that can flip between two sides of content, much like a playing card.</p>
+    <section class="demo-wrap">
+        <header><h2>Basic usage</h2></header>
+        <p>An <code class="prettyprint">&lt;x-flipbox&gt;</code> should contain only two direct children elements, each of which can contain any markup.</p> 
+        <p>The first child element will be considered the front face of the <code class="prettyprint">&lt;x-flipbox&gt;</code>.</p>
+        <p>The last child element will be considered the back face of the <code class="prettyprint">&lt;x-flipbox&gt;</code>.</p>
+        <div class="two-up">
+            <figure class="demo largeprint">
+                <x-flipbox>
+                    <div>I'm the front face.</div>
+                    <div>And I'm the back face.</div>
+                </x-flipbox>
+            </figure>
+        </div>
+        <div class="markup-wrap two-up">
+            <div class="controls">
+                <button class="btn btn-default" data-toggle-prop="flipped" data-toggle-target="x-flipbox">Toggle flip</button>
+            </div>
+            <h3>Markup</h3>
+            <pre class="prettyprint html">&lt;x-flipbox&gt;<br/>    &lt;div&gt;I'm the front face.&lt;/div&gt;<br/>    &lt;div&gt;And I'm the back face.&lt;/div&gt;<br/>&lt;/x-flipbox&gt;</pre>
+            <h3>JavaScript</h3>
+            <pre class="prettyprint javascript">// assume that toggleButton and flipBox are already<br/>// defined as their respective DOM elements<br/>toggleButton.addEventListener(&quot;click&quot;, function(){<br/>    flipBox.toggle(); <br/>});</pre>
+        </div>
+        <a href="#" class="top">Top</a>
+    </section>
+    <section class="demo-wrap">
+        <header><h2>Changing flip direction: <code>direction</code></h2></header>
+        <p>To change the direction that the flip animation spins in, users can change either the <code>direction</code> attribute or the <code>.direction</code> property of the <code class="prettyprint">&lt;x-flipbox&gt;</code>.</p>
+        <p>Valid options: <code class="prettyprint">"right"</code>, <code class="prettyprint">"left"</code>, <code class="prettyprint">"up"</code>, <code class="prettyprint">"down"</code></p>
+        <div class="two-up">
+            <figure class="demo">
+                <x-flipbox direction="right">
+                    <img src="{{REL_PATH}}site/img/Card_front.png"/>
+                    <img src="{{REL_PATH}}site/img/Card_back.png"/>
+                </x-flipbox>
+            </figure>
+        </div>
+        <div class="markup-wrap two-up">
+            <div class="controls">
+                <button class="btn btn-default" data-toggle-prop="flipped" data-toggle-target="x-flipbox">Toggle flip</button>
+                <button class="btn btn-default" data-toggle-prop="direction" data-toggle-target="x-flipbox" data-toggle-options='["right", "left", "up", "down"]'>Change flip direction</button>
+            </div>  
+            <h3>Markup</h3>
+            <pre class="prettyprint html">&lt;x-flipbox&gt;<br/>    &lt;div&gt;I'm the front face.&lt;/div&gt;<br/>    &lt;div&gt;And I'm the back face.&lt;/div&gt;<br/>&lt;/x-flipbox&gt;</pre>
+        </div>
+        <a href="#" class="top">Top</a>
+    </section>
+{% endblock %}

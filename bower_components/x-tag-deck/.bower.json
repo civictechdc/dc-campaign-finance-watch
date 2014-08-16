@@ -1,0 +1,30 @@
+{
+  "name": "x-tag-deck",
+  "description": "",
+  "version": "0.2.6",
+  "keywords": [
+    "element",
+    "web-components",
+    "x-tag"
+  ],
+  "main": [
+    "src/deck.js",
+    "src/deck.css",
+    "src/deck.styl"
+  ],
+  "dependencies": {
+    "x-tag-core": "*",
+    "x-tag-transitions": "*",
+    "brick-common": "*"
+  },
+  "homepage": "https://github.com/x-tag/deck",
+  "_release": "0.2.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.2.6",
+    "commit": "b141932d753258aa29def8f311136ea5594a27cd"
+  },
+  "_source": "git://github.com/x-tag/deck.git",
+  "_target": "~0.2.4",
+  "_originalSource": "x-tag-deck"
+}

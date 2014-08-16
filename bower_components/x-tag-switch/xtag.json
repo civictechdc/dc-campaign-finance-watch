@@ -1,0 +1,33 @@
+{
+	"name": "Switch",
+	"tagName": "x-switch",
+	"version": "0.2.2",
+	"author": "Daniel Buchner",
+	"description": "Switch provides you a slick iPhone-esque toggle switch with a single line",
+	"images": [],
+	"categories": [
+		"input"
+	],
+	"demo": "demo/index.html",
+	"compatibility": {
+		"firefox": 5,
+		"chrome": 4,
+		"opera": 12,
+		"android": 2.1,
+		"ios": 4
+	},
+	"documentation": {
+		"getters": {
+			"onText": "Retrieves the current on-state text label",
+			"offText": "Retrieves the off-state text label",
+			"checked": "Returns the checked property's state",
+			"formName": "Returns the name attribute on the checkbox input element"
+		},
+		"setters": {
+			"onText": "Adjust the on-state text label",
+			"offText": "Adjust the off-state text label",
+			"checked": "Sets the checked property of the switch input",
+			"formName": "Sets the checkbox input form name"
+		}
+	}
+}
