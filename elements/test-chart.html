@@ -23,6 +23,16 @@
                         text: 'Number of DC Residents Contributing to Each Candidate'
                     }
                 },
+                plotOptions: {
+                    bar: {
+                        dataLabels: {
+                            enabled: true
+                        }
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
                 series: [{}]
             };
             $.getJSON('2014%20Council%20At-Large.json', function(data) {
