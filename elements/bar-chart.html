@@ -1,12 +1,21 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
-<polymer-element name="bar-chart">
+<script src="../bower_components/underscore/underscore.js"></script>
+<polymer-element name="bar-chart" attributes="data">
     <template>
         <div id="container" style="min-width: 80%; height: 360px;"></div>
+        {{data}}
     </template>
     <script>
     Polymer("bar-chart", {
-        url: "",
+        dataChanged: function() {
+            $(this.$.data).change();
+        },
+        created: function () {
+            this.data = {};
+        },
         ready: function() {
+            candList = _.keys(this.data);
+            numberContrList = _.values(this.data);
             var options = {
                 chart: {
                     type: 'bar',
@@ -16,15 +25,38 @@
                     text: '2014 Council At-Large'
                 },
                 xAxis: {
+<<<<<<< HEAD
                     categories: ["Elissa Silverman","Matthew Frumin","Anita Bonds","Patrick Mara","Perry D Redd","Paul Zukerberg","Michael A Brown","John F Settles","John Capozzi","Diallo Brooks","AJ Cooper"]
+=======
+                    categories: candList,
+                    title: {
+                        text: null
+                    },
+                    labels: {
+                        formatter: function() {
+                            return this.value;
+                        }
+                    }
+>>>>>>> FETCH_HEAD
                 },
                 yAxis: {
                     title: {
                         text: 'Number of DC Residents Contributing to Each Candidate'
                     }
                 },
+<<<<<<< HEAD
                 series: [{name:"DC Donors",data:[619,488,338,298,55,42,37,34,10,3,2]}]
+=======
+
+
+                series: [{
+                    name: 'Number of DC Contributors',
+                    data: numberContrList
+                }]
+
+>>>>>>> FETCH_HEAD
             };
+
             var chart = new Highcharts.Chart(options);
         }
     });
