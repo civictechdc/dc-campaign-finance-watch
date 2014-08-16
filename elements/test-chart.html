@@ -1,0 +1,35 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="test-chart">
+    <template>
+        <div id="container" style="min-width: 80%; height: 360px;"></div>
+    </template>
+    <script>
+    Polymer("test-chart", {
+        url: "",
+        ready: function() {
+            var options = {
+                chart: {
+                    type: 'bar',
+                    renderTo: this.$.container
+                },
+                title: {
+                    text: '2014 Council At-Large'
+                },
+                xAxis: {
+                    categories: ["Elissa Silverman","Robert White","Anita Bonds","John F Settles","Nate Bennett Fleming","Khalid Pitts","Brian Hart","Graylan Haglar","Eugene Puryear","Kishan Putta","Marc Morgan","Eric Jones", "Wendell Felder","Pedro Rubio","Kevin Valentine","Michael D Brown"]
+                },
+                yAxis: {
+                    title: {
+                        text: 'Number of DC Residents Contributing to Each Candidate'
+                    }
+                },
+                series: [{}]
+            };
+            $.getJSON('2014 Council At-Large.json', function(data) {
+                options.series[0].data = data;
+                var chart = new Highcharts.Chart(options);
+            });
+        }
+    });
+    </script>
+</polymer-element>
