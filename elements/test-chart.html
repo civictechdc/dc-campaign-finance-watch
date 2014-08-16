@@ -25,7 +25,7 @@
                 },
                 series: [{}]
             };
-            $.getJSON('https://raw.githubusercontent.com/codefordc/dc-campaign-finance-data/master/json/grass-roots/2014%20Council%20At-Large.json', function(data) {
+            $.getJSON('https://cdn.rawgit.com/codefordc/dc-campaign-finance-data/master/json/grass-roots/2010%2520Council%2520At-Large.json', function(data) {
                 options.categories = data[0];
                 options.series[0].data = data[1];
                 var chart = new Highcharts.Chart(options);
