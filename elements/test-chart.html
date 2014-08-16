@@ -25,7 +25,7 @@
                 },
                 series: [{}]
             };
-            $.getJSON('../2010%20Council%20At-Large.json', function(data) {
+            $.getJSON('../2014%20Council%20At-Large.json', function(data) {
                 options.categories = data[0];
                 options.series[0].data = data[1];
                 var chart = new Highcharts.Chart(options);
