@@ -16,16 +16,30 @@
                     text: '2014 Council At-Large'
                 },
                 xAxis: {
-                    categories: ["Elissa Silverman","Matthew Frumin","Anita Bonds","Patrick Mara","Perry D Redd","Paul Zukerberg","Michael A Brown","John F Settles","John Capozzi","Diallo Brooks","AJ Cooper"]
+                    categories: []
                 },
                 yAxis: {
                     title: {
                         text: 'Number of DC Residents Contributing to Each Candidate'
                     }
                 },
-                series: [{name:"DC Donors",data:[619,488,338,298,55,42,37,34,10,3,2]}]
+                plotOptions: {
+                    bar: {
+                        dataLabels: {
+                            enabled: false
+                        }
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                series: [{}]
             };
-            var chart = new Highcharts.Chart(options);
+            $.getJSON('2014%20Council%20At-Large.json', function(chartjson) {
+                options.xAxis.categories = chartjson[0];
+                options.series[0].data = chartjson[1];
+                var chart = new Highcharts.Chart(options);
+            });
         }
     });
     </script>
