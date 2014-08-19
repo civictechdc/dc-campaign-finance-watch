@@ -46,7 +46,7 @@
                 },
                 series: [{}]
             };
-            $.getJSON('2014%20Council%20At-Large.json', function(chartjson) {
+            $.getJSON('../../../dc-campaign-finance-data/master/json/grass-roots/2014%20Council%20At-Large.json', function(chartjson) {
                 options.xAxis.categories = chartjson[0];
                 options.series[0].data = chartjson[1];
                 var chart = new Highcharts.Chart(options);
