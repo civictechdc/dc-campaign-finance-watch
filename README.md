@@ -104,3 +104,21 @@ Expose [NAICS Codes for DC businesses](http://dcra.dc.gov/service/get-general-bu
 Location based information for relevant races. 
 
 [Greenhouse](http://allaregreen.us/) for dc. 
+
+A moving average of corporate capture & grass roots support for each current officeholder. Will span available data.
+
+Add blog. Maybe using Poole? Include in angular gh-pages or vice-versa? Custom domain?
+
+Add party affiliations. Would be a new code related to candidate & election cycle (some candidates change affiliation).
+
+contribution timing / filters. Post-election & pre-legislation contributions to catch "pay-to-play" post-win contribubtions. 
+
+Big v Small donors: Count of small donors; Count of large donors; Sum of small donors; Sum of large donors; Percent of “max-ers”
+
+Burn rate. Show area chart of cash on hand (contributions & expenditures).
+
+non-local influence. Show contributions from DC v outside DC.
+
+Show percentage of each candidates donors from each ward/zip/etc. (heat map?)
+
+
