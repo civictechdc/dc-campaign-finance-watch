@@ -1,0 +1,40 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>DC Campaign Finance Watch</title>
+    <script src="bower_components/platform/platform.js"></script>
+    <script src="scripts/app.js"></script>
+</head>
+
+<polymer-element name="bar-chart">
+    <template>
+        <div id="container" style="min-width: 80%; height: 360px;"></div>
+    </template>
+    <script>
+    Polymer("bar-chart", {
+        url: "",
+        ready: function() {
+            var options = {
+                chart: {
+                    type: 'bar',
+                    renderTo: this.$.container
+                },
+                xAxis: {
+                    categories: []
+                },
+                series: [{}]
+            };
+            $.getJSON('2014%20Council%20At-Large.json', function(jsondata) {
+                options.xAxis.categories = jsondata[0];
+                options.series[0].data = jsondata[1];
+                var chart = new Highcharts.Chart(options);
+            });
+        }
+    });
+    </script>
+</polymer-element>
+
+<body>
+<bar-chart></bar-chart>
+</body>
+</html>
