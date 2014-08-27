@@ -2,16 +2,12 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 
-<polymer-element name="bar-chart" attributes="title names values">
+<polymer-element name="bar-chart">
     <template>
         <div id="container" style="min-width: 80%; height: 360px;"></div>
     </template>
     <script>
     Polymer("bar-chart", {
-        created: function() {
-            this.names = [];
-            this.values = [];
-        },
         url: "",
         ready: function() {
             var options = {
@@ -20,7 +16,7 @@
                     renderTo: this.$.container
                 },
                 title: {
-                    text: this.title //'2014 Council At-Large'
+                    text: '2014 Council At-Large'
                 },
                 subtitle: {
                     text: 'Grass Roots Supporters'
@@ -48,19 +44,11 @@
                 },
                 series: [{}]
             };
-
-            // Polymer converts arrays to strings for some reason?!
-            //console.log(this.names.split(','),this.values.split(','))
-            var names = this.names.split(',');
-            var values = [];
-            for (var i = 0; i < this.values.length; i++) {
-                values.push(parseInt(this.values[i]));
-            }
-
-            options.xAxis.categories = names;
-            options.series[0].data = values;
-            var chart = new Highcharts.Chart(options);
-            // TODO: Force a reflow of the window to make charts render correctly.
+            $.ajax('https://api.github.com/repos/codefordc/dc-campaign-finance-data/contents/json/grass-roots/2014%20Council%20At-Large.json', {headers:{Accept:'application/vnd.github.v3.raw+json'}}).done(function(chartjson) {
+                options.xAxis.categories = chartjson[0];
+                options.series[0].data = chartjson[1];
+                var chart = new Highcharts.Chart(options);
+            });
         }
     });
     </script>
