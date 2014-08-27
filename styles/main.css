@@ -6,6 +6,7 @@ core-header-panel {
 }
 core-toolbar {
     background-color: #03A9F4;
+    font-size: 3.3 em;
 }
 #navheader {
     background-color: #56BA89;
