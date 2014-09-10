@@ -99,6 +99,10 @@ Usine NAICS codes and all available online data, we will link donors with specif
 
 Expose [NAICS Codes for DC businesses](http://dcra.dc.gov/service/get-general-business-license-gbl) (via API?) 
 
+###Goal 5: Basic contributor search
+
+Organize the data by contributor, to generate a table of top contributors, and power a search wherein a citizen can enter the name of a individual or organization to see a basic table of contribution history -- how much have they given, to whome, when. Ideally this eventually covers both current cycle and historical races. 
+
 ###Future Goals: 
 
 Location based information for relevant races. 
