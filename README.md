@@ -78,6 +78,8 @@ But we could throw them in at the bottom.
 
 It will default to the current year, but will allow selection of all prior years for which data are available. Ian’s design seems to work well to this end, though we really only need two drop-down selectors. 
 
+When any race is selected, a Summary page will show the few most important data points we choose in a chart, such as: loal contributors, % from individual donors vs corporate donors, total money raised. (We do NOT want to sort by the total money raised as this horse race is not the most civially important). Large tabs will allow the citizen to view more data on our two topic areas Grassroots Support (ie: number of individual contributors, % from individual donors, average contribution size, location of donors, etc) and Corporate Influence (number of corporate contributors, % from corporate contributors, total cash from corporate contributors, average contribution size, etc). Graphics can be used as needed. A very, very rough wireframe of this idea: https://cloudup.com/c8TwWZ3LICC
+
 ###Goal 2: Automation
 The next step will not provide more analyses, but rather will increase the automation of data analysis and distribution.  
 Dockerization
