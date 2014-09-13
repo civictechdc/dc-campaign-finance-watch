@@ -2,7 +2,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 
-<polymer-element name="bar-chart" attributes="title source">
+<polymer-element name="bar-chart" attributes="title subtitle yaxistitle source">
     <template>
         <div id="container" style="max-width: 600px; height: 360px;"></div>
     </template>
@@ -24,14 +24,14 @@
                     text: this.title //'2014 Council At-Large'
                 },
                 subtitle: {
-                    text: 'Grass Roots Supporters'
+                    text: this.subtitle
                 },
                 xAxis: {
                     categories: []
                 },
                 yAxis: {
                     title: {
-                        text: '(Number of DC Residents Contributing to Each Candidate)'
+                        text: this.yaxistitle
                     }
                 },
                 plotOptions: {
