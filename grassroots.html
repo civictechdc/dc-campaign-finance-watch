@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <title>DC Campaign Finance Watch</title>
+    <script src="bower_components/platform/platform.js"></script>
+    <script src="scripts/app.js"></script>
+    <link rel="import" href="elements/elements.html">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body fullbleed layout verticle>
+
+    <core-drawer-panel id="drawerPanel" responsiveWidth="1000px" theme="core-dark-theme">
+        <core-header-panel drawer icon="visibility">
+            <core-toolbar theme="dark"></core-toolbar>
+            <core-menu>
+                <core-submenu icon="visibility" label="grassroot support">
+                    <core-item icon="" label="number of donors"></core-item>
+                    <core-item icon="" label="percent of donors"></core-item>
+                </core-submenu>
+                <core-submenu icon="visibility" label="corporate cash">
+                    <core-item icon="" label="number of donors"></core-item>
+                    <core-item icon="" label="percent of donors"></core-item>
+                    <core-item icon="" label="percent of warchest"></core-item>
+                </core-submenu>
+                <core-submenu icon="visibility" label="pay-to-play">
+                    <core-item icon="" label="by contractors"></core-item>
+                    <core-item icon="" label="by officeholder"></core-item>
+                </core-submenu>
+                <core-submenu icon="visibility" label="influential industries">
+                    <core-item icon="" label="overall"></core-item>
+                    <core-item icon="" label="by officeholder"></core-item>
+                </core-submenu>
+                <core-submenu icon="visibility" label="office holders">
+                    <core-item icon="" label="current"></core-item>
+                    <core-item icon="" label="all"></core-item>
+                </core-submenu>
+                <core-submenu icon="info-outline" label="about">
+                    <core-item icon="" label="mission"></core-item>
+                    <core-item icon="" label="contributors"></core-item>
+                    <core-item icon="" label="how to help"></core-item>
+                    <core-item icon="" label="links"></core-item>
+                </core-submenu>
+            </core-menu>
+        </core-header-panel>
+
+        <core-header-panel main>
+            <core-toolbar id="mainheader" theme="core-dark-theme">
+                <paper-icon-button id="navicon" icon="menu"></paper-icon-button>
+                <span flex>DC Campaign Finance Watch</span>
+                <core-icon-button icon="search"></core-icon-button>
+            </core-toolbar>
+
+            <div class="content">
+
+                <bar-chart title="Mayor" source="https://api.github.com/repos/codefordc/dc-campaign-finance-data/contents/json/grass-roots/2014%20Mayor.json"></bar-chart>
+                <bar-chart title="Council Chairman" source="https://api.github.com/repos/codefordc/dc-campaign-finance-data/contents/json/grass-roots/2014 Council Chairman.json"></bar-chart>
+                <bar-chart title="Council At-Large" source="https://api.github.com/repos/codefordc/dc-campaign-finance-data/contents/json/grass-roots/2014 Council At-Large.json"></bar-chart>
+                <bar-chart title="Council Ward 1" source="https://api.github.com/repos/codefordc/dc-campaign-finance-data/contents/json/grass-roots/2014 Council Ward 1.json"></bar-chart>
+                <bar-chart title="Council Ward 3" source="https://api.github.com/repos/codefordc/dc-campaign-finance-data/contents/json/grass-roots/2014 Council Ward 3.json"></bar-chart>
+                <bar-chart title="Council Ward 5" source="https://api.github.com/repos/codefordc/dc-campaign-finance-data/contents/json/grass-roots/2014 Council Ward 5.json"></bar-chart>
+                <bar-chart title="Council Ward 6" source="https://api.github.com/repos/codefordc/dc-campaign-finance-data/contents/json/grass-roots/2014 Council Ward 6.json"></bar-chart>
+                <bar-chart title="School Board Ward 1" source="https://api.github.com/repos/codefordc/dc-campaign-finance-data/contents/json/grass-roots/2014 School Board Ward 1.json"></bar-chart>
+                <bar-chart title="School Board Ward 3" source="https://api.github.com/repos/codefordc/dc-campaign-finance-data/contents/json/grass-roots/2014 School Board Ward 3.json"></bar-chart>
+                <bar-chart title="School Board Ward 5" source="https://api.github.com/repos/codefordc/dc-campaign-finance-data/contents/json/grass-roots/2014 School Board Ward 5.json"></bar-chart>
+                <bar-chart title="School Board Ward 8" source="https://api.github.com/repos/codefordc/dc-campaign-finance-data/contents/json/grass-roots/2014 School Board Ward 8.json"></bar-chart>
+                <bar-chart title="Attorney General" source="https://api.github.com/repos/codefordc/dc-campaign-finance-data/contents/json/grass-roots/2014 Attorney General.json"></bar-chart>
+
+            </div>
+        </core-header-panel>
+
+    </core-drawer-panel>
+
+</body>
+
+</html>
