@@ -13,7 +13,6 @@ license that can be found in the LICENSE file.
   user-select: none;
   -webkit-user-select: none;
   cursor: pointer;
-  overflow: hidden;
 }
 
 :host([disabled]) {
@@ -45,10 +44,14 @@ core-icon::shadow svg {
   fill: #c9c9c9;
 }
 
-#overlay {
-  display: block;
-	position: fixed;
-  border-radius: 3px;
+#dropdown {
+  background-color: transparent;
+}
+
+#menu {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 0;
 }
 
 .paper-menu-button-overlay-ink {
@@ -58,7 +61,6 @@ core-icon::shadow svg {
 	width: 40px;
 	height: 40px;
 	border-radius: 20px;
-  background: #fff;
   opacity: 0;
   transform: scale(0);
   -webkit-transform: scale(0);
@@ -69,6 +71,11 @@ core-icon::shadow svg {
 	right: 0;
 }
 
+:host([valign="bottom"]) .paper-menu-button-overlay-ink {
+  top: auto;
+  bottom: 0;
+}
+
 .paper-menu-button-overlay-bg {
 	position: absolute;
 	top: 0;
@@ -76,11 +83,11 @@ core-icon::shadow svg {
 	bottom: 0;
 	right: 0;
 	border-radius: 3px;
-  background: #fff;
   opacity: 0;
 }
 
-#menu {
-	position: relative;
-  margin: 0;
+.paper-menu-button-menu-container {
+  overflow: auto;
+  max-height: 100%;
+  max-width: 100%;
 }

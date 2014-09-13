@@ -52,11 +52,8 @@
             $.getJSON(this.source).done(function(chartjson) {
                 options.xAxis.categories = chartjson.categories;
                 options.series[0].data = chartjson.series;
-                console.log(chartjson.title);
                 options.title.text = chartjson.title;
-                console.log(chartjson.subtitle);
                 options.subtitle.text = chartjson.subtitle;
-                console.log(chartjson.yAxistitle);
                 options.yAxis.title.text = chartjson.yAxistitle;
                 var chart = new Highcharts.Chart(options);
             });

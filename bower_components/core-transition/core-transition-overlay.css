@@ -7,7 +7,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 :host(.core-transition) {
   outline: none;
-  overflow: hidden;
+  overflow: auto;
   opacity: 0;
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in;
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in;
