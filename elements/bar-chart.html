@@ -2,7 +2,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 
-<polymer-element name="bar-chart" attributes="title subtitle yaxistitle source">
+<polymer-element name="bar-chart" attributes="source">
     <template>
         <div id="container" style="max-width: 600px; height: 360px;"></div>
     </template>
@@ -21,17 +21,17 @@
                     renderTo: this.$.container
                 },
                 title: {
-                    text: this.title //'2014 Council At-Large'
+                    text:  ''
                 },
                 subtitle: {
-                    text: this.subtitle
+                    text: ''
                 },
                 xAxis: {
                     categories: []
                 },
                 yAxis: {
                     title: {
-                        text: this.yaxistitle
+                        text: ''
                     }
                 },
                 plotOptions: {
@@ -49,10 +49,15 @@
                 },
                 series: [{}]
             };
-            $.ajax(this.source, 
-                {headers:{Accept:'application/vnd.github.v3.raw+json'}}).done(function(chartjson) {
-                options.xAxis.categories = chartjson[0];
-                options.series[0].data = chartjson[1];
+            $.getJSON(this.source).done(function(chartjson) {
+                options.xAxis.categories = chartjson.categories;
+                options.series[0].data = chartjson.series;
+                console.log(chartjson.title);
+                options.title.text = chartjson.title;
+                console.log(chartjson.subtitle);
+                options.subtitle.text = chartjson.subtitle;
+                console.log(chartjson.yAxistitle);
+                options.yAxis.title.text = chartjson.yAxistitle;
                 var chart = new Highcharts.Chart(options);
             });
         }

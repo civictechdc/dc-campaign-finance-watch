@@ -1,0 +1,274 @@
+[
+    {
+        "year": "2014",
+        "office": "Alternate Democratic National Committeeman",
+        "data": { "categories": [], "series": [], "title": "Alternate Democratic National Committeeman (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "Alternate Democratic National Committeewoman",
+        "data": { "categories": ["Winifred Y Carson Smith"], "series": [1], "title": "Alternate Democratic National Committeewoman (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "At-Large DC Democratic State Committee",
+        "data": { "categories": ["Barrie Daneker"], "series": [60], "title": "At-Large DC Democratic State Committee (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "Attorney General",
+        "data": { "categories": ["Edward Smith", "Paul Zukerberg", "Lorie Masters", "Lateefah Williams", "Karl A Racine"], "series": [207, 50, 30, 16, 9], "title": "Attorney General (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "Council At-Large",
+        "data": { "categories": ["Elissa Silverman", "Robert White", "Anita Bonds", "John F Settles", "Nate Bennett Fleming", "Khalid Pitts", "Brian Hart", "Graylan Hagler", "Eugene Puryear", "Kishan Putta", "Marc Morgan", "Eric Jones", "Wendell Felder", "Pedro Rubio", "Michael D Brown", "Kevin Valentine", "Calvin H Gurley"], "series": [280, 246, 227, 143, 112, 103, 102, 64, 51, 49, 36, 25, 7, 5, 2, 2, 1], "title": "Council At-Large (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "Council Chairman",
+        "data": { "categories": ["Phil Mendelson", "Kris Hammond", "John C Cheeks"], "series": [172, 44, 4], "title": "Council Chairman (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "Council Ward 1",
+        "data": { "categories": ["Brianne Nadeau", "Jim Graham", "Bryan Weaver", "Beverley Wheeler", "Ernest E Johnson"], "series": [1055, 200, 165, 13, 2], "title": "Council Ward 1 (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "Council Ward 3",
+        "data": { "categories": ["Mary M Cheh"], "series": [117], "title": "Council Ward 3 (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "Council Ward 5",
+        "data": { "categories": ["Kenyan McDuffie", "Kathy Henderson"], "series": [421, 34], "title": "Council Ward 5 (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "Council Ward 6",
+        "data": { "categories": ["Charles Allen", "Darrel Thompson", "Shelonda Tillman"], "series": [683, 319, 9], "title": "Council Ward 6 (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "Democratic National Committeeman",
+        "data": { "categories": ["Michael Panetta"], "series": [38], "title": "Democratic National Committeeman (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "Democratic National Committeewoman",
+        "data": { "categories": ["Acqunetta Anderson"], "series": [3], "title": "Democratic National Committeewoman (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "Mayor",
+        "data": { "categories": ["Muriel E Bowser", "Tommy Wells", "Jack Evans", "Vincent C Gray", "David Catania", "Andy Shallal", "Reta Jo Lewis", "Carol Schwartz", "Vincent Orange", "Christian Carter", "Nestor DJonkam", "Bruce Majors", "Michael L Green"], "series": [2505, 1654, 1332, 956, 699, 399, 183, 81, 72, 3, 3, 2, 1], "title": "Mayor (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "School Board Ward 1",
+        "data": { "categories": ["Scott Simpson", "David Do", "Laura Wilson Phelan", "Lillian Perdomo"], "series": [119, 46, 19, 7], "title": "School Board Ward 1 (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "School Board Ward 3",
+        "data": { "categories": ["W. Philip Thomas"], "series": [1], "title": "School Board Ward 3 (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "School Board Ward 5",
+        "data": { "categories": ["Mark Jones"], "series": [1], "title": "School Board Ward 5 (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "School Board Ward 6",
+        "data": { "categories": [], "series": [], "title": "School Board Ward 6 (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "School Board Ward 8",
+        "data": { "categories": ["Philip E Pannell", "Tierra Jolly", "Darrell Gaston", "Derrell Simpson"], "series": [71, 27, 23, 11], "title": "School Board Ward 8 (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "US Representative",
+        "data": { "categories": ["Franklin Garcia"], "series": [1], "title": "US Representative (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "US Senator",
+        "data": { "categories": ["Paul Strauss", "David Schwartzman", "Glenda J Richmond"], "series": [70, 3, 2], "title": "US Senator (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "Ward 1 DC Democratic State Committee ",
+        "data": { "categories": [], "series": [], "title": "Ward 1 DC Democratic State Committee  (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "Ward 3 DC Democratic State Committee",
+        "data": { "categories": ["Robert M Brandon"], "series": [5], "title": "Ward 3 DC Democratic State Committee (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2014",
+        "office": "Ward 6 DC Democratic State Committee",
+        "data": { "categories": [], "series": [], "title": "Ward 6 DC Democratic State Committee (2014)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2013",
+        "office": "Council At-Large",
+        "data": { "categories": ["Elissa Silverman", "Matthew Frumin", "Anita Bonds", "Patrick Mara", "Perry D Redd", "Paul Zukerberg", "Michael A Brown", "John F Settles", "John Capozzi", "Diallo Brooks", "AJ Cooper"], "series": [619, 488, 338, 298, 55, 42, 37, 34, 10, 3, 2], "title": "Council At-Large (2013)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "Council At-Large",
+        "data": { "categories": ["David Grosso", "Sekou Biddle", "Vincent Orange", "Michael A Brown", "Peter Shapiro", "Mary  Brooks Beatty", "A.J  Cooper", "E. Gail Anderson Holness", "Leon J Swain"], "series": [656, 367, 201, 165, 153, 138, 62, 29, 25], "title": "Council At-Large (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "Council Chairman",
+        "data": { "categories": ["Phil Mendelson"], "series": [348], "title": "Council Chairman (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "Council Ward 2",
+        "data": { "categories": ["Jack Evans", "Fiona Greig"], "series": [602, 25], "title": "Council Ward 2 (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "Council Ward 4",
+        "data": { "categories": ["Muriel Bowser", "Max Skolnik", "Renee L Bowser", "Baruti Jahi", "Judi Jones", "Calvin H Gurley"], "series": [1072, 245, 66, 29, 11, 3], "title": "Council Ward 4 (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "Council Ward 5",
+        "data": { "categories": ["Kenyan McDuffie", "Delano D Hunter", "Tim Day", "Drew Hubbard", "Frank Wilds", "John T Salatti", "Rae Zapata", "Kathy Henderson", "Ron L Magnus", "Shelly Gardner", "John C Cheeks", "William Boston", "Ruth E Marshall"], "series": [449, 138, 98, 93, 80, 55, 42, 24, 23, 12, 6, 5, 4], "title": "Council Ward 5 (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "Council Ward 7",
+        "data": { "categories": ["Yvette M Alexander", "Kevin B Chavous", "Tom Brown", "Ronald L Moten", "William H Bennett", "Monica L Johnson"], "series": [401, 126, 106, 85, 53, 5], "title": "Council Ward 7 (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "Council Ward 8",
+        "data": { "categories": ["Marion Barry", "Darrell Gaston", "Jacque D Patterson", "Sandra Seegars", "Natalie Williams", "Jauhar Abraham"], "series": [104, 89, 53, 29, 21, 7], "title": "Council Ward 8 (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "Democratic Delegates",
+        "data": { "categories": ["Gregory Cendana"], "series": [62], "title": "Democratic Delegates (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "Republican National Committeeman
+",
+        "data": { "categories": ["Robert J Kabel", "Jordan Gehrke"], "series": [49, 6], "title": "Republican National Committeeman
+ (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "Republican National Committeewoman",
+        "data": { "categories": ["Teri Galvez", "Jill Homan"], "series": [88, 78], "title": "Republican National Committeewoman (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "School Board At-Large",
+        "data": { "categories": ["Mary Lord", "Marvin Tucker"], "series": [18, 5], "title": "School Board At-Large (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "School Board Ward 2",
+        "data": { "categories": ["Jack Jacobson"], "series": [156], "title": "School Board Ward 2 (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "School Board Ward 7",
+        "data": { "categories": ["Karen Williams"], "series": [20], "title": "School Board Ward 7 (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "School Board Ward 8",
+        "data": { "categories": ["Philip E Pannell", "Trayon  White"], "series": [85, 13], "title": "School Board Ward 8 (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2012",
+        "office": "US Senator",
+        "data": { "categories": ["Nelson F Rimensnyder", "Michael D Brown"], "series": [78, 15], "title": "US Senator (2012)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2011",
+        "office": "Council At-Large",
+        "data": { "categories": ["Sekou Biddle", "Patrick Mara", "Bryan Weaver", "Vincent Orange", "Joshua Lopez", "Jacque D Patterson", "Alan Page", "Arkan Haile", "Tom Brown", "Wayne Dickson"], "series": [510, 247, 234, 175, 159, 112, 17, 15, 13, 3], "title": "Council At-Large (2011)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2011",
+        "office": "School Board Ward 4",
+        "data": { "categories": ["D. Kamili Anderson", "Andrew Moss", "Bill Quirk", "An Almquist", "James Garay Heelan"], "series": [40, 23, 18, 7, 2], "title": "School Board Ward 4 (2011)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2011",
+        "office": "School Board Ward 8",
+        "data": { "categories": ["Eugene D Kinlow", "Philip Pannell", "Tijwanna U Phillips", "Anthony Muhammad", "Trayon White"], "series": [90, 46, 13, 12, 4], "title": "School Board Ward 8 (2011)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2010",
+        "office": "Council At-Large",
+        "data": { "categories": ["David Catania", "Clark E Ray", "Phil Mendelson", "Richard Urban", "Anthony J Motley", "Michael Brown", "David Schwartzman", "Kelvin J Robinson", "Darryl L.C. Moch"], "series": [710, 337, 290, 48, 25, 24, 23, 17, 13], "title": "Council At-Large (2010)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2010",
+        "office": "Council Chairman",
+        "data": { "categories": ["Kwame R Brown", "Vincent Orange", "Calvin Gurley"], "series": [478, 222, 2], "title": "Council Chairman (2010)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2010",
+        "office": "Council Ward 1",
+        "data": { "categories": ["Jim Graham", "Bryan Weaver", "Marc Morgan", "Jeff Smith", "Nancy Shia"], "series": [665, 215, 86, 77, 9], "title": "Council Ward 1 (2010)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2010",
+        "office": "Council Ward 3",
+        "data": { "categories": ["Mary M Cheh", "Dave Hedgepeth"], "series": [197, 136], "title": "Council Ward 3 (2010)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2010",
+        "office": "Council Ward 5",
+        "data": { "categories": ["Harry Thomas", "Kenyan McDuffie", "Delano Hunter", "Kathy Henderson", "Timothy Day", "Tracey D Turner"], "series": [363, 153, 81, 48, 48, 35], "title": "Council Ward 5 (2010)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2010",
+        "office": "Council Ward 6",
+        "data": { "categories": ["Tommy Wells", "Jim DeMartino", "Kelvin Robinson"], "series": [408, 96, 66], "title": "Council Ward 6 (2010)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2010",
+        "office": "Mayor",
+        "data": { "categories": ["Vincent C Gray", "Adrian M Fenty", "Leo Alexander", "Ernest E Johnson", "Sulaimon M Brown", "Carlos Allen"], "series": [4572, 1418, 33, 3, 2, 1], "title": "Mayor (2010)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2010",
+        "office": "School Board Ward 1",
+        "data": { "categories": ["Patrick Mara", "Dotti Love Wade"], "series": [103, 31], "title": "School Board Ward 1 (2010)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2010",
+        "office": "School Board Ward 3",
+        "data": { "categories": ["Laura M Slover"], "series": [1], "title": "School Board Ward 3 (2010)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2010",
+        "office": "School Board Ward 5",
+        "data": { "categories": ["Mark Jones", "Darlene Glymph"], "series": [14, 11], "title": "School Board Ward 5 (2010)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2010",
+        "office": "School Board Ward 6",
+        "data": { "categories": ["Melissa Rohan", "Monica Warren Jones"], "series": [97, 51], "title": "School Board Ward 6 (2010)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    },
+    {
+        "year": "2010",
+        "office": "US Representative",
+        "data": { "categories": ["Nate Bennett-Fleming", "Jon Kuhl", "Mike Panetta"], "series": [58, 29, 27], "title": "US Representative (2010)", "subtitle": "Grassroots Contributors", "yAxistitle": "Number of DC Residents Contributing to Candidate" }
+    }
+]
