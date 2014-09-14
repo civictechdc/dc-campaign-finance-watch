@@ -1,6 +1,6 @@
 {
         "status": "Beta",
-        "thumbnailUrl": "http://codefordc.github.io/dc-campaign-finance-watch/",
+        "thumbnailUrl": "",
         "contact": {
             "name":"Donald Braman",
             "email":"donald.braman@gmail.com",
@@ -11,8 +11,13 @@
         "politicalEntity": {"DC Office of Campaign Finance": "http://www.ocf.dc.gov"},
         "governmentPartner": {},
         "communityPartner": {},
-        "type": ["Web App", "Mobile App", "Data"],
-        "needs": [ ],
-        "categories": ["Politics", "Financial", "Open Data"],
+        "type": "Web App",
+        "needs": [],
+        "categories": [
+                {"category":"Politics"}, 
+                {"category":"Financial"},
+                {"category":"Open Data"},
+                {"category":"Campaign Finance"}
+        ],
         "moreInfo":""
 }
