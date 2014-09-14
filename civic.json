@@ -8,7 +8,7 @@
         },
         "bornAt": "Code for DC",
         "geography": "DC",
-        "politicalEntity": {"Office of Campaign Financ": "http://www.ocf.dc.gov"},
+        "politicalEntity": {"DC Office of Campaign Finance": "http://www.ocf.dc.gov"},
         "governmentPartner": {},
         "communityPartner": {},
         "type": ["Web App", "Mobile App", "Data"],
