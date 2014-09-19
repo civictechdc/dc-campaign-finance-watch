@@ -77,10 +77,18 @@ core-menu-button - a icon button that triggers a dropdown menu
       border-radius: 3px;
     }
 
+    drop-down.margin::shadow core-dropdown {
+      margin: 12px;
+    }
+
     drop-down.open-below::shadow core-dropdown {
       position: absolute;
       top: 38px;
       left: 0px;
+    }
+
+    drop-down.constrained::shadow core-dropdown {
+      max-height: 500px;
     }
 
     .dropdown {
@@ -161,6 +169,32 @@ core-menu-button - a icon button that triggers a dropdown menu
   </script>
   </polymer-element>
 
+  <polymer-element name="drop-down-2" attributes="opened halign valign">
+  <template>
+    <style>
+      :host {
+        display: inline-block;
+      }
+      #trigger {
+        position: relative;
+      }
+    </style>
+    <div id="trigger" on-tap="{{toggle}}">
+      <content select=".core-dropdown-trigger"></content>
+      <core-dropdown relatedTarget="{{$.trigger}}" halign="{{halign}}" valign="{{valign}}" opened="{{opened}}" margin="12">
+        <content></content>
+      </core-dropdown>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      toggle: function() {
+        this.opened = !this.opened;
+      }
+    });
+  </script>
+  </polymer-element>
+
   <template is="auto-binding">
 
   <div layout vertical fit>
@@ -178,10 +212,27 @@ core-menu-button - a icon button that triggers a dropdown menu
         </div>
       </drop-down>
 
+      <drop-down-2 halign="left">
+        <core-icon-button class="core-dropdown-trigger" icon="menu"></core-icon-button>
+        <div class="dropdown" layout horizontal center-center>
+          <h2>I'm a child of the button</h2>
+        </div>
+      </drop-down-2>
+
       <drop-down halign="left">
         <core-icon-button class="core-dropdown-trigger" icon="menu"></core-icon-button>
         <div class="dropdown">
           <h2>scrollable-vertical</h2>
+          <template repeat="{{countries}}">
+            <p>{{name}}</p>
+          </template>
+        </div>
+      </drop-down>
+
+      <drop-down class="margin" halign="left">
+        <core-icon-button class="core-dropdown-trigger" icon="menu"></core-icon-button>
+        <div class="dropdown">
+          <h2>margins</h2>
           <template repeat="{{countries}}">
             <p>{{name}}</p>
           </template>
@@ -201,6 +252,16 @@ core-menu-button - a icon button that triggers a dropdown menu
 
       <div flex></div>
 
+      <drop-down class="margin" halign="right">
+        <core-icon-button class="core-dropdown-trigger" icon="menu"></core-icon-button>
+        <div class="dropdown">
+          <h2>margin</h2>
+          <template repeat="{{countries}}">
+            <p>{{name}}</p>
+          </template>
+        </div>
+      </drop-down>
+
       <drop-down halign="right">
         <core-icon-button class="core-dropdown-trigger" icon="menu"></core-icon-button>
         <div class="dropdown">
@@ -210,6 +271,13 @@ core-menu-button - a icon button that triggers a dropdown menu
           </template>
         </div>
       </drop-down>
+
+      <drop-down-2 halign="right">
+        <core-icon-button class="core-dropdown-trigger" icon="menu"></core-icon-button>
+        <div class="dropdown" layout horizontal center-center>
+          <h2>I'm a child of the button</h2>
+        </div>
+      </drop-down-2>
 
       <drop-down halign="right">
         <core-icon-button class="core-dropdown-trigger" icon="more-vert"></core-icon-button>
@@ -235,8 +303,43 @@ core-menu-button - a icon button that triggers a dropdown menu
             <h2>Custom positioning</h2>
           </div>
         </drop-down>
+
+        <drop-down class="open-below constrained">
+          <core-icon-button class="core-dropdown-trigger" icon="social:notifications"></core-icon-button>
+          <div class="dropdown">
+            <h2>Scrollable + custom size + custom positioning</h2>
+            <template repeat="{{countries}}">
+              <p>{{name}}</p>
+            </template>
+          </div>
+        </drop-down>
       </div>
-      <div style="height:2000px;">I am scrollable...</div>
+
+      <p>scroll me...</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 
     <div class="toolbar bottom-toolbar-2" layout horizontal center>
@@ -252,10 +355,27 @@ core-menu-button - a icon button that triggers a dropdown menu
         </div>
       </drop-down>
 
+      <drop-down-2 halign="left" valign="bottom">
+        <core-icon-button class="core-dropdown-trigger" icon="menu"></core-icon-button>
+        <div class="dropdown" layout horizontal center-center>
+          <h2>I'm a child of the button</h2>
+        </div>
+      </drop-down-2>
+
       <drop-down halign="left" valign="bottom">
         <core-icon-button class="core-dropdown-trigger" icon="menu"></core-icon-button>
         <div class="dropdown">
           <h2>scrollable-vertical</h2>
+          <template repeat="{{countries}}">
+            <p>{{name}}</p>
+          </template>
+        </div>
+      </drop-down>
+
+      <drop-down class="margin" halign="left" valign="bottom">
+        <core-icon-button class="core-dropdown-trigger" icon="menu"></core-icon-button>
+        <div class="dropdown">
+          <h2>margin</h2>
           <template repeat="{{countries}}">
             <p>{{name}}</p>
           </template>
@@ -275,6 +395,16 @@ core-menu-button - a icon button that triggers a dropdown menu
 
       <div flex></div>
 
+      <drop-down class="margin" halign="right" valign="bottom">
+        <core-icon-button class="core-dropdown-trigger" icon="menu"></core-icon-button>
+        <div class="dropdown">
+          <h2>margin</h2>
+          <template repeat="{{countries}}">
+            <p>{{name}}</p>
+          </template>
+        </div>
+      </drop-down>
+
       <drop-down halign="right" valign="bottom">
         <core-icon-button class="core-dropdown-trigger" icon="menu"></core-icon-button>
         <div class="dropdown">
@@ -284,6 +414,13 @@ core-menu-button - a icon button that triggers a dropdown menu
           </template>
         </div>
       </drop-down>
+
+      <drop-down-2 halign="right" valign="bottom">
+        <core-icon-button class="core-dropdown-trigger" icon="menu"></core-icon-button>
+        <div class="dropdown" layout horizontal center-center>
+          <h2>I'm a child of the button</h2>
+        </div>
+      </drop-down-2>
 
       <drop-down halign="right" valign="bottom">
         <core-icon-button class="core-dropdown-trigger" icon="more-vert"></core-icon-button>

@@ -77,7 +77,7 @@ Example:
 
   <link href="core-dropdown.css" rel="stylesheet">
 
-  <core-dropdown-overlay id="overlay" target="{{}}" relatedTarget="{{relatedTarget}}" opened="{{opened}}" halign="{{halign}}" valign="{{valign}}" margin="{{margin}}" transition="{{transition}}"></core-dropdown-overlay>
+  <core-dropdown-overlay id="overlay" target="{{}}" relatedTarget="{{relatedTarget}}" opened="{{opened}}" halign="{{halign}}" valign="{{valign}}" margin="{{margin}}" transition="{{transition}}" autoFocusDisabled="{{autoFocusDisabled}}"></core-dropdown-overlay>
 
   <content></content>
 
@@ -128,16 +128,16 @@ Example:
        */
       valign: 'top',
 
-      /**
-       * A pixel amount around the dropdown that will be reserved. It's useful for
-       * ensuring that, for example, a shadow displayed outside the dropdown will
-       * always be visible.
+     /**
+       * By default an overlay will focus its target or an element inside
+       * it with the `autoFocus` attribute. Disable this
+       * behavior by setting the `autoFocusDisabled` property to true.
        *
-       * @attribute margin
-       * @type number
-       * @default 0
+       * @attribute autoFocusDisabled
+       * @type boolean
+       * @default false
        */
-      margin: 0,
+      autoFocusDisabled: false,
 
       /**
        * The transition property specifies a string which identifies a 

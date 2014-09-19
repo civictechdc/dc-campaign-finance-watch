@@ -46,6 +46,8 @@ core-icon::shadow svg {
 
 #dropdown {
   background-color: transparent;
+  margin: 12px;
+  color: #000;
 }
 
 #menu {
@@ -84,6 +86,10 @@ core-icon::shadow svg {
 	right: 0;
 	border-radius: 3px;
   opacity: 0;
+}
+
+:host([noTransition]) .paper-menu-button-overlay-bg {
+  opacity: 1;
 }
 
 .paper-menu-button-menu-container {

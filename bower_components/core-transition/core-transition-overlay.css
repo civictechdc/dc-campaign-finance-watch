@@ -16,8 +16,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 :host(.core-transition.core-opened) {
   opacity: 1;
-  transform: none;
-  -webkit-transform: none;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 :host(.core-transition-center) {
