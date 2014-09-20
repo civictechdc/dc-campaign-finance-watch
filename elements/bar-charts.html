@@ -4,7 +4,6 @@
 <polymer-element name="bar-charts" attributes="source" noscript>
   <template>
     <core-ajax auto url="{{source}}" response="{{items}}" handleAs="json"></core-ajax>
-
     <template repeat="{{item in items}}">
       <google-chart type='bar' height='400px' width='600px'
         options='{{item.options}}' cols='{{item.cols}}'

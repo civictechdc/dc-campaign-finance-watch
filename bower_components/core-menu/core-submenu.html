@@ -37,7 +37,21 @@ To style the item for the submenu, do something like this:
     core-submenu::shadow > #submenuItem {
       color: blue;
     }
+    
+To style all the `core-item`s in the light DOM:
 
+    polyfill-next-selector { content: 'core-submenu > #submenu > core-item'; }
+    core-submenu > core-item {
+      color: red;
+    }
+    
+The above will style `Topic1` and `Topic2` to have font color red.
+
+    <core-submenu icon="settings" label="Topics">
+      <core-item label="Topic1"></core-item>
+      <core-item label="Topic2"></core-item>
+    </core-submenu>
+    
 @group Polymer Core Elements
 @element core-submenu
 @extends core-item
