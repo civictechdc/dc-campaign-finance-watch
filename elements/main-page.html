@@ -1,43 +1,35 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
 <polymer-element name="main-page">
 
   <template>
-    <core-drawer-panel id="drawerPanel" responsiveWidth="1000px" theme="core-dark-theme">
 
-        <core-header-panel drawer icon="visibility">
-            <core-toolbar theme="dark"></core-toolbar>
-            <core-menu selected="{{selected}}" valueattr="id">
-                <core-item icon="visibility" id="grassroots" label="grassroot support"></core-item>
-                <core-item icon="visibility" id="corporate" label="corporate cash"></core-item>
+    <core-scaffold theme="core-dark-theme">
+        <core-header-panel navigation flex mode="seamed" theme="core-dark-theme">
+            <core-toolbar theme="core-dark-theme"></core-toolbar>
+            <core-menu selected="{{selected}}" valueattr="id" theme="core-dark-theme">
+                <core-item icon="visibility" id="grassrootdonors" label="grassroot donors"></core-item>
+                <core-item icon="visibility" id="grassrootdollars" label="grassroot dollars"></core-item>
+                <core-item icon="visibility" id="corporatedonors" label="corporate donors"></core-item>
+                <core-item icon="visibility" id="corporatedollars" label="corporate dollars"></core-item>
                 <core-item icon="visibility" id="paytoplay" label="pay-to-play"></core-item>
                 <core-item icon="visibility" id="industryinfluence" label="influential industries"></core-item>
                 <core-item icon="visibility" id="officeholders" label="office holders"></core-item>
                 <core-item icon="info-outline" id="about" label="about"></core-item>
             </core-menu>
         </core-header-panel>
-        
-        <core-header-panel main>
-
-            <core-toolbar id="mainheader" theme="core-dark-theme">
-                <paper-icon-button id="navicon" icon="menu"></paper-icon-button>
-                <span flex>DC Campaign Finance Watch</span>
-                <core-icon-button icon="search"></core-icon-button>
-            </core-toolbar>
-            
-            <core-pages selected="{{selected}}" valueattr="id">
-              <div id="grassroots"><bar-charts source="json/grass-roots.json"></bar-charts></div>
-              <div id="corporate"><bar-charts source="json/corporate.json"></bar-charts></div>
-              <div id="paytoplay">Under Develpment</div>
-              <div id="industryinfluence">Under Develpment</div>
-              <div id="officeholders">Under Develpment</div>
-              <div id="about">Under Develpment</div>
-            </core-pages>
-
-        </core-header-panel>
-
-    </core-drawer-panel>
-  
+        <div tool>DC Campaign Finance Watch</div>
+        <core-pages selected="{{selected}}" valueattr="id">
+          <div id="grassrootdonors"><bar-charts source="json/grassroot-donors.json"></bar-charts></div>
+          <div id="grassrootdollars"><bar-charts source="json/grassroot-dollars.json"></bar-charts></div>
+          <div id="corporatedonors"><bar-charts source="json/corporate-donors.json"></bar-charts></div>
+          <div id="corporatedollars"><bar-charts source="json/corporate-dollars.json"></bar-charts></div>
+          <div id="paytoplay">These analyses will link campaign contributions to District contracts.  The cash paid to office holders’ campaigns will be linked to past, existing, and pending contracts with the city. </div>
+          <div id="industryinfluence">Using NIGP codes and all available online data, we will link donors with specific industries. We can then sort each candidate and political office-holder by level of industry influence and relate them to upcoming bills.   </div>
+          <div id="officeholders">A moving average of corporate capture & grass roots support for each current officeholder. Will span available data.</div>
+          <div id="about">We are just regular folk coding for DC.  Come to a meetup or check out a repo on github!</div>
+        </core-pages>
   </template>
-  
+
   <script>
     Polymer('main-page', {
       ready: function() {
@@ -45,12 +37,12 @@
           var page = window.location.hash.substring(1);
           this.selected = page;
         }.bind(this);
-        this.selected = 'grassroots';
+        this.selected = 'grassrootdonors';
       },
       selectedChanged: function() {
         window.location.hash = this.selected;
       }
     });
   </script>
-  
+
 </polymer-element>
