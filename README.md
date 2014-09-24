@@ -14,17 +14,21 @@ The DC Campaign Finance Scraper pulls campaign contribution and expenditure data
 
 ### DC Public Contracts and Procurement Scraper
 
-The DC Public Contracts Scraper pulls  data from the District's [Office of Campaign Finance Website] (http://app.ocp.dc.gov/RUI/information/award/search.asp) and converts it into a CSV file for further analysis. It is currently under development.
+The DC Public Contracts Scraper pulls data from the District's [Office of Campaign Finance Website] (http://app.ocp.dc.gov/RUI/information/award/search.asp) and converts it into a CSV file for further analysis. It is a python script that is located in the 'wrangler' directory of the 'watch' repo. 
 
 
-### DC Campaign Finance Wrangler
+#### DC Campaign Finance Wrangler
 
-These are python scripts that we use to analyze the data.  They are broken into two functions, each of which is intended to be run every night.  (1) download (downloads campaign finance and public conract data); (2) wrangler (turns that data into graphable json files for the website).
+These are python scripts that we use to analyze the data.  They are broken into two functions, each of which is intended to be run every night.  (1) download (downloads campaign finance and public conract data); (2) wrangler (turns that data into graphable json files for the website).  They are scripts located in the 'wrangler' directory of the 'watch' repo. 
 
+#### DC Campaign Finance Data
+
+This is the source data we scrape OCF and OCP. They are csv files located in the 'csv' directory of the 'watch' repo. 
 
 ### DC Campaign Finance Watch
 
 Where you are now.  This is the front end that display the analyses we develop.
+
 
 # Roadmap
 
