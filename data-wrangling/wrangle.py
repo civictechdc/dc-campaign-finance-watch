@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 '''
 CLEAN AND WRAGLE DATA INTO JSON
 '''
@@ -7,8 +9,8 @@ import io
 import pandas as pd
 import numpy as np
 
-input_dir = '../dc-campaign-finance-data/csv'
-output_dir = '../dc-campaign-finance-watch/json'
+input_dir = '../csv'
+output_dir = '../json'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
@@ -60,7 +62,7 @@ for rownum in range(0, len(yo.index)):
 nested = nested + ']'
 nested = nested.replace('\n', '').replace('\r', '').replace('},]', '}]')
 
-output_dir = '../dc-campaign-finance-watch/json'
+output_dir = '../json'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 nested_filename = os.path.join(output_dir, 'grassroot-donors.json')
@@ -96,7 +98,7 @@ for rownum in range(0, len(yo.index)):
 nested = nested + ']'
 nested = nested.replace('\n', '').replace('\r', '').replace('},]', '}]')
 
-output_dir = '../dc-campaign-finance-watch/json'
+output_dir = '../json'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 nested_filename = os.path.join(output_dir, 'grassroot-dollars.json')
@@ -138,7 +140,7 @@ for rownum in range(0, len(yo.index)):
             nested = nested + ','
 nested = nested + ']'
 nested = nested.replace('\n', '').replace('\r', '').replace('},]', '}]')
-output_dir = '../dc-campaign-finance-watch/json'
+output_dir = '../json'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 nested_filename = os.path.join(output_dir, 'corporate-donors.json')
@@ -178,7 +180,7 @@ for rownum in range(0, len(yo.index)):
             nested = nested + ','
 nested = nested + ']'
 nested = nested.replace('\n', '').replace('\r', '').replace('},]', '}]')
-output_dir = '../dc-campaign-finance-watch/json'
+output_dir = '../json'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 nested_filename = os.path.join(output_dir, 'corporate-dollars.json')

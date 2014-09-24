@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # This file downloads data from the DC Office of Campaign Finance
 # and generates various data tables suitable for graphing.
 # It uses @sshanabrook's awesome dc_campaign_finance_data package.
@@ -10,7 +11,7 @@ from  dc_campaign_finance_scraper import scraper
 
 '''setup up input and output directories'''
 
-csv_dir = '../dc-campaign-finance-data/csv'
+csv_dir = '../csv'
 if not os.path.exists(csv_dir):
     os.makedirs(csv_dir)
 

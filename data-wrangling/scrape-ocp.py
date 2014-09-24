@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Scrape contract award data
+
 import os
 import mechanicalsoup
 from bs4 import BeautifulSoup
@@ -44,7 +45,7 @@ for row in data_rows:
     data.append(cleaned_row)
 
 # save to csv file
-input_dir = '../dc-campaign-finance-data/csv'
+input_dir = '../csv'
 if not os.path.exists(input_dir):
     os.makedirs(input_dir)
 filename = os.path.join(input_dir, 'ocp_awards.csv')

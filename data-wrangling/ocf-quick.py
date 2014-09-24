@@ -1,7 +1,9 @@
+#!/usr/bin/env python3
+
 import os
 from urllib import request
 
-csv_dir = '../dc-campaign-finance-data/csv'
+csv_dir = '../csv'
 if not os.path.exists(csv_dir):
     os.makedirs(csv_dir)
 
