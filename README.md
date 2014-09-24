@@ -103,6 +103,10 @@ In DC -  Solicitations and local registered CBE’s use something called [NIGP c
 
 One can find local businesses [here](https://lsdbe.dslbd.dc.gov/public/certification/search.aspx) and if one click on a business the NIGP codes for which it is certified are revealed.  One caveat, this is only DC CBE’s – so will not capture any information about the Large Businesses (Deloitte, CACI, etc.) that do business in the District and CBE’s can win solicitations in other than their NIGP codes.
 
+###Goal 5: Basic contributor search
+
+Organize the data by contributor, to generate a table of top contributors, and power a search wherein a citizen can enter the name of a individual or organization to see a basic table of contribution history -- how much have they given, to whome, when. Ideally this eventually covers both current cycle and historical races. 
+
 
 ###Future Goals:
 
