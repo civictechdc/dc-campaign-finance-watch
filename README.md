@@ -6,7 +6,7 @@ DC Campaign Finance Watch uses open source tools and publicly available data to 
 
 ## Components
 
-The project comprises several components, each with a discrete task.
+The project comprises several components.  
 
 ### DC Campaign Finance Scraper
 
@@ -19,7 +19,7 @@ The DC Public Contracts Scraper pulls data from the District's [Office of Campai
 
 #### DC Campaign Finance Wrangler
 
-These are python scripts that we use to analyze the data.  They are broken into two functions, each of which is intended to be run every night.  (1) download (downloads campaign finance and public conract data); (2) wrangler (turns that data into graphable json files for the website).  They are scripts located in the 'wrangler' directory of the 'watch' repo. 
+These are python scripts that we use to analyze the data.  They are broken into two functions, each of which is intended to be run every night.  (1) download (downloads campaign finance and public contract data); (2) wrangler (turns that data into graphable json files for the website).  They are scripts located in the 'wrangler' directory of the 'watch' repo. 
 
 #### DC Campaign Finance Data
 
@@ -32,7 +32,7 @@ Where you are now.  This is the front end that display the analyses we develop.
 
 # Roadmap
 
-The following  lays out a path for the development of the website that will track campaign finance data, and help citizens, news media, and candidates make sense of that data with those tools.
+The following describes a provisional path for the development of the website that will track campaign finance data, and help citizens, news media, and candidates make sense of that data with those tools.
 
 Our roadmap recognizes that all data analysis is normative; every graph tells a story and helps people draw conclusions. As such, we pay close attention to the kinds of stories our analyses underwrite. It also acknowledges that some projects are more ambitious than others, and will require more data than we have at present.
 
@@ -51,7 +51,7 @@ There are several metrics we could use for evaluating grassroot support.  One is
 
 ####Corporate Influence
 
-There are two straightforward ways to provide the corporate cash ranking: number of corporate donors & percent of warchest from coporate donors.  Showing both side-by-side / above-below is preferable to toggling.
+There are two straightforward ways to provide the corporate cash ranking: number of corporate donors & percent of warchest from corporate donors.  Showing both side-by-side / above-below is preferable to toggling.
 
 ####Organization
 
@@ -82,7 +82,7 @@ But we could throw them in at the bottom.
 
 It will default to the current year, but will allow selection of all prior years for which data are available. Ian’s design seems to work well to this end, though we really only need two drop-down selectors.
 
-When any race is selected, a Summary page will show the few most important data points we choose in a chart, such as: loal contributors, % from individual donors vs corporate donors, total money raised. (We do NOT want to sort by the total money raised as this horse race is not the most civially important). Large tabs will allow the citizen to view more data on our two topic areas Grassroots Support (ie: number of individual contributors, % from individual donors, average contribution size, location of donors, etc) and Corporate Influence (number of corporate contributors, % from corporate contributors, total cash from corporate contributors, average contribution size, etc). Graphics can be used as needed. A very, very rough wireframe of this idea: https://cloudup.com/c8TwWZ3LICC
+When any race is selected, a Summary page will show the few most important data points we choose in a chart, such as: local contributors, % from individual donors vs corporate donors, total money raised. (We do NOT want to sort by the total money raised as this horse race is not the most civically important). Large tabs will allow the citizen to view more data on our two topic areas Grassroots Support (ie: number of individual contributors, % from individual donors, average contribution size, location of donors, etc) and Corporate Influence (number of corporate contributors, % from corporate contributors, total cash from corporate contributors, average contribution size, etc). Graphics can be used as needed. A very, very rough wireframe of this idea: https://cloudup.com/c8TwWZ3LICC
 
 ###Goal 2: Automation
 The next step will not provide more analyses, but rather will increase the automation of data analysis and distribution.
@@ -124,7 +124,7 @@ Add blog. Maybe using Poole? Include in angular gh-pages or vice-versa? Custom d
 
 Add party affiliations. Would be a new code related to candidate & election cycle (some candidates change affiliation).
 
-contribution timing / filters. Post-election & pre-legislation contributions to catch "pay-to-play" post-win contribubtions.
+contribution timing / filters. Post-election & pre-legislation contributions to catch "pay-to-play" post-win contributions.
 
 Big v Small donors: Count of small donors; Count of large donors; Sum of small donors; Sum of large donors; Percent of “max-ers”
 
