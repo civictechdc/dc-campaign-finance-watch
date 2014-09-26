@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+'''This is really just a bookmark to a straightforward donwload link for limited data'''
+
 
 import os
 from urllib import request

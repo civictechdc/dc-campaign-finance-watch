@@ -28,8 +28,8 @@ yo = yo.reset_index()
 yo = pd.DataFrame(yo[['Election Year', 'Office']]).sort(['Election Year', 'Office'],ascending=[0,1])
 filename = os.path.join(input_dir, 'office_order.csv')
 oo = pd.read_csv(filename)
-yo = pd.merge(yo, oo, how='left', left_on='Office', right_on='office')
-yo = yo.sort(columns=['Election Year','order'], ascending=[0,1])
+yo = pd.merge(yo, oo, how='left', left_on='Office', right_on='Office')
+yo = yo.sort(columns=['Election Year','Order'], ascending=[0,1])
 
 
 # json files for grassroot contributor count graphs
