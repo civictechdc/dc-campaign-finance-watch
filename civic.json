@@ -1,0 +1,23 @@
+{
+        "status": "Beta",
+        "thumbnailUrl": "",
+        "contact": {
+            "name":"Donald Braman",
+            "email":"donald.braman@gmail.com",
+            "twitter":"@donaldbraman"
+        },
+        "bornAt": "Code for DC",
+        "geography": "DC",
+        "politicalEntity": {"DC Office of Campaign Finance": "http://www.ocf.dc.gov"},
+        "governmentPartner": {},
+        "communityPartner": {},
+        "type": "Web App",
+        "needs": [],
+        "categories": [
+                {"category":"Politics"}, 
+                {"category":"Financial"},
+                {"category":"Open Data"},
+                {"category":"Campaign Finance"}
+        ],
+        "moreInfo":""
+}

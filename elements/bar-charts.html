@@ -1,0 +1,14 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+<polymer-element name="bar-charts" attributes="source" noscript>
+  <template>
+    <core-ajax auto url="{{source}}" response="{{items}}" handleAs="json"></core-ajax>
+    <template repeat="{{item in items}}">
+      <google-chart type='bar' height='400px' width='100%'
+        options='{{item.options}}' cols='{{item.cols}}'
+        rows='{{item.rows}}' data='{{item.data}}'>
+      </google-chart>
+    </template>
+  </template>
+</polymer-element>

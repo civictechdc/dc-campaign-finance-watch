@@ -1,0 +1,12 @@
+{
+  "name": "dc-campaign-finance-watch",
+  "dependencies": {
+    "polymer": "Polymer/polymer#master",
+    "core-ajax": "Polymer/core-ajax#master",
+    "paper-elements": "Polymer/paper-elements",
+    "core-menu-button": "Polymer/core-menu-button",
+    "core-scaffold": "Polymer/core-scaffold",
+    "core-pages": "Polymer/core-pages",
+    "google-chart": "GoogleWebComponents/google-chart#master"
+  }
+}
