@@ -1,3 +1,0 @@
-numpy==1.8.1
-pandas==0.14.0
-dc-campaign-finance-data==0.4.3
