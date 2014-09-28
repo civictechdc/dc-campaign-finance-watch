@@ -8,6 +8,7 @@ import os
 import io
 import pandas as pd
 import numpy as np
+import simplejson
 
 input_dir = '../csv'
 output_dir = '../json'
@@ -48,7 +49,8 @@ for rownum in range(0, len(yo.index)):
     cols = '[{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}]'
     rows = '['
     for rnum in range(0, len(data.index)):
-        rows = rows + '["' + data['Candidate Name'][rnum] + '", ' + str(data['DC Donors'][rnum]) + ']'
+        rows = rows + '''
+            ["''' + data['Candidate Name'][rnum] + '", ' + str(data['DC Donors'][rnum]) + ']'
         if rnum + 1 < len(data.index): rows = rows + ','
     rows = rows + ']'
     title = str(office) + ' (' + str(year) + ')'
@@ -67,7 +69,7 @@ if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 nested_filename = os.path.join(output_dir, 'grassroot-donors.json')
 with open(nested_filename, 'w') as f:
-    f.write(nested)
+    f.write(simplejson.dumps(simplejson.loads(nested), indent=4, sort_keys=True))
 f.close()
 
 
@@ -103,7 +105,7 @@ if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 nested_filename = os.path.join(output_dir, 'grassroot-dollars.json')
 with open(nested_filename, 'w') as f:
-    f.write(nested)
+    f.write(simplejson.dumps(simplejson.loads(nested), indent=4, sort_keys=True))
 f.close()
 
 
@@ -145,7 +147,7 @@ if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 nested_filename = os.path.join(output_dir, 'corporate-donors.json')
 with open(nested_filename, 'w') as f:
-    f.write(nested)
+    f.write(simplejson.dumps(simplejson.loads(nested), indent=4, sort_keys=True))
 f.close()
 
 
@@ -185,6 +187,6 @@ if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 nested_filename = os.path.join(output_dir, 'corporate-dollars.json')
 with open(nested_filename, 'w') as f:
-    f.write(nested)
+    f.write(simplejson.dumps(simplejson.loads(nested), indent=4, sort_keys=True))
 f.close()
 

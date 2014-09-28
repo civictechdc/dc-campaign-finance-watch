@@ -1,1 +1,422 @@
-[{"year": "2014", "title": "Mayor (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Corporate Dollars", "type": "number"}], "rows": [["Muriel E Bowser", 537551.0],["Vincent C Gray", 282227.57],["Jack Evans", 189347.07],["David Catania", 37100.0],["Vincent Orange", 29990.0],["Andy Shallal", 3100.0],["Christian Carter", 1642.99],["Reta Jo Lewis", 916.78],["Carol Schwartz", 100.0]], "options": {  "title": "Mayor (2014)",  "hAxis": {"title": "Corporate Dollars"}, "legend": "none"}},{"year": "2014", "title": "Council Chairman (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Corporate Dollars", "type": "number"}], "rows": [["Phil Mendelson", 22860.97]], "options": {  "title": "Council Chairman (2014)",  "hAxis": {"title": "Corporate Dollars"}, "legend": "none"}},{"year": "2014", "title": "Council At-Large (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Corporate Dollars", "type": "number"}], "rows": [["Anita Bonds", 36976.0],["Eric Jones", 11950.0],["John F Settles", 8900.0],["Khalid Pitts", 6100.0],["Robert White", 3950.0],["Brian Hart", 2150.14],["Nate Bennett Fleming", 2000.0],["Graylan Hagler", 1200.0],["Kishan Putta", 1000.0],["Marc Morgan", 1000.0],["Pedro Rubio", 1000.0]], "options": {  "title": "Council At-Large (2014)",  "hAxis": {"title": "Corporate Dollars"}, "legend": "none"}},{"year": "2014", "title": "Council Ward 1 (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Corporate Dollars", "type": "number"}], "rows": [["Brianne Nadeau", 36690.0],["Jim Graham", 30650.0],["Beverley Wheeler", 1000.0]], "options": {  "title": "Council Ward 1 (2014)",  "hAxis": {"title": "Corporate Dollars"}, "legend": "none"}},{"year": "2014", "title": "Council Ward 3 (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Corporate Dollars", "type": "number"}], "rows": [["Mary M Cheh", 8750.0]], "options": {  "title": "Council Ward 3 (2014)",  "hAxis": {"title": "Corporate Dollars"}, "legend": "none"}},{"year": "2014", "title": "Council Ward 5 (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Corporate Dollars", "type": "number"}], "rows": [["Kenyan McDuffie", 20800.0],["Kathy Henderson", 1750.0]], "options": {  "title": "Council Ward 5 (2014)",  "hAxis": {"title": "Corporate Dollars"}, "legend": "none"}},{"year": "2014", "title": "Council Ward 6 (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Corporate Dollars", "type": "number"}], "rows": [["Darrel Thompson", 3750.0]], "options": {  "title": "Council Ward 6 (2014)",  "hAxis": {"title": "Corporate Dollars"}, "legend": "none"}},{"year": "2014", "title": "Attorney General (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Corporate Dollars", "type": "number"}], "rows": [["Paul Zukerberg", 8900.0],["Karl A Racine", 1500.0],["Edward Smith", 1000.0]], "options": {  "title": "Attorney General (2014)",  "hAxis": {"title": "Corporate Dollars"}, "legend": "none"}},{"year": "2014", "title": "School Board Ward 1 (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Corporate Dollars", "type": "number"}], "rows": [["Scott Simpson", 200.0]], "options": {  "title": "School Board Ward 1 (2014)",  "hAxis": {"title": "Corporate Dollars"}, "legend": "none"}},{"year": "2014", "title": "School Board Ward 8 (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Corporate Dollars", "type": "number"}], "rows": [["Philip E Pannell", 1425.0]], "options": {  "title": "School Board Ward 8 (2014)",  "hAxis": {"title": "Corporate Dollars"}, "legend": "none"}},{"year": "2014", "title": "US Senator (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Corporate Dollars", "type": "number"}], "rows": [["Paul Strauss", 2465.0],["James S Bubar", 2000.0]], "options": {  "title": "US Senator (2014)",  "hAxis": {"title": "Corporate Dollars"}, "legend": "none"}},{"year": "2014", "title": "At-Large DC Democratic State Committee (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Corporate Dollars", "type": "number"}], "rows": [["Barrie Daneker", 298.0]], "options": {  "title": "At-Large DC Democratic State Committee (2014)",  "hAxis": {"title": "Corporate Dollars"}, "legend": "none"}}]
+[
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Mayor (2014)"
+        },
+        "rows": [
+            [
+                "Muriel E Bowser",
+                537551.0
+            ],
+            [
+                "Vincent C Gray",
+                282227.57
+            ],
+            [
+                "Jack Evans",
+                189347.07
+            ],
+            [
+                "David Catania",
+                58925.0
+            ],
+            [
+                "Vincent Orange",
+                29990.0
+            ],
+            [
+                "Andy Shallal",
+                3100.0
+            ],
+            [
+                "Christian Carter",
+                1642.99
+            ],
+            [
+                "Reta Jo Lewis",
+                916.78
+            ],
+            [
+                "Carol Schwartz",
+                100.0
+            ]
+        ],
+        "title": "Mayor (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Chairman (2014)"
+        },
+        "rows": [
+            [
+                "Phil Mendelson",
+                22860.97
+            ]
+        ],
+        "title": "Council Chairman (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council At-Large (2014)"
+        },
+        "rows": [
+            [
+                "Anita Bonds",
+                36976.0
+            ],
+            [
+                "Eric Jones",
+                11950.0
+            ],
+            [
+                "John F Settles",
+                8900.0
+            ],
+            [
+                "Khalid Pitts",
+                6100.0
+            ],
+            [
+                "Robert White",
+                3950.0
+            ],
+            [
+                "Brian Hart",
+                2150.14
+            ],
+            [
+                "Nate Bennett Fleming",
+                2000.0
+            ],
+            [
+                "Graylan Hagler",
+                1200.0
+            ],
+            [
+                "Kishan Putta",
+                1000.0
+            ],
+            [
+                "Marc Morgan",
+                1000.0
+            ],
+            [
+                "Pedro Rubio",
+                1000.0
+            ]
+        ],
+        "title": "Council At-Large (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Ward 1 (2014)"
+        },
+        "rows": [
+            [
+                "Brianne Nadeau",
+                36690.0
+            ],
+            [
+                "Jim Graham",
+                30650.0
+            ],
+            [
+                "Beverley Wheeler",
+                1000.0
+            ]
+        ],
+        "title": "Council Ward 1 (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Ward 3 (2014)"
+        },
+        "rows": [
+            [
+                "Mary M Cheh",
+                8750.0
+            ]
+        ],
+        "title": "Council Ward 3 (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Ward 5 (2014)"
+        },
+        "rows": [
+            [
+                "Kenyan McDuffie",
+                20800.0
+            ],
+            [
+                "Kathy Henderson",
+                1750.0
+            ]
+        ],
+        "title": "Council Ward 5 (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Ward 6 (2014)"
+        },
+        "rows": [
+            [
+                "Darrel Thompson",
+                3750.0
+            ]
+        ],
+        "title": "Council Ward 6 (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Attorney General (2014)"
+        },
+        "rows": [
+            [
+                "Paul Zukerberg",
+                8900.0
+            ],
+            [
+                "Karl A Racine",
+                1500.0
+            ],
+            [
+                "Edward Smith",
+                1000.0
+            ]
+        ],
+        "title": "Attorney General (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "School Board Ward 1 (2014)"
+        },
+        "rows": [
+            [
+                "Scott Simpson",
+                200.0
+            ]
+        ],
+        "title": "School Board Ward 1 (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "School Board Ward 8 (2014)"
+        },
+        "rows": [
+            [
+                "Philip E Pannell",
+                1425.0
+            ]
+        ],
+        "title": "School Board Ward 8 (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "US Senator (2014)"
+        },
+        "rows": [
+            [
+                "Paul Strauss",
+                2465.0
+            ],
+            [
+                "James S Bubar",
+                2000.0
+            ]
+        ],
+        "title": "US Senator (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "At-Large DC Democratic State Committee (2014)"
+        },
+        "rows": [
+            [
+                "Barrie Daneker",
+                298.0
+            ]
+        ],
+        "title": "At-Large DC Democratic State Committee (2014)",
+        "year": "2014"
+    }
+]

@@ -1,1 +1,711 @@
-[{"year": "2014", "title": "Mayor (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Muriel E Bowser", 2505],["Tommy Wells", 1654],["Jack Evans", 1332],["Vincent C Gray", 956],["David Catania", 699],["Andy Shallal", 399],["Reta Jo Lewis", 183],["Carol Schwartz", 81],["Vincent Orange", 72],["Christian Carter", 3],["Nestor DJonkam", 3],["Bruce Majors", 2],["Michael L Green", 1]], "options": {  "title": "Mayor (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "Council Chairman (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Phil Mendelson", 172],["Kris Hammond", 44],["John C Cheeks", 4]], "options": {  "title": "Council Chairman (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "Council At-Large (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Elissa Silverman", 280],["Robert White", 246],["Anita Bonds", 227],["John F Settles", 143],["Nate Bennett Fleming", 112],["Khalid Pitts", 103],["Brian Hart", 102],["Graylan Hagler", 64],["Eugene Puryear", 51],["Kishan Putta", 49],["Marc Morgan", 36],["Eric Jones", 25],["Wendell Felder", 7],["Pedro Rubio", 5],["Michael D Brown", 2],["Kevin Valentine", 2],["Calvin H Gurley", 1]], "options": {  "title": "Council At-Large (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "Council Ward 1 (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Brianne Nadeau", 1055],["Jim Graham", 200],["Bryan Weaver", 165],["Beverley Wheeler", 13],["Ernest E Johnson", 2]], "options": {  "title": "Council Ward 1 (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "Council Ward 3 (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Mary M Cheh", 117]], "options": {  "title": "Council Ward 3 (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "Council Ward 5 (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Kenyan McDuffie", 421],["Kathy Henderson", 34]], "options": {  "title": "Council Ward 5 (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "Council Ward 6 (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Charles Allen", 683],["Darrel Thompson", 319],["Shelonda Tillman", 9]], "options": {  "title": "Council Ward 6 (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "Attorney General (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Edward Smith", 207],["Paul Zukerberg", 50],["Lorie Masters", 30],["Lateefah Williams", 16],["Karl A Racine", 9]], "options": {  "title": "Attorney General (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "School Board Ward 1 (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Scott Simpson", 119],["David Do", 46],["Laura Wilson Phelan", 19],["Lillian Perdomo", 7]], "options": {  "title": "School Board Ward 1 (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "School Board Ward 3 (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["W. Philip Thomas", 1]], "options": {  "title": "School Board Ward 3 (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "School Board Ward 5 (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Mark Jones", 1]], "options": {  "title": "School Board Ward 5 (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "School Board Ward 8 (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Philip E Pannell", 71],["Tierra Jolly", 27],["Darrell Gaston", 23],["Derrell Simpson", 11]], "options": {  "title": "School Board Ward 8 (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "US Representative (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Franklin Garcia", 1]], "options": {  "title": "US Representative (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "US Senator (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Paul Strauss", 70],["David Schwartzman", 3],["Glenda J Richmond", 2]], "options": {  "title": "US Senator (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "Alternate Democratic National Committeewoman (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Winifred Y Carson Smith", 1]], "options": {  "title": "Alternate Democratic National Committeewoman (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "At-Large DC Democratic State Committee (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Barrie Daneker", 60]], "options": {  "title": "At-Large DC Democratic State Committee (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "Democratic National Committeeman (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Michael Panetta", 38]], "options": {  "title": "Democratic National Committeeman (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "Democratic National Committeewoman (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Acqunetta Anderson", 3]], "options": {  "title": "Democratic National Committeewoman (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}},{"year": "2014", "title": "Ward 3 DC Democratic State Committee (2014)", "cols": [{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}], "rows": [["Robert M Brandon", 5]], "options": {  "title": "Ward 3 DC Democratic State Committee (2014)",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}}]
+[
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Mayor (2014)"
+        },
+        "rows": [
+            [
+                "Muriel E Bowser",
+                2504
+            ],
+            [
+                "Tommy Wells",
+                1654
+            ],
+            [
+                "Jack Evans",
+                1332
+            ],
+            [
+                "David Catania",
+                1171
+            ],
+            [
+                "Vincent C Gray",
+                956
+            ],
+            [
+                "Andy Shallal",
+                399
+            ],
+            [
+                "Reta Jo Lewis",
+                183
+            ],
+            [
+                "Carol Schwartz",
+                81
+            ],
+            [
+                "Vincent Orange",
+                72
+            ],
+            [
+                "Christian Carter",
+                3
+            ],
+            [
+                "Nestor DJonkam",
+                3
+            ],
+            [
+                "Bruce Majors",
+                2
+            ],
+            [
+                "Michael L Green",
+                1
+            ]
+        ],
+        "title": "Mayor (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Chairman (2014)"
+        },
+        "rows": [
+            [
+                "Phil Mendelson",
+                172
+            ],
+            [
+                "Kris Hammond",
+                44
+            ],
+            [
+                "John C Cheeks",
+                4
+            ]
+        ],
+        "title": "Council Chairman (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council At-Large (2014)"
+        },
+        "rows": [
+            [
+                "Elissa Silverman",
+                280
+            ],
+            [
+                "Robert White",
+                246
+            ],
+            [
+                "Anita Bonds",
+                227
+            ],
+            [
+                "John F Settles",
+                143
+            ],
+            [
+                "Nate Bennett Fleming",
+                112
+            ],
+            [
+                "Khalid Pitts",
+                103
+            ],
+            [
+                "Brian Hart",
+                102
+            ],
+            [
+                "Graylan Hagler",
+                64
+            ],
+            [
+                "Eugene Puryear",
+                51
+            ],
+            [
+                "Kishan Putta",
+                49
+            ],
+            [
+                "Marc Morgan",
+                36
+            ],
+            [
+                "Eric Jones",
+                25
+            ],
+            [
+                "Wendell Felder",
+                7
+            ],
+            [
+                "Pedro Rubio",
+                5
+            ],
+            [
+                "Michael D Brown",
+                2
+            ],
+            [
+                "Kevin Valentine",
+                2
+            ],
+            [
+                "Calvin H Gurley",
+                1
+            ]
+        ],
+        "title": "Council At-Large (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Ward 1 (2014)"
+        },
+        "rows": [
+            [
+                "Brianne Nadeau",
+                1055
+            ],
+            [
+                "Jim Graham",
+                200
+            ],
+            [
+                "Bryan Weaver",
+                165
+            ],
+            [
+                "Beverley Wheeler",
+                13
+            ],
+            [
+                "Ernest E Johnson",
+                2
+            ]
+        ],
+        "title": "Council Ward 1 (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Ward 3 (2014)"
+        },
+        "rows": [
+            [
+                "Mary M Cheh",
+                117
+            ]
+        ],
+        "title": "Council Ward 3 (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Ward 5 (2014)"
+        },
+        "rows": [
+            [
+                "Kenyan McDuffie",
+                421
+            ],
+            [
+                "Kathy Henderson",
+                34
+            ]
+        ],
+        "title": "Council Ward 5 (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Ward 6 (2014)"
+        },
+        "rows": [
+            [
+                "Charles Allen",
+                683
+            ],
+            [
+                "Darrel Thompson",
+                318
+            ],
+            [
+                "Shelonda Tillman",
+                9
+            ]
+        ],
+        "title": "Council Ward 6 (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Attorney General (2014)"
+        },
+        "rows": [
+            [
+                "Edward Smith",
+                207
+            ],
+            [
+                "Paul Zukerberg",
+                50
+            ],
+            [
+                "Lorie Masters",
+                30
+            ],
+            [
+                "Lateefah Williams",
+                16
+            ],
+            [
+                "Karl A Racine",
+                9
+            ]
+        ],
+        "title": "Attorney General (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "School Board Ward 1 (2014)"
+        },
+        "rows": [
+            [
+                "Scott Simpson",
+                119
+            ],
+            [
+                "David Do",
+                46
+            ],
+            [
+                "Laura Wilson Phelan",
+                19
+            ],
+            [
+                "Lillian Perdomo",
+                7
+            ]
+        ],
+        "title": "School Board Ward 1 (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "School Board Ward 3 (2014)"
+        },
+        "rows": [
+            [
+                "W. Philip Thomas",
+                1
+            ]
+        ],
+        "title": "School Board Ward 3 (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "School Board Ward 5 (2014)"
+        },
+        "rows": [
+            [
+                "Mark Jones",
+                1
+            ]
+        ],
+        "title": "School Board Ward 5 (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "School Board Ward 8 (2014)"
+        },
+        "rows": [
+            [
+                "Philip E Pannell",
+                71
+            ],
+            [
+                "Tierra Jolly",
+                27
+            ],
+            [
+                "Darrell Gaston",
+                23
+            ],
+            [
+                "Derrell Simpson",
+                11
+            ]
+        ],
+        "title": "School Board Ward 8 (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "US Representative (2014)"
+        },
+        "rows": [
+            [
+                "Franklin Garcia",
+                1
+            ]
+        ],
+        "title": "US Representative (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "US Senator (2014)"
+        },
+        "rows": [
+            [
+                "Paul Strauss",
+                70
+            ],
+            [
+                "David Schwartzman",
+                3
+            ],
+            [
+                "Glenda J Richmond",
+                2
+            ]
+        ],
+        "title": "US Senator (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Alternate Democratic National Committeewoman (2014)"
+        },
+        "rows": [
+            [
+                "Winifred Y Carson Smith",
+                1
+            ]
+        ],
+        "title": "Alternate Democratic National Committeewoman (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "At-Large DC Democratic State Committee (2014)"
+        },
+        "rows": [
+            [
+                "Barrie Daneker",
+                60
+            ]
+        ],
+        "title": "At-Large DC Democratic State Committee (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Democratic National Committeeman (2014)"
+        },
+        "rows": [
+            [
+                "Michael Panetta",
+                38
+            ]
+        ],
+        "title": "Democratic National Committeeman (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Democratic National Committeewoman (2014)"
+        },
+        "rows": [
+            [
+                "Acqunetta Anderson",
+                2
+            ]
+        ],
+        "title": "Democratic National Committeewoman (2014)",
+        "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Ward 3 DC Democratic State Committee (2014)"
+        },
+        "rows": [
+            [
+                "Robert M Brandon",
+                5
+            ]
+        ],
+        "title": "Ward 3 DC Democratic State Committee (2014)",
+        "year": "2014"
+    }
+]
