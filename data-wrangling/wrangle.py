@@ -15,11 +15,13 @@ output_dir = '../json'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
+
+
 # read in data and clean up a bit
 filename = os.path.join(input_dir, 'ocf_contributions.csv')
 contributions = pd.read_csv(filename)
 contributions['Amount'] = contributions['Amount'].str.replace(',', '').str.replace('$', '').str.replace('(', '').str.replace(')', '').astype('float')
-contributions = contributions[contributions['Election Year'] == 2014]
+contributions = contributions[contributions['Election Year'] > 2009]
 contributions['Election Year'] = contributions['Election Year'].astype('int16')
 
 # make a list of offices for each election year
@@ -31,6 +33,34 @@ filename = os.path.join(input_dir, 'office_order.csv')
 oo = pd.read_csv(filename)
 yo = pd.merge(yo, oo, how='left', left_on='Office', right_on='Office')
 yo = yo.sort(columns=['Election Year','Order'], ascending=[0,1])
+years = yo['Election Year'].drop_duplicates()
+nested = '['
+for yearnum in range(0, len(years.index)):
+    year = years.iloc[yearnum]
+    nested = nested + '{"year": "'+ str(year) + '", "offices": ['
+    oneyear = yo[yo['Election Year'] ==  year]
+    offices = oneyear['Office']
+    for officenum in range(0, len(offices.index)): 
+        office = offices.iloc[officenum]
+        nested = nested + '"' + office + '"'
+        if officenum < len(offices.index)-1: 
+            nested = nested + ','
+    nested = nested + ']}'
+    if yearnum < len(years.index)-1: 
+        nested = nested + ','
+nested = nested + ']'
+
+nested = nested.replace('\n', '').replace('\r', '')
+
+output_dir = '../json'
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+nested_filename = os.path.join(output_dir, 'years and offices.json')
+with open(nested_filename, 'w') as f:
+    f.write(simplejson.dumps(simplejson.loads(nested), indent=4, sort_keys=True))
+f.close()
+
+
 
 
 # json files for grassroot contributor count graphs
@@ -59,7 +89,7 @@ for rownum in range(0, len(yo.index)):
     graphjson = graphjson.replace("'", '"')
     if len(rows) > 3:
         nested = nested + graphjson
-        if rownum +1 < len(yo.index):
+        if rownum < len(yo.index)-1:
             nested = nested + ','
 nested = nested + ']'
 nested = nested.replace('\n', '').replace('\r', '').replace('},]', '}]')
@@ -95,7 +125,7 @@ for rownum in range(0, len(yo.index)):
     graphjson = graphjson.replace("'", '"')
     if len(rows) > 2:
         nested = nested + graphjson
-        if rownum +1 < len(yo.index):
+        if rownum < len(yo.index)-1:
             nested = nested + ','
 nested = nested + ']'
 nested = nested.replace('\n', '').replace('\r', '').replace('},]', '}]')

@@ -418,5 +418,979 @@
         ],
         "title": "At-Large DC Democratic State Committee (2014)",
         "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council At-Large (2013)"
+        },
+        "rows": [
+            [
+                "Anita Bonds",
+                46505.0
+            ],
+            [
+                "Patrick Mara",
+                27950.0
+            ],
+            [
+                "Michael A Brown",
+                11500.0
+            ],
+            [
+                "Matthew Frumin",
+                1750.0
+            ],
+            [
+                "Paul Zukerberg",
+                1202.5
+            ]
+        ],
+        "title": "Council At-Large (2013)",
+        "year": "2013"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Chairman (2012)"
+        },
+        "rows": [
+            [
+                "Phil Mendelson",
+                76609.0
+            ]
+        ],
+        "title": "Council Chairman (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council At-Large (2012)"
+        },
+        "rows": [
+            [
+                "Michael A Brown",
+                79715.47
+            ],
+            [
+                "Vincent Orange",
+                74200.0
+            ],
+            [
+                "David Grosso",
+                28013.07
+            ],
+            [
+                "Sekou Biddle",
+                15550.0
+            ],
+            [
+                "Leon J Swain",
+                7700.0
+            ],
+            [
+                "Peter Shapiro",
+                5800.0
+            ],
+            [
+                "Mary  Brooks Beatty",
+                4930.0
+            ],
+            [
+                "A.J  Cooper",
+                2200.0
+            ]
+        ],
+        "title": "Council At-Large (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Ward 2 (2012)"
+        },
+        "rows": [
+            [
+                "Jack Evans",
+                81075.0
+            ]
+        ],
+        "title": "Council Ward 2 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Ward 4 (2012)"
+        },
+        "rows": [
+            [
+                "Muriel Bowser",
+                89163.2
+            ],
+            [
+                "Baruti Jahi",
+                575.0
+            ],
+            [
+                "Max Skolnik",
+                507.4
+            ]
+        ],
+        "title": "Council Ward 4 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Ward 5 (2012)"
+        },
+        "rows": [
+            [
+                "Kenyan McDuffie",
+                26220.0
+            ],
+            [
+                "Frank Wilds",
+                13580.0
+            ],
+            [
+                "Delano D Hunter",
+                9760.0
+            ],
+            [
+                "Drew Hubbard",
+                8660.01
+            ],
+            [
+                "John T Salatti",
+                1500.0
+            ],
+            [
+                "Tim Day",
+                1200.0
+            ],
+            [
+                "Ron L Magnus",
+                750.0
+            ],
+            [
+                "Shelly Gardner",
+                700.0
+            ],
+            [
+                "John C Cheeks",
+                500.0
+            ],
+            [
+                "William Boston",
+                100.0
+            ],
+            [
+                "Robert Albrecht",
+                12.99
+            ]
+        ],
+        "title": "Council Ward 5 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Ward 7 (2012)"
+        },
+        "rows": [
+            [
+                "Yvette M Alexander",
+                43495.0
+            ],
+            [
+                "Tom Brown",
+                8400.0
+            ],
+            [
+                "Ronald L Moten",
+                3181.85
+            ],
+            [
+                "Kevin B Chavous",
+                3000.0
+            ],
+            [
+                "William H Bennett",
+                1195.07
+            ]
+        ],
+        "title": "Council Ward 7 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Ward 8 (2012)"
+        },
+        "rows": [
+            [
+                "Marion Barry",
+                60875.0
+            ],
+            [
+                "Sandra Seegars",
+                720.0
+            ],
+            [
+                "Jacque D Patterson",
+                660.0
+            ],
+            [
+                "Natalie Williams",
+                600.0
+            ],
+            [
+                "Darrell Gaston",
+                100.0
+            ]
+        ],
+        "title": "Council Ward 8 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "School Board Ward 8 (2012)"
+        },
+        "rows": [
+            [
+                "Philip E Pannell",
+                900.0
+            ],
+            [
+                "Trayon  White",
+                700.0
+            ]
+        ],
+        "title": "School Board Ward 8 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "US Senator (2012)"
+        },
+        "rows": [
+            [
+                "Michael D Brown",
+                500.0
+            ],
+            [
+                "Nelson F Rimensnyder",
+                100.0
+            ]
+        ],
+        "title": "US Senator (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Republican National Committeewoman (2012)"
+        },
+        "rows": [
+            [
+                "Jill Homan",
+                300.0
+            ],
+            [
+                "Teri Galvez",
+                200.0
+            ]
+        ],
+        "title": "Republican National Committeewoman (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Republican National Committeeman (2012)"
+        },
+        "rows": [
+            [
+                "Jordan Gehrke",
+                800.0
+            ],
+            [
+                "Robert J Kabel",
+                400.0
+            ]
+        ],
+        "title": "Republican National Committeeman (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council At-Large (2011)"
+        },
+        "rows": [
+            [
+                "Vincent Orange",
+                57485.0
+            ],
+            [
+                "Sekou Biddle",
+                46000.0
+            ],
+            [
+                "Patrick Mara",
+                11450.0
+            ],
+            [
+                "Joshua Lopez",
+                7072.0
+            ],
+            [
+                "Jacque D Patterson",
+                4650.0
+            ],
+            [
+                "Tom Brown",
+                2250.0
+            ],
+            [
+                "Bryan Weaver",
+                2050.0
+            ]
+        ],
+        "title": "Council At-Large (2011)",
+        "year": "2011"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "School Board Ward 4 (2011)"
+        },
+        "rows": [
+            [
+                "D. Kamili Anderson",
+                1200.0
+            ],
+            [
+                "Andrew Moss",
+                800.0
+            ],
+            [
+                "An Almquist",
+                500.0
+            ]
+        ],
+        "title": "School Board Ward 4 (2011)",
+        "year": "2011"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "School Board Ward 8 (2011)"
+        },
+        "rows": [
+            [
+                "Philip Pannell",
+                1300.0
+            ],
+            [
+                "Eugene D Kinlow",
+                1200.0
+            ],
+            [
+                "Anthony Muhammad",
+                1000.0
+            ],
+            [
+                "Sandra V Williams",
+                200.0
+            ],
+            [
+                "Tijwanna U Phillips",
+                200.0
+            ]
+        ],
+        "title": "School Board Ward 8 (2011)",
+        "year": "2011"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Mayor (2010)"
+        },
+        "rows": [
+            [
+                "Vincent C Gray",
+                500226.49
+            ],
+            [
+                "Adrian M Fenty",
+                182970.0
+            ],
+            [
+                "Sulaimon M Brown",
+                1150.0
+            ],
+            [
+                "Leo Alexander",
+                360.25
+            ]
+        ],
+        "title": "Mayor (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Chairman (2010)"
+        },
+        "rows": [
+            [
+                "Kwame R Brown",
+                229325.0
+            ],
+            [
+                "Vincent Orange",
+                57385.0
+            ]
+        ],
+        "title": "Council Chairman (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council At-Large (2010)"
+        },
+        "rows": [
+            [
+                "David Catania",
+                119491.08
+            ],
+            [
+                "Phil Mendelson",
+                47400.0
+            ],
+            [
+                "Clark E Ray",
+                6920.0
+            ],
+            [
+                "Anthony J Motley",
+                1150.0
+            ],
+            [
+                "Kelvin J Robinson",
+                1000.0
+            ],
+            [
+                "Michael Brown",
+                1000.0
+            ]
+        ],
+        "title": "Council At-Large (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Ward 1 (2010)"
+        },
+        "rows": [
+            [
+                "Jim Graham",
+                92449.0
+            ],
+            [
+                "Jeff Smith",
+                10750.0
+            ],
+            [
+                "Bryan Weaver",
+                9540.0
+            ]
+        ],
+        "title": "Council Ward 1 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Ward 3 (2010)"
+        },
+        "rows": [
+            [
+                "Mary M Cheh",
+                19100.0
+            ],
+            [
+                "Dave Hedgepeth",
+                15.0
+            ]
+        ],
+        "title": "Council Ward 3 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Ward 5 (2010)"
+        },
+        "rows": [
+            [
+                "Harry Thomas",
+                69350.0
+            ],
+            [
+                "Delano Hunter",
+                4050.0
+            ],
+            [
+                "Kenyan McDuffie",
+                2142.0
+            ],
+            [
+                "Tracey D Turner",
+                500.0
+            ],
+            [
+                "Kathy Henderson",
+                228.0
+            ],
+            [
+                "Timothy Day",
+                50.0
+            ]
+        ],
+        "title": "Council Ward 5 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "Council Ward 6 (2010)"
+        },
+        "rows": [
+            [
+                "Tommy Wells",
+                26822.26
+            ],
+            [
+                "Kelvin Robinson",
+                11300.0
+            ],
+            [
+                "Jim DeMartino",
+                200.0
+            ]
+        ],
+        "title": "Council Ward 6 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "School Board Ward 1 (2010)"
+        },
+        "rows": [
+            [
+                "Patrick Mara",
+                3099.99
+            ],
+            [
+                "Dotti Love Wade",
+                900.0
+            ]
+        ],
+        "title": "School Board Ward 1 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "School Board Ward 5 (2010)"
+        },
+        "rows": [
+            [
+                "Mark Jones",
+                200.0
+            ]
+        ],
+        "title": "School Board Ward 5 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "School Board Ward 6 (2010)"
+        },
+        "rows": [
+            [
+                "Melissa Rohan",
+                300.0
+            ],
+            [
+                "Monica Warren Jones",
+                225.0
+            ]
+        ],
+        "title": "School Board Ward 6 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Dollars",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Dollars"
+            },
+            "legend": "none",
+            "title": "US Representative (2010)"
+        },
+        "rows": [
+            [
+                "Nate Bennett-Fleming",
+                51.0
+            ]
+        ],
+        "title": "US Representative (2010)",
+        "year": "2010"
     }
 ]

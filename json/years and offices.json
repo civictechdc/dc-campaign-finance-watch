@@ -1,1 +1,81 @@
-[{"Election Year":2014,"Office":"Alternate Democratic National Committeeman"},{"Election Year":2014,"Office":"Alternate Democratic National Committeewoman"},{"Election Year":2014,"Office":"At-Large DC Democratic State Committee"},{"Election Year":2014,"Office":"Attorney General"},{"Election Year":2014,"Office":"Council At-Large"},{"Election Year":2014,"Office":"Council Chairman"},{"Election Year":2014,"Office":"Council Ward 1"},{"Election Year":2014,"Office":"Council Ward 3"},{"Election Year":2014,"Office":"Council Ward 5"},{"Election Year":2014,"Office":"Council Ward 6"},{"Election Year":2014,"Office":"Democratic National Committeeman"},{"Election Year":2014,"Office":"Democratic National Committeewoman"},{"Election Year":2014,"Office":"Mayor"},{"Election Year":2014,"Office":"School Board Ward 1"},{"Election Year":2014,"Office":"School Board Ward 3"},{"Election Year":2014,"Office":"School Board Ward 5"},{"Election Year":2014,"Office":"School Board Ward 6"},{"Election Year":2014,"Office":"School Board Ward 8"},{"Election Year":2014,"Office":"US Representative"},{"Election Year":2014,"Office":"US Senator"},{"Election Year":2014,"Office":"Ward 1 DC Democratic State Committee "},{"Election Year":2014,"Office":"Ward 3 DC Democratic State Committee"},{"Election Year":2014,"Office":"Ward 6 DC Democratic State Committee"}]
+[
+    {
+        "offices": [
+            "Mayor",
+            "Council Chairman",
+            "Council At-Large",
+            "Council Ward 1",
+            "Council Ward 3",
+            "Council Ward 5",
+            "Council Ward 6",
+            "Attorney General",
+            "School Board Ward 1",
+            "School Board Ward 3",
+            "School Board Ward 5",
+            "School Board Ward 6",
+            "School Board Ward 8",
+            "US Representative",
+            "US Senator",
+            "Alternate Democratic National Committeeman",
+            "Alternate Democratic National Committeewoman",
+            "At-Large DC Democratic State Committee",
+            "Democratic National Committeeman",
+            "Democratic National Committeewoman",
+            "Ward 3 DC Democratic State Committee",
+            "Ward 6 DC Democratic State Committee",
+            "Ward 1 DC Democratic State Committee "
+        ],
+        "year": "2014"
+    },
+    {
+        "offices": [
+            "Council At-Large"
+        ],
+        "year": "2013"
+    },
+    {
+        "offices": [
+            "Council Chairman",
+            "Council At-Large",
+            "Council Ward 2",
+            "Council Ward 4",
+            "Council Ward 5",
+            "Council Ward 7",
+            "Council Ward 8",
+            "School Board At-Large",
+            "School Board Ward 2",
+            "School Board Ward 7",
+            "School Board Ward 8",
+            "US Senator",
+            "Democratic Delegates",
+            "Republican National Committeewoman",
+            "Republican National Committeeman"
+        ],
+        "year": "2012"
+    },
+    {
+        "offices": [
+            "Council At-Large",
+            "School Board Ward 4",
+            "School Board Ward 8"
+        ],
+        "year": "2011"
+    },
+    {
+        "offices": [
+            "Mayor",
+            "Council Chairman",
+            "Council At-Large",
+            "Council Ward 1",
+            "Council Ward 3",
+            "Council Ward 5",
+            "Council Ward 6",
+            "School Board Ward 1",
+            "School Board Ward 3",
+            "School Board Ward 5",
+            "School Board Ward 6",
+            "US Representative"
+        ],
+        "year": "2010"
+    }
+]

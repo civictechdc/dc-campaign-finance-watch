@@ -418,5 +418,979 @@
         ],
         "title": "At-Large DC Democratic State Committee (2014)",
         "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council At-Large (2013)"
+        },
+        "rows": [
+            [
+                "Anita Bonds",
+                80
+            ],
+            [
+                "Patrick Mara",
+                37
+            ],
+            [
+                "Michael A Brown",
+                17
+            ],
+            [
+                "Matthew Frumin",
+                4
+            ],
+            [
+                "Paul Zukerberg",
+                2
+            ]
+        ],
+        "title": "Council At-Large (2013)",
+        "year": "2013"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council Chairman (2012)"
+        },
+        "rows": [
+            [
+                "Phil Mendelson",
+                93
+            ]
+        ],
+        "title": "Council Chairman (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council At-Large (2012)"
+        },
+        "rows": [
+            [
+                "Michael A Brown",
+                146
+            ],
+            [
+                "Vincent Orange",
+                123
+            ],
+            [
+                "David Grosso",
+                41
+            ],
+            [
+                "Sekou Biddle",
+                34
+            ],
+            [
+                "Mary  Brooks Beatty",
+                15
+            ],
+            [
+                "Leon J Swain",
+                13
+            ],
+            [
+                "Peter Shapiro",
+                10
+            ],
+            [
+                "A.J  Cooper",
+                6
+            ]
+        ],
+        "title": "Council At-Large (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council Ward 2 (2012)"
+        },
+        "rows": [
+            [
+                "Jack Evans",
+                196
+            ]
+        ],
+        "title": "Council Ward 2 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council Ward 4 (2012)"
+        },
+        "rows": [
+            [
+                "Muriel Bowser",
+                247
+            ],
+            [
+                "Baruti Jahi",
+                3
+            ],
+            [
+                "Max Skolnik",
+                2
+            ]
+        ],
+        "title": "Council Ward 4 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council Ward 5 (2012)"
+        },
+        "rows": [
+            [
+                "Kenyan McDuffie",
+                66
+            ],
+            [
+                "Frank Wilds",
+                38
+            ],
+            [
+                "Delano D Hunter",
+                29
+            ],
+            [
+                "Drew Hubbard",
+                25
+            ],
+            [
+                "John T Salatti",
+                3
+            ],
+            [
+                "Tim Day",
+                3
+            ],
+            [
+                "Ron L Magnus",
+                2
+            ],
+            [
+                "Shelly Gardner",
+                2
+            ],
+            [
+                "John C Cheeks",
+                1
+            ],
+            [
+                "Robert Albrecht",
+                1
+            ],
+            [
+                "William Boston",
+                1
+            ]
+        ],
+        "title": "Council Ward 5 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council Ward 7 (2012)"
+        },
+        "rows": [
+            [
+                "Yvette M Alexander",
+                123
+            ],
+            [
+                "Tom Brown",
+                20
+            ],
+            [
+                "Ronald L Moten",
+                13
+            ],
+            [
+                "Kevin B Chavous",
+                6
+            ],
+            [
+                "William H Bennett",
+                4
+            ]
+        ],
+        "title": "Council Ward 7 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council Ward 8 (2012)"
+        },
+        "rows": [
+            [
+                "Marion Barry",
+                145
+            ],
+            [
+                "Jacque D Patterson",
+                3
+            ],
+            [
+                "Sandra Seegars",
+                3
+            ],
+            [
+                "Natalie Williams",
+                2
+            ],
+            [
+                "Darrell Gaston",
+                1
+            ]
+        ],
+        "title": "Council Ward 8 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "School Board Ward 8 (2012)"
+        },
+        "rows": [
+            [
+                "Philip E Pannell",
+                5
+            ],
+            [
+                "Trayon  White",
+                5
+            ]
+        ],
+        "title": "School Board Ward 8 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "US Senator (2012)"
+        },
+        "rows": [
+            [
+                "Michael D Brown",
+                1
+            ],
+            [
+                "Nelson F Rimensnyder",
+                1
+            ]
+        ],
+        "title": "US Senator (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Republican National Committeewoman (2012)"
+        },
+        "rows": [
+            [
+                "Jill Homan",
+                2
+            ],
+            [
+                "Teri Galvez",
+                2
+            ]
+        ],
+        "title": "Republican National Committeewoman (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Republican National Committeeman (2012)"
+        },
+        "rows": [
+            [
+                "Jordan Gehrke",
+                4
+            ],
+            [
+                "Robert J Kabel",
+                2
+            ]
+        ],
+        "title": "Republican National Committeeman (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council At-Large (2011)"
+        },
+        "rows": [
+            [
+                "Sekou Biddle",
+                91
+            ],
+            [
+                "Vincent Orange",
+                77
+            ],
+            [
+                "Joshua Lopez",
+                21
+            ],
+            [
+                "Patrick Mara",
+                18
+            ],
+            [
+                "Jacque D Patterson",
+                9
+            ],
+            [
+                "Bryan Weaver",
+                4
+            ],
+            [
+                "Tom Brown",
+                3
+            ]
+        ],
+        "title": "Council At-Large (2011)",
+        "year": "2011"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "School Board Ward 4 (2011)"
+        },
+        "rows": [
+            [
+                "D. Kamili Anderson",
+                6
+            ],
+            [
+                "Andrew Moss",
+                4
+            ],
+            [
+                "An Almquist",
+                1
+            ]
+        ],
+        "title": "School Board Ward 4 (2011)",
+        "year": "2011"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "School Board Ward 8 (2011)"
+        },
+        "rows": [
+            [
+                "Philip Pannell",
+                7
+            ],
+            [
+                "Eugene D Kinlow",
+                6
+            ],
+            [
+                "Anthony Muhammad",
+                5
+            ],
+            [
+                "Sandra V Williams",
+                2
+            ],
+            [
+                "Tijwanna U Phillips",
+                1
+            ]
+        ],
+        "title": "School Board Ward 8 (2011)",
+        "year": "2011"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Mayor (2010)"
+        },
+        "rows": [
+            [
+                "Vincent C Gray",
+                567
+            ],
+            [
+                "Adrian M Fenty",
+                170
+            ],
+            [
+                "Sulaimon M Brown",
+                3
+            ],
+            [
+                "Leo Alexander",
+                2
+            ]
+        ],
+        "title": "Mayor (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council Chairman (2010)"
+        },
+        "rows": [
+            [
+                "Kwame R Brown",
+                277
+            ],
+            [
+                "Vincent Orange",
+                58
+            ]
+        ],
+        "title": "Council Chairman (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council At-Large (2010)"
+        },
+        "rows": [
+            [
+                "David Catania",
+                171
+            ],
+            [
+                "Phil Mendelson",
+                71
+            ],
+            [
+                "Clark E Ray",
+                21
+            ],
+            [
+                "Anthony J Motley",
+                3
+            ],
+            [
+                "Kelvin J Robinson",
+                2
+            ],
+            [
+                "Michael Brown",
+                1
+            ]
+        ],
+        "title": "Council At-Large (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council Ward 1 (2010)"
+        },
+        "rows": [
+            [
+                "Jim Graham",
+                244
+            ],
+            [
+                "Bryan Weaver",
+                30
+            ],
+            [
+                "Jeff Smith",
+                21
+            ]
+        ],
+        "title": "Council Ward 1 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council Ward 3 (2010)"
+        },
+        "rows": [
+            [
+                "Mary M Cheh",
+                52
+            ],
+            [
+                "Dave Hedgepeth",
+                1
+            ]
+        ],
+        "title": "Council Ward 3 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council Ward 5 (2010)"
+        },
+        "rows": [
+            [
+                "Harry Thomas",
+                170
+            ],
+            [
+                "Delano Hunter",
+                9
+            ],
+            [
+                "Kenyan McDuffie",
+                9
+            ],
+            [
+                "Kathy Henderson",
+                1
+            ],
+            [
+                "Timothy Day",
+                1
+            ],
+            [
+                "Tracey D Turner",
+                1
+            ]
+        ],
+        "title": "Council Ward 5 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "Council Ward 6 (2010)"
+        },
+        "rows": [
+            [
+                "Tommy Wells",
+                76
+            ],
+            [
+                "Kelvin Robinson",
+                23
+            ],
+            [
+                "Jim DeMartino",
+                1
+            ]
+        ],
+        "title": "Council Ward 6 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "School Board Ward 1 (2010)"
+        },
+        "rows": [
+            [
+                "Patrick Mara",
+                16
+            ],
+            [
+                "Dotti Love Wade",
+                6
+            ]
+        ],
+        "title": "School Board Ward 1 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "School Board Ward 5 (2010)"
+        },
+        "rows": [
+            [
+                "Mark Jones",
+                1
+            ]
+        ],
+        "title": "School Board Ward 5 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "School Board Ward 6 (2010)"
+        },
+        "rows": [
+            [
+                "Melissa Rohan",
+                2
+            ],
+            [
+                "Monica Warren Jones",
+                2
+            ]
+        ],
+        "title": "School Board Ward 6 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Corporate Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Corporate Contributors"
+            },
+            "legend": "none",
+            "title": "US Representative (2010)"
+        },
+        "rows": [
+            [
+                "Nate Bennett-Fleming",
+                1
+            ]
+        ],
+        "title": "US Representative (2010)",
+        "year": "2010"
     }
 ]

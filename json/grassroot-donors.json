@@ -707,5 +707,1242 @@
         ],
         "title": "Ward 3 DC Democratic State Committee (2014)",
         "year": "2014"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council At-Large (2013)"
+        },
+        "rows": [
+            [
+                "Elissa Silverman",
+                619
+            ],
+            [
+                "Matthew Frumin",
+                488
+            ],
+            [
+                "Anita Bonds",
+                338
+            ],
+            [
+                "Patrick Mara",
+                298
+            ],
+            [
+                "Perry D Redd",
+                55
+            ],
+            [
+                "Paul Zukerberg",
+                42
+            ],
+            [
+                "Michael A Brown",
+                37
+            ],
+            [
+                "John F Settles",
+                34
+            ],
+            [
+                "John Capozzi",
+                10
+            ],
+            [
+                "Diallo Brooks",
+                3
+            ],
+            [
+                "AJ Cooper",
+                2
+            ]
+        ],
+        "title": "Council At-Large (2013)",
+        "year": "2013"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Chairman (2012)"
+        },
+        "rows": [
+            [
+                "Phil Mendelson",
+                348
+            ]
+        ],
+        "title": "Council Chairman (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council At-Large (2012)"
+        },
+        "rows": [
+            [
+                "David Grosso",
+                656
+            ],
+            [
+                "Sekou Biddle",
+                367
+            ],
+            [
+                "Vincent Orange",
+                201
+            ],
+            [
+                "Michael A Brown",
+                165
+            ],
+            [
+                "Peter Shapiro",
+                153
+            ],
+            [
+                "Mary  Brooks Beatty",
+                138
+            ],
+            [
+                "A.J  Cooper",
+                62
+            ],
+            [
+                "E. Gail Anderson Holness",
+                29
+            ],
+            [
+                "Leon J Swain",
+                25
+            ]
+        ],
+        "title": "Council At-Large (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Ward 2 (2012)"
+        },
+        "rows": [
+            [
+                "Jack Evans",
+                602
+            ],
+            [
+                "Fiona Greig",
+                25
+            ]
+        ],
+        "title": "Council Ward 2 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Ward 4 (2012)"
+        },
+        "rows": [
+            [
+                "Muriel Bowser",
+                1072
+            ],
+            [
+                "Max Skolnik",
+                245
+            ],
+            [
+                "Renee L Bowser",
+                66
+            ],
+            [
+                "Baruti Jahi",
+                29
+            ],
+            [
+                "Judi Jones",
+                11
+            ],
+            [
+                "Calvin H Gurley",
+                3
+            ]
+        ],
+        "title": "Council Ward 4 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Ward 5 (2012)"
+        },
+        "rows": [
+            [
+                "Kenyan McDuffie",
+                449
+            ],
+            [
+                "Delano D Hunter",
+                138
+            ],
+            [
+                "Tim Day",
+                98
+            ],
+            [
+                "Drew Hubbard",
+                93
+            ],
+            [
+                "Frank Wilds",
+                80
+            ],
+            [
+                "John T Salatti",
+                55
+            ],
+            [
+                "Rae Zapata",
+                42
+            ],
+            [
+                "Kathy Henderson",
+                24
+            ],
+            [
+                "Ron L Magnus",
+                23
+            ],
+            [
+                "Shelly Gardner",
+                12
+            ],
+            [
+                "John C Cheeks",
+                6
+            ],
+            [
+                "William Boston",
+                5
+            ],
+            [
+                "Ruth E Marshall",
+                4
+            ]
+        ],
+        "title": "Council Ward 5 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Ward 7 (2012)"
+        },
+        "rows": [
+            [
+                "Yvette M Alexander",
+                401
+            ],
+            [
+                "Kevin B Chavous",
+                126
+            ],
+            [
+                "Tom Brown",
+                106
+            ],
+            [
+                "Ronald L Moten",
+                85
+            ],
+            [
+                "William H Bennett",
+                53
+            ],
+            [
+                "Monica L Johnson",
+                5
+            ]
+        ],
+        "title": "Council Ward 7 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Ward 8 (2012)"
+        },
+        "rows": [
+            [
+                "Marion Barry",
+                104
+            ],
+            [
+                "Darrell Gaston",
+                89
+            ],
+            [
+                "Jacque D Patterson",
+                53
+            ],
+            [
+                "Sandra Seegars",
+                29
+            ],
+            [
+                "Natalie Williams",
+                21
+            ],
+            [
+                "Jauhar Abraham",
+                7
+            ]
+        ],
+        "title": "Council Ward 8 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "School Board At-Large (2012)"
+        },
+        "rows": [
+            [
+                "Mary Lord",
+                18
+            ],
+            [
+                "Marvin Tucker",
+                5
+            ]
+        ],
+        "title": "School Board At-Large (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "School Board Ward 2 (2012)"
+        },
+        "rows": [
+            [
+                "Jack Jacobson",
+                156
+            ]
+        ],
+        "title": "School Board Ward 2 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "School Board Ward 7 (2012)"
+        },
+        "rows": [
+            [
+                "Karen Williams",
+                20
+            ]
+        ],
+        "title": "School Board Ward 7 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "School Board Ward 8 (2012)"
+        },
+        "rows": [
+            [
+                "Philip E Pannell",
+                85
+            ],
+            [
+                "Trayon  White",
+                13
+            ]
+        ],
+        "title": "School Board Ward 8 (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "US Senator (2012)"
+        },
+        "rows": [
+            [
+                "Nelson F Rimensnyder",
+                78
+            ],
+            [
+                "Michael D Brown",
+                15
+            ]
+        ],
+        "title": "US Senator (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Democratic Delegates (2012)"
+        },
+        "rows": [
+            [
+                "Gregory Cendana",
+                62
+            ]
+        ],
+        "title": "Democratic Delegates (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Republican National Committeewoman (2012)"
+        },
+        "rows": [
+            [
+                "Teri Galvez",
+                88
+            ],
+            [
+                "Jill Homan",
+                78
+            ]
+        ],
+        "title": "Republican National Committeewoman (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Republican National Committeeman (2012)"
+        },
+        "rows": [
+            [
+                "Robert J Kabel",
+                49
+            ],
+            [
+                "Jordan Gehrke",
+                6
+            ]
+        ],
+        "title": "Republican National Committeeman (2012)",
+        "year": "2012"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council At-Large (2011)"
+        },
+        "rows": [
+            [
+                "Sekou Biddle",
+                510
+            ],
+            [
+                "Patrick Mara",
+                247
+            ],
+            [
+                "Bryan Weaver",
+                234
+            ],
+            [
+                "Vincent Orange",
+                175
+            ],
+            [
+                "Joshua Lopez",
+                159
+            ],
+            [
+                "Jacque D Patterson",
+                112
+            ],
+            [
+                "Alan Page",
+                17
+            ],
+            [
+                "Arkan Haile",
+                15
+            ],
+            [
+                "Tom Brown",
+                13
+            ],
+            [
+                "Wayne Dickson",
+                3
+            ]
+        ],
+        "title": "Council At-Large (2011)",
+        "year": "2011"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "School Board Ward 4 (2011)"
+        },
+        "rows": [
+            [
+                "D. Kamili Anderson",
+                40
+            ],
+            [
+                "Andrew Moss",
+                23
+            ],
+            [
+                "Bill Quirk",
+                18
+            ],
+            [
+                "An Almquist",
+                7
+            ],
+            [
+                "James Garay Heelan",
+                2
+            ]
+        ],
+        "title": "School Board Ward 4 (2011)",
+        "year": "2011"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "School Board Ward 8 (2011)"
+        },
+        "rows": [
+            [
+                "Eugene D Kinlow",
+                90
+            ],
+            [
+                "Philip Pannell",
+                46
+            ],
+            [
+                "Tijwanna U Phillips",
+                13
+            ],
+            [
+                "Anthony Muhammad",
+                12
+            ],
+            [
+                "Trayon White",
+                4
+            ]
+        ],
+        "title": "School Board Ward 8 (2011)",
+        "year": "2011"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Mayor (2010)"
+        },
+        "rows": [
+            [
+                "Vincent C Gray",
+                4572
+            ],
+            [
+                "Adrian M Fenty",
+                1418
+            ],
+            [
+                "Leo Alexander",
+                33
+            ],
+            [
+                "Ernest E Johnson",
+                3
+            ],
+            [
+                "Sulaimon M Brown",
+                2
+            ],
+            [
+                "Carlos Allen",
+                1
+            ]
+        ],
+        "title": "Mayor (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Chairman (2010)"
+        },
+        "rows": [
+            [
+                "Kwame R Brown",
+                478
+            ],
+            [
+                "Vincent Orange",
+                222
+            ],
+            [
+                "Calvin Gurley",
+                2
+            ]
+        ],
+        "title": "Council Chairman (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council At-Large (2010)"
+        },
+        "rows": [
+            [
+                "David Catania",
+                710
+            ],
+            [
+                "Clark E Ray",
+                337
+            ],
+            [
+                "Phil Mendelson",
+                290
+            ],
+            [
+                "Richard Urban",
+                48
+            ],
+            [
+                "Anthony J Motley",
+                25
+            ],
+            [
+                "Michael Brown",
+                24
+            ],
+            [
+                "David Schwartzman",
+                23
+            ],
+            [
+                "Kelvin J Robinson",
+                17
+            ],
+            [
+                "Darryl L.C. Moch",
+                13
+            ]
+        ],
+        "title": "Council At-Large (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Ward 1 (2010)"
+        },
+        "rows": [
+            [
+                "Jim Graham",
+                665
+            ],
+            [
+                "Bryan Weaver",
+                215
+            ],
+            [
+                "Marc Morgan",
+                86
+            ],
+            [
+                "Jeff Smith",
+                77
+            ],
+            [
+                "Nancy Shia",
+                9
+            ]
+        ],
+        "title": "Council Ward 1 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Ward 3 (2010)"
+        },
+        "rows": [
+            [
+                "Mary M Cheh",
+                197
+            ],
+            [
+                "Dave Hedgepeth",
+                136
+            ]
+        ],
+        "title": "Council Ward 3 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Ward 5 (2010)"
+        },
+        "rows": [
+            [
+                "Harry Thomas",
+                363
+            ],
+            [
+                "Kenyan McDuffie",
+                153
+            ],
+            [
+                "Delano Hunter",
+                81
+            ],
+            [
+                "Kathy Henderson",
+                48
+            ],
+            [
+                "Timothy Day",
+                48
+            ],
+            [
+                "Tracey D Turner",
+                35
+            ]
+        ],
+        "title": "Council Ward 5 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "Council Ward 6 (2010)"
+        },
+        "rows": [
+            [
+                "Tommy Wells",
+                408
+            ],
+            [
+                "Jim DeMartino",
+                96
+            ],
+            [
+                "Kelvin Robinson",
+                66
+            ]
+        ],
+        "title": "Council Ward 6 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "School Board Ward 1 (2010)"
+        },
+        "rows": [
+            [
+                "Patrick Mara",
+                103
+            ],
+            [
+                "Dotti Love Wade",
+                31
+            ]
+        ],
+        "title": "School Board Ward 1 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "School Board Ward 3 (2010)"
+        },
+        "rows": [
+            [
+                "Laura M Slover",
+                1
+            ]
+        ],
+        "title": "School Board Ward 3 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "School Board Ward 5 (2010)"
+        },
+        "rows": [
+            [
+                "Mark Jones",
+                14
+            ],
+            [
+                "Darlene Glymph",
+                11
+            ]
+        ],
+        "title": "School Board Ward 5 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "School Board Ward 6 (2010)"
+        },
+        "rows": [
+            [
+                "Melissa Rohan",
+                97
+            ],
+            [
+                "Monica Warren Jones",
+                51
+            ]
+        ],
+        "title": "School Board Ward 6 (2010)",
+        "year": "2010"
+    },
+    {
+        "cols": [
+            {
+                "label": "Candidate",
+                "type": "string"
+            },
+            {
+                "label": "Grass root Contributors",
+                "type": "number"
+            }
+        ],
+        "options": {
+            "hAxis": {
+                "title": "Grassroot Contributors (DC Residents)"
+            },
+            "legend": "none",
+            "title": "US Representative (2010)"
+        },
+        "rows": [
+            [
+                "Nate Bennett-Fleming",
+                58
+            ],
+            [
+                "Jon Kuhl",
+                29
+            ],
+            [
+                "Mike Panetta",
+                27
+            ]
+        ],
+        "title": "US Representative (2010)",
+        "year": "2010"
     }
 ]
