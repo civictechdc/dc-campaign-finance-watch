@@ -1,0 +1,10 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="list-of-offices" attributes="source" noscript>
+  <template>
+    <core-ajax auto url="{{source}}" response="{{items}}" handleAs="json"></core-ajax>
+    <template repeat="{{item in items}}">
+      <core-item label="{{item.Office}}"></core-item>
+    </template>
+  </template>
+</polymer-element>
