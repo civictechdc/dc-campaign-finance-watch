@@ -6,21 +6,20 @@
     <core-scaffold theme="core-light-theme">
         <core-header-panel navigation flex mode="seamed" theme="core-light-theme">
             <core-toolbar theme="core-dark-theme"></core-toolbar>
-            <core-menu selected="{{selected}}" valueattr="id" theme="core-light-theme">
-              <!--<core-item icon="visibility" id="grassrootdonors" label="grassroot donors"></core-item>-->
-              <!--<core-item icon="visibility" id="grassrootdollars" label="grassroot dollars"></core-item>-->
-              <!--<core-item icon="visibility" id="corporatedonors" label="corporate donors"></core-item>-->
-              <!--<core-item icon="visibility" id="corporatedollars" label="corporate dollars"></core-item>-->
-              <!--<core-item icon="visibility" id="paytoplay" label="pay-to-play"></core-item>-->
-              <!--<core-item icon="visibility" id="industryinfluence" label="influential industries"></core-item>-->
-              <!--<core-item icon="visibility" id="officeholders" label="office holders"></core-item>-->
-              <!--<core-item icon="info-outline" id="about" label="about"></core-item>-->
-              <years-submenu></years-submenu>
-            </core-menu>
+              <core-menu selected="{{selected}}" valueattr="id" theme="core-light-theme">
+                <core-ajax auto url="../json/years and offices.json" response="{{items}}" handleAs="json"></core-ajax>
+                <template repeat="{{item in items}}">
+                  <core-submenu icon="visibility" label="{{item.year}}">
+                    <template repeat="{{office in item.offices}}">
+                      <core-item id="{{item.year}} {{office}}" label="{{office}}"></core-item>
+                    </template>
+                  </core-submenu>
+                </template>
+              </core-menu>
         </core-header-panel>
         <div tool>DC Campaign Finance Watch</div>
         <core-pages selected="{{selected}}" valueattr="id">
-          <div id="grassrootdonors"><bar-charts source="json/grassroot-donors.json"></bar-charts></div>
+          <div id="2014 Council At-Large"><bar-charts source="json/grassroot-donors.json"></bar-charts></div>
           <div id="grassrootdollars"><bar-charts source="json/grassroot-dollars.json"></bar-charts></div>
           <div id="corporatedonors"><bar-charts source="json/corporate-donors.json"></bar-charts></div>
           <div id="corporatedollars"><bar-charts source="json/corporate-dollars.json"></bar-charts></div>
