@@ -15,65 +15,6 @@
                 "title": "Corporate Dollars"
             },
             "legend": "none",
-            "title": "Mayor (2014)"
-        },
-        "rows": [
-            [
-                "Muriel E Bowser",
-                537551.0
-            ],
-            [
-                "Vincent C Gray",
-                282227.57
-            ],
-            [
-                "Jack Evans",
-                189347.07
-            ],
-            [
-                "David Catania",
-                58925.0
-            ],
-            [
-                "Vincent Orange",
-                29990.0
-            ],
-            [
-                "Andy Shallal",
-                3100.0
-            ],
-            [
-                "Christian Carter",
-                1642.99
-            ],
-            [
-                "Reta Jo Lewis",
-                916.78
-            ],
-            [
-                "Carol Schwartz",
-                100.0
-            ]
-        ],
-        "title": "Mayor (2014)",
-        "year": "2014"
-    },
-    {
-        "cols": [
-            {
-                "label": "Candidate",
-                "type": "string"
-            },
-            {
-                "label": "Corporate Dollars",
-                "type": "number"
-            }
-        ],
-        "options": {
-            "hAxis": {
-                "title": "Corporate Dollars"
-            },
-            "legend": "none",
             "title": "Council Chairman (2014)"
         },
         "rows": [

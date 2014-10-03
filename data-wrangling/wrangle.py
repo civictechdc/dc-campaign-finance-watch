@@ -10,55 +10,65 @@ import pandas as pd
 import numpy as np
 import simplejson
 
+# READ IN CONTRIBUTIONS CSV FILE AND CLEAN IT UP A BIT
+
 input_dir = '../csv'
 output_dir = '../json'
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
+
+def readincontributions(input_dir, filename):
+  filename = os.path.join(input_dir, filename)
+  data = pd.read_csv(filename)
+  data['Amount'] = data['Amount'].str.replace(',', '').str.replace('$', '').str.replace('(', '').str.replace(')', '').astype('float')
+  data = data[data['Election Year'] > 2009]
+  data['Election Year'] = data['Election Year'].astype('int16')
+  return data
+contributions = readincontributions(input_dir, 'ocf_contributions.csv')
 
 
+#  GENERATE A LIST OF YEARS AND OFFICES FOR MENUS & GRAPH ITERATION
 
-# read in data and clean up a bit
-filename = os.path.join(input_dir, 'ocf_contributions.csv')
-contributions = pd.read_csv(filename)
-contributions['Amount'] = contributions['Amount'].str.replace(',', '').str.replace('$', '').str.replace('(', '').str.replace(')', '').astype('float')
-contributions = contributions[contributions['Election Year'] > 2009]
-contributions['Election Year'] = contributions['Election Year'].astype('int16')
+def cleanAndSave(datatosave, output_dir, filename): 
+  datatosave = datatosave.replace('\n', '').replace('\r', '')
+  if not os.path.exists(output_dir):
+      os.makedirs(output_dir)
+  full_filename = os.path.join(output_dir, filename)
+  with open(full_filename, 'w') as f:
+      f.write(simplejson.dumps(simplejson.loads(datatosave), indent=4, sort_keys=True))
+  f.close()
 
-# make a list of offices for each election year
-yo = contributions[['Election Year', 'Office']]
-yo = yo.drop_duplicates()
-yo = yo.reset_index()
-yo = pd.DataFrame(yo[['Election Year', 'Office']]).sort(['Election Year', 'Office'],ascending=[0,1])
-filename = os.path.join(input_dir, 'office_order.csv')
-oo = pd.read_csv(filename)
-yo = pd.merge(yo, oo, how='left', left_on='Office', right_on='Office')
-yo = yo.sort(columns=['Election Year','Order'], ascending=[0,1])
+def generateYOlist(contributions, input_dir, oo_filename): 
+  yo = contributions[['Election Year', 'Office']]
+  yo = yo.drop_duplicates()
+  yo = yo.reset_index()
+  yo = pd.DataFrame(yo[['Election Year', 'Office']]).sort(['Election Year', 'Office'],ascending=[0,1])
+  filename = os.path.join(input_dir, oo_filename)
+  oo = pd.read_csv(filename)
+  yo = pd.merge(yo, oo, how='left', left_on='Office', right_on='Office')
+  yo = yo.sort(columns=['Election Year','Order'], ascending=[0,1])
+  return yo
+
+def generateYOjson(yo, years): 
+  yojson = '['
+  for yearnum in range(0, len(years.index)):
+      year = years.iloc[yearnum]
+      yojson = yojson + '{"year": "'+ str(year) + '", "offices": ['
+      oneyear = yo[yo['Election Year'] ==  year]
+      offices = oneyear['Office']
+      for officenum in range(0, len(offices.index)): 
+          office = offices.iloc[officenum]
+          yojson = yojson + '"' + office + '"'
+          if officenum < len(offices.index)-1: 
+              yojson = yojson + ','
+      yojson = yojson + ']}'
+      if yearnum < len(years.index)-1: 
+          yojson = yojson + ','
+  yojson = yojson + ']'
+  return yojson
+
+yo = generateYOlist(contributions, input_dir, 'office_order.csv')
 years = yo['Election Year'].drop_duplicates()
-nested = '['
-for yearnum in range(0, len(years.index)):
-    year = years.iloc[yearnum]
-    nested = nested + '{"year": "'+ str(year) + '", "offices": ['
-    oneyear = yo[yo['Election Year'] ==  year]
-    offices = oneyear['Office']
-    for officenum in range(0, len(offices.index)): 
-        office = offices.iloc[officenum]
-        nested = nested + '"' + office + '"'
-        if officenum < len(offices.index)-1: 
-            nested = nested + ','
-    nested = nested + ']}'
-    if yearnum < len(years.index)-1: 
-        nested = nested + ','
-nested = nested + ']'
-
-nested = nested.replace('\n', '').replace('\r', '')
-
-output_dir = '../json'
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
-nested_filename = os.path.join(output_dir, 'years and offices.json')
-with open(nested_filename, 'w') as f:
-    f.write(simplejson.dumps(simplejson.loads(nested), indent=4, sort_keys=True))
-f.close()
+yojson = generateYOjson(yo, years)
+cleanAndSave(yojson, output_dir, 'years and offices.json')
 
 
 
@@ -77,6 +87,7 @@ for rownum in range(0, len(yo.index)):
     data = data.sort(['DC Donors'],ascending=False).reset_index()
     data = data[['Candidate Name', 'DC Donors']]
     cols = '[{"label": "Candidate", "type": "string"},{"label": "Grass root Contributors", "type": "number"}]'
+    htitle = 'Grassroot Contributors (DC Residents)'
     rows = '['
     for rnum in range(0, len(data.index)):
         rows = rows + '''
@@ -84,7 +95,7 @@ for rownum in range(0, len(yo.index)):
         if rnum + 1 < len(data.index): rows = rows + ','
     rows = rows + ']'
     title = str(office) + ' (' + str(year) + ')'
-    options = '{  "title": "' + title + '",  "hAxis": {"title": "Grassroot Contributors (DC Residents)"}, "legend": "none"}'
+    options = '{  "title": "' + title + '",  "hAxis": {"title": "' + htitle +'"}, "legend": "none"}'
     graphjson = '{"year": "'+ str(year) + '", "title": "' +  title + '", "cols": ' + cols + ', "rows": ' + rows + ', "options": ' + options + '}'
     graphjson = graphjson.replace("'", '"')
     if len(rows) > 3:
@@ -93,14 +104,7 @@ for rownum in range(0, len(yo.index)):
             nested = nested + ','
 nested = nested + ']'
 nested = nested.replace('\n', '').replace('\r', '').replace('},]', '}]')
-
-output_dir = '../json'
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
-nested_filename = os.path.join(output_dir, 'grassroot-donors.json')
-with open(nested_filename, 'w') as f:
-    f.write(simplejson.dumps(simplejson.loads(nested), indent=4, sort_keys=True))
-f.close()
+cleanAndSave(nested, output_dir, 'grassroot-donors.json')
 
 
 # json files for grassroot  amount graphs
@@ -114,6 +118,7 @@ for rownum in range(0, len(yo.index)):
     data = data.sort(['Amount'],ascending=False).reset_index()
     data = data[['Candidate Name', 'Amount']]
     cols = '[{"label": "Candidate", "type": "string"},{"label": "Grass root Dolars", "type": "number"}]'
+
     rows = '['
     for rnum in range(0, len(data.index)):
         rows = rows + '["' + data['Candidate Name'][rnum] + '", ' + str(data['Amount'][rnum]) + ']'
@@ -128,15 +133,8 @@ for rownum in range(0, len(yo.index)):
         if rownum < len(yo.index)-1:
             nested = nested + ','
 nested = nested + ']'
-nested = nested.replace('\n', '').replace('\r', '').replace('},]', '}]')
+cleanAndSave(nested, output_dir, 'grassroot-dollars.json')
 
-output_dir = '../json'
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
-nested_filename = os.path.join(output_dir, 'grassroot-dollars.json')
-with open(nested_filename, 'w') as f:
-    f.write(simplejson.dumps(simplejson.loads(nested), indent=4, sort_keys=True))
-f.close()
 
 
 
@@ -171,15 +169,7 @@ for rownum in range(0, len(yo.index)):
         if rownum +1 < len(yo.index):
             nested = nested + ','
 nested = nested + ']'
-nested = nested.replace('\n', '').replace('\r', '').replace('},]', '}]')
-output_dir = '../json'
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
-nested_filename = os.path.join(output_dir, 'corporate-donors.json')
-with open(nested_filename, 'w') as f:
-    f.write(simplejson.dumps(simplejson.loads(nested), indent=4, sort_keys=True))
-f.close()
-
+cleanAndSave(nested, output_dir, 'corporate-donors.json')
 
 
 
@@ -211,12 +201,5 @@ for rownum in range(0, len(yo.index)):
         if rownum +1 < len(yo.index):
             nested = nested + ','
 nested = nested + ']'
-nested = nested.replace('\n', '').replace('\r', '').replace('},]', '}]')
-output_dir = '../json'
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
-nested_filename = os.path.join(output_dir, 'corporate-dollars.json')
-with open(nested_filename, 'w') as f:
-    f.write(simplejson.dumps(simplejson.loads(nested), indent=4, sort_keys=True))
-f.close()
+cleanAndSave(nested, output_dir, 'corporate-dollars.json')
 

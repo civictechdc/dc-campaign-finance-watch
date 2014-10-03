@@ -7,6 +7,7 @@
     "core-menu-button": "Polymer/core-menu-button",
     "core-scaffold": "Polymer/core-scaffold",
     "core-pages": "Polymer/core-pages",
+    "flatiron-director": "Polymer/flatiron-director",
     "google-chart": "GoogleWebComponents/google-chart"
   }
 }
