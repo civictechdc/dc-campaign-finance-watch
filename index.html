@@ -27,14 +27,12 @@
           </core-menu>
         </core-header-panel>
         <div tool>{{title}}</div>
-        <core-ajax auto url="json/gr-donors.json" response="{{grdonors}}" handleAs="json"></core-ajax>
+        <core-ajax auto url="json/graphing-data.json" response="{{races}}" handleAs="json"></core-ajax>
         <core-pages selected="{{selectedPageId}}" valueattr="id">
-          <template repeat="{{item in items}}">
-            <template repeat="{{office in item.offices}}">
-              <div id="page-{{ office + '-' + item.year | replaceSpaces }}">
-                <bar-chart jsondata="{{grdonors}}" graphid="{{office + ' (' + item.year + ')'}}"></bar-chart>
-              </div>
-            </template>
+          <template repeat="{{race in races}}">
+            <div id="page-{{race.officeyearid}}">
+              <my-charts charts="{{race.officeyeardata}}"></my-charts>
+            </div>
           </template>
         </core-pages>
       </core-scaffold>
