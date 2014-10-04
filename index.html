@@ -1,16 +1,66 @@
 <!doctype html>
 <html>
-<head>
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="bower_components/platform/platform.js"></script>
-    <script src="scripts/app.js"></script>
-    <link rel="import" href="elements/elements.html">
     <title>DC Campaign Finance Watch</title>
-</head>
 
-<body fullbleed layout verticle>
-    <main-page></main-page>
-</body>
+    <script src="bower_components/platform/platform.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="import" href="elements/elements.html">
+  </head>
+
+  <body unresolved fullbleed>
+    <template is="auto-binding" id="page-template">
+      <core-scaffold theme="core-light-theme">
+        <core-header-panel navigation flex mode="seamed">
+          <core-toolbar theme="core-light-theme"></core-toolbar>
+          <core-menu theme="core-light-theme" on-core-select="{{handleSelect}}">
+            <core-ajax auto url="json/years and offices.json" response="{{items}}" handleAs="json"></core-ajax>
+            <template repeat="{{item in items}}">
+              <core-submenu icon="visibility" label="{{item.year}}">
+                <template repeat="{{office in item.offices}}">
+                  <core-item id="{{ office + '-' + item.year | replaceSpaces }}" label="{{office}}"></core-item>
+                </template>
+              </core-submenu>
+            </template>
+                <core-item icon="visibility" id="paytoplay" label="pay-to-play"></core-item>
+                <core-item icon="visibility" id="industryinfluence" label="influential industries"></core-item>
+                <core-item icon="visibility" id="officeholders" label="office holders"></core-item>
+                <core-item icon="info-outline" id="about" label="about"></core-item>
+          </core-menu>
+        </core-header-panel>
+        <div tool>{{title}}</div>
+        <core-ajax auto url="json/graphing-data.json" response="{{races}}" handleAs="json"></core-ajax>
+        <core-pages selected="{{selectedPageId}}" valueattr="id">
+          <template repeat="{{race in races}}">
+            <div id="page-{{race.officeyearid}}">
+              <my-charts charts="{{race.officeyeardata}}"></my-charts>
+            </div>
+          </template>
+          <div id="page-paytoplay">These analyses will link campaign contributions to District contracts.  The cash paid to office holders’ campaigns will be linked to past, existing, and pending contracts with the city. </div>
+          <div id="page-industryinfluence">Using NIGP codes and all available online data, we will link donors with specific industries. We can then sort each candidate and political office-holder by level of industry influence and relate them to upcoming bills.   </div>
+          <div id="page-officeholders">A moving average of corporate capture & grass roots support for each current officeholder. Will span available data.</div>
+          <div id="page-about">We are just regular folk coding for DC.  Come to a <a href="http://www.meetup.com/Code-for-DC/">meetup</a> or <a href="https://github.com/codefordc/dc-campaign-finance-watch">check out a repo on github</a>!</div>
+        </core-pages>
+      </core-scaffold>
+    </template>
+
+    <script>
+      	var template = document.querySelector('#page-template');
+        template.title = 'DC Campaign Finance Watch';
+
+        template.replaceSpaces = function(str) {
+        	return str.replace(/\s/g, '-');
+      	},
+
+        template.handleSelect = function(e) {
+          if(e.detail.isSelected && e.detail.item.localName == 'core-item') {
+            this.selectedPageId = 'page-' + e.detail.item.id;
+          }
+        };
+    </script>
+
+  </body>
 
 </html>
