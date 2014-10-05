@@ -38,6 +38,7 @@
               <my-charts charts="{{race.officeyeardata}}"></my-charts>
             </div>
           </template>
+          <div id="page-welcome">Welcome to DC Campaign Finance Watch.  To see details about a particular election, elected official, or contractor, select from the "hamburger" menu on the upper-lefthand corner. </div>
           <div id="page-paytoplay">These analyses will link campaign contributions to District contracts.  The cash paid to office holders’ campaigns will be linked to past, existing, and pending contracts with the city. </div>
           <div id="page-industryinfluence">Using NIGP codes and all available online data, we will link donors with specific industries. We can then sort each candidate and political office-holder by level of industry influence and relate them to upcoming bills.   </div>
           <div id="page-officeholders">A moving average of corporate capture & grass roots support for each current officeholder. Will span available data.</div>
@@ -57,6 +58,8 @@
         template.handleSelect = function(e) {
           if(e.detail.isSelected && e.detail.item.localName == 'core-item') {
             this.selectedPageId = 'page-' + e.detail.item.id;
+          } else {
+            this.selectedPageId = 'page-welcome' ;
           }
         };
     </script>
