@@ -134,4 +134,19 @@ non-local influence. Show contributions from DC v outside DC.
 
 Show percentage of each candidates donors from each ward/zip/etc. (heat map?)
 
+2 Lederboards for each race, each of which will show each candidate relative to historical mean & sd for their office. 
 
+  GRASSROOTS LEADERBOARD: 
+   - percentage of grassroots donors
+   - number of grassroots donors
+   - percentage of small donors
+   - number of small donors
+   - and the average (of standard deviations reative to the means) 
+   
+  CORPORATE TOOL LEADERBOARD: 
+   - percentage of corporate-style donors
+   - number of corporate-style donors
+   - percentage of corporate-style dollars
+   - number of small corporate-style dollars
+   - and the average (of standard deviations reative to the means) 
+ 
