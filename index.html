@@ -16,11 +16,11 @@
         <core-header-panel navigation flex mode="seamed">
           <core-toolbar theme="core-light-theme"></core-toolbar>
           <core-menu theme="core-light-theme" on-core-select="{{handleSelect}}">
-            <core-ajax auto url="json/years and offices.json" response="{{items}}" handleAs="json"></core-ajax>
-            <template repeat="{{item in items}}">
-              <core-submenu icon="visibility" label="{{item.year}}">
-                <template repeat="{{office in item.offices}}">
-                  <core-item id="{{ office + '-' + item.year | replaceSpaces }}" label="{{office}}"></core-item>
+            <core-ajax auto url="json/years and offices.json" response="{{elections}}" handleAs="json"></core-ajax>
+            <template repeat="{{election in elections}}">
+              <core-submenu icon="visibility" label="{{election.year}}">
+                <template repeat="{{office in election.offices}}">
+                  <core-item id="{{ office + '-' + election.year | replaceSpaces }}" label="{{office}}"></core-item>
                 </template>
               </core-submenu>
             </template>
