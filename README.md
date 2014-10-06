@@ -149,4 +149,5 @@ Show percentage of each candidates donors from each ward/zip/etc. (heat map?)
    - percentage of corporate-style dollars
    - number of small corporate-style dollars
    - and the average (of standard deviations reative to the means) 
- 
+
+Breakout contributions by year, office and candidate into seperate json files.  This will allow us to track changes as they update. 
