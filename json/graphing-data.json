@@ -38,7 +38,7 @@
                     ],
                     [
                         "Vincent C Gray",
-                        953
+                        959
                     ],
                     [
                         "Andy Shallal",
@@ -101,7 +101,7 @@
                     ],
                     [
                         "Vincent C Gray",
-                        366
+                        367
                     ],
                     [
                         "Jack Evans",
@@ -168,7 +168,7 @@
                     ],
                     [
                         "Vincent C Gray",
-                        457011.38
+                        460076.38
                     ],
                     [
                         "Tommy Wells",
@@ -239,7 +239,7 @@
                     ],
                     [
                         "Vincent C Gray",
-                        429302.57
+                        430623.57
                     ],
                     [
                         "Jack Evans",
@@ -1687,7 +1687,62 @@
         "officeyearid": "School-Board-Ward-5-2014"
     },
     {
-        "officeyeardata": [],
+        "officeyeardata": [
+            {
+                "cols": [
+                    {
+                        "label": "Candidate",
+                        "type": "string"
+                    },
+                    {
+                        "label": "Grassroots Contributors",
+                        "type": "number"
+                    }
+                ],
+                "options": {
+                    "hAxis": {
+                        "title": "Grassroots Contributors (DC Residents)"
+                    },
+                    "legend": "none",
+                    "title": "School Board Ward 6 (2014)"
+                },
+                "rows": [
+                    [
+                        "Joey R Weedon",
+                        40
+                    ]
+                ],
+                "title": "School Board Ward 6 (2014)",
+                "year": "2014"
+            },
+            {
+                "cols": [
+                    {
+                        "label": "Candidate",
+                        "type": "string"
+                    },
+                    {
+                        "label": "Grassroots Dollars",
+                        "type": "number"
+                    }
+                ],
+                "options": {
+                    "hAxis": {
+                        "title": "Grassroots Dollars (From DC Residents)"
+                    },
+                    "legend": "none",
+                    "title": "School Board Ward 6 (2014)"
+                },
+                "rows": [
+                    [
+                        "Joey R Weedon",
+                        3301.29
+                    ]
+                ],
+                "title": "School Board Ward 6 (2014)",
+                "year": "2014"
+            }
+        ],
         "officeyearid": "School-Board-Ward-6-2014"
     },
     {
