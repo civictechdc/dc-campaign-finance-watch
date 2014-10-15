@@ -35,7 +35,7 @@
         <core-pages selected="{{selectedPageId}}" valueattr="id">
           <template repeat="{{race in races}}">
             <div id="page-{{race.officeyearid}}">
-              <my-charts charts="{{race.officeyeardata}}"></my-charts>
+              <google-bar charts="{{race.officeyeardata}}"></my-charts>
             </div>
           </template>
           <div id="page-welcome">Welcome to DC Campaign Finance Watch.  To see details about a particular election, elected official, or contractor, select from the "hamburger" menu on the upper-lefthand corner. </div>

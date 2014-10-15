@@ -1,13 +1,16 @@
+
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
-<polymer-element name="my-charts" attributes="charts" noscript>
+<polymer-element name="google-bar" attributes="charts" noscript>
   <template>
     <template repeat="{{chart in charts}}">
-      <google-chart type='bar' height='400px' width='100%'
+    	<h3>{{chart.title}}<br>{{chart.subtitle}}</h3>
+      <google-chart type='bar' height={{chart.height}} width='100%'
         options='{{chart.options}}' cols='{{chart.cols}}'
         rows='{{chart.rows}}' data='{{chart.data}}'>
       </google-chart>
+      <div alight="center" style="font-size:10px">note 1: {{chart.notesa}}<br>note 2: {{chart.notesb}}</div>
     </template>
   </template>
 </polymer-element>
