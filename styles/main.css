@@ -177,3 +177,13 @@ core-item a {
     color: currentcolor;
     text-decoration: none
 }
+core-scaffold::shadow core-header-panel {
+  background: #FFFFFF;
+  color: black;
+  padding: 0 16px
+}
+core-pages {
+  background: #FFFFFF;
+  color: black;
+  margin: 16px;
+}
