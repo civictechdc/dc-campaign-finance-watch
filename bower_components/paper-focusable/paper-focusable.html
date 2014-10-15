@@ -23,15 +23,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <polymer-element name="paper-focusable" attributes="active focused disabled isToggle" tabindex="0" on-down="{{downAction}}" on-up="{{upAction}}" on-focus="{{focusAction}}" on-blur="{{blurAction}}" on-contextmenu="{{contextMenuAction}}">
 
-  <template>
-    <style>
-      :host([disabled]) {
-        pointer-events: none;
-      }
-    </style>
-    <content></content>
-  </template>
-
   <script>
     Polymer('paper-focusable', {
 
