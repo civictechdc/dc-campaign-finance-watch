@@ -4,25 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <title>DC Campaign Finance Watch</title>
+
     <script src="bower_components/platform/platform.js"></script>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="import" href="elements/elements.html">
-
-  <!--<style shim-shadowdom>-->
-  <!--  core-scaffold::shadow core-header-panel {-->
-  <!--    background: #FFFFFF;-->
-  <!--    color: black;-->
-  <!--  }-->
-  <!--</style>-->
-
   </head>
 
   <body unresolved fullbleed>
     <template is="auto-binding" id="page-template">
-      <core-scaffold responsiveWidth='800px'>
+      <core-scaffold theme="core-light-theme" responsiveWidth='1200px'>
         <core-header-panel navigation flex mode="seamed">
-          <core-toolbar ></core-toolbar>
-          <core-menu on-core-select="{{handleSelect}}">
+          <core-toolbar theme="core-light-theme"></core-toolbar>
+          <core-menu theme="core-light-theme" on-core-select="{{handleSelect}}">
             <core-ajax auto url="json/years and offices.json" response="{{elections}}" handleAs="json"></core-ajax>
             <template repeat="{{election in elections}}">
               <core-submenu icon="visibility" label="{{election.year}}">
@@ -37,16 +30,16 @@
                 <core-item icon="info-outline" id="about" label="about"></core-item>
           </core-menu>
         </core-header-panel>
-        <div tool flex>{{title}}</div>
+        <div tool>{{title}}</div>
         <core-ajax auto url="json/graphing-data.json" response="{{races}}" handleAs="json"></core-ajax>
         <core-pages selected="{{selectedPageId}}" valueattr="id">
           <template repeat="{{race in races}}">
             <div id="page-{{race.officeyearid}}">
-              <google-bar charts="{{race.officeyeardata}}"></my-charts>
+              <my-charts charts="{{race.officeyeardata}}"></my-charts>
             </div>
           </template>
           <div id="page-welcome">Welcome to DC Campaign Finance Watch.  To see details about a particular election, elected official, or contractor, select from the "hamburger" menu on the upper-lefthand corner. </div>
-          <div id="page-paytoplay">First, see <a href="http://wamu.org/projects/paytoplay/#/officials">WAMU's work on this area</a>.  Our analyses will attempt to link campaign contributions to District contracts in additional ways. </div>
+          <div id="page-paytoplay">These analyses will link campaign contributions to District contracts.  The cash paid to office holders’ campaigns will be linked to past, existing, and pending contracts with the city. </div>
           <div id="page-industryinfluence">Using NIGP codes and all available online data, we will link donors with specific industries. We can then sort each candidate and political office-holder by level of industry influence and relate them to upcoming bills.   </div>
           <div id="page-officeholders">A moving average of corporate capture & grass roots support for each current officeholder. Will span available data.</div>
           <div id="page-about">We are just regular folk coding for DC.  Come to a <a href="http://www.meetup.com/Code-for-DC/">meetup</a> or <a href="https://github.com/codefordc/dc-campaign-finance-watch">check out a repo on github</a>!</div>

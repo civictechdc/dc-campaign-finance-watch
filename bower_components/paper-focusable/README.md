@@ -1,6 +1,3 @@
-!!! DEPRECATED !!! DO NOT USE !!!
-=================================
-
 paper-focusable
 ===============
 

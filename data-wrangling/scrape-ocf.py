@@ -32,7 +32,6 @@ with open(filename, 'w') as f:
 f.close()
 
 expenditures = scraper.records_with_office_and_election_year(from_date=start_date, to_date=end_date, report_type='exp')
-
 filename = os.path.join(csv_dir, 'ocf_expenditures.csv')
 with open(filename, 'w') as f:
     f.write(expenditures.csv)
