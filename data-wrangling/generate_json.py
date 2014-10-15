@@ -106,8 +106,8 @@ def assemble_json(year, office, title, subtitle, notesa, notesb, data, height, o
   return out_data
 
 def generate_grcont_json(df, year, office):
-  title = str(office) + ' (' + str(year) + ')'
-  subtitle = 'Grassroots: Number of DC Residents Contributing'
+  title = str(office) + ' (' + str(year) + '): Grassroots'
+  subtitle = '(Number of DC Residents Contributing)'
   notesa = 'Data retrieved from OCF: ' + str(ocf_retrieval_time)
   notesb = 'Sorted by grassroots contributions and then, for same value results, by corporate contributions'
   options = '{"legend": "none"}'
@@ -128,8 +128,8 @@ def generate_grcont_json(df, year, office):
   return gjd
 
 def generate_cocont_json(df, year, office):
-  title = str(office) + ' (' + str(year) + ')'
-  subtitle = 'Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing'
+  title = str(office) + ' (' + str(year) + '): Corporate'
+  subtitle = '(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)'
   notesa = 'Data retrieved from OCF: ' + str(ocf_retrieval_time)
   notesb = 'Sorted by corporate contributions and then, for same value results, by grassrotts contributions'
   options = '{"legend": "none"}'

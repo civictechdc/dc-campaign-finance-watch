@@ -2,15 +2,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Mayor (2014)",
+                "title": "Mayor (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "520",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Mayor",
                 "data": [
                     [
@@ -81,18 +80,18 @@
                         "Victoria Gordon",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Mayor (2014)",
+                "title": "Mayor (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "520",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Mayor",
                 "data": [
                     [
@@ -163,7 +162,8 @@
                         "Muriel E Bowser",
                         1275
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Mayor-2014"
@@ -171,15 +171,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Chairman (2014)",
+                "title": "Council Chairman (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "160",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Chairman",
                 "data": [
                     [
@@ -202,18 +201,18 @@
                         "Calvin H Gurley",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Chairman (2014)",
+                "title": "Council Chairman (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "160",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Chairman",
                 "data": [
                     [
@@ -236,7 +235,8 @@
                         "Phil Mendelson",
                         41
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Chairman-2014"
@@ -244,15 +244,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council At-Large (2014)",
+                "title": "Council At-Large (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "580",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council At-Large",
                 "data": [
                     [
@@ -309,7 +308,7 @@
                     ],
                     [
                         "Marc Morgan",
-                        37
+                        41
                     ],
                     [
                         "Eric Jones",
@@ -331,18 +330,18 @@
                         "Kevin Valentine",
                         2
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council At-Large (2014)",
+                "title": "Council At-Large (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "580",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council At-Large",
                 "data": [
                     [
@@ -421,7 +420,8 @@
                         "Anita Bonds",
                         133
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-At-Large-2014"
@@ -429,15 +429,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Ward 1 (2014)",
+                "title": "Council Ward 1 (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "220",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Ward 1",
                 "data": [
                     [
@@ -468,18 +467,18 @@
                         "John V LaBeaume",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Ward 1 (2014)",
+                "title": "Council Ward 1 (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "220",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Ward 1",
                 "data": [
                     [
@@ -510,7 +509,8 @@
                         "Brianne Nadeau",
                         107
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Ward-1-2014"
@@ -518,15 +518,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Ward 3 (2014)",
+                "title": "Council Ward 3 (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "70",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Ward 3",
                 "data": [
                     [
@@ -537,18 +536,18 @@
                         "Mary M Cheh",
                         125
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Ward 3 (2014)",
+                "title": "Council Ward 3 (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "70",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Ward 3",
                 "data": [
                     [
@@ -559,7 +558,8 @@
                         "Mary M Cheh",
                         31
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Ward-3-2014"
@@ -567,15 +567,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Ward 5 (2014)",
+                "title": "Council Ward 5 (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "130",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Ward 5",
                 "data": [
                     [
@@ -594,18 +593,18 @@
                         "Jacqueline Manning",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Ward 5 (2014)",
+                "title": "Council Ward 5 (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "130",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Ward 5",
                 "data": [
                     [
@@ -624,7 +623,8 @@
                         "Kenyan McDuffie",
                         87
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Ward-5-2014"
@@ -632,15 +632,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Ward 6 (2014)",
+                "title": "Council Ward 6 (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "160",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Ward 6",
                 "data": [
                     [
@@ -653,7 +652,7 @@
                     ],
                     [
                         "Darrel Thompson",
-                        326
+                        323
                     ],
                     [
                         "Shelonda Tillman",
@@ -663,18 +662,18 @@
                         "Pranav Badhwar",
                         1
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Ward 6 (2014)",
+                "title": "Council Ward 6 (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "160",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Ward 6",
                 "data": [
                     [
@@ -697,7 +696,8 @@
                         "Darrel Thompson",
                         12
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Ward-6-2014"
@@ -705,15 +705,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Attorney General (2014)",
+                "title": "Attorney General (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "190",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Attorney General",
                 "data": [
                     [
@@ -740,18 +739,18 @@
                         "Lateefah Williams",
                         72
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Attorney General (2014)",
+                "title": "Attorney General (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "190",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Attorney General",
                 "data": [
                     [
@@ -778,7 +777,8 @@
                         "Karl A Racine",
                         23
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Attorney-General-2014"
@@ -786,15 +786,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board Ward 1 (2014)",
+                "title": "School Board Ward 1 (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "190",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board Ward 1",
                 "data": [
                     [
@@ -815,24 +814,24 @@
                     ],
                     [
                         "Lillian Perdomo",
-                        37
+                        46
                     ],
                     [
                         "E. Gail Anderson Holness",
                         3
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board Ward 1 (2014)",
+                "title": "School Board Ward 1 (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "190",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board Ward 1",
                 "data": [
                     [
@@ -859,7 +858,8 @@
                         "David Do",
                         6
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-Ward-1-2014"
@@ -867,15 +867,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board Ward 3 (2014)",
+                "title": "School Board Ward 3 (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "160",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board Ward 3",
                 "data": [
                     [
@@ -883,12 +882,12 @@
                         "Grassroots Contributors"
                     ],
                     [
-                        "Stephanie Lilley",
-                        39
+                        "Patricia Braun",
+                        52
                     ],
                     [
-                        "Patricia Braun",
-                        35
+                        "Stephanie Lilley",
+                        39
                     ],
                     [
                         "Ruth Wattenberg",
@@ -898,22 +897,23 @@
                         "W. Philip Thomas",
                         15
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board Ward 3 (2014)",
+                "title": "School Board Ward 3 (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board Ward 3",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-Ward-3-2014"
@@ -921,15 +921,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board Ward 5 (2014)",
+                "title": "School Board Ward 5 (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "70",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board Ward 5",
                 "data": [
                     [
@@ -940,22 +939,23 @@
                         "Mark Jones",
                         1
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board Ward 5 (2014)",
+                "title": "School Board Ward 5 (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board Ward 5",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-Ward-5-2014"
@@ -963,15 +963,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board Ward 6 (2014)",
+                "title": "School Board Ward 6 (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board Ward 6",
                 "data": [
                     [
@@ -986,22 +985,23 @@
                         "Mark Naydan",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board Ward 6 (2014)",
+                "title": "School Board Ward 6 (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board Ward 6",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-Ward-6-2014"
@@ -1009,15 +1009,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board Ward 8 (2014)",
+                "title": "School Board Ward 8 (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "160",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board Ward 8",
                 "data": [
                     [
@@ -1040,18 +1039,18 @@
                         "Derrell Simpson",
                         11
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board Ward 8 (2014)",
+                "title": "School Board Ward 8 (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "160",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board Ward 8",
                 "data": [
                     [
@@ -1074,7 +1073,8 @@
                         "Philip E Pannell",
                         9
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-Ward-8-2014"
@@ -1082,15 +1082,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "US Representative (2014)",
+                "title": "US Representative (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "70",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "US Representative",
                 "data": [
                     [
@@ -1101,22 +1100,23 @@
                         "Franklin Garcia",
                         3
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "US Representative (2014)",
+                "title": "US Representative (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "US Representative",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "US-Representative-2014"
@@ -1124,15 +1124,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "US Senator (2014)",
+                "title": "US Senator (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "190",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "US Senator",
                 "data": [
                     [
@@ -1159,18 +1158,18 @@
                         "James S Bubar",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "US Senator (2014)",
+                "title": "US Senator (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "190",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "US Senator",
                 "data": [
                     [
@@ -1197,7 +1196,8 @@
                         "Paul Strauss",
                         7
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "US-Senator-2014"
@@ -1205,34 +1205,34 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Alternate Democratic National Committeeman (2014)",
+                "title": "Alternate Democratic National Committeeman (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Alternate Democratic National Committeeman",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Alternate Democratic National Committeeman (2014)",
+                "title": "Alternate Democratic National Committeeman (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Alternate Democratic National Committeeman",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Alternate-Democratic-National-Committeeman-2014"
@@ -1240,15 +1240,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Alternate Democratic National Committeewoman (2014)",
+                "title": "Alternate Democratic National Committeewoman (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "70",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Alternate Democratic National Committeewoman",
                 "data": [
                     [
@@ -1259,22 +1258,23 @@
                         "Winifred Y Carson Smith",
                         1
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Alternate Democratic National Committeewoman (2014)",
+                "title": "Alternate Democratic National Committeewoman (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Alternate Democratic National Committeewoman",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Alternate-Democratic-National-Committeewoman-2014"
@@ -1282,15 +1282,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "At-Large DC Democratic State Committee (2014)",
+                "title": "At-Large DC Democratic State Committee (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "70",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "At-Large DC Democratic State Committee",
                 "data": [
                     [
@@ -1301,18 +1300,18 @@
                         "Barrie Daneker",
                         85
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "At-Large DC Democratic State Committee (2014)",
+                "title": "At-Large DC Democratic State Committee (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "70",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "At-Large DC Democratic State Committee",
                 "data": [
                     [
@@ -1323,7 +1322,8 @@
                         "Barrie Daneker",
                         3
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "At-Large-DC-Democratic-State-Committee-2014"
@@ -1331,15 +1331,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Democratic National Committeeman (2014)",
+                "title": "Democratic National Committeeman (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Democratic National Committeeman",
                 "data": [
                     [
@@ -1354,22 +1353,23 @@
                         "Gregory Cendana",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Democratic National Committeeman (2014)",
+                "title": "Democratic National Committeeman (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Democratic National Committeeman",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Democratic-National-Committeeman-2014"
@@ -1377,15 +1377,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Democratic National Committeewoman (2014)",
+                "title": "Democratic National Committeewoman (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "70",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Democratic National Committeewoman",
                 "data": [
                     [
@@ -1396,22 +1395,23 @@
                         "Acqunetta Anderson",
                         2
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Democratic National Committeewoman (2014)",
+                "title": "Democratic National Committeewoman (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Democratic National Committeewoman",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Democratic-National-Committeewoman-2014"
@@ -1419,15 +1419,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Ward 3 DC Democratic State Committee (2014)",
+                "title": "Ward 3 DC Democratic State Committee (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "70",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Ward 3 DC Democratic State Committee",
                 "data": [
                     [
@@ -1438,22 +1437,23 @@
                         "Robert M Brandon",
                         9
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Ward 3 DC Democratic State Committee (2014)",
+                "title": "Ward 3 DC Democratic State Committee (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Ward 3 DC Democratic State Committee",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Ward-3-DC-Democratic-State-Committee-2014"
@@ -1461,34 +1461,34 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Ward 6 DC Democratic State Committee (2014)",
+                "title": "Ward 6 DC Democratic State Committee (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Ward 6 DC Democratic State Committee",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Ward 6 DC Democratic State Committee (2014)",
+                "title": "Ward 6 DC Democratic State Committee (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Ward 6 DC Democratic State Committee",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Ward-6-DC-Democratic-State-Committee-2014"
@@ -1496,34 +1496,34 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Ward 1 DC Democratic State Committee (2014)",
+                "title": "Ward 1 DC Democratic State Committee (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Ward 1 DC Democratic State Committee ",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2014",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2014",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Ward 1 DC Democratic State Committee (2014)",
+                "title": "Ward 1 DC Democratic State Committee (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Ward 1 DC Democratic State Committee ",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Ward-1-DC-Democratic-State-Committee--2014"
@@ -1531,15 +1531,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2013",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2013",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council At-Large (2013)",
+                "title": "Council At-Large (2013): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "400",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council At-Large",
                 "data": [
                     [
@@ -1594,18 +1593,18 @@
                         "Jon Gann",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2013",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2013",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council At-Large (2013)",
+                "title": "Council At-Large (2013): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "400",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council At-Large",
                 "data": [
                     [
@@ -1660,7 +1659,8 @@
                         "Anita Bonds",
                         116
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-At-Large-2013"
@@ -1668,15 +1668,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Chairman (2012)",
+                "title": "Council Chairman (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "130",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Chairman",
                 "data": [
                     [
@@ -1695,18 +1694,18 @@
                         "John C Cheeks",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Chairman (2012)",
+                "title": "Council Chairman (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "130",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Chairman",
                 "data": [
                     [
@@ -1725,7 +1724,8 @@
                         "Phil Mendelson",
                         145
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Chairman-2012"
@@ -1733,15 +1733,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council At-Large (2012)",
+                "title": "Council At-Large (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "310",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council At-Large",
                 "data": [
                     [
@@ -1784,18 +1783,18 @@
                         "Leon J Swain",
                         25
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council At-Large (2012)",
+                "title": "Council At-Large (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "310",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council At-Large",
                 "data": [
                     [
@@ -1838,7 +1837,8 @@
                         "Michael A Brown",
                         216
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-At-Large-2012"
@@ -1846,15 +1846,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Ward 2 (2012)",
+                "title": "Council Ward 2 (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Ward 2",
                 "data": [
                     [
@@ -1869,18 +1868,18 @@
                         "Fiona Greig",
                         26
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Ward 2 (2012)",
+                "title": "Council Ward 2 (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Ward 2",
                 "data": [
                     [
@@ -1895,7 +1894,8 @@
                         "Jack Evans",
                         316
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Ward-2-2012"
@@ -1903,15 +1903,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Ward 4 (2012)",
+                "title": "Council Ward 4 (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "220",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Ward 4",
                 "data": [
                     [
@@ -1942,18 +1941,18 @@
                         "Calvin H Gurley",
                         3
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Ward 4 (2012)",
+                "title": "Council Ward 4 (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "220",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Ward 4",
                 "data": [
                     [
@@ -1984,7 +1983,8 @@
                         "Muriel Bowser",
                         353
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Ward-4-2012"
@@ -1992,15 +1992,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Ward 5 (2012)",
+                "title": "Council Ward 5 (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "550",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Ward 5",
                 "data": [
                     [
@@ -2075,18 +2074,18 @@
                         "Robert Albrecht",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Ward 5 (2012)",
+                "title": "Council Ward 5 (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "550",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Ward 5",
                 "data": [
                     [
@@ -2161,7 +2160,8 @@
                         "Kenyan McDuffie",
                         98
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Ward-5-2012"
@@ -2169,15 +2169,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Ward 7 (2012)",
+                "title": "Council Ward 7 (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "280",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Ward 7",
                 "data": [
                     [
@@ -2216,18 +2215,18 @@
                         "Jimmy Johnson",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Ward 7 (2012)",
+                "title": "Council Ward 7 (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "280",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Ward 7",
                 "data": [
                     [
@@ -2266,7 +2265,8 @@
                         "Yvette M Alexander",
                         238
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Ward-7-2012"
@@ -2274,15 +2274,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Ward 8 (2012)",
+                "title": "Council Ward 8 (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "250",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Ward 8",
                 "data": [
                     [
@@ -2317,18 +2316,18 @@
                         "Gary Ric Feenster",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Ward 8 (2012)",
+                "title": "Council Ward 8 (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "250",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Ward 8",
                 "data": [
                     [
@@ -2363,7 +2362,8 @@
                         "Marion Barry",
                         217
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Ward-8-2012"
@@ -2371,15 +2371,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board At-Large (2012)",
+                "title": "School Board At-Large (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board At-Large",
                 "data": [
                     [
@@ -2394,22 +2393,23 @@
                         "Marvin Tucker",
                         5
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board At-Large (2012)",
+                "title": "School Board At-Large (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board At-Large",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-At-Large-2012"
@@ -2417,15 +2417,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board Ward 2 (2012)",
+                "title": "School Board Ward 2 (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "70",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board Ward 2",
                 "data": [
                     [
@@ -2436,22 +2435,23 @@
                         "Jack Jacobson",
                         158
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board Ward 2 (2012)",
+                "title": "School Board Ward 2 (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board Ward 2",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-Ward-2-2012"
@@ -2459,15 +2459,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board Ward 7 (2012)",
+                "title": "School Board Ward 7 (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "70",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board Ward 7",
                 "data": [
                     [
@@ -2478,22 +2477,23 @@
                         "Karen Williams",
                         20
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board Ward 7 (2012)",
+                "title": "School Board Ward 7 (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board Ward 7",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-Ward-7-2012"
@@ -2501,15 +2501,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board Ward 8 (2012)",
+                "title": "School Board Ward 8 (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board Ward 8",
                 "data": [
                     [
@@ -2524,18 +2523,18 @@
                         "Trayon White",
                         14
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board Ward 8 (2012)",
+                "title": "School Board Ward 8 (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board Ward 8",
                 "data": [
                     [
@@ -2550,7 +2549,8 @@
                         "Trayon White",
                         5
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-Ward-8-2012"
@@ -2558,15 +2558,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "US Senator (2012)",
+                "title": "US Senator (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "US Senator",
                 "data": [
                     [
@@ -2581,18 +2580,18 @@
                         "Michael D Brown",
                         16
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "US Senator (2012)",
+                "title": "US Senator (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "US Senator",
                 "data": [
                     [
@@ -2607,7 +2606,8 @@
                         "Michael D Brown",
                         1
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "US-Senator-2012"
@@ -2615,15 +2615,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Democratic Delegates (2012)",
+                "title": "Democratic Delegates (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "70",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Democratic Delegates",
                 "data": [
                     [
@@ -2634,22 +2633,23 @@
                         "Gregory Cendana",
                         62
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Democratic Delegates (2012)",
+                "title": "Democratic Delegates (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Democratic Delegates",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Democratic-Delegates-2012"
@@ -2657,15 +2657,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Republican National Committeewoman (2012)",
+                "title": "Republican National Committeewoman (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Republican National Committeewoman",
                 "data": [
                     [
@@ -2680,18 +2679,18 @@
                         "Teri Galvez",
                         89
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Republican National Committeewoman (2012)",
+                "title": "Republican National Committeewoman (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Republican National Committeewoman",
                 "data": [
                     [
@@ -2706,7 +2705,8 @@
                         "Teri Galvez",
                         5
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Republican-National-Committeewoman-2012"
@@ -2714,15 +2714,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Republican National Committeeman (2012)",
+                "title": "Republican National Committeeman (2012): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Republican National Committeeman ",
                 "data": [
                     [
@@ -2737,18 +2736,18 @@
                         "Jordan Gehrke",
                         6
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2012",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2012",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Republican National Committeeman (2012)",
+                "title": "Republican National Committeeman (2012): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Republican National Committeeman ",
                 "data": [
                     [
@@ -2763,7 +2762,8 @@
                         "Jordan Gehrke",
                         6
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Republican-National-Committeeman -2012"
@@ -2771,15 +2771,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2011",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2011",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council At-Large (2011)",
+                "title": "Council At-Large (2011): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "340",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council At-Large",
                 "data": [
                     [
@@ -2826,18 +2825,18 @@
                         "Wayne Dickson",
                         3
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2011",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2011",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council At-Large (2011)",
+                "title": "Council At-Large (2011): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "340",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council At-Large",
                 "data": [
                     [
@@ -2884,7 +2883,8 @@
                         "Vincent Orange",
                         136
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-At-Large-2011"
@@ -2892,15 +2892,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2011",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2011",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board Ward 4 (2011)",
+                "title": "School Board Ward 4 (2011): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "190",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board Ward 4",
                 "data": [
                     [
@@ -2927,18 +2926,18 @@
                         "James Garay Heelan",
                         2
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2011",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2011",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board Ward 4 (2011)",
+                "title": "School Board Ward 4 (2011): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "190",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board Ward 4",
                 "data": [
                     [
@@ -2965,7 +2964,8 @@
                         "D. Kamili Anderson",
                         8
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-Ward-4-2011"
@@ -2973,15 +2973,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2011",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2011",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board Ward 8 (2011)",
+                "title": "School Board Ward 8 (2011): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "280",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board Ward 8",
                 "data": [
                     [
@@ -3020,18 +3019,18 @@
                         "Sandra V Williams",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2011",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2011",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board Ward 8 (2011)",
+                "title": "School Board Ward 8 (2011): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "280",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board Ward 8",
                 "data": [
                     [
@@ -3070,7 +3069,8 @@
                         "Philip Pannell",
                         8
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-Ward-8-2011"
@@ -3078,15 +3078,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Mayor (2010)",
+                "title": "Mayor (2010): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "310",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Mayor",
                 "data": [
                     [
@@ -3129,18 +3128,18 @@
                         "Patrick J Tayman",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Mayor (2010)",
+                "title": "Mayor (2010): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "310",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Mayor",
                 "data": [
                     [
@@ -3183,7 +3182,8 @@
                         "Vincent C Gray",
                         903
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Mayor-2010"
@@ -3191,15 +3191,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Chairman (2010)",
+                "title": "Council Chairman (2010): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "160",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Chairman",
                 "data": [
                     [
@@ -3222,18 +3221,18 @@
                         "Ann C Wilcox",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Chairman (2010)",
+                "title": "Council Chairman (2010): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "160",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Chairman",
                 "data": [
                     [
@@ -3256,7 +3255,8 @@
                         "Kwame R Brown",
                         444
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Chairman-2010"
@@ -3264,15 +3264,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council At-Large (2010)",
+                "title": "Council At-Large (2010): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "340",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council At-Large",
                 "data": [
                     [
@@ -3319,18 +3318,18 @@
                         "Carolyn Steptoe",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council At-Large (2010)",
+                "title": "Council At-Large (2010): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "340",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council At-Large",
                 "data": [
                     [
@@ -3377,7 +3376,8 @@
                         "David Catania",
                         246
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-At-Large-2010"
@@ -3385,15 +3385,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Ward 1 (2010)",
+                "title": "Council Ward 1 (2010): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "190",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Ward 1",
                 "data": [
                     [
@@ -3420,18 +3419,18 @@
                         "Nancy Shia",
                         9
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Ward 1 (2010)",
+                "title": "Council Ward 1 (2010): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "190",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Ward 1",
                 "data": [
                     [
@@ -3458,7 +3457,8 @@
                         "Jim Graham",
                         347
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Ward-1-2010"
@@ -3466,15 +3466,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Ward 3 (2010)",
+                "title": "Council Ward 3 (2010): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Ward 3",
                 "data": [
                     [
@@ -3489,18 +3488,18 @@
                         "Dave Hedgepeth",
                         144
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Ward 3 (2010)",
+                "title": "Council Ward 3 (2010): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Ward 3",
                 "data": [
                     [
@@ -3515,7 +3514,8 @@
                         "Mary M Cheh",
                         89
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Ward-3-2010"
@@ -3523,15 +3523,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Ward 5 (2010)",
+                "title": "Council Ward 5 (2010): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "220",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Ward 5",
                 "data": [
                     [
@@ -3562,18 +3561,18 @@
                         "Tracey D Turner",
                         35
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Ward 5 (2010)",
+                "title": "Council Ward 5 (2010): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "220",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Ward 5",
                 "data": [
                     [
@@ -3604,7 +3603,8 @@
                         "Harry Thomas",
                         266
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Ward-5-2010"
@@ -3612,15 +3612,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "Council Ward 6 (2010)",
+                "title": "Council Ward 6 (2010): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "130",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "Council Ward 6",
                 "data": [
                     [
@@ -3639,18 +3638,18 @@
                         "Kelvin Robinson",
                         67
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "Council Ward 6 (2010)",
+                "title": "Council Ward 6 (2010): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "130",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "Council Ward 6",
                 "data": [
                     [
@@ -3669,7 +3668,8 @@
                         "Tommy Wells",
                         103
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "Council-Ward-6-2010"
@@ -3677,15 +3677,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board Ward 1 (2010)",
+                "title": "School Board Ward 1 (2010): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board Ward 1",
                 "data": [
                     [
@@ -3700,18 +3699,18 @@
                         "Dotti Love Wade",
                         31
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board Ward 1 (2010)",
+                "title": "School Board Ward 1 (2010): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board Ward 1",
                 "data": [
                     [
@@ -3726,7 +3725,8 @@
                         "Patrick Mara",
                         17
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-Ward-1-2010"
@@ -3734,15 +3734,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board Ward 3 (2010)",
+                "title": "School Board Ward 3 (2010): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "70",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board Ward 3",
                 "data": [
                     [
@@ -3753,22 +3752,23 @@
                         "Laura M Slover",
                         1
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board Ward 3 (2010)",
+                "title": "School Board Ward 3 (2010): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "1",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board Ward 3",
                 "data": [
                     []
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-Ward-3-2010"
@@ -3776,15 +3776,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board Ward 5 (2010)",
+                "title": "School Board Ward 5 (2010): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board Ward 5",
                 "data": [
                     [
@@ -3799,18 +3798,18 @@
                         "Darlene Glymph",
                         12
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board Ward 5 (2010)",
+                "title": "School Board Ward 5 (2010): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board Ward 5",
                 "data": [
                     [
@@ -3825,7 +3824,8 @@
                         "Darlene Glymph",
                         2
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-Ward-5-2010"
@@ -3833,15 +3833,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "School Board Ward 6 (2010)",
+                "title": "School Board Ward 6 (2010): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "School Board Ward 6",
                 "data": [
                     [
@@ -3856,18 +3855,18 @@
                         "Monica Warren Jones",
                         51
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "School Board Ward 6 (2010)",
+                "title": "School Board Ward 6 (2010): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "100",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "School Board Ward 6",
                 "data": [
                     [
@@ -3882,7 +3881,8 @@
                         "Monica Warren Jones",
                         2
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "School-Board-Ward-6-2010"
@@ -3890,15 +3890,14 @@
     {
         "officeyeardata": [
             {
+                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by grassroots contributions and then, for same value results, by corporate contributions",
-                "title": "US Representative (2010)",
+                "title": "US Representative (2010): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "160",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Grassroots: Number of DC Residents Contributing",
                 "office": "US Representative",
                 "data": [
                     [
@@ -3921,18 +3920,18 @@
                         "Tarek Stevens",
                         0
                     ]
-                ]
+                ],
+                "subtitle": "(Number of DC Residents Contributing)"
             },
             {
+                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
+                "year": "2010",
                 "options": {
                     "legend": "none"
                 },
-                "year": "2010",
-                "notesb": "Sorted by corporate contributions and then, for same value results, by grassrotts contributions",
-                "title": "US Representative (2010)",
+                "title": "US Representative (2010): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 14 21:42:19 2014",
                 "height": "160",
-                "notesa": "Data retrieved from OCF: Tue Oct 14 21:11:58 2014",
-                "subtitle": "Corporate: Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing",
                 "office": "US Representative",
                 "data": [
                     [
@@ -3955,7 +3954,8 @@
                         "Nate Bennett-Fleming",
                         2
                     ]
-                ]
+                ],
+                "subtitle": "(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)"
             }
         ],
         "officeyearid": "US-Representative-2010"

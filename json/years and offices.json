@@ -1,6 +1,5 @@
 [
     {
-        "year": "2014",
         "offices": [
             "Mayor",
             "Council Chairman",
@@ -25,16 +24,16 @@
             "Ward 3 DC Democratic State Committee",
             "Ward 6 DC Democratic State Committee",
             "Ward 1 DC Democratic State Committee "
-        ]
+        ],
+        "year": "2014"
     },
     {
-        "year": "2013",
         "offices": [
             "Council At-Large"
-        ]
+        ],
+        "year": "2013"
     },
     {
-        "year": "2012",
         "offices": [
             "Council Chairman",
             "Council At-Large",
@@ -51,18 +50,18 @@
             "Democratic Delegates",
             "Republican National Committeewoman",
             "Republican National Committeeman "
-        ]
+        ],
+        "year": "2012"
     },
     {
-        "year": "2011",
         "offices": [
             "Council At-Large",
             "School Board Ward 4",
             "School Board Ward 8"
-        ]
+        ],
+        "year": "2011"
     },
     {
-        "year": "2010",
         "offices": [
             "Mayor",
             "Council Chairman",
@@ -76,6 +75,7 @@
             "School Board Ward 5",
             "School Board Ward 6",
             "US Representative"
-        ]
+        ],
+        "year": "2010"
     }
 ]
