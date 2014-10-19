@@ -8,39 +8,6 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
-<!--
-Issues:
-
-* what to do on window resize?
-  * reposition
-* what to do when window scrolls?
-  * tbd
-* positioning
-  * convenience - halign, valign
-  * possible to use custom CSS
-
-Approaches:
-
-* uses default core-overlay behavior
-  * possible to be always on top
-  * doesn't scroll with
-  * core-dropdown is independent of the triggering element
-* uses position: absolute
-  * scrolls with
-  * might not be always on top
-  * core-dropdown needs to know about both the triggering element and the dropdown
-* core-dropdown contains both the triggering element and the dropdown, uses distribution
-  * how do I position the dropdown?
-  * if the dropdown is the distributed node, it's hard to style the dropdown from the outside because of specificity
-  * if the dropdown is the container of the distributed node, it's hard to style the dropdown from the outside
-    because of shadow dom - maybe ok?
-
-Related elements:
-
-core-dropdown - a control that triggers a dropdown
-core-dropdown-menu - a control that triggers a dropdown menu, similar to select
-core-menu-button - a icon button that triggers a dropdown menu
--->
 <html>
 <head>
 
@@ -50,7 +17,7 @@ core-menu-button - a icon button that triggers a dropdown menu
 
   <title>core-dropdown</title>
 
-  <script src="../platform/platform.js"></script>
+  <script src="../webcomponentsjs/webcomponents.js"></script>
 
   <link href="../core-icon/core-icon.html" rel="import">
   <link href="../core-icons/core-icons.html" rel="import">
@@ -77,17 +44,17 @@ core-menu-button - a icon button that triggers a dropdown menu
       border-radius: 3px;
     }
 
-    drop-down.margin::shadow core-dropdown {
+    .margin::shadow core-dropdown {
       margin: 12px;
     }
 
-    drop-down.open-below::shadow core-dropdown {
+    .open-below::shadow core-dropdown {
       position: absolute;
       top: 38px;
       left: 0px;
     }
 
-    drop-down.constrained::shadow core-dropdown {
+    .constrained::shadow core-dropdown {
       max-height: 500px;
     }
 
@@ -156,7 +123,7 @@ core-menu-button - a icon button that triggers a dropdown menu
     <div id="trigger" on-tap="{{toggle}}">
       <content select=".core-dropdown-trigger"></content>
     </div>
-    <core-dropdown relatedTarget="{{$.trigger}}" halign="{{halign}}" valign="{{valign}}" opened="{{opened}}" margin="12">
+    <core-dropdown relatedTarget="{{$.trigger}}" halign="{{halign}}" valign="{{valign}}" opened="{{opened}}">
       <content></content>
     </core-dropdown>
   </template>
@@ -181,10 +148,34 @@ core-menu-button - a icon button that triggers a dropdown menu
     </style>
     <div id="trigger" on-tap="{{toggle}}">
       <content select=".core-dropdown-trigger"></content>
-      <core-dropdown relatedTarget="{{$.trigger}}" halign="{{halign}}" valign="{{valign}}" opened="{{opened}}" margin="12">
+      <core-dropdown relatedTarget="{{$.trigger}}" halign="{{halign}}" valign="{{valign}}" opened="{{opened}}">
         <content></content>
       </core-dropdown>
     </div>
+  </template>
+  <script>
+    Polymer({
+      toggle: function() {
+        this.opened = !this.opened;
+      }
+    });
+  </script>
+  </polymer-element>
+
+  <polymer-element name="layered-drop-down">
+  <template>
+    <style>
+      :host {
+        display: inline-block;
+        position: relative;
+      }
+    </style>
+    <div id="trigger" on-tap="{{toggle}}">
+      <content select=".core-dropdown-trigger"></content>
+    </div>
+    <core-dropdown id="dropdown" relatedTarget="{{$.trigger}}" halign="{{halign}}" valign="{{valign}}" opened="{{opened}}" layered>
+      <content></content>
+    </core-dropdown>
   </template>
   <script>
     Polymer({
@@ -313,6 +304,18 @@ core-menu-button - a icon button that triggers a dropdown menu
             </template>
           </div>
         </drop-down>
+
+        <layered-drop-down style="z-index:1;">
+          <core-icon-button class="core-dropdown-trigger" icon="social:notifications"></core-icon-button>
+          <div class="dropdown">
+            <h2>layered</h2>
+          </div>
+        </layered-drop-down>
+
+        <span style="position:relative;z-index:10;">
+          z-index: 10;
+        </span>
+
       </div>
 
       <p>scroll me...</p>

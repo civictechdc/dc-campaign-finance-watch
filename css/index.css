@@ -1,0 +1,64 @@
+/* unvisited link */
+a:link {
+    color: inherit;
+}
+
+/* visited link */
+a:visited {
+    color: inherit;
+}
+
+/* mouse over link */
+a:hover {
+    color: inherit;
+}
+
+/* selected link */
+a:active {
+    color: inherit;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: #333;
+}
+
+core-scroll-header-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+}
+
+/* background for toolbar when it is at its full size */
+core-scroll-header-panel::shadow #headerBg {
+  background-image: url(../assets/background.jpg);
+}
+
+/* background for toolbar when it is condensed */
+core-scroll-header-panel::shadow #condensedHeaderBg {
+  background-color: black;
+}
+
+core-toolbar {
+  color: #f1f1f1;
+  fill: #f1f1f1;
+  background-color: transparent;
+}
+
+.title {
+  -webkit-transform-origin: 0;
+  transform-origin: 0;
+  font-size: 40px;
+}
+
+.content {
+  padding: 8px;
+}

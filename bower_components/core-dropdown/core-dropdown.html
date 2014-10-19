@@ -64,6 +64,17 @@ Example:
       </div>
     </template>
 
+The `layered` property
+----------------------
+
+Sometimes you may need to render the dropdown in a separate layer. For example,
+it may be nested inside an element that needs to be `overflow: hidden`, or
+its parent may be overlapped by elements above it in stacking order.
+
+The `layered` property will place the dropdown in a separate layer to ensure
+it appears on top of everything else. Note that this implies the dropdown will
+not scroll with its container.
+
 @group Polymer Core Elements
 @element core-dropdown
 @homepage github.io
@@ -77,7 +88,14 @@ Example:
 
   <link href="core-dropdown.css" rel="stylesheet">
 
-  <core-dropdown-overlay id="overlay" target="{{}}" relatedTarget="{{relatedTarget}}" opened="{{opened}}" halign="{{halign}}" valign="{{valign}}" margin="{{margin}}" transition="{{transition}}" autoFocusDisabled="{{autoFocusDisabled}}"></core-dropdown-overlay>
+  <core-dropdown-overlay id="overlay"
+    target="{{}}" sizingTarget="{{sizingTarget}}" relatedTarget="{{relatedTarget}}"
+    halign="{{halign}}" valign="{{valign}}"
+    opened="{{opened}}" backdrop="{{backdrop}}" layered="{{layered}}"
+    autoCloseDisabled="{{autoCloseDisabled}}" closeAttribute="{{closeAttribute}}" closeSelector="{{closeSelector}}"
+    autoFocusDisabled="{{autoFocusDisabled}}"
+    transition="{{transition}}">
+  </core-dropdown-overlay>
 
   <content></content>
 
@@ -89,6 +107,20 @@ Example:
     publish: {
 
       /**
+       * A `core-overlay`'s size is guaranteed to be
+       * constrained to the window size. To achieve this, the sizingElement
+       * is sized with a max-height/width. By default this element is the
+       * target element, but it can be specifically set to a specific element
+       * inside the target if that is more appropriate. This is useful, for
+       * example, when a region inside the overlay should scroll if needed.
+       *
+       * @attribute sizingTarget
+       * @type Object
+       * @default the target element
+       */
+      sizingTarget: null,
+
+      /**
        * The element associated with this dropdown, usually the element that triggers
        * the menu.
        *
@@ -96,15 +128,6 @@ Example:
        * @type Node
        */
       relatedTarget: null,
-
-      /**
-       * If true, the menu is currently visible.
-       *
-       * @attribute opened
-       * @type boolean
-       * @default false
-       */
-      opened: false,
 
       /**
        * The horizontal alignment of the popup relative to `relatedTarget`. `left`
@@ -128,6 +151,15 @@ Example:
        */
       valign: 'top',
 
+      /**
+       * If true, the menu is currently visible.
+       *
+       * @attribute opened
+       * @type boolean
+       * @default false
+       */
+      opened: false,
+
      /**
        * By default an overlay will focus its target or an element inside
        * it with the `autoFocus` attribute. Disable this
@@ -140,8 +172,62 @@ Example:
       autoFocusDisabled: false,
 
       /**
-       * The transition property specifies a string which identifies a 
-       * <a href="../core-transition/">`core-transition`</a> element that 
+       * If true, the overlay has a backdrop darkening the rest of the screen.
+       * The backdrop element is attached to the document body and may be styled
+       * with the class `core-overlay-backdrop`. When opened the `core-opened`
+       * class is applied.
+       *
+       * @attribute backdrop
+       * @type boolean
+       * @default false
+       */
+      backdrop: false,
+
+      /**
+       * If true, the overlay is guaranteed to display above page content.
+       *
+       * @attribute layered
+       * @type boolean
+       * @default false
+      */
+      layered: false,
+
+      /**
+       * By default an overlay will close automatically if the user
+       * taps outside it or presses the escape key. Disable this
+       * behavior by setting the `autoCloseDisabled` property to true.
+       * @attribute autoCloseDisabled
+       * @type boolean
+       * @default false
+       */
+      autoCloseDisabled: false,
+
+
+      /**
+       * This property specifies an attribute on elements that should
+       * close the overlay on tap. Should not set `closeSelector` if this
+       * is set.
+       *
+       * @attribute closeAttribute
+       * @type string
+       * @default "core-overlay-toggle"
+       */
+      closeAttribute: 'core-overlay-toggle',
+
+      /**
+       * This property specifies a selector matching elements that should
+       * close the overlay on tap. Should not set `closeAttribute` if this
+       * is set.
+       *
+       * @attribute closeSelector
+       * @type string
+       * @default ""
+       */
+      closeSelector: '',
+
+      /**
+       * The transition property specifies a string which identifies a
+       * <a href="../core-transition/">`core-transition`</a> element that
        * will be used to help the overlay open and close. The default
        * `core-transition-fade` will cause the overlay to fade in and out.
        *

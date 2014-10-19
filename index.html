@@ -1,69 +1,71 @@
 <!doctype html>
+<!--
+DC Campaign Finance Watch -- A project of Code for DC
+-->
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <title>DC Campaign Finance Watch</title>
+<head>
+  <title>DC Campaign Finance Watch</title>
 
-    <script src="bower_components/platform/platform.js"></script>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="import" href="elements/elements.html">
-  </head>
+  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
 
-  <body unresolved fullbleed>
-    <template is="auto-binding" id="page-template">
-      <core-scaffold theme="core-light-theme" responsiveWidth='1200px'>
-        <core-header-panel navigation flex mode="seamed">
-          <core-toolbar theme="core-light-theme"></core-toolbar>
-          <core-menu theme="core-light-theme" on-core-select="{{handleSelect}}">
-            <core-ajax auto url="json/years and offices.json" response="{{elections}}" handleAs="json"></core-ajax>
-            <template repeat="{{election in elections}}">
-              <core-submenu icon="visibility" label="{{election.year}}">
-                <template repeat="{{office in election.offices}}">
-                  <core-item id="{{ office + '-' + election.year | replaceSpaces }}" label="{{office}}"></core-item>
-                </template>
-              </core-submenu>
-            </template>
-                <core-item icon="visibility" id="paytoplay" label="pay-to-play"></core-item>
-                <core-item icon="visibility" id="industryinfluence" label="influential industries"></core-item>
-                <core-item icon="visibility" id="officeholders" label="office holders"></core-item>
-                <core-item icon="info-outline" id="about" label="about"></core-item>
-          </core-menu>
-        </core-header-panel>
-        <div tool>{{title}}</div>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <link rel="import" href="bower_components/polymer/polymer.html">
+  <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="import" href="elements/elements.html">
+
+
+</head>
+<body unresolved>
+
+  <core-scroll-header-panel condenses>
+
+    <core-toolbar class="tall">
+      <paper-menu-button icon="menu">
+        <paper-item>Rankings</paper-item>
+        <paper-item>Current Elections</paper-item>
+        <paper-item>All Elections</paper-item>
+        <paper-item>Current Officeholders</paper-item>
+        <paper-item>Influential Industries</paper-item>
+        <paper-item>Pay-to-Play</paper-item>
+        <paper-item>Data</paper-item>
+      </paper-menu-button>
+      <div flex></div>
+      <a href="http://codefordc.org/index.html"><img src="assets/c4dc-logo-white-30x58.png"></img></a>
+      <a href="http://github.com/codefordc/dc-campaign-finance-watch"><span class="mega-octicon octicon-octoface"></span></a>
+      <div class="bottom indent title">
+        DC Campaign Finance Watch
+      </div>
+
+    </core-toolbar>
+
+    <div class="content">
+      <template is="auto-binding" id="page-template">
         <core-ajax auto url="json/graphing-data.json" response="{{races}}" handleAs="json"></core-ajax>
-        <core-pages selected="{{selectedPageId}}" valueattr="id">
-          <template repeat="{{race in races}}">
-            <div id="page-{{race.officeyearid}}">
-              <google-bar charts="{{race.officeyeardata}}"></my-charts>
-            </div>
-          </template>
-          <div id="page-welcome">Welcome to DC Campaign Finance Watch.  To see details about a particular election, elected official, or contractor, select from the "hamburger" menu on the upper-lefthand corner. </div>
-          <div id="page-paytoplay">These analyses will link campaign contributions to District contracts.  The cash paid to office holders’ campaigns will be linked to past, existing, and pending contracts with the city. </div>
-          <div id="page-industryinfluence">Using NIGP codes and all available online data, we will link donors with specific industries. We can then sort each candidate and political office-holder by level of industry influence and relate them to upcoming bills.   </div>
-          <div id="page-officeholders">A moving average of corporate capture & grass roots support for each current officeholder. Will span available data.</div>
-          <div id="page-about">We are just regular folk coding for DC.  Come to a <a href="http://www.meetup.com/Code-for-DC/">meetup</a> or <a href="https://github.com/codefordc/dc-campaign-finance-watch">check out a repo on github</a>!</div>
-        </core-pages>
-      </core-scaffold>
-    </template>
+        <template repeat="{{race in races}}">
+            <h3 align="center">{{race.officeyeardata[0].office}} ({{race.officeyeardata[0].year}})</h3>
+          <google-bar charts="{{race.officeyeardata}}"></my-charts>
+        </template>
+      </template>
+    </div>
 
-    <script>
-      	var template = document.querySelector('#page-template');
-        template.title = 'DC Campaign Finance Watch';
+  </core-scroll-header-panel>
+  <script>
 
-        template.replaceSpaces = function(str) {
-        	return str.replace(/\s/g, '-');
-      	},
+    // custom transformation: scale header's title
+    var titleStyle = document.querySelector('.title').style;
+    addEventListener('core-header-transform', function(e) {
+      var d = e.detail;
+      var m = d.height - d.condensedHeight;
+      var scale = Math.max(0.75, (m - d.y) / (m / 0.25)  + 0.75);
+      titleStyle.transform = titleStyle.webkitTransform =
+          'scale(' + scale + ') translateZ(0)';
+    });
 
-        template.handleSelect = function(e) {
-          if(e.detail.isSelected && e.detail.item.localName == 'core-item') {
-            this.selectedPageId = 'page-' + e.detail.item.id;
-          } else {
-            this.selectedPageId = 'page-welcome' ;
-          }
-        };
-    </script>
+  </script>
 
-  </body>
-
+</body>
 </html>

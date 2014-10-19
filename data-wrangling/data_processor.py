@@ -1,10 +1,10 @@
 #!user/bin/python
-import config
+
 import csv
 import datetime
 from pymongo import MongoClient
 
-client = MongoClient('mongodb://'+config.MONGOLAB_USER+':'+config.MONGOLAB_PW+'@ds041380.mongolab.com:41380/dc-campaign-finance').get_default_database()
+client = MongoClient()['dc-finance']
 
 ocp_awards_field_names = ['agency','contract_number','caption','amount','base_contract_period','multi_year','option_yrs_remaining','market_type','nfp','lsdbe','vendor_name']
 

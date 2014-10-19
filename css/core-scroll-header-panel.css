@@ -1,0 +1,50 @@
+
+:host {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+#mainContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#headerContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#headerBg, #condensedHeaderBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#condensedHeaderBg {
+  opacity: 0;
+}

@@ -85,9 +85,11 @@ element within the same offsetParent.
         var style = this.target.style;
         if (dims.position.h_by === this.localName) {
           style[dims.position.h] = null;
+          dims.position.h_by = null;
         }
         if (dims.position.v_by === this.localName) {
           style[dims.position.v] = null;
+          dims.position.v_by = null;
         }
         this.super();
       },
@@ -98,14 +100,56 @@ element within the same offsetParent.
           return;
         }
 
-        var target = this.target;
-        var related = this.relatedTarget;
-
         // explicitly set width/height, because we don't want it constrained
         // to the offsetParent
+        var target = this.target;
         var rect = this.measure();
         target.style.width = rect.width + 'px';
         target.style.height = rect.height + 'px';
+
+        if (this.layered) {
+          this.positionLayeredTarget();
+        } else {
+          this.positionNestedTarget();
+        }
+      },
+
+      positionLayeredTarget: function() {
+        var target = this.target;
+        var rect = this.relatedTarget.getBoundingClientRect();
+
+        var dims = this.dimensions;
+
+        if (!dims.position.h) {
+          if (this.halign === 'right') {
+            target.style.right = window.innerWidth - rect.right + 'px';
+            dims.position.h = 'right';
+          } else {
+            target.style.left = rect.left + 'px';
+            dims.position.h = 'left';
+          }
+          dims.position.h_by = this.localName;
+        }
+
+        if (!dims.position.v) {
+          if (this.valign === 'bottom') {
+            target.style.bottom = window.innerHeight - rect.bottom + 'px';
+            dims.position.v = 'bottom';
+          } else {
+            target.style.top = rect.top + 'px';
+            dims.position.v = 'top';
+          }
+          dims.position.v_by = this.localName;
+        }
+
+        if (dims.position.h_by || dims.position.v_by) {
+          target.style.position = 'fixed';
+        }
+      },
+
+      positionNestedTarget: function() {
+        var target = this.target;
+        var related = this.relatedTarget;
 
         var t_op = target.offsetParent;
         var r_op = related.offsetParent;

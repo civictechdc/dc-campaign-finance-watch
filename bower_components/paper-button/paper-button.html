@@ -25,7 +25,7 @@ You may use custom DOM in the button body to create a variety of buttons. For ex
 create a button with an icon and some text:
 
     <paper-button>
-      <core-icon icon="favorite">
+      <core-icon icon="favorite"></core-icon>
       custom button content
     </paper-button>
 
@@ -56,7 +56,6 @@ The opacity of the ripple is not customizable via CSS.
 -->
 
 <link href="../polymer/polymer.html" rel="import">
-<link href="../core-icon/core-icon.html" rel="import">
 <link href="../paper-ripple/paper-ripple.html" rel="import">
 <link href="../paper-shadow/paper-shadow.html" rel="import">
 
@@ -89,8 +88,8 @@ role="button">
       }
 
       :host([disabled]) {
-        background: #eaeaea !important;
-        color: #a8a8a8 !important;
+        background: #eaeaea;
+        color: #a8a8a8;
         cursor: auto;
         pointer-events: none;
       }
@@ -123,8 +122,6 @@ role="button">
 
       publish: {
 
-        label: '',
-
         /**
          * If true, the button will be styled with a shadow.
          *
@@ -133,7 +130,6 @@ role="button">
          * @default false
          */
         raised: false,
-        raisedButton: false,
 
         /**
          * By default the ripple emanates from where the user touched the button.
@@ -155,18 +151,6 @@ role="button">
          */
         fill: true
 
-      },
-
-      labelChanged: function() {
-        if (this.label) {
-          console.warn('The "label" property is deprecated.');
-        }
-      },
-
-      raisedButtonChanged: function() {
-        if (this.raisedButton) {
-          console.warn('The "raisedButton" property is deprecated.');
-        }
       }
 
     });

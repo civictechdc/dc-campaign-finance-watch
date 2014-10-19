@@ -107,9 +107,9 @@ def assemble_json(year, office, title, subtitle, notesa, notesb, data, height, o
 
 def generate_grcont_json(df, year, office):
   title = str(office) + ' (' + str(year) + '): Grassroots'
-  subtitle = '(Number of DC Residents Contributing)'
+  subtitle = 'DC Residents Contributing'
   notesa = 'Data retrieved from OCF: ' + str(ocf_retrieval_time)
-  notesb = 'Sorted by grassroots contributions and then, for same value results, by corporate contributions'
+  notesb = 'Ranked by grassroots, then by corporate to break ties'
   options = '{"legend": "none"}'
   myct = pd.crosstab(rows=[df['Election Year'],df['Office'],df['Candidate Name']], cols=[df['donor_type']], margins=True)
   try:
@@ -129,9 +129,9 @@ def generate_grcont_json(df, year, office):
 
 def generate_cocont_json(df, year, office):
   title = str(office) + ' (' + str(year) + '): Corporate'
-  subtitle = '(Number of Corporations, Businesses, LLCs, LLPs, and related PACs Contributing)'
+  subtitle = 'Corporations, Businesses, LLCs, LLPs, and related PACs'
   notesa = 'Data retrieved from OCF: ' + str(ocf_retrieval_time)
-  notesb = 'Sorted by corporate contributions and then, for same value results, by grassrotts contributions'
+  notesb = 'Ranked by corporate, then by grassroots to break ties'
   options = '{"legend": "none"}'
   myct = pd.crosstab(rows=[df['Election Year'],df['Office'],df['Candidate Name']], cols=[df['donor_type']], margins=True)
   try:

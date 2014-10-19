@@ -3,9 +3,12 @@
   "private": true,
   "dependencies": {
     "polymer": "Polymer/polymer#master",
+    "core-focusable": "Polymer/core-focusable#master",
     "core-icon": "Polymer/core-icon#master",
-    "paper-focusable": "Polymer/paper-focusable#master",
     "paper-ripple": "Polymer/paper-ripple#master",
     "paper-shadow": "Polymer/paper-shadow#master"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^1.0.0"
   }
 }

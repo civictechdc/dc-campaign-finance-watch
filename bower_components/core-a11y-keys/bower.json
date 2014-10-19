@@ -4,6 +4,9 @@
   "dependencies": {
     "polymer": "Polymer/polymer#master"
   },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^1"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
