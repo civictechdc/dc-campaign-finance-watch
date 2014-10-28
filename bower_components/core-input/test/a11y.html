@@ -31,9 +31,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     test('aria-label set to placeholder', function(done) {
       assert.strictEqual('label', i1.getAttribute('aria-label'));
-      i1.placeholder = 'new label';
-      asyncPlatformFlush(function() {
-        assert.strictEqual('new label', i1.getAttribute('aria-label'));
+      // test failing on polyfill due to https://github.com/Polymer/webcomponentsjs-dev/issues/13
+      // i1.placeholder = 'new label';
+      i1.setAttribute('placeholder', 'new label');
+      flush(function() {
+        assert.strictEqual(i1.getAttribute('aria-label'), 'new label');
         done();
       });
     });
@@ -41,7 +43,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     test('aria-disabled is set', function(done) {
       assert.ok(i2.hasAttribute('aria-disabled'));
       i2.removeAttribute('disabled');
-      asyncPlatformFlush(function() {
+      flush(function() {
         assert.ok(!i2.hasAttribute('aria-disabled'));
         done();
       });

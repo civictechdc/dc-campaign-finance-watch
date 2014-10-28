@@ -1,13 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
 DC Campaign Finance Watch -- A project of Code for DC
 -->
-<html>
 <head>
   <title>DC Campaign Finance Watch</title>
 
   <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -24,15 +24,31 @@ DC Campaign Finance Watch -- A project of Code for DC
   <core-scroll-header-panel condenses>
 
     <core-toolbar class="tall">
-      <paper-menu-button icon="menu">
-        <paper-item>Rankings</paper-item>
-        <paper-item>Current Elections</paper-item>
-        <paper-item>All Elections</paper-item>
-        <paper-item>Current Officeholders</paper-item>
-        <paper-item>Influential Industries</paper-item>
-        <paper-item>Pay-to-Play</paper-item>
-        <paper-item>Data</paper-item>
-      </paper-menu-button>
+
+      <!--<paper-menu-button icon="menu">-->
+      <!--  <paper-item label='Rankings'>-->
+      <!--    <a href="rankings.html" target="_blank"></a>-->
+      <!--  </paper-item>-->
+      <!--  <paper-item label='Current Elections'>-->
+      <!--    <a href="currentraces.html" target="_blank"></a>-->
+      <!--  </paper-item>-->
+      <!--  <paper-item label='All Elections'>-->
+      <!--    <a href="allraces.html" target="_blank"></a>-->
+      <!--  </paper-item>-->
+      <!--  <paper-item label='Current Officeholders'>-->
+      <!--    <a href="officeholders.html" target="_blank"></a>-->
+      <!--  </paper-item>-->
+      <!--  <paper-item label='Influential Industries'>-->
+      <!--    <a href="industries.html" target="_blank"></a>-->
+      <!--  </paper-item>-->
+      <!--  <paper-item label='Pay-to-Play'>-->
+      <!--    <a href="paytoplay.html" target="_blank"></a>-->
+      <!--  </paper-item>-->
+      <!--  <paper-item label='Data'>-->
+      <!--    <a href="data.html" target="_blank"></a>-->
+      <!--  </paper-item>-->
+      <!--</paper-menu-button>-->
+
       <div flex></div>
       <a href="http://codefordc.org/index.html"><img src="assets/c4dc-logo-white-30x58.png"></img></a>
       <a href="http://github.com/codefordc/dc-campaign-finance-watch"><span class="mega-octicon octicon-octoface"></span></a>
@@ -42,18 +58,89 @@ DC Campaign Finance Watch -- A project of Code for DC
 
     </core-toolbar>
 
+
     <div class="content">
-      <template is="auto-binding" id="page-template">
-        <core-ajax auto url="json/graphing-data.json" response="{{races}}" handleAs="json"></core-ajax>
-        <template repeat="{{race in races}}">
-            <h3 align="center">{{race.officeyeardata[0].office}} ({{race.officeyeardata[0].year}})</h3>
-          <google-bar charts="{{race.officeyeardata}}"></my-charts>
-        </template>
-      </template>
+
+      <p>Elections are about many things,
+      but the two things we care most about here at
+      DC Campaign Finance Watch are: (1) where candidates
+      get their money, and (2) whether they are tell the public
+      where they get their money. To help the public
+      evaluate candidates along these two dimension,
+      we have constructed two rankings of candidates who
+      received contributions from more than 25 sources.  </p>
+
+      <paper-tabs selected="0">
+        <paper-tab id=0>Data Quality</paper-tab>
+        <paper-tab id=1>Money Quality</paper-tab>
+      </paper-tabs>
+
+      <core-pages flex>
+        <div id=0>
+          <p>
+            The following ranks candidates based on the completeness of the
+            data that they file with the DC Office cf Campaign Finance.
+            The most common failing in this respect
+            is the failure to list data about the contributor's employer.  If you
+            want to know why that data is important, have a look at
+            <a href="http://wamu.org/projects/paytoplay">
+            the recent reporting by WAMU</a> on pay-to-play.
+          </p>
+          <p>
+            Small campaigns might be forgiven for overlooking
+            some legally required data, but when a large campaigns fails to report data,
+            lack of resources can't be the explanation; the implication, of course,
+            is that they have some other reason. Whether the reason is incompetence,
+            ilicit dealings, or both, it suggests to us that the candidate
+            probably shouldn't become an elected officials.
+          </p>
+          <p>
+            We provide two measures of data quality. Logically, we rank candidates based on the proportion
+            of their data that meets the criteria required by law. This includes the donors
+            "Principal Place of Business", which must include a business name and address.
+            We exclude donors who list their employer as "unemployed" or "self".
+            How can the major mayoral candidates
+          </p>
+          <table-element
+            sourcefile="json/data-ranking-this-year.json"
+            tabletitle="Ranking of Candidates by Percent of Reported Donors with Required Data">
+          </table-element>
+        </div>
+        <div id=1>
+          <p>
+            We prefer candidates who raise money from people,
+            and we dislike candidates who take corporate contributions.
+            Why? At best corporate contributions distract candidates from what the
+            citizenry -- as represented by actual citizens -- want them to do; at worst
+            (and sadly we've seen a fair amount of this in the District), corporate
+            contributions help a business at the expense of the District's residents.
+          </p>
+          <p>
+            To measure the quality of the money that candidates raise, we look
+            at the ratio of grassroots contributions (contributions from real people living
+            in the District) to corporate contributions (including corporations, businesses,
+            LLCs, LLPs, and related PACs.  Note that filings not containing
+            information about source type is not included -- yet another reason
+            to care about the quality of the data.
+          </p>
+
+          <table-element
+            sourcefile="json/money-ranking-this-year.json"
+            tabletitle="Ranking of Candidates by Ratio of Grassroots to Corporate Contributors">
+          </table-element>
+        </div>
+      </core-pages>
+
     </div>
 
   </core-scroll-header-panel>
   <script>
+
+    var pages = document.querySelector('core-pages');
+    var tabs = document.querySelector('paper-tabs');
+    tabs.addEventListener('core-select', function() {
+      pages.selected = tabs.selected;
+    });
 
     // custom transformation: scale header's title
     var titleStyle = document.querySelector('.title').style;

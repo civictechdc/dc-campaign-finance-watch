@@ -61,6 +61,7 @@ you should ensure that the `aria-label` attribute is set.
 -->
 
 <link href="../polymer/polymer.html" rel="import">
+<link href="../core-icon/core-icon.html" rel="import">
 <link href="../paper-button/paper-button-base.html" rel="import">
 <link href="../paper-ripple/paper-ripple.html" rel="import">
 <link href="../paper-shadow/paper-shadow.html" rel="import">
@@ -104,10 +105,18 @@ you should ensure that the `aria-label` attribute is set.
         pointer-events: none;
         z-index: -1;
       }
+
+      #shadow {
+        border-radius: inherit;
+      }
+
+      #icon {
+        display: block;
+      }
     </style>
 
     <template if="{{raised}}">
-      <paper-shadow id="shadow" z="{{z}}" animated></paper-shadow>
+      <paper-shadow id="shadow" fit animated></paper-shadow>
     </template>
 
     <!-- to position to ripple behind the icon -->
@@ -157,7 +166,10 @@ you should ensure that the `aria-label` attribute is set.
       },
 
       iconChanged: function(oldIcon) {
-        this.setAttribute('aria-label', this.icon);
+        var label = this.getAttribute('aria-label');
+        if (!label || label === oldIcon) {
+          this.setAttribute('aria-label', this.icon);
+        }
       }
 
     });

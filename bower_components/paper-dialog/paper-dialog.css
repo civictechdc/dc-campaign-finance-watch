@@ -11,6 +11,7 @@
 :host {
   background: white;
   color: rgba(0, 0, 0, 0.87);
+  margin: 24px;
 }
 
 #shadow {
@@ -23,6 +24,7 @@
 }
 
 #container {
+  position: relative;
   overflow: hidden;
 }
 

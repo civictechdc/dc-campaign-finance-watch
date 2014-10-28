@@ -62,11 +62,9 @@ Fired when the dialog's `opened` property changes.
 
     <link href="paper-dialog.css" rel="stylesheet">
 
-    <div id="shadow">
-      <paper-shadow z="3" hasPosition></paper-shadow>
-    </div>
+    <paper-shadow z="3" fit></paper-shadow>
 
-    <core-overlay id="overlay" opened="{{opened}}" autoCloseDisabled?="{{autoCloseDisabled}}" backdrop?="{{backdrop}}" layered?="{{layered}}" target="{{}}" sizingTarget="{{$.container}}" closeSelector="{{closeSelector}}" transition="{{transition}}" margin="20"></core-overlay>
+    <core-overlay id="overlay" opened="{{opened}}" autoCloseDisabled?="{{autoCloseDisabled}}" backdrop?="{{backdrop}}" layered?="{{layered}}" target="{{}}" sizingTarget="{{$.container}}" closeSelector="{{closeSelector}}" transition="{{transition}}"></core-overlay>
 
     <div id="container" layout vertical>
 

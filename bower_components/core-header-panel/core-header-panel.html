@@ -211,9 +211,9 @@ Use `mode` to control the header and scrolling behavior.
     },
 
     modeChanged: function(old) {
+      var configs = this.modeConfigs;
       var header = this.header;
       if (header) {
-        var configs = this.modeConfigs;
         // in tallMode it may add tallClass to the header; so do the cleanup
         // when mode is changed from tallMode to not tallMode
         if (configs.tallMode[old] && !configs.tallMode[this.mode]) {

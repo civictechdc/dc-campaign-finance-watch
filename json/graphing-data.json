@@ -1,13 +1,8 @@
 [
     {
-        "officeyearid": "Mayor-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "520",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "Mayor (2014): Grassroots",
+                "office": "Mayor",
                 "data": [
                     [
                         "Candidate",
@@ -15,11 +10,11 @@
                     ],
                     [
                         "Muriel E Bowser",
-                        3780
+                        3889
                     ],
                     [
                         "Tommy Wells",
-                        2422
+                        2423
                     ],
                     [
                         "Jack Evans",
@@ -35,7 +30,7 @@
                     ],
                     [
                         "Andy Shallal",
-                        434
+                        436
                     ],
                     [
                         "Reta Jo Lewis",
@@ -43,7 +38,7 @@
                     ],
                     [
                         "Carol Schwartz",
-                        178
+                        202
                     ],
                     [
                         "Vincent Orange",
@@ -81,15 +76,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Mayor",
-                "subtitle": "DC Residents Contributing"
+                "height": "520",
+                "title": "Mayor (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "520",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "Mayor (2014): Corporate",
+                "office": "Mayor",
                 "data": [
                     [
                         "Candidate",
@@ -125,7 +120,7 @@
                     ],
                     [
                         "Carol Schwartz",
-                        6
+                        9
                     ],
                     [
                         "Christian Carter",
@@ -157,26 +152,26 @@
                     ],
                     [
                         "Muriel E Bowser",
-                        1275
+                        1311
                     ]
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Mayor",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "520",
+                "title": "Mayor (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Mayor-2014"
     },
     {
-        "officeyearid": "Council-Chairman-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "160",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "Council Chairman (2014): Grassroots",
+                "office": "Council Chairman",
                 "data": [
                     [
                         "Candidate",
@@ -184,15 +179,15 @@
                     ],
                     [
                         "Phil Mendelson",
-                        179
+                        182
                     ],
                     [
                         "Kris Hammond",
-                        73
+                        79
                     ],
                     [
                         "John C Cheeks",
-                        5
+                        7
                     ],
                     [
                         "Calvin H Gurley",
@@ -202,15 +197,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Chairman",
-                "subtitle": "DC Residents Contributing"
+                "height": "160",
+                "title": "Council Chairman (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "160",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "Council Chairman (2014): Corporate",
+                "office": "Council Chairman",
                 "data": [
                     [
                         "Candidate",
@@ -230,26 +225,26 @@
                     ],
                     [
                         "Phil Mendelson",
-                        41
+                        46
                     ]
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Chairman",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "160",
+                "title": "Council Chairman (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Chairman-2014"
     },
     {
-        "officeyearid": "Council-At-Large-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "580",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "Council At-Large (2014): Grassroots",
+                "office": "Council At-Large",
                 "data": [
                     [
                         "Candidate",
@@ -257,34 +252,38 @@
                     ],
                     [
                         "Elissa Silverman",
-                        639
+                        780
                     ],
                     [
                         "Robert White",
-                        442
+                        446
                     ],
                     [
                         "Anita Bonds",
-                        275
+                        292
+                    ],
+                    [
+                        "Courtney R Snowden",
+                        213
+                    ],
+                    [
+                        "Graylan Hagler",
+                        176
                     ],
                     [
                         "Khalid Pitts",
                         158
                     ],
                     [
+                        "Brian Hart",
+                        153
+                    ],
+                    [
                         "John F Settles",
                         153
                     ],
                     [
-                        "Brian Hart",
-                        149
-                    ],
-                    [
-                        "Graylan Hagler",
-                        145
-                    ],
-                    [
-                        "Courtney R Snowden",
+                        "Eugene Puryear",
                         125
                     ],
                     [
@@ -292,16 +291,12 @@
                         124
                     ],
                     [
-                        "Eugene Puryear",
-                        89
-                    ],
-                    [
                         "Kishan Putta",
                         83
                     ],
                     [
                         "Michael D Brown",
-                        67
+                        73
                     ],
                     [
                         "Marc Morgan",
@@ -313,7 +308,7 @@
                     ],
                     [
                         "Wendell Felder",
-                        11
+                        16
                     ],
                     [
                         "Pedro Rubio",
@@ -331,15 +326,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council At-Large",
-                "subtitle": "DC Residents Contributing"
+                "height": "580",
+                "title": "Council At-Large (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "580",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "Council At-Large (2014): Corporate",
+                "office": "Council At-Large",
                 "data": [
                     [
                         "Candidate",
@@ -347,10 +342,6 @@
                     ],
                     [
                         "Elissa Silverman",
-                        0
-                    ],
-                    [
-                        "Eugene Puryear",
                         0
                     ],
                     [
@@ -366,6 +357,10 @@
                         0
                     ],
                     [
+                        "Eugene Puryear",
+                        1
+                    ],
+                    [
                         "Kishan Putta",
                         1
                     ],
@@ -378,10 +373,6 @@
                         1
                     ],
                     [
-                        "Courtney R Snowden",
-                        2
-                    ],
-                    [
                         "Nate Bennett Fleming",
                         2
                     ],
@@ -390,12 +381,16 @@
                         2
                     ],
                     [
+                        "Courtney R Snowden",
+                        4
+                    ],
+                    [
                         "Graylan Hagler",
-                        5
+                        6
                     ],
                     [
                         "Brian Hart",
-                        11
+                        12
                     ],
                     [
                         "John F Settles",
@@ -411,30 +406,30 @@
                     ],
                     [
                         "Robert White",
-                        46
+                        48
                     ],
                     [
                         "Anita Bonds",
-                        133
+                        140
                     ]
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council At-Large",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "580",
+                "title": "Council At-Large (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-At-Large-2014"
     },
     {
-        "officeyearid": "Council-Ward-1-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "220",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "Council Ward 1 (2014): Grassroots",
+                "office": "Council Ward 1",
                 "data": [
                     [
                         "Candidate",
@@ -458,7 +453,7 @@
                     ],
                     [
                         "Ernest E Johnson",
-                        4
+                        6
                     ],
                     [
                         "John V LaBeaume",
@@ -468,15 +463,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 1",
-                "subtitle": "DC Residents Contributing"
+                "height": "220",
+                "title": "Council Ward 1 (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "220",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "Council Ward 1 (2014): Corporate",
+                "office": "Council Ward 1",
                 "data": [
                     [
                         "Candidate",
@@ -510,20 +505,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 1",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "220",
+                "title": "Council Ward 1 (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Ward-1-2014"
     },
     {
-        "officeyearid": "Council-Ward-3-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "70",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "Council Ward 3 (2014): Grassroots",
+                "office": "Council Ward 3",
                 "data": [
                     [
                         "Candidate",
@@ -531,21 +526,21 @@
                     ],
                     [
                         "Mary M Cheh",
-                        125
+                        126
                     ]
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 3",
-                "subtitle": "DC Residents Contributing"
+                "height": "70",
+                "title": "Council Ward 3 (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "70",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "Council Ward 3 (2014): Corporate",
+                "office": "Council Ward 3",
                 "data": [
                     [
                         "Candidate",
@@ -559,20 +554,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 3",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "70",
+                "title": "Council Ward 3 (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Ward-3-2014"
     },
     {
-        "officeyearid": "Council-Ward-5-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "130",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "Council Ward 5 (2014): Grassroots",
+                "office": "Council Ward 5",
                 "data": [
                     [
                         "Candidate",
@@ -580,7 +575,7 @@
                     ],
                     [
                         "Kenyan McDuffie",
-                        457
+                        460
                     ],
                     [
                         "Kathy Henderson",
@@ -594,15 +589,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 5",
-                "subtitle": "DC Residents Contributing"
+                "height": "130",
+                "title": "Council Ward 5 (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "130",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "Council Ward 5 (2014): Corporate",
+                "office": "Council Ward 5",
                 "data": [
                     [
                         "Candidate",
@@ -618,26 +613,26 @@
                     ],
                     [
                         "Kenyan McDuffie",
-                        87
+                        96
                     ]
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 5",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "130",
+                "title": "Council Ward 5 (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Ward-5-2014"
     },
     {
-        "officeyearid": "Council-Ward-6-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "160",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "Council Ward 6 (2014): Grassroots",
+                "office": "Council Ward 6",
                 "data": [
                     [
                         "Candidate",
@@ -645,11 +640,11 @@
                     ],
                     [
                         "Charles Allen",
-                        875
+                        898
                     ],
                     [
                         "Darrel Thompson",
-                        323
+                        322
                     ],
                     [
                         "Shelonda Tillman",
@@ -657,21 +652,21 @@
                     ],
                     [
                         "Pranav Badhwar",
-                        0
+                        4
                     ]
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 6",
-                "subtitle": "DC Residents Contributing"
+                "height": "160",
+                "title": "Council Ward 6 (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "160",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "Council Ward 6 (2014): Corporate",
+                "office": "Council Ward 6",
                 "data": [
                     [
                         "Candidate",
@@ -697,20 +692,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 6",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "160",
+                "title": "Council Ward 6 (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Ward-6-2014"
     },
     {
-        "officeyearid": "Attorney-General-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "190",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "Attorney General (2014): Grassroots",
+                "office": "Attorney General",
                 "data": [
                     [
                         "Candidate",
@@ -718,15 +713,11 @@
                     ],
                     [
                         "Edward Smith",
-                        390
-                    ],
-                    [
-                        "Karl A Racine",
-                        174
+                        468
                     ],
                     [
                         "Lorie Masters",
-                        122
+                        149
                     ],
                     [
                         "Paul Zukerberg",
@@ -734,21 +725,25 @@
                     ],
                     [
                         "Lateefah Williams",
-                        72
+                        86
+                    ],
+                    [
+                        "Karl A Racine",
+                        9
                     ]
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Attorney General",
-                "subtitle": "DC Residents Contributing"
+                "height": "190",
+                "title": "Attorney General (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "190",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "Attorney General (2014): Corporate",
+                "office": "Attorney General",
                 "data": [
                     [
                         "Candidate",
@@ -763,35 +758,35 @@
                         4
                     ],
                     [
+                        "Karl A Racine",
+                        9
+                    ],
+                    [
                         "Edward Smith",
-                        14
+                        17
                     ],
                     [
                         "Paul Zukerberg",
                         22
-                    ],
-                    [
-                        "Karl A Racine",
-                        23
                     ]
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Attorney General",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "190",
+                "title": "Attorney General (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Attorney-General-2014"
     },
     {
-        "officeyearid": "School-Board-Ward-1-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "190",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "School Board Ward 1 (2014): Grassroots",
+                "office": "School Board Ward 1",
                 "data": [
                     [
                         "Candidate",
@@ -799,19 +794,19 @@
                     ],
                     [
                         "Scott Simpson",
-                        204
+                        213
                     ],
                     [
                         "Laura Wilson Phelan",
-                        128
+                        135
                     ],
                     [
                         "David Do",
-                        82
+                        95
                     ],
                     [
                         "Lillian Perdomo",
-                        46
+                        54
                     ],
                     [
                         "E. Gail Anderson Holness",
@@ -821,15 +816,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 1",
-                "subtitle": "DC Residents Contributing"
+                "height": "190",
+                "title": "School Board Ward 1 (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "190",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "School Board Ward 1 (2014): Corporate",
+                "office": "School Board Ward 1",
                 "data": [
                     [
                         "Candidate",
@@ -859,20 +854,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 1",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "190",
+                "title": "School Board Ward 1 (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-Ward-1-2014"
     },
     {
-        "officeyearid": "School-Board-Ward-3-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "160",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "School Board Ward 3 (2014): Grassroots",
+                "office": "School Board Ward 3",
                 "data": [
                     [
                         "Candidate",
@@ -880,53 +875,53 @@
                     ],
                     [
                         "Patricia Braun",
-                        52
+                        67
                     ],
                     [
                         "Stephanie Lilley",
-                        39
+                        66
                     ],
                     [
                         "Ruth Wattenberg",
-                        15
+                        39
                     ],
                     [
                         "W. Philip Thomas",
-                        15
+                        21
                     ]
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 3",
-                "subtitle": "DC Residents Contributing"
+                "height": "160",
+                "title": "School Board Ward 3 (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "School Board Ward 3 (2014): Corporate",
+                "office": "School Board Ward 3",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 3",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "1",
+                "title": "School Board Ward 3 (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-Ward-3-2014"
     },
     {
-        "officeyearid": "School-Board-Ward-5-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "70",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "School Board Ward 5 (2014): Grassroots",
+                "office": "School Board Ward 5",
                 "data": [
                     [
                         "Candidate",
@@ -940,35 +935,35 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 5",
-                "subtitle": "DC Residents Contributing"
+                "height": "70",
+                "title": "School Board Ward 5 (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "School Board Ward 5 (2014): Corporate",
+                "office": "School Board Ward 5",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 5",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "1",
+                "title": "School Board Ward 5 (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-Ward-5-2014"
     },
     {
-        "officeyearid": "School-Board-Ward-6-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "School Board Ward 6 (2014): Grassroots",
+                "office": "School Board Ward 6",
                 "data": [
                     [
                         "Candidate",
@@ -986,35 +981,35 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 6",
-                "subtitle": "DC Residents Contributing"
+                "height": "100",
+                "title": "School Board Ward 6 (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "School Board Ward 6 (2014): Corporate",
+                "office": "School Board Ward 6",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 6",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "1",
+                "title": "School Board Ward 6 (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-Ward-6-2014"
     },
     {
-        "officeyearid": "School-Board-Ward-8-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "160",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "School Board Ward 8 (2014): Grassroots",
+                "office": "School Board Ward 8",
                 "data": [
                     [
                         "Candidate",
@@ -1040,15 +1035,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 8",
-                "subtitle": "DC Residents Contributing"
+                "height": "160",
+                "title": "School Board Ward 8 (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "160",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "School Board Ward 8 (2014): Corporate",
+                "office": "School Board Ward 8",
                 "data": [
                     [
                         "Candidate",
@@ -1074,20 +1069,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 8",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "160",
+                "title": "School Board Ward 8 (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-Ward-8-2014"
     },
     {
-        "officeyearid": "US-Representative-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "70",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "US Representative (2014): Grassroots",
+                "office": "US Representative",
                 "data": [
                     [
                         "Candidate",
@@ -1101,35 +1096,35 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "US Representative",
-                "subtitle": "DC Residents Contributing"
+                "height": "70",
+                "title": "US Representative (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "US Representative (2014): Corporate",
+                "office": "US Representative",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "US Representative",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "1",
+                "title": "US Representative (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "US-Representative-2014"
     },
     {
-        "officeyearid": "US-Senator-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "190",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "US Senator (2014): Grassroots",
+                "office": "US Senator",
                 "data": [
                     [
                         "Candidate",
@@ -1137,11 +1132,11 @@
                     ],
                     [
                         "Paul Strauss",
-                        89
+                        91
                     ],
                     [
                         "David Schwartzman",
-                        7
+                        8
                     ],
                     [
                         "Glenda J Richmond",
@@ -1159,15 +1154,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "US Senator",
-                "subtitle": "DC Residents Contributing"
+                "height": "190",
+                "title": "US Senator (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "190",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "US Senator (2014): Corporate",
+                "office": "US Senator",
                 "data": [
                     [
                         "Candidate",
@@ -1197,55 +1192,55 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "US Senator",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
-            }
-        ]
-    },
-    {
-        "officeyearid": "Alternate-Democratic-National-Committeeman-2014",
-        "officeyeardata": [
-            {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "Alternate Democratic National Committeeman (2014): Grassroots",
-                "data": [
-                    []
-                ],
-                "options": {
-                    "legend": "none"
-                },
-                "office": "Alternate Democratic National Committeeman",
-                "subtitle": "DC Residents Contributing"
-            },
-            {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
+                "height": "190",
+                "title": "US Senator (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
                 "notesb": "Ranked by corporate, then by grassroots to break ties",
                 "year": "2014",
-                "title": "Alternate Democratic National Committeeman (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
+            }
+        ],
+        "officeyearid": "US-Senator-2014"
+    },
+    {
+        "officeyeardata": [
+            {
+                "office": "Alternate Democratic National Committeeman",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Alternate Democratic National Committeeman",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
-            }
-        ]
-    },
-    {
-        "officeyearid": "Alternate-Democratic-National-Committeewoman-2014",
-        "officeyeardata": [
-            {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "70",
+                "height": "1",
+                "title": "Alternate Democratic National Committeeman (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
                 "notesb": "Ranked by grassroots, then by corporate to break ties",
                 "year": "2014",
-                "title": "Alternate Democratic National Committeewoman (2014): Grassroots",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
+            },
+            {
+                "office": "Alternate Democratic National Committeeman",
+                "data": [
+                    []
+                ],
+                "options": {
+                    "legend": "none"
+                },
+                "height": "1",
+                "title": "Alternate Democratic National Committeeman (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
+            }
+        ],
+        "officeyearid": "Alternate-Democratic-National-Committeeman-2014"
+    },
+    {
+        "officeyeardata": [
+            {
+                "office": "Alternate Democratic National Committeewoman",
                 "data": [
                     [
                         "Candidate",
@@ -1259,35 +1254,35 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Alternate Democratic National Committeewoman",
-                "subtitle": "DC Residents Contributing"
+                "height": "70",
+                "title": "Alternate Democratic National Committeewoman (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "Alternate Democratic National Committeewoman (2014): Corporate",
+                "office": "Alternate Democratic National Committeewoman",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Alternate Democratic National Committeewoman",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "1",
+                "title": "Alternate Democratic National Committeewoman (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Alternate-Democratic-National-Committeewoman-2014"
     },
     {
-        "officeyearid": "At-Large-DC-Democratic-State-Committee-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "70",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "At-Large DC Democratic State Committee (2014): Grassroots",
+                "office": "At-Large DC Democratic State Committee",
                 "data": [
                     [
                         "Candidate",
@@ -1301,15 +1296,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "At-Large DC Democratic State Committee",
-                "subtitle": "DC Residents Contributing"
+                "height": "70",
+                "title": "At-Large DC Democratic State Committee (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "70",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "At-Large DC Democratic State Committee (2014): Corporate",
+                "office": "At-Large DC Democratic State Committee",
                 "data": [
                     [
                         "Candidate",
@@ -1323,20 +1318,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "At-Large DC Democratic State Committee",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "70",
+                "title": "At-Large DC Democratic State Committee (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "At-Large-DC-Democratic-State-Committee-2014"
     },
     {
-        "officeyearid": "Democratic-National-Committeeman-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "Democratic National Committeeman (2014): Grassroots",
+                "office": "Democratic National Committeeman",
                 "data": [
                     [
                         "Candidate",
@@ -1354,35 +1349,35 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Democratic National Committeeman",
-                "subtitle": "DC Residents Contributing"
+                "height": "100",
+                "title": "Democratic National Committeeman (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "Democratic National Committeeman (2014): Corporate",
+                "office": "Democratic National Committeeman",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Democratic National Committeeman",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "1",
+                "title": "Democratic National Committeeman (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Democratic-National-Committeeman-2014"
     },
     {
-        "officeyearid": "Democratic-National-Committeewoman-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "70",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "Democratic National Committeewoman (2014): Grassroots",
+                "office": "Democratic National Committeewoman",
                 "data": [
                     [
                         "Candidate",
@@ -1396,35 +1391,35 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Democratic National Committeewoman",
-                "subtitle": "DC Residents Contributing"
+                "height": "70",
+                "title": "Democratic National Committeewoman (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
-                "title": "Democratic National Committeewoman (2014): Corporate",
+                "office": "Democratic National Committeewoman",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Democratic National Committeewoman",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "1",
+                "title": "Democratic National Committeewoman (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Democratic-National-Committeewoman-2014"
     },
     {
-        "officeyearid": "Ward-3-DC-Democratic-State-Committee-2014",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "70",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "Ward 3 DC Democratic State Committee (2014): Grassroots",
+                "office": "Ward 3 DC Democratic State Committee",
                 "data": [
                     [
                         "Candidate",
@@ -1438,105 +1433,105 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Ward 3 DC Democratic State Committee",
-                "subtitle": "DC Residents Contributing"
+                "height": "70",
+                "title": "Ward 3 DC Democratic State Committee (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
+                "office": "Ward 3 DC Democratic State Committee",
+                "data": [
+                    []
+                ],
+                "options": {
+                    "legend": "none"
+                },
                 "height": "1",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
                 "title": "Ward 3 DC Democratic State Committee (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
+            }
+        ],
+        "officeyearid": "Ward-3-DC-Democratic-State-Committee-2014"
+    },
+    {
+        "officeyeardata": [
+            {
+                "office": "Ward 6 DC Democratic State Committee",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Ward 3 DC Democratic State Committee",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
-            }
-        ]
-    },
-    {
-        "officeyearid": "Ward-6-DC-Democratic-State-Committee-2014",
-        "officeyeardata": [
-            {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
                 "height": "1",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
                 "title": "Ward 6 DC Democratic State Committee (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
+            },
+            {
+                "office": "Ward 6 DC Democratic State Committee",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Ward 6 DC Democratic State Committee",
-                "subtitle": "DC Residents Contributing"
-            },
-            {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
                 "height": "1",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2014",
                 "title": "Ward 6 DC Democratic State Committee (2014): Corporate",
-                "data": [
-                    []
-                ],
-                "options": {
-                    "legend": "none"
-                },
-                "office": "Ward 6 DC Democratic State Committee",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
-            }
-        ]
-    },
-    {
-        "officeyearid": "Ward-1-DC-Democratic-State-Committee--2014",
-        "officeyeardata": [
-            {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2014",
-                "title": "Ward 1 DC Democratic State Committee (2014): Grassroots",
-                "data": [
-                    []
-                ],
-                "options": {
-                    "legend": "none"
-                },
-                "office": "Ward 1 DC Democratic State Committee ",
-                "subtitle": "DC Residents Contributing"
-            },
-            {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
                 "notesb": "Ranked by corporate, then by grassroots to break ties",
                 "year": "2014",
-                "title": "Ward 1 DC Democratic State Committee (2014): Corporate",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
+            }
+        ],
+        "officeyearid": "Ward-6-DC-Democratic-State-Committee-2014"
+    },
+    {
+        "officeyeardata": [
+            {
+                "office": "Ward 1 DC Democratic State Committee ",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
+                "height": "1",
+                "title": "Ward 1 DC Democratic State Committee (2014): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
+            },
+            {
                 "office": "Ward 1 DC Democratic State Committee ",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "data": [
+                    []
+                ],
+                "options": {
+                    "legend": "none"
+                },
+                "height": "1",
+                "title": "Ward 1 DC Democratic State Committee (2014): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2014",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Ward-1-DC-Democratic-State-Committee--2014"
     },
     {
-        "officeyearid": "Council-At-Large-2013",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "400",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2013",
-                "title": "Council At-Large (2013): Grassroots",
+                "office": "Council At-Large",
                 "data": [
                     [
                         "Candidate",
@@ -1594,15 +1589,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council At-Large",
-                "subtitle": "DC Residents Contributing"
+                "height": "400",
+                "title": "Council At-Large (2013): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2013",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "400",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2013",
-                "title": "Council At-Large (2013): Corporate",
+                "office": "Council At-Large",
                 "data": [
                     [
                         "Candidate",
@@ -1660,20 +1655,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council At-Large",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "400",
+                "title": "Council At-Large (2013): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2013",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-At-Large-2013"
     },
     {
-        "officeyearid": "Council-Chairman-2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "130",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "Council Chairman (2012): Grassroots",
+                "office": "Council Chairman",
                 "data": [
                     [
                         "Candidate",
@@ -1695,15 +1690,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Chairman",
-                "subtitle": "DC Residents Contributing"
+                "height": "130",
+                "title": "Council Chairman (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "130",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "Council Chairman (2012): Corporate",
+                "office": "Council Chairman",
                 "data": [
                     [
                         "Candidate",
@@ -1725,20 +1720,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Chairman",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "130",
+                "title": "Council Chairman (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Chairman-2012"
     },
     {
-        "officeyearid": "Council-At-Large-2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "310",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "Council At-Large (2012): Grassroots",
+                "office": "Council At-Large",
                 "data": [
                     [
                         "Candidate",
@@ -1784,15 +1779,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council At-Large",
-                "subtitle": "DC Residents Contributing"
+                "height": "310",
+                "title": "Council At-Large (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "310",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "Council At-Large (2012): Corporate",
+                "office": "Council At-Large",
                 "data": [
                     [
                         "Candidate",
@@ -1838,20 +1833,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council At-Large",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "310",
+                "title": "Council At-Large (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-At-Large-2012"
     },
     {
-        "officeyearid": "Council-Ward-2-2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "Council Ward 2 (2012): Grassroots",
+                "office": "Council Ward 2",
                 "data": [
                     [
                         "Candidate",
@@ -1869,15 +1864,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 2",
-                "subtitle": "DC Residents Contributing"
+                "height": "100",
+                "title": "Council Ward 2 (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "Council Ward 2 (2012): Corporate",
+                "office": "Council Ward 2",
                 "data": [
                     [
                         "Candidate",
@@ -1895,20 +1890,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 2",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "100",
+                "title": "Council Ward 2 (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Ward-2-2012"
     },
     {
-        "officeyearid": "Council-Ward-4-2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "220",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "Council Ward 4 (2012): Grassroots",
+                "office": "Council Ward 4",
                 "data": [
                     [
                         "Candidate",
@@ -1942,15 +1937,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 4",
-                "subtitle": "DC Residents Contributing"
+                "height": "220",
+                "title": "Council Ward 4 (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "220",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "Council Ward 4 (2012): Corporate",
+                "office": "Council Ward 4",
                 "data": [
                     [
                         "Candidate",
@@ -1984,20 +1979,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 4",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "220",
+                "title": "Council Ward 4 (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Ward-4-2012"
     },
     {
-        "officeyearid": "Council-Ward-5-2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "550",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "Council Ward 5 (2012): Grassroots",
+                "office": "Council Ward 5",
                 "data": [
                     [
                         "Candidate",
@@ -2075,15 +2070,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 5",
-                "subtitle": "DC Residents Contributing"
+                "height": "550",
+                "title": "Council Ward 5 (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "550",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "Council Ward 5 (2012): Corporate",
+                "office": "Council Ward 5",
                 "data": [
                     [
                         "Candidate",
@@ -2161,20 +2156,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 5",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "550",
+                "title": "Council Ward 5 (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Ward-5-2012"
     },
     {
-        "officeyearid": "Council-Ward-7-2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "280",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "Council Ward 7 (2012): Grassroots",
+                "office": "Council Ward 7",
                 "data": [
                     [
                         "Candidate",
@@ -2216,15 +2211,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 7",
-                "subtitle": "DC Residents Contributing"
+                "height": "280",
+                "title": "Council Ward 7 (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "280",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "Council Ward 7 (2012): Corporate",
+                "office": "Council Ward 7",
                 "data": [
                     [
                         "Candidate",
@@ -2266,20 +2261,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 7",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "280",
+                "title": "Council Ward 7 (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Ward-7-2012"
     },
     {
-        "officeyearid": "Council-Ward-8-2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "250",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "Council Ward 8 (2012): Grassroots",
+                "office": "Council Ward 8",
                 "data": [
                     [
                         "Candidate",
@@ -2317,15 +2312,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 8",
-                "subtitle": "DC Residents Contributing"
+                "height": "250",
+                "title": "Council Ward 8 (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "250",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "Council Ward 8 (2012): Corporate",
+                "office": "Council Ward 8",
                 "data": [
                     [
                         "Candidate",
@@ -2363,20 +2358,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 8",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "250",
+                "title": "Council Ward 8 (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Ward-8-2012"
     },
     {
-        "officeyearid": "School-Board-At-Large-2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "School Board At-Large (2012): Grassroots",
+                "office": "School Board At-Large",
                 "data": [
                     [
                         "Candidate",
@@ -2394,35 +2389,35 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board At-Large",
-                "subtitle": "DC Residents Contributing"
+                "height": "100",
+                "title": "School Board At-Large (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "School Board At-Large (2012): Corporate",
+                "office": "School Board At-Large",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board At-Large",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "1",
+                "title": "School Board At-Large (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-At-Large-2012"
     },
     {
-        "officeyearid": "School-Board-Ward-2-2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "70",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "School Board Ward 2 (2012): Grassroots",
+                "office": "School Board Ward 2",
                 "data": [
                     [
                         "Candidate",
@@ -2436,35 +2431,35 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 2",
-                "subtitle": "DC Residents Contributing"
+                "height": "70",
+                "title": "School Board Ward 2 (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "School Board Ward 2 (2012): Corporate",
+                "office": "School Board Ward 2",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 2",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "1",
+                "title": "School Board Ward 2 (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-Ward-2-2012"
     },
     {
-        "officeyearid": "School-Board-Ward-7-2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "70",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "School Board Ward 7 (2012): Grassroots",
+                "office": "School Board Ward 7",
                 "data": [
                     [
                         "Candidate",
@@ -2478,35 +2473,35 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 7",
-                "subtitle": "DC Residents Contributing"
+                "height": "70",
+                "title": "School Board Ward 7 (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "School Board Ward 7 (2012): Corporate",
+                "office": "School Board Ward 7",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 7",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "1",
+                "title": "School Board Ward 7 (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-Ward-7-2012"
     },
     {
-        "officeyearid": "School-Board-Ward-8-2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "School Board Ward 8 (2012): Grassroots",
+                "office": "School Board Ward 8",
                 "data": [
                     [
                         "Candidate",
@@ -2524,15 +2519,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 8",
-                "subtitle": "DC Residents Contributing"
+                "height": "100",
+                "title": "School Board Ward 8 (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "School Board Ward 8 (2012): Corporate",
+                "office": "School Board Ward 8",
                 "data": [
                     [
                         "Candidate",
@@ -2550,20 +2545,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 8",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "100",
+                "title": "School Board Ward 8 (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-Ward-8-2012"
     },
     {
-        "officeyearid": "US-Senator-2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "US Senator (2012): Grassroots",
+                "office": "US Senator",
                 "data": [
                     [
                         "Candidate",
@@ -2581,15 +2576,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "US Senator",
-                "subtitle": "DC Residents Contributing"
+                "height": "100",
+                "title": "US Senator (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "US Senator (2012): Corporate",
+                "office": "US Senator",
                 "data": [
                     [
                         "Candidate",
@@ -2607,20 +2602,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "US Senator",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "100",
+                "title": "US Senator (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "US-Senator-2012"
     },
     {
-        "officeyearid": "Democratic-Delegates-2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "70",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "Democratic Delegates (2012): Grassroots",
+                "office": "Democratic Delegates",
                 "data": [
                     [
                         "Candidate",
@@ -2634,35 +2629,35 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Democratic Delegates",
-                "subtitle": "DC Residents Contributing"
+                "height": "70",
+                "title": "Democratic Delegates (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "Democratic Delegates (2012): Corporate",
+                "office": "Democratic Delegates",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "Democratic Delegates",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "1",
+                "title": "Democratic Delegates (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Democratic-Delegates-2012"
     },
     {
-        "officeyearid": "Republican-National-Committeewoman-2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "Republican National Committeewoman (2012): Grassroots",
+                "office": "Republican National Committeewoman",
                 "data": [
                     [
                         "Candidate",
@@ -2680,15 +2675,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Republican National Committeewoman",
-                "subtitle": "DC Residents Contributing"
+                "height": "100",
+                "title": "Republican National Committeewoman (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "Republican National Committeewoman (2012): Corporate",
+                "office": "Republican National Committeewoman",
                 "data": [
                     [
                         "Candidate",
@@ -2706,20 +2701,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Republican National Committeewoman",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "100",
+                "title": "Republican National Committeewoman (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Republican-National-Committeewoman-2012"
     },
     {
-        "officeyearid": "Republican-National-Committeeman -2012",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2012",
-                "title": "Republican National Committeeman (2012): Grassroots",
+                "office": "Republican National Committeeman ",
                 "data": [
                     [
                         "Candidate",
@@ -2737,15 +2732,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Republican National Committeeman ",
-                "subtitle": "DC Residents Contributing"
+                "height": "100",
+                "title": "Republican National Committeeman (2012): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2012",
-                "title": "Republican National Committeeman (2012): Corporate",
+                "office": "Republican National Committeeman ",
                 "data": [
                     [
                         "Candidate",
@@ -2763,20 +2758,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Republican National Committeeman ",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "100",
+                "title": "Republican National Committeeman (2012): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2012",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Republican-National-Committeeman -2012"
     },
     {
-        "officeyearid": "Council-At-Large-2011",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "340",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2011",
-                "title": "Council At-Large (2011): Grassroots",
+                "office": "Council At-Large",
                 "data": [
                     [
                         "Candidate",
@@ -2826,15 +2821,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council At-Large",
-                "subtitle": "DC Residents Contributing"
+                "height": "340",
+                "title": "Council At-Large (2011): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2011",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "340",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2011",
-                "title": "Council At-Large (2011): Corporate",
+                "office": "Council At-Large",
                 "data": [
                     [
                         "Candidate",
@@ -2884,20 +2879,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council At-Large",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "340",
+                "title": "Council At-Large (2011): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2011",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-At-Large-2011"
     },
     {
-        "officeyearid": "School-Board-Ward-4-2011",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "190",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2011",
-                "title": "School Board Ward 4 (2011): Grassroots",
+                "office": "School Board Ward 4",
                 "data": [
                     [
                         "Candidate",
@@ -2927,15 +2922,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 4",
-                "subtitle": "DC Residents Contributing"
+                "height": "190",
+                "title": "School Board Ward 4 (2011): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2011",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "190",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2011",
-                "title": "School Board Ward 4 (2011): Corporate",
+                "office": "School Board Ward 4",
                 "data": [
                     [
                         "Candidate",
@@ -2965,20 +2960,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 4",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "190",
+                "title": "School Board Ward 4 (2011): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2011",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-Ward-4-2011"
     },
     {
-        "officeyearid": "School-Board-Ward-8-2011",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "280",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2011",
-                "title": "School Board Ward 8 (2011): Grassroots",
+                "office": "School Board Ward 8",
                 "data": [
                     [
                         "Candidate",
@@ -3020,15 +3015,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 8",
-                "subtitle": "DC Residents Contributing"
+                "height": "280",
+                "title": "School Board Ward 8 (2011): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2011",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "280",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2011",
-                "title": "School Board Ward 8 (2011): Corporate",
+                "office": "School Board Ward 8",
                 "data": [
                     [
                         "Candidate",
@@ -3070,20 +3065,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 8",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "280",
+                "title": "School Board Ward 8 (2011): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2011",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-Ward-8-2011"
     },
     {
-        "officeyearid": "Mayor-2010",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "310",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2010",
-                "title": "Mayor (2010): Grassroots",
+                "office": "Mayor",
                 "data": [
                     [
                         "Candidate",
@@ -3129,15 +3124,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Mayor",
-                "subtitle": "DC Residents Contributing"
+                "height": "310",
+                "title": "Mayor (2010): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "310",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2010",
-                "title": "Mayor (2010): Corporate",
+                "office": "Mayor",
                 "data": [
                     [
                         "Candidate",
@@ -3183,20 +3178,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Mayor",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "310",
+                "title": "Mayor (2010): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Mayor-2010"
     },
     {
-        "officeyearid": "Council-Chairman-2010",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "160",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2010",
-                "title": "Council Chairman (2010): Grassroots",
+                "office": "Council Chairman",
                 "data": [
                     [
                         "Candidate",
@@ -3222,15 +3217,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Chairman",
-                "subtitle": "DC Residents Contributing"
+                "height": "160",
+                "title": "Council Chairman (2010): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "160",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2010",
-                "title": "Council Chairman (2010): Corporate",
+                "office": "Council Chairman",
                 "data": [
                     [
                         "Candidate",
@@ -3256,20 +3251,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Chairman",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "160",
+                "title": "Council Chairman (2010): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Chairman-2010"
     },
     {
-        "officeyearid": "Council-At-Large-2010",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "340",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2010",
-                "title": "Council At-Large (2010): Grassroots",
+                "office": "Council At-Large",
                 "data": [
                     [
                         "Candidate",
@@ -3319,15 +3314,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council At-Large",
-                "subtitle": "DC Residents Contributing"
+                "height": "340",
+                "title": "Council At-Large (2010): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "340",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2010",
-                "title": "Council At-Large (2010): Corporate",
+                "office": "Council At-Large",
                 "data": [
                     [
                         "Candidate",
@@ -3377,20 +3372,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council At-Large",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "340",
+                "title": "Council At-Large (2010): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-At-Large-2010"
     },
     {
-        "officeyearid": "Council-Ward-1-2010",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "190",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2010",
-                "title": "Council Ward 1 (2010): Grassroots",
+                "office": "Council Ward 1",
                 "data": [
                     [
                         "Candidate",
@@ -3420,15 +3415,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 1",
-                "subtitle": "DC Residents Contributing"
+                "height": "190",
+                "title": "Council Ward 1 (2010): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "190",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2010",
-                "title": "Council Ward 1 (2010): Corporate",
+                "office": "Council Ward 1",
                 "data": [
                     [
                         "Candidate",
@@ -3458,20 +3453,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 1",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "190",
+                "title": "Council Ward 1 (2010): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Ward-1-2010"
     },
     {
-        "officeyearid": "Council-Ward-3-2010",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2010",
-                "title": "Council Ward 3 (2010): Grassroots",
+                "office": "Council Ward 3",
                 "data": [
                     [
                         "Candidate",
@@ -3489,15 +3484,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 3",
-                "subtitle": "DC Residents Contributing"
+                "height": "100",
+                "title": "Council Ward 3 (2010): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2010",
-                "title": "Council Ward 3 (2010): Corporate",
+                "office": "Council Ward 3",
                 "data": [
                     [
                         "Candidate",
@@ -3515,20 +3510,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 3",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "100",
+                "title": "Council Ward 3 (2010): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Ward-3-2010"
     },
     {
-        "officeyearid": "Council-Ward-5-2010",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "220",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2010",
-                "title": "Council Ward 5 (2010): Grassroots",
+                "office": "Council Ward 5",
                 "data": [
                     [
                         "Candidate",
@@ -3562,15 +3557,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 5",
-                "subtitle": "DC Residents Contributing"
+                "height": "220",
+                "title": "Council Ward 5 (2010): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "220",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2010",
-                "title": "Council Ward 5 (2010): Corporate",
+                "office": "Council Ward 5",
                 "data": [
                     [
                         "Candidate",
@@ -3604,20 +3599,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 5",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "220",
+                "title": "Council Ward 5 (2010): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Ward-5-2010"
     },
     {
-        "officeyearid": "Council-Ward-6-2010",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "130",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2010",
-                "title": "Council Ward 6 (2010): Grassroots",
+                "office": "Council Ward 6",
                 "data": [
                     [
                         "Candidate",
@@ -3639,15 +3634,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 6",
-                "subtitle": "DC Residents Contributing"
+                "height": "130",
+                "title": "Council Ward 6 (2010): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "130",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2010",
-                "title": "Council Ward 6 (2010): Corporate",
+                "office": "Council Ward 6",
                 "data": [
                     [
                         "Candidate",
@@ -3669,20 +3664,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "Council Ward 6",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "130",
+                "title": "Council Ward 6 (2010): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "Council-Ward-6-2010"
     },
     {
-        "officeyearid": "School-Board-Ward-1-2010",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2010",
-                "title": "School Board Ward 1 (2010): Grassroots",
+                "office": "School Board Ward 1",
                 "data": [
                     [
                         "Candidate",
@@ -3700,15 +3695,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 1",
-                "subtitle": "DC Residents Contributing"
+                "height": "100",
+                "title": "School Board Ward 1 (2010): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2010",
-                "title": "School Board Ward 1 (2010): Corporate",
+                "office": "School Board Ward 1",
                 "data": [
                     [
                         "Candidate",
@@ -3726,20 +3721,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 1",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "100",
+                "title": "School Board Ward 1 (2010): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-Ward-1-2010"
     },
     {
-        "officeyearid": "School-Board-Ward-3-2010",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "70",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2010",
-                "title": "School Board Ward 3 (2010): Grassroots",
+                "office": "School Board Ward 3",
                 "data": [
                     [
                         "Candidate",
@@ -3753,35 +3748,35 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 3",
-                "subtitle": "DC Residents Contributing"
+                "height": "70",
+                "title": "School Board Ward 3 (2010): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "1",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2010",
-                "title": "School Board Ward 3 (2010): Corporate",
+                "office": "School Board Ward 3",
                 "data": [
                     []
                 ],
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 3",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "1",
+                "title": "School Board Ward 3 (2010): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-Ward-3-2010"
     },
     {
-        "officeyearid": "School-Board-Ward-5-2010",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2010",
-                "title": "School Board Ward 5 (2010): Grassroots",
+                "office": "School Board Ward 5",
                 "data": [
                     [
                         "Candidate",
@@ -3799,15 +3794,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 5",
-                "subtitle": "DC Residents Contributing"
+                "height": "100",
+                "title": "School Board Ward 5 (2010): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2010",
-                "title": "School Board Ward 5 (2010): Corporate",
+                "office": "School Board Ward 5",
                 "data": [
                     [
                         "Candidate",
@@ -3825,20 +3820,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 5",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "100",
+                "title": "School Board Ward 5 (2010): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-Ward-5-2010"
     },
     {
-        "officeyearid": "School-Board-Ward-6-2010",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2010",
-                "title": "School Board Ward 6 (2010): Grassroots",
+                "office": "School Board Ward 6",
                 "data": [
                     [
                         "Candidate",
@@ -3856,15 +3851,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 6",
-                "subtitle": "DC Residents Contributing"
+                "height": "100",
+                "title": "School Board Ward 6 (2010): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "100",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2010",
-                "title": "School Board Ward 6 (2010): Corporate",
+                "office": "School Board Ward 6",
                 "data": [
                     [
                         "Candidate",
@@ -3882,20 +3877,20 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "School Board Ward 6",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "100",
+                "title": "School Board Ward 6 (2010): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "School-Board-Ward-6-2010"
     },
     {
-        "officeyearid": "US-Representative-2010",
         "officeyeardata": [
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "160",
-                "notesb": "Ranked by grassroots, then by corporate to break ties",
-                "year": "2010",
-                "title": "US Representative (2010): Grassroots",
+                "office": "US Representative",
                 "data": [
                     [
                         "Candidate",
@@ -3921,15 +3916,15 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "US Representative",
-                "subtitle": "DC Residents Contributing"
+                "height": "160",
+                "title": "US Representative (2010): Grassroots",
+                "subtitle": "DC Residents Contributing",
+                "notesb": "Ranked by grassroots, then by corporate to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             },
             {
-                "notesa": "Data retrieved from OCF: Sat Oct 18 23:05:19 2014",
-                "height": "160",
-                "notesb": "Ranked by corporate, then by grassroots to break ties",
-                "year": "2010",
-                "title": "US Representative (2010): Corporate",
+                "office": "US Representative",
                 "data": [
                     [
                         "Candidate",
@@ -3955,9 +3950,14 @@
                 "options": {
                     "legend": "none"
                 },
-                "office": "US Representative",
-                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs"
+                "height": "160",
+                "title": "US Representative (2010): Corporate",
+                "subtitle": "Corporations, Businesses, LLCs, LLPs, and related PACs",
+                "notesb": "Ranked by corporate, then by grassroots to break ties",
+                "year": "2010",
+                "notesa": "Data retrieved from OCF: Tue Oct 28 01:43:10 2014"
             }
-        ]
+        ],
+        "officeyearid": "US-Representative-2010"
     }
 ]

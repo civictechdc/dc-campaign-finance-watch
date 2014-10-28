@@ -92,17 +92,17 @@ The following ARIA attributes are set automatically:
 
     ready: function() {
       /* set ARIA attributes */
-      this.disabledChanged();
-      this.placeholderChanged();
+      this.disabledHandler();
+      this.placeholderHandler();
     },
 
     attributeChanged: function(attr, old) {
-      if (this[attr + 'Changed']) {
-        this[attr + 'Changed'](old);
+      if (this[attr + 'Handler']) {
+        this[attr + 'Handler'](old);
       }
     },
 
-    disabledChanged: function() {
+    disabledHandler: function() {
       if (this.disabled) {
         this.setAttribute('aria-disabled', '');
       } else {
@@ -110,7 +110,7 @@ The following ARIA attributes are set automatically:
       }
     },
 
-    placeholderChanged: function() {
+    placeholderHandler: function() {
       if (this.placeholder) {
         this.setAttribute('aria-label', this.placeholder);
       } else {

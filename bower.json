@@ -1,10 +1,15 @@
 {
-  "name": "core-scroll-header-panel",
+  "name": "dc-campaign-finance-watch",
   "private": true,
   "dependencies": {
     "polymer": "Polymer/polymer#master",
     "paper-elements": "Polymer/paper-elements#master",
+    "core-pages": "Polymer/core-pages#master",
     "octicons": "github/octicons",
+    "json5": "aseemk/json5",
+    "time-elements": "github/time-elements",
+    "sortable-table": "stevenrskelton/sortable-table#master",
     "google-chart": "GoogleWebComponents/google-chart"
   }
 }
+

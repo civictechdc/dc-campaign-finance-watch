@@ -7,5 +7,8 @@
   	"core-icon-button": "Polymer/core-icon-button#master",
   	"core-icons": "Polymer/core-icons#master",
     "core-overlay": "Polymer/core-overlay#master"
+  },
+  "devDependencies": {
+    "web-component-tester": "Polymer/web-component-tester#^1.1.4"
   }
 }

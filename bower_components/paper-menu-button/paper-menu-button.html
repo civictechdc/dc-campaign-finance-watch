@@ -17,26 +17,25 @@ Example:
       <div>Menu Item 3</div>
     </paper-menu-button>
 
-Theming
-=======
+### Theming
 
 To change the text color in the menu:
 
-paper-menu-button::shadow #menu {
-  color: white;
-}
+    paper-menu-button::shadow #menu {
+      color: white;
+    }
 
 To change the overlay background color:
 
-paper-menu-button::shadow .paper-menu-button-overlay-bg {
-  background: green;
-}
+    paper-menu-button::shadow .paper-menu-button-overlay-bg {
+      background: green;
+    }
 
 To change the color of the ripple effect:
 
-paper-menu-button:shadow .paper-menu-button-overlay-ink {
- background: red;
-}
+    paper-menu-button:shadow .paper-menu-button-overlay-ink {
+      background: red;
+    }
 
 @group Paper Elements
 @element paper-menu-button
@@ -86,7 +85,7 @@ paper-menu-button:shadow .paper-menu-button-overlay-ink {
 
     <core-dropdown id="dropdown" relatedTarget="{{}}" opened="{{opened}}" halign="{{halign}}" valign="{{valign}}" transition="{{noTransition ? '' : transition}}" on-core-transitionend="{{transitionEndAction}}">
 
-      <paper-shadow id="shadow" z="1" target="{{$.dropdown}}"></paper-shadow>
+      <paper-shadow id="shadow" fit></paper-shadow>
 
       <div class="paper-menu-button-overlay-ink"></div>
       <div id="overlayBg" class="paper-menu-button-overlay-bg"></div>
@@ -176,12 +175,12 @@ paper-menu-button:shadow .paper-menu-button-overlay-ink {
         this.super();
         this.toggle();
         if (this.opened && !this.noTransition) {
-          this.$.shadow.z = 0;
+          this.$.shadow.setZ(0);
         }
       },
 
       transitionEndAction: function() {
-        this.$.shadow.z = 1;
+        this.$.shadow.setZ(1);
       },
 
       activateAction: function() {
