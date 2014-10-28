@@ -3,13 +3,15 @@ import campaign_mongo_client
 
 business_collection = campaign_mongo_client.get_collection("businesses")
 
-def get_business_record(original_name, clean_name, acronym, trading_as):
-        business_records = business_collection.find({"$or":[{"name.original_name":orginal_name},{"name.clean_name":clean_name}, {"name.trading_as":trading_as}, {"name.acronym":acronym}]})
-    if len(business_records) > 1:
-        print "possible duplicate entries for " + clean_name
-        return None
-    elif:
-        print "new business discovered :" + clean_name + " adding a record"
+def get_business_record(original_name='', clean_name='', acronym='', trading_as=''):
+    business_records = business_collection.find({"$or":[{"name.original_name":original_name},{"name.clean_name":clean_name}, {"name.trading_as":trading_as}, {"name.acronym":acronym}]})
+
+    business_record = business_collection.find_one({"name.clean_name":clean_name})
+    if not business_record:
+        business_record = business_collection.find_one({"name.original_name":original_name})
+
+
+    if not  business_record:
         record = {}
         
         # create the name sub-doc
@@ -26,15 +28,14 @@ def get_business_record(original_name, clean_name, acronym, trading_as):
         record["employees"] = []
         return record
     else:
-        record = business_records[0]
-        if original_name not in record["name"]["original_name"]:
-            record["name"]["original_name"].append(original_name)
-        if acronym not in record["name"]["acronym"]:
-            record["name"]["acronym"].append(acronym)
-        if trading_as not in record["name"]["trading_as"]:
-            record["name"]["trading_as"].append(trading_as)
+        if original_name not in business_record["name"]["original_name"]:
+            business_record["name"]["original_name"].append(original_name)
+        if acronym not in business_record["name"]["acronym"]:
+            business_record["name"]["acronym"].append(acronym)
+        if trading_as not in business_record["name"]["trading_as"]:
+            business_record["name"]["trading_as"].append(trading_as)
 
-        return record
+        return business_record
 
 def save_business_record(business_record):
-    business_client.save(business_record, business_record)
+    business_collection.save(business_record, business_record)
