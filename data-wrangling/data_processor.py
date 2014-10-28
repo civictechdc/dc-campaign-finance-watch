@@ -14,7 +14,7 @@ business_name_endings = ['corporation', 'llp', 'in', 'llc', 'inc', 'lp', 'llc', 
 
 def remove_punctuation_characters(words):
     words = words.translate(None, '.!;:,?\'\"')
-    words = words.lower()
+    ords = words.lower()
     return words
 
 def remove_business_endings(business_name):
@@ -137,5 +137,5 @@ if __name__ == '__main__':
             award['amount'] = float(record['amount'])
         except:
             award['amount'] = 0
-        award['date'] = process_date(record['base_contract_period'])
+       award['date'] = process_date(record['base_contract_period'])
         award_collection.insert(award)

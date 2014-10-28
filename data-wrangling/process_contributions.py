@@ -1,6 +1,6 @@
 #!user/bin/python
 import csv
-from business_record import get_business_record
+from business_record import get_business_record, save_business_record
 import data_util
 
 path = '../csv/ocp_contributions.csv'
@@ -16,9 +16,11 @@ def process_contributions():
                 if row['contributor'] not in business_record:
                     business_record['employees'].append(row['contributor'])
                     business_record['contributions'].append(create_contribution_sub_doc(row))
+                    save_business_record(business_record)
             else:
                 business_record = process_corporate_record(row)
                 business_record['contributions'].append(create_contribution_sub_doc(row))
+                save_business_record(business_record)
 
 
 def process_corporate_record(row):

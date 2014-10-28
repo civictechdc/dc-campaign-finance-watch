@@ -36,3 +36,5 @@ def get_business_record(original_name, clean_name, acronym, trading_as):
 
         return record
 
+def save_business_record(business_record):
+    business_client.save(business_record, business_record)

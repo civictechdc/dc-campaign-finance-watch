@@ -2,6 +2,7 @@
 import csv
 import data_util
 from business_record import get_business_record
+from business_record import save_business_record
 
 path = '../csv/ocp_awards.csv'
 
@@ -17,6 +18,8 @@ def process_awards():
 
         business_record = get_business_record(row['vendor_name'], clean_name, trading_as, acronym)
         business_record['awards'].append(create_award_sub_doc(row))
+        save_business_record(business_record)
+
 
 def create_award_sub_doc(csv_row):
     award = {}
