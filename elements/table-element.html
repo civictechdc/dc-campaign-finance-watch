@@ -1,0 +1,14 @@
+<polymer-element name="table-element" attributes="sourcefile tabletitle" noscript>
+    <template>
+    <style>
+      @import url("../css/bootstrap.css");
+    </style>
+    <core-ajax auto url="{{sourcefile}}" response="{{tabula}}" handleAs="json"></core-ajax>
+    <div>{{introtext}}</div>
+    <div class="panel panel-default">
+    	<div class="panel-heading"><h3>{{tabletitle}}</h3></div>
+      <sortable-table class="bootstrap" columns='{{tabula.columns}}' data='{{tabula.data}}'>
+      </sortable-table>
+    </div>
+  </template>
+</polymer-element>
