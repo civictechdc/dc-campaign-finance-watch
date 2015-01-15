@@ -46,7 +46,7 @@ We'd like to have a page showing all elected officials with summary data. The da
 
 ####Organization
 
-The page will rank the races in the following order:
+The page will list the races in the following order:
 
 ```
 All Offices
