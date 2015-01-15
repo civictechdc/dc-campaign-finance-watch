@@ -84,20 +84,20 @@ It will default to the current year, but will allow selection of all prior years
 
 When any race is selected, a Summary page will show the few most important data points we choose in a chart, such as: local contributors, % from individual donors vs corporate donors, total money raised. (We do NOT want to sort by the total money raised as this horse race is not the most civically important). Large tabs will allow the citizen to view more data on our two topic areas Grassroots Support (ie: number of individual contributors, % from individual donors, average contribution size, location of donors, etc) and Corporate Influence (number of corporate contributors, % from corporate contributors, total cash from corporate contributors, average contribution size, etc). Graphics can be used as needed. A very, very rough wireframe of this idea: https://cloudup.com/c8TwWZ3LICC
 
-###Goal 2: Automation
-The next step will not provide more analyses, but rather will increase the automation of data analysis and distribution.
-Dockerization
-
-We will dockerize the analysis, setting it to run daily.
-
-##Twitter Servo
-Like this: [https://github.com/vzvenyach/scotus-servo](https://github.com/vzvenyach/scotus-servo), but for data from the DC OCF
-
-###Goal 3: Pay-to-Play
+###Goal 2: Pay-to-Play
 
 The second set of analyses will link campaign contributions to District contracts.  The cash paid to office holders’ campaigns will be linked to past, existing, and pending contracts with the city.
 
 Expose [OCP Contract and Procurement Data](http://app.ocp.dc.gov/RUI/information/award/search.asp) (via API?)
+
+###Goal 3: Automation
+The next step will not provide more analyses, but rather will increase the automation of data analysis and distribution.
+
+##Twitter Servo
+Like this: [https://github.com/vzvenyach/scotus-servo](https://github.com/vzvenyach/scotus-servo), but for data from the DC OCF
+
+##Dockerization
+Dockerize twitter servo, setting it to run daily.
 
 ###Goal 4: Industry Influence
 
