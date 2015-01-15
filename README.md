@@ -151,3 +151,5 @@ Show percentage of each candidates donors from each ward/zip/etc. (heat map?)
    - and the average (of standard deviations reative to the means) 
 
 Breakout contributions by year, office and candidate into seperate json files.  This will allow us to track changes as they update. 
+
+[Quick mockup](https://docs.google.com/presentation/d/1WvTNgmqvy31nZ-25LUniX8EGbF74IiSDPwPWQs6W9BI)
