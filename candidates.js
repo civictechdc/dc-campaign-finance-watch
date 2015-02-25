@@ -51,7 +51,6 @@ function getRace(position, year) {
 
 function getElectedOfficials(year) {
     var deferred = q.defer();
-    console.log(year);
     db.candidates
         .find({"held_office.elected_year": year})
         .toArray()

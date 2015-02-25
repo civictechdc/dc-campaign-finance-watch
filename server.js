@@ -38,8 +38,7 @@ server.get('/dc-campaign-finance/api/candidate', function(req, res, next) {
 });
 
 server.get('/dc-campaign-finance/api/candidate/:lastName/:firstName', function(req, res, next){
-    console.log('retrieving candidate information for %s %s', req.params.lastName, req.params.firstName);
-   
+    
     var id = {};
     id['_id.first_name'] = req.params.firstName;
     id['_id.last_name'] = req.params.lastName;
@@ -59,7 +58,7 @@ server.get('/dc-campaign-finance/api/candidate/:lastName/:firstName', function(r
             var totalDonors = corporateDonors + individualDonors + otherDonors;
             candidateResponse.numberOfDonors = totalDonors;
             candidateResponse.contributorQuality = (candidate.contributor_quality/5) / totalDonors;
-            console.log(candidate);
+            
             
             return candidateResponse;
         })
@@ -70,7 +69,6 @@ server.get('/dc-campaign-finance/api/candidate/:lastName/:firstName', function(r
                 .limit(50)
                 .toArray()
                 .then(function(contributions) {
-                    console.log(candidate.name);
                     candidate.contributions = contributions;
                     db
                         .contributions
@@ -84,7 +82,7 @@ server.get('/dc-campaign-finance/api/candidate/:lastName/:firstName', function(r
                             res.send(candidate);
                     });
         }, function(err){
-            console.log(err);       
+
         });
     });    
 });
@@ -126,7 +124,6 @@ server.get('/dc-campaign-finance/api/candidate/:name/contributions/:page', funct
             response.contributions = contributions;
             db.contributions.find({'candidate':req.params.name})
                 .count(function(err, count){
-                    console.log(count);
                     if(count <= (skipAmount+50)) {
                         response.moreContributions = false
                     } else {
