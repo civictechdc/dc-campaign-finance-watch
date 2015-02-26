@@ -172,6 +172,17 @@ server.get('/dc-campaign-finance/api/contributions/corporate/top', function(req,
         });
 });
 
+server.get('/dc-campaign-finance/api/corporate/:corporation/:state', function(req, res, next){
+    openCorporateApi.
+        searchCompany(req.params.corporation, req.params.state)
+        .then(function(info){
+            res.send(info);
+        })
+        .catch(function(err){
+            res.send(err);
+        });
+});
+
 server.listen(process.env.PORT || 3000, function(){
     console.log('%s listening at %s', server.name, server.url);
 });

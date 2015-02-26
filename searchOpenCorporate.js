@@ -1,23 +1,28 @@
-var rest = require('restler')
+var rest = require('restler');
+var q = require('q');
+var openCorporateEndpoint = 'https://api.opencorporates.com/v0.3/';
 
-var openCorporateEndpoint = 'https://api.opencorporates.com/v0.3/'
+var openCorporateApi = {};
 
-var openCorporateApi = {}
 
-openCorporateApi.searchCompany = function(business, jurisdiction) {
+
+openCorporateApi.searchCompany = function(business, state) {
     var searchQuery = openCorporateEndpoint + '/companies/search?q=' + business;
-    if(jurisdiction) {
-        searchQuery += ('&jurisdiction_code=' + jurisdiction);
-    }
-    searchQuery += '&order=score';
+    searchQuery += '&order=score'+
+                    '&jurisdiction_code=us_'+state +
+                    '&exclude_incactive=true';
+    var deferred = q.defer();
     rest.get(searchQuery,{timeout:100000})
             .on('complete', function(result){
-                return result;        
+                deferred.resolve(result);        
             })
             .on('timeout', function(ms){
                 console.log('did not return in ' + ms);
+                deferred.reject('did not return');
             });
+    return deferred.promise;
     };
+
 
 
 

@@ -1,9 +1,0 @@
-TODO:
-1. Make candidates and contributions into a service
-2. Add postman requests for the below
-	- currently elected officials
-	- top ten individual donations
-	- top ten corporate donations
-	- next election date DONE
-3. Redeploy to heroku
-4. Create basic angular app for the above requests
