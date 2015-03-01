@@ -1,4 +1,5 @@
 {
+        "conformsTo":"http://codefordc.org/resources/specification.html",        
         "status": "Beta",
         "thumbnailUrl": "",
         "contact": {
@@ -6,6 +7,7 @@
             "email":"donald.braman@gmail.com",
             "twitter":"@donaldbraman"
         },
+        "data": {},
         "bornAt": "Code for DC",
         "geography": "DC",
         "politicalEntity": {"DC Office of Campaign Finance": "http://www.ocf.dc.gov"},
