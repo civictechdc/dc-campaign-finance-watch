@@ -1,5 +1,6 @@
 {
 	"name": "ObjectId(company) or String",
+	"employerId": "ObjectId(company)"
 	"_id": "ObjectId",
 	"candidate": "ObjectId(candidate)",
 	"date": "Date",
