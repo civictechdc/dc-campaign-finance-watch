@@ -15,7 +15,7 @@
   "dependencies": {
     "bunyan": "^1.2.3",
     "lodash": "^3.3.1",
-    "mongoose": "~3.8.18",
+    "mongoose": "~3.8.X",
     "promised-mongo": "~0.11.1",
     "properties": "^1.2.1",
     "q": "^1.1.2",
