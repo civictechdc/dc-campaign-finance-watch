@@ -1,0 +1,29 @@
+{
+	"name": {
+		"first": "String",
+		"middle": "String",
+		"last": "String"
+	},
+	"id": "ObjectId",
+	"campaigns": [
+		{
+			"id": "ObjectId",
+			"position": "String",
+			"commitee": "String",
+			"year": "Integer",
+			"individualDonorCount": "Integer",
+			"corporateDonorCount": "Integer"
+		}
+	],
+	"positions": [
+		{
+			"id": "ObjectId",
+			"position": "String",
+			"period": {
+				"from": "Integer",
+				"to": "Integer"
+			},
+			"corporateDonorCount": "Integer"
+		}
+	]
+}

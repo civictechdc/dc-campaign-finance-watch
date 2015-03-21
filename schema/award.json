@@ -1,0 +1,13 @@
+{
+	"name": "ObjectId(company)",
+	"_id": "ObjectId",
+	"amount": "Float",
+	"period": {
+		"to": "Date",
+		"from": "Date"
+	},
+	"agency": "ObjectId(agency)",
+	"contractNumber": "String",
+	"caption": "String",
+	"marketType": "String"
+}

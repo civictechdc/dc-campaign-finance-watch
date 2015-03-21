@@ -1,0 +1,12 @@
+{
+	"name": "ObjectId(company) or String",
+	"_id": "ObjectId",
+	"candidate": "ObjectId(candidate)",
+	"date": "Date",
+	"amount": "Float",
+	"contributorType": "String('Individual', 'Other', 'Corporate')",
+	"contributionType": {
+		"name": "String('campaign', 'position')",
+		"id": "ObjectId(campaign or position)"
+	}
+}

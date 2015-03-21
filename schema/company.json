@@ -1,0 +1,15 @@
+{
+	"name": "String",
+	"_id": "ObjectId",
+	"address": {
+		"zip": "String",
+		"state": "String",
+		"street": "String",
+	},
+	"alias": [
+		{
+			"name": "String or ObjectId(company)",
+			"rule": "String"
+		}
+	]
+}
