@@ -5,9 +5,17 @@ var contributorTypes = ['Individual', 'Other', 'Corporate'];
 var contributionTypes = ['campaign', 'position'];
 
 var contributionSchema = new Schema({
-  name: Schema.Types.Mixed,
-  employerId: {type: Schema.Types.ObjectId, ref: 'Company'},
-  candidate: {type: Schema.Types.ObjectId, ref: 'Candidate'},
+  name: {type: Schema.Types.Mixed, required: true},
+  employerId: {
+    type: Schema.Types.ObjectId,
+    ref: 'Company',
+    required: true
+  },
+  candidate: {
+    type: Schema.Types.ObjectId,
+    ref: 'Candidate',
+    required: true
+  },
   date: Date,
   amount: Number,
   contributorType: {type: String, enum: contributorTypes},

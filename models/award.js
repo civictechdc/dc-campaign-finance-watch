@@ -2,8 +2,12 @@ var mongoose = require('mongoose')
   , Schema = mongoose.Schema;
 
 var awardSchema = new Schema({
-  name: {type: Schema.ObjectId, ref: 'company'},
-  amount: Number,
+  name: {
+    type: Schema.ObjectId,
+    ref: 'company',
+    required: true,
+  },
+  amount: {type: Number, required: true},
   period: {
     to: Date,
     from: Date,

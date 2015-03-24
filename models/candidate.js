@@ -2,10 +2,14 @@ var mongoose = require('mongoose')
   , Schema = mongoose.Schema;
 
 var candidateSchema = new Schema({
-  name: {
-    first: String,
-    middle: String,
-    last: String,
+  name: {type:
+    {
+      first: String,
+      middle: String,
+      last: String,
+    },
+    unique: true,
+    required: true
   },
   campaigns: [
     {

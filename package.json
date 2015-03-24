@@ -20,6 +20,7 @@
     "properties": "^1.2.1",
     "q": "^1.1.2",
     "restify": "~2.8.3",
-    "restler": "^3.2.2"
+    "restler": "^3.2.2",
+    "underscore": "^1.8.2"
   }
 }
