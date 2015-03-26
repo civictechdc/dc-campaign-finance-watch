@@ -60,7 +60,7 @@ function processOldCandidateRecord(record) {
         office.individualDonorCount = record.individual_donor_count;
         office.corporateDonorCount = record.other_donor_count + record.corporate_donor_count;
         return office;
-      }));
+      });
 
       candidate.positions = _.union(candidate.positions || [], positions);
 
