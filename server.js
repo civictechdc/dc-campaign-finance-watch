@@ -32,7 +32,7 @@ server.get('/dc-campaign-finance/api/candidate', function(req, res, next) {
         })
         .catch(function(err){
             logger.error("could not get candidates");
-            res.send(500);
+            res.send(500, err);
         });
 
 });
@@ -82,7 +82,7 @@ server.get('/dc-campaign-finance/api/candidate/:lastName/:firstName', function(r
                             res.send(candidate);
                     });
         }, function(err){
-
+            res.send(500, err);
         });
     });    
 });
@@ -140,7 +140,7 @@ server.get('/dc-campaign-finance/api/electedOfficials/:year', function(req, res,
         .then(function(officials){
             res.send(officials);
         }, function(err){
-            res.send(err);
+            res.send(500, err);
         });
 });
 
@@ -157,7 +157,7 @@ server.get('/dc-campaign-finance/api/contributions/individuals/top', function(re
             res.send(donors);
         })
         .catch(function(err){
-            res.send(err);
+            res.send(500, err);
         });
 });
 
@@ -168,7 +168,7 @@ server.get('/dc-campaign-finance/api/contributions/corporate/top', function(req,
             res.send(donors);
         })
         .catch(function(err){
-            res.send(err);
+            res.send(500, err);
         });
 });
 
@@ -179,7 +179,7 @@ server.get('/dc-campaign-finance/api/corporate/:corporation/:state', function(re
             res.send(info);
         })
         .catch(function(err){
-            res.send(err);
+            res.send(500, err);
         });
 });
 
