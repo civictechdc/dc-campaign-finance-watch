@@ -22,6 +22,14 @@ function constructResourceUrl(endpoint, id, queryParams) {
     
 }
 
+server.get('/dc-campaign-finance/api', function(req, res, next) {
+    logger.debug('getting api meta information');
+    res.send(200, {
+        name: "DC Campaign Finance API by Code for DC",
+        version: 1
+    });
+});
+
 server.get('/dc-campaign-finance/api/candidate', function(req, res, next) {
     logger.debug('getting all candidates');
     candidates
