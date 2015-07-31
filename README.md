@@ -4,7 +4,21 @@ A node.js server for providing a DC Campaign Finance API.
 
 ## Running the server
 
-To deploy this project locally you will need to set up a local MongoDB database and then set up our API server.
+To deploy this project locally you will need to get this code, get the data, set up a local MongoDB database, and then set up our API server.
+
+Get this code:
+
+	git clone https://github.com/codefordc/dc-campaign-finance-watch
+	cd dc-campaign-finance-watch
+
+Get the data from anther collaborator. It'll come in the form of a Mongo dump directory called `dc-campaign-finance-mongodatabase`. (It was created using `mongodump --host localhost:27017`.) Put that directory within your `dc-campaign-finance-watch` directory.
+
+Now you can just start up everything with Vagrant:
+
+	sudo apt-get install vagrant virtualbox
+	vagrant up
+
+or continue setting up the local service...
 
 Install MongoDB and then start a foregrounded instance of the Mongo server. On Ubuntu 14.04 that's:
 
@@ -14,13 +28,12 @@ Install MongoDB and then start a foregrounded instance of the Mongo server. On U
 
 Continue in a new terminal...
 
-Get the data from anther collaborator. It'll come in the form of a Mongo dump directory called `dc-campaign-finance-mongodatabase`. (It was created using `mongodump --host localhost:27017`.) Add this into your local Mongo database:
+Add this into your local Mongo database:
 
 	mongorestore --host localhost:27017 dc-campaign-finance-mongodatabase/
 
 For the API server, you will need node.js. A good way to do that is via [nvm](https://github.com/creationix/nvm). Once you have node.js set up, do this:
 
-	git clone https://github.com/codefordc/dc-campaign-finance-watch
 	npm install
 
 	npm install -g supervisor
