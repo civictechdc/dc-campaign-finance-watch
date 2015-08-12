@@ -34,4 +34,6 @@ var candidateSchema = new Schema({
   ]
 });
 
+candidateSchema.index({name: 'text', campaigns: 'text', positions: 'text'});
+
 module.exports = mongoose.model('Candidate', candidateSchema);

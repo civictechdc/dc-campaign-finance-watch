@@ -17,3 +17,15 @@ exports.getElectedOfficials = function(req, res) {
       res.send(officials);
     });
 }
+
+exports.searchForCandidate = function(req, res) {
+  var search = req.query.search;
+  candidateService
+    .searchForCandidate(search)
+    .then(function(results){
+      res.send(results);
+    })
+    .catch(function(err){
+      console.log(err);
+    });
+}

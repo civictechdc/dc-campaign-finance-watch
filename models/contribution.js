@@ -5,7 +5,7 @@ var contributorTypes = ['Individual', 'Other', 'Corporate'];
 var contributionTypes = ['campaign', 'position'];
 
 var contributionSchema = new Schema({
-  contributorName: {type: Schema.Types.Mixed, required: true},
+  contributor: {type: Schema.Types.ObjectId, ref:'Contributor' , required: true},
   employerId: {
     type: Schema.Types.ObjectId,
     ref: 'Company'

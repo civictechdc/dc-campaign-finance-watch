@@ -4,7 +4,7 @@ var mongoose = require('mongoose')
 var awardSchema = new Schema({
   name: {
     type: Schema.ObjectId,
-    ref: 'company',
+    ref: 'Company',
     required: true,
   },
   amount: {type: Number, required: true},
