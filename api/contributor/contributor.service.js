@@ -13,18 +13,18 @@ var Contribution = require('../../models/contribution');
 Promise.promisifyAll(Contribution);
 
 
-exports.findCompany =  function(companyId) {
-  var companyPromise = Contributor.findByIdAsync(companyId);
+exports.findCompany =  function(contributorId) {
+  var contributorPromise = Contributor.findByIdAsync(contributorId);
 
-  var companyObjectId = new ObjectId(companyId);
-  var contributionPromise = Contribution.findAsync({ contributorName: companyObjectId });
+  var contributorObjectId = new ObjectId(contributorId);
+  var contributionPromise = Contribution.findAsync({ contributor: contributorObjectId });
 
-  return Promise.join(companyPromise, contributionPromise, function(company, contributions){
-    console.log(company);
-    var companyData = {};
-    companyData.company = company;
-    companyData.contributions = contributions;
-    return companyData;
+  return Promise.join(contributorPromise, contributionPromise, function(contributor, contributions){
+    var contributorData = {
+      company: contributor,
+      contributions: contributions
+    };
+    return contributorData;
   });
 }
 

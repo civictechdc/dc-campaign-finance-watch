@@ -21,9 +21,9 @@ server.get('/dc-campaign-finance/api/search/candidate', candidateController.sear
 
 // Company
 var contributorController = require('./api/contributor/contributor.controller');
-server.get('/dc-campaign-finance/api/company/:id', contributorController.getCompanyInformation);
-server.get('/dc-campaign-finance/api/company/contributors/:limit', contributorController.getTopContributingCompanies);
-server.get('/dc-campaign-finance/api/search/company', contributorController.searchForCompany);
+server.get('/dc-campaign-finance/api/contributor/:id', contributorController.getCompanyInformation);
+server.get('/dc-campaign-finance/api/contributor/contributors/:limit', contributorController.getTopContributingCompanies);
+server.get('/dc-campaign-finance/api/search/contributor', contributorController.searchForCompany);
 
 // Election
 var electionController = require('./api/election/election.controller');

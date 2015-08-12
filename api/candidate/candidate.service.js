@@ -15,22 +15,15 @@ exports.findCandidate = function(candidateId) {
   var candidateResponse = {};
   return Promise.join(candidatePromise, contributionsPromise, function(candidate, contributions){
     candidateResponse.candidate = candidate;
-    candidateResponse.individualContributions = _.filter(contributions, function(contribution){
-        return contribution.contributorType === 'Individual';
-    });
-    var corporateContributions = _.filter(contributions, function(contribution){
-      return contribution.contributorType === 'Corporate';
-    });
 
-    return Contribution.populate(corporateContributions, {
-      path: 'contributorName',
-      model: 'Company'
+    return Contribution.populate(contributions, {
+      path: 'contributor',
+      model: 'Contributor'
     });
 
   })
-  .then(function(populatedCorporateContributions){
-    console.log(populatedCorporateContributions);
-    candidateResponse.companyContributions = populatedCorporateContributions;
+  .then(function(populatedContributions){
+    candidateResponse.contributions = populatedContributions;
     return candidateResponse;
   });
 }
