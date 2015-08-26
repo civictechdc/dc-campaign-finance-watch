@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 // Company Service
 var companyService = require('./contributor.service');
 
@@ -24,8 +26,10 @@ exports.searchForCompany = function(req, res) {
   var search = req.query.search;
   companyService
     .searchForCompany(search)
-    .then(function(companies) {
-      res.send(companies);
+    .then(function(contributors) {
+      res.send(_.map(contributors, function(contributor){
+        return contributor.toObject({virtuals: true});
+      }));
     })
     .catch(function(err){
       console.log(err);

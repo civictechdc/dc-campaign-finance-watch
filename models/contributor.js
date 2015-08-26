@@ -1,6 +1,8 @@
-var mongoose = require('mongoose')
+var path = require('path'),
+  mongoose = require('mongoose')
   , Schema = mongoose.Schema;
 
+var config = require('../config/environment');
 
 var contributorTypes = ['Individual', 'Other', 'Corporation'];
 
@@ -27,5 +29,11 @@ var contributorSchema = new Schema({
       rule: String
   }]
 });
+
+contributor.virtual('resource').get(function(){
+  return path.join(config.baseUrl, 'contributor', this._id.toString()); 
+});
+
+contributorSchema.index({'$**': 'text'});
 
 module.exports = mongoose.model('Contributor', contributorSchema);

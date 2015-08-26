@@ -1,5 +1,8 @@
-var mongoose = require('mongoose')
+var path = require('path'),
+  mongoose = require('mongoose')
   , Schema = mongoose.Schema;
+
+var config = require('../config/environment');
 
 var candidateSchema = new Schema({
   name: {type:
@@ -34,6 +37,10 @@ var candidateSchema = new Schema({
   ]
 });
 
-candidateSchema.index({name: 'text', campaigns: 'text', positions: 'text'});
+candidateSchema.index({"$**": 'text'});
+
+candidateSchema.virtual('resource').get(function(){
+  return path.join(config.baseUrl, 'candidate', this._id.toString());
+});
 
 module.exports = mongoose.model('Candidate', candidateSchema);

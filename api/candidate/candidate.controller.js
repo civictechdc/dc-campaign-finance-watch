@@ -1,4 +1,5 @@
 var candidateService = require('./candidate.service');
+var _ = require('lodash');
 
 exports.getCandidateById = function(req, res) {
   var candidateId = req.params.id;
@@ -23,7 +24,9 @@ exports.searchForCandidate = function(req, res) {
   candidateService
     .searchForCandidate(search)
     .then(function(results){
-      res.send(results);
+      res.send(_.map(results, function(result){
+        return result.toObject({virtuals: true});
+      }));
     })
     .catch(function(err){
       console.log(err);

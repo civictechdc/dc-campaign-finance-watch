@@ -17,13 +17,13 @@ mongoose.connect(config.mongo.uri);
 var candidateController = require('./api/candidate/candidate.controller');
 server.get('/dc-campaign-finance/api/candidate/:id', candidateController.getCandidateById);
 server.get('/dc-campaign-finance/api/electedOfficials/:year', candidateController.getElectedOfficials);
-server.get('/dc-campaign-finance/api/search/candidate', candidateController.searchForCandidate);
+server.get('/dc-campaign-finance/api/candidate', candidateController.searchForCandidate);
 
 // Company
 var contributorController = require('./api/contributor/contributor.controller');
 server.get('/dc-campaign-finance/api/contributor/:id', contributorController.getCompanyInformation);
 server.get('/dc-campaign-finance/api/contributor/contributors/:limit', contributorController.getTopContributingCompanies);
-server.get('/dc-campaign-finance/api/search/contributor', contributorController.searchForCompany);
+server.get('/dc-campaign-finance/api/contributor', contributorController.searchForCompany);
 
 // Election
 var electionController = require('./api/election/election.controller');
