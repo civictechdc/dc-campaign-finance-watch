@@ -30,8 +30,8 @@ var contributorSchema = new Schema({
   }]
 });
 
-contributor.virtual('resource').get(function(){
-  return path.join(config.baseUrl, 'contributor', this._id.toString()); 
+contributorSchema.virtual('resource').get(function(){
+  return path.join(config.baseUrl, 'contributor', this._id.toString());
 });
 
 contributorSchema.index({'$**': 'text'});
