@@ -1,5 +1,5 @@
 import React from 'react/addons';
-import Chart from './chart.jsx'
+import Chart from './js/chart.jsx'
 
 let sampleData = [
   {date: '20151001', can1: 2, can2: 3},

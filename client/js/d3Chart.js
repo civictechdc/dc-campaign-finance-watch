@@ -14,7 +14,7 @@ class d3Chart {
     let width = el.offsetWidth;
     let height = el.offsetHeight;
 
-    let margin = {top: 50, right: 100, bottom: 30, left: 80};
+    let margin = {top: 50, right: 100, bottom: 50, left: 80};
 
     let parseDate = d3.time.format("%Y%m%d").parse;
 

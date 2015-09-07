@@ -1,5 +1,5 @@
 import React from 'react/addons';
-import d3Chart from './d3Chart';
+import d3Chart from './js/d3Chart';
 
 var chart;
 
