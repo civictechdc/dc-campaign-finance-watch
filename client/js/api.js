@@ -45,14 +45,35 @@ Promise.promisifyAll(Rest, {
 });
 
 
+
 class Client {
   constructor(baseUrl, restClient) {
     this.baseUrl = baseUrl;
     this.Rest = restClient;
   }
 
-  getContributionChart() {
-    return this.Rest.getAsync(this.baseUrl + '/contributor/55ca7da23689fff2efd9ca24');
+
+  getContributionChart(ids) {
+    var promises = []
+    var that = this;
+    ids.forEach(function(id){
+      promises.push(
+        that.Rest.getAsync(that.baseUrl + '/candidate/' + id)
+        .then(function(results){
+          var candidate = results[0];
+          return candidate.contributions.map(function(contribution){
+            return {
+              
+            }
+          });
+        })
+      );
+    });
+    return Promise.all(promises);
+  }
+
+  getCandidates(){
+    return this.Rest.getAsync(this.baseUrl + '/candidate');
   }
 }
 

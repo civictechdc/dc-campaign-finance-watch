@@ -49,11 +49,7 @@ class d3Chart {
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    data.forEach(function(d){
-      d.date = parseDate(d.date);
-    });
-
+      
     let candidates = color.domain().map(function(name){
       return {
         name: name,

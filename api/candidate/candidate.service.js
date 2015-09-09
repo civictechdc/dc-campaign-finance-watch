@@ -1,6 +1,7 @@
 'use strict';
 
 var Promise = require('bluebird');
+Promise.promisifyAll(require("mongoose"));
 var _  = require('lodash');
 
 var Candidate = require('../../models/candidate');
@@ -8,6 +9,13 @@ Promise.promisifyAll(Candidate);
 
 var Contribution = require('../../models/contribution');
 Promise.promisifyAll(Contribution);
+
+exports.findAllCandidates = function() {
+  return Candidate
+    .find()
+    .limit(50)
+    .execAsync();
+}
 
 exports.findCandidate = function(candidateId) {
   var contributionsPromise = Contribution.findAsync({candidate: candidateId});
