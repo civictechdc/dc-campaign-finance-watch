@@ -1,5 +1,16 @@
 import React from 'react/addons';
 import Chart from './js/chart.jsx'
+import Rest from 'restler';
+import Promise from 'bluebird';
+import Client from './js/api';
+
+Client.getContributionChart()
+  .then(function(data){
+    console.log('data', data)
+  })
+  .catch(function(err){
+    console.log('err', err);
+  });
 
 let sampleData = [
   {date: '20151001', can1: 2, can2: 3},

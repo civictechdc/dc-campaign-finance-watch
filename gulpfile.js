@@ -12,6 +12,7 @@ var gutil = require('gulp-util');
 var browserSync  = require('browser-sync');
 var nodemon = require('gulp-nodemon');
 var path = require('path');
+var fs = require('fs');
 
 
 var watchifyOpts = { poll: true }
@@ -39,7 +40,13 @@ function bundle() {
     .pipe(browserSync.stream());
 }
 
-gulp.task('bundle', function() {
+gulp.task('create-config', function(done){
+  fs.writeFile('client/config.json', JSON.stringify({
+    env: gutil.env.env
+  }), done);
+});
+
+gulp.task('bundle', ['create-config'], function() {
   bundle();
 });
 

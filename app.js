@@ -8,6 +8,11 @@ var config = require('./config/environment');
 var restify = require('restify');
 var server = restify.createServer({name: 'dc-campaign-finance'});
 server.use(restify.queryParser());
+server.use(function crossOrigin(req, res, next){
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  return next();
+});
 
 //Mongoose
 var mongoose = require('mongoose');
