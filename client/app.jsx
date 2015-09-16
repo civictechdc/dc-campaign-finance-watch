@@ -52,11 +52,9 @@ class AppRoot extends React.Component {
       .bind(this)
       .then(function(results){
         results.forEach(function(d){
-          console.log(parseDate(d.date));
           d.date = parseDate(d.date);
         });
         this.setState({data: results});
-        console.log(results);
         this.state.selectedCandidates = [];
       })
       .catch(function(err){

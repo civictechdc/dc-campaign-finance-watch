@@ -70,24 +70,24 @@ class Client {
             };
           });
           formattedResults = _.sortBy(formattedResults, 'date');
-          let minDate = Moment(formattedResults[0].date).date(1);
-          let maxDate = Moment(_.last(formattedResults).date).date(1);
+          let minDate = Moment(formattedResults[0].date, Moment.UTC).date(1);
+          let maxDate = Moment(_.last(formattedResults).date, Moment.UTC).date(1);
           formattedResults =  _.groupBy(formattedResults, function(result){
             let tempMin = minDate;
-            let date = Moment(result.date);
+            let date = Moment(result.date, Moment.UTC);
             while(tempMin.isBefore(maxDate)){
-              let tempMinPlusMonth = Moment(tempMin).add(1, 'months');
+              let tempMinPlusMonth = Moment(tempMin, Moment.UTC).add(1, 'months');
               if(date.isBetween(tempMin, tempMinPlusMonth) || date.isSame(tempMin)) {
                 return tempMin;
               } else {
-                tempMin.add('months', 1)
+                tempMin.add(1, 'months');
               }
             }
             return maxDate;
           });
           return _.map(formattedResults, function(contributions, date){
-            var entry = {
-              date: Moment(date)
+            let entry = {
+              date: Moment(date, Moment.UTC)
             };
             entry[contributions[0].candidate] = _.reduce(_.pluck(contributions, 'amount'), function(result, contribution){
               return result + contribution;
