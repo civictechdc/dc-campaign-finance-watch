@@ -2,7 +2,7 @@ import d3 from 'd3';
 
 class d3Chart {
   constructor(el, props, state) {
-
+    this.svg = d3.select(el).append('svg');
     this.update(el, state);
   }
 
@@ -11,6 +11,7 @@ class d3Chart {
   }
 
   _drawPoints(el, data) {
+    this.svg.selectAll('*').remove();
     let width = el.offsetWidth;
     let height = el.offsetHeight;
 
@@ -44,12 +45,13 @@ class d3Chart {
       .x(function(d) { return x(d.date); })
       .y(function(d) { return y(d.amount); });
 
-    let svg = d3.select(el).append("svg")
+
+    let svg = this.svg
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-      
+
     let candidates = color.domain().map(function(name){
       return {
         name: name,

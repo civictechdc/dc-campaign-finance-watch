@@ -47,13 +47,17 @@ class AppRoot extends React.Component {
   }
 
   _getChartData() {
-    console.log(this.state.selectedCandidates);
     Client
       .getContributionChart(this.state.selectedCandidates)
       .bind(this)
       .then(function(results){
+        results.forEach(function(d){
+          console.log(parseDate(d.date));
+          d.date = parseDate(d.date);
+        });
+        this.setState({data: results});
         console.log(results);
-        // this.setState({data: results});
+        this.state.selectedCandidates = [];
       })
       .catch(function(err){
         console.log(err);

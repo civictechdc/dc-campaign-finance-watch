@@ -19,8 +19,9 @@ exports.getCandidateById = function(req, res) {
 
   candidateService
     .findCandidate(candidateId)
-    .then(function(candidate){
-      res.send(candidate);
+    .then(function(result){
+      result.candidate = result.candidate.toObject({virtuals: true});
+      res.send(result);
     });
 }
 
