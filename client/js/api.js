@@ -124,8 +124,14 @@ class Client {
       });
   }
 
-  getCandidates(){
-    return this.Rest.getAsync(this.baseUrl + '/candidate');
+  getCandidates(toDate, fromDate){
+    let toDateString = toDate.format();
+    let fromDateString = fromDate.format();
+    return this.Rest
+      .getAsync(this.baseUrl + '/candidate' + '?toDate=' + toDateString + '&fromDate=' + fromDateString)
+      .then(function(result){
+        return result[0];
+      });
   }
 }
 

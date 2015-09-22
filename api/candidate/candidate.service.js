@@ -10,11 +10,19 @@ Promise.promisifyAll(Candidate);
 var Contribution = require('../../models/contribution');
 Promise.promisifyAll(Contribution);
 
-exports.findAllCandidates = function() {
-  return Candidate
-    .find()
-    .limit(50)
-    .execAsync();
+exports.findAllCandidates = function(toDate, fromDate) {
+  return Contribution
+    .find({
+      date:{$gte: new Date(fromDate), $lte: new Date(toDate)}
+    })
+    .populate('candidate')
+    .execAsync()
+    .then(function(contributions){
+      return _.uniq(_.pluck(contributions, 'candidate'));
+    })
+    .catch(function(err){
+      console.log(err);
+    });
 }
 
 exports.findCandidate = function(candidateId) {

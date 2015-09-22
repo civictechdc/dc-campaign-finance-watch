@@ -4,25 +4,24 @@ import React from 'react/addons';
 import Client from './api';
 
 
-class CandidatesComponent extends React.Component {
+class CandidatesListComponent extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    var onCandidateChange = this.props.onCandidateSelection;
+    var onCandidateSelection = this.props.onCandidateSelection;
     var checks = this.props.candidates.map(function(candidate){
       return (
         <span key={candidate.id}>
           <input type="checkbox"
                   htmlId={candidate.id}
                   checked={candidate.selected}
-                  onChange={onCandidateChange.bind(this, candidate.id)}/>
+                  onChange={onCandidateSelection.bind(this, candidate.id)}/>
                 <label htmlFor={candidate.id}>{candidate.name}</label>
         </span>
       )
     });
-
     return (
       <form>
         <h1>All Candidates</h1>
@@ -32,4 +31,4 @@ class CandidatesComponent extends React.Component {
   }
 }
 
-export default CandidatesComponent;
+export default CandidatesListComponent;

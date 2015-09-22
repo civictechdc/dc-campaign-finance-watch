@@ -34,8 +34,8 @@ exports.getElectedOfficials = function(req, res) {
 }
 
 exports.searchForCandidate = function(req, res) {
-  var search = req.query.search;
-  if(search) {
+  var query = req.query;
+  if(!query) {
     candidateService
       .searchForCandidate(search)
       .then(function(results){
@@ -48,7 +48,7 @@ exports.searchForCandidate = function(req, res) {
       });
   } else {
     candidateService
-      .findAllCandidates()
+      .findAllCandidates(query.toDate, query.fromDate)
       .then(function(candidates){
         res.send(candidates.map(function(candidate){
           return {

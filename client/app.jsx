@@ -1,6 +1,6 @@
 import React from 'react/addons';
 import Chart from './js/chart.jsx'
-import CandidatesComponent from './js/candidates.jsx';
+import CandidateSelector from './js/candidateSelector.jsx';
 import Rest from 'restler';
 import Promise from 'bluebird';
 import Client from './js/api';
@@ -24,7 +24,8 @@ class AppRoot extends React.Component {
     super(props);
     this.state = {
       data: sampleData,
-      domain: {x: [0, 30], y: [0, 100]}
+      domain: {x: [0, 30], y: [0, 100]},
+      selectedCandidates: []
     }
   }
 
@@ -41,14 +42,23 @@ class AppRoot extends React.Component {
   }
 
   _handleCandidateSelection(id) {
-    var selectedCandidates = this.state.selectedCandidates || [];
+    console.log('id selected',id);
+    var selectedCandidates = this.state.selectedCandidates;
     selectedCandidates.push(id);
     this.setState({selectedCandidates: selectedCandidates});
   }
 
-  _getChartData() {
+  _handleCandidateDeselection(id) {
+    var selectedCandidates = _.remove(this.state.selectedCandidates, function(c){
+      return c ===id;
+    });
+    this.setState({selectedCandidates: selectedCandidates});
+  }
+
+  _getChartData(candidates, range) {
+    console.log(candidates);
     Client
-      .getContributionChart(this.state.selectedCandidates)
+      .getContributionChart(candidates)
       .bind(this)
       .then(function(results){
         results.forEach(function(d){
@@ -67,8 +77,7 @@ class AppRoot extends React.Component {
     return (
       <div>
         <h1>DC Campaign Finance</h1>
-        <CandidatesComponent onCandidateSelection={this._handleCandidateSelection.bind(this)} candidates={candidates}/>
-        <button onClick={this._getChartData.bind(this)}>Create Chart</button>
+        <CandidateSelector onSelectedCandidatesSumbitted={this._getChartData.bind(this)}/>
         <div>
           {(() =>{
             if(this.state.data) {
