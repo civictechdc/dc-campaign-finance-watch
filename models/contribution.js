@@ -15,7 +15,7 @@ var contributionSchema = new Schema({
     ref: 'Candidate',
     required: true
   },
-  date: Date,
+  date: {type: Date, index: true},
   amount: Number,
   contributorType: {type: String, enum: contributorTypes},
   contributionType: {
