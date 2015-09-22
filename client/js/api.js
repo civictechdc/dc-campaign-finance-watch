@@ -1,6 +1,9 @@
 import Rest from 'restler';
 import Promise from 'bluebird';
 import config from '../config.json';
+import Moment from 'moment';
+import * as range from 'moment-range';
+import _  from 'lodash';
 
 var methodNamesToPromisify = "get post put del head patch json postJson putJson".split(" ");
 
@@ -44,15 +47,91 @@ Promise.promisifyAll(Rest, {
     promisifier: EventEmitterPromisifier
 });
 
-
 class Client {
   constructor(baseUrl, restClient) {
     this.baseUrl = baseUrl;
     this.Rest = restClient;
   }
 
-  getContributionChart() {
-    return this.Rest.getAsync(this.baseUrl + '/contributor/55ca7da23689fff2efd9ca24');
+
+  getContributionChart(ids) {
+    var promises = []
+    var that = this;
+    ids.forEach(function(id){
+      promises.push(
+        that.Rest.getAsync(that.baseUrl + '/candidate/' + id)
+        .then(function(results){
+          results = results[0];
+          let formattedResults = results.contributions.map(function(contribution){
+            return {
+              amount: contribution.amount,
+              date: contribution.date,
+              candidate: results.candidate.displayName
+            };
+          });
+          formattedResults = _.sortBy(formattedResults, 'date');
+          let minDate = Moment(formattedResults[0].date, Moment.UTC).date(1);
+          let maxDate = Moment(_.last(formattedResults).date, Moment.UTC).date(1);
+          formattedResults =  _.groupBy(formattedResults, function(result){
+            let tempMin = minDate;
+            let date = Moment(result.date, Moment.UTC);
+            while(tempMin.isBefore(maxDate)){
+              let tempMinPlusMonth = Moment(tempMin, Moment.UTC).add(1, 'months');
+              if(date.isBetween(tempMin, tempMinPlusMonth) || date.isSame(tempMin)) {
+                return tempMin;
+              } else {
+                tempMin.add(1, 'months');
+              }
+            }
+            return maxDate;
+          });
+          return _.map(formattedResults, function(contributions, date){
+            let entry = {
+              date: Moment(date, Moment.UTC)
+            };
+            entry[contributions[0].candidate] = _.reduce(_.pluck(contributions, 'amount'), function(result, contribution){
+              return result + contribution;
+            }, 0)
+            return entry;
+          });
+        })
+      );
+    });
+    return Promise.all(promises)
+      .then(function(results){
+        let candidates = _.map(results, function(result){
+          return _.keys(result[0])[1];
+        });
+        let dates = _.chain(results)
+          .map(function(result){
+            return _.pluck(result, 'date');
+          })
+          .flatten()
+          .map(function(date) {
+            let cleanedEntry = {
+              date: date.format('YYYYMMDD')
+            };
+            _.forEach(candidates, function(candidate, idx){
+              let match = _.find(results[idx], function(entry){
+                return entry.date.isSame(date);
+              });
+              cleanedEntry[candidate] = match ? match[candidate] : 0;
+            });
+            return cleanedEntry;
+          })
+          .sortBy('date');
+        return dates.value();
+      });
+  }
+
+  getCandidates(toDate, fromDate){
+    let toDateString = toDate.format();
+    let fromDateString = fromDate.format();
+    return this.Rest
+      .getAsync(this.baseUrl + '/candidate' + '?toDate=' + toDateString + '&fromDate=' + fromDateString)
+      .then(function(result){
+        return result[0];
+      });
   }
 }
 

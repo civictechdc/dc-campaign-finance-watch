@@ -43,4 +43,8 @@ candidateSchema.virtual('resource').get(function(){
   return path.join(config.baseUrl, 'candidate', this._id.toString());
 });
 
+candidateSchema.virtual('displayName').get(function(){
+  return this.name.first + ' ' + this.name.last;
+});
+
 module.exports = mongoose.model('Candidate', candidateSchema);

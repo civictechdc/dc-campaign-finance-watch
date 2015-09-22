@@ -1,6 +1,7 @@
 'use strict';
 
 var Promise = require('bluebird');
+Promise.promisifyAll(require("mongoose"));
 var _  = require('lodash');
 
 var Candidate = require('../../models/candidate');
@@ -8,6 +9,21 @@ Promise.promisifyAll(Candidate);
 
 var Contribution = require('../../models/contribution');
 Promise.promisifyAll(Contribution);
+
+exports.findAllCandidates = function(toDate, fromDate) {
+  return Contribution
+    .find({
+      date:{$gte: new Date(fromDate), $lte: new Date(toDate)}
+    })
+    .populate('candidate')
+    .execAsync()
+    .then(function(contributions){
+      return _.uniq(_.pluck(contributions, 'candidate'));
+    })
+    .catch(function(err){
+      console.log(err);
+    });
+}
 
 exports.findCandidate = function(candidateId) {
   var contributionsPromise = Contribution.findAsync({candidate: candidateId});

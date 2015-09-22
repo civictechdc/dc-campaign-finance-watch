@@ -16,6 +16,14 @@ class Chart extends React.Component {
     }, this.getChartState())
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if(nextProps.data === this.props.data) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   componentDidUpdate() {
     let el = React.findDOMNode(this);
     chart.update(el, this.getChartState());
