@@ -135,7 +135,7 @@ var AppRoot = (function (_React$Component) {
 _reactAddons2['default'].render(_reactAddons2['default'].createElement(AppRoot, null), document.body);
 
 },{"./js/api":3,"./js/candidateSelector.jsx":5,"./js/chart.jsx":6,"bluebird":9,"d3":67,"react/addons":130,"restler":303}],2:[function(require,module,exports){
-module.exports={}
+module.exports={"env":"prod"}
 },{}],3:[function(require,module,exports){
 'use strict';
 
