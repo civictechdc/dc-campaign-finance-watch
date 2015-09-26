@@ -49,6 +49,7 @@ Promise.promisifyAll(Rest, {
 
 class Client {
   constructor(baseUrl, restClient) {
+    console.log(baseUrl);
     this.baseUrl = baseUrl;
     this.Rest = restClient;
   }
@@ -137,7 +138,7 @@ class Client {
 
 let endPoints = {
   local: 'http://localhost:3000/dc-campaign-finance/api',
-  prod: 'https://dc-finance-backend.herokuapp.com/dc-campaign-finance/api'
+  prod: 'http://dc-finance-backend.herokuapp.com/dc-campaign-finance/api'
 };
 
 config.env = config.env || 'local';
