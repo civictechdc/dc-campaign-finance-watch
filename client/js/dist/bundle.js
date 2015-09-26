@@ -135,7 +135,7 @@ var AppRoot = (function (_React$Component) {
 _reactAddons2['default'].render(_reactAddons2['default'].createElement(AppRoot, null), document.body);
 
 },{"./js/api":3,"./js/candidateSelector.jsx":5,"./js/chart.jsx":6,"bluebird":9,"d3":67,"react/addons":130,"restler":303}],2:[function(require,module,exports){
-module.exports={"env":"prod"}
+module.exports={}
 },{}],3:[function(require,module,exports){
 'use strict';
 
@@ -216,6 +216,7 @@ var Client = (function () {
   function Client(baseUrl, restClient) {
     _classCallCheck(this, Client);
 
+    console.log(baseUrl);
     this.baseUrl = baseUrl;
     this.Rest = restClient;
   }
@@ -299,7 +300,7 @@ var Client = (function () {
 
 var endPoints = {
   local: 'http://localhost:3000/dc-campaign-finance/api',
-  prod: 'https://dc-finance-backend.herokuapp.com/dc-campaign-finance/api'
+  prod: 'http://dc-finance-backend.herokuapp.com/dc-campaign-finance/api'
 };
 
 _configJson2['default'].env = _configJson2['default'].env || 'local';
