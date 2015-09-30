@@ -58,7 +58,7 @@ class AppRoot extends React.Component {
   _getChartData(candidates, range) {
     console.log(candidates);
     Client
-      .getContributionChart(candidates)
+      .getContributionChart(candidates, range)
       .bind(this)
       .then(function(results){
         results.forEach(function(d){

@@ -16,9 +16,11 @@ exports.getCandidates = function(req, res) {
 
 exports.getCandidateById = function(req, res) {
   var candidateId = req.params.id;
+  var toDate = req.params.toDate;
+  var fromDate = req.params.fromDate;
 
   candidateService
-    .findCandidate(candidateId)
+    .findCandidate(candidateId, toDate, fromDate)
     .then(function(result){
       result.candidate = result.candidate.toObject({virtuals: true});
       res.send(result);

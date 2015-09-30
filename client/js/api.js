@@ -4,6 +4,18 @@ import config from '../config.json';
 import Moment from 'moment';
 import * as range from 'moment-range';
 import _  from 'lodash';
+import SimpleWorkerWrapper from '../../lib/simpleWorker';
+
+var worker = new SimpleWorkerWrapper(function(foo){
+  let x = 6;
+  return foo + x;
+});
+
+// worker
+//   .execute(6)
+//   .then(function(r){
+//     console.log(r);
+//   });
 
 var methodNamesToPromisify = "get post put del head patch json postJson putJson".split(" ");
 
@@ -55,12 +67,12 @@ class Client {
   }
 
 
-  getContributionChart(ids) {
+  getContributionChart(ids, dateRange) {
     var promises = []
     var that = this;
     ids.forEach(function(id){
       promises.push(
-        that.Rest.getAsync(that.baseUrl + '/candidate/' + id)
+        that.Rest.getAsync(that.baseUrl + '/candidate/' + id + '?fromDate=' + dateRange.fromDate.format() + '&toDate=' + dateRange.toDate.format())
         .then(function(results){
           results = results[0];
           let formattedResults = results.contributions.map(function(contribution){
