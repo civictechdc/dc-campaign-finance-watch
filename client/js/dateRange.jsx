@@ -25,18 +25,25 @@ class DateRangeComponent extends React.Component {
   render(){
     return (
       <div>
-        <label>From:</label>
-        <input type="date"
-          name="dateFrom"
-          value={this.props.range.from}
-          ref="from"
-          onChange={this.handleChange.bind(this)}/>
-        <label>To:</label>
-        <input type="date"
-          name="dateTo"
-          value={this.props.range.to}
-          ref="to"
-          onChange={this.handleChange.bind(this)}/>
+        <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input type="date"
+            className="mdl-textfield__input"
+            name="dateFrom"
+            value={this.props.range.from}
+            ref="from"
+            id="from"
+            onChange={this.handleChange.bind(this)}/>
+          <label className="mdl-textfield__label" htmlFor="from">From:</label>
+        </div>
+        <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input type="date"
+            className="mdl-textfield__input"
+            name="dateTo"
+            value={this.props.range.to}
+            ref="to"
+            onChange={this.handleChange.bind(this)}/>
+          <label className="mdl-textfield__label" htmlFor="from">To:</label>
+        </div>
       </div>
     )
   }

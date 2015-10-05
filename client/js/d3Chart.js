@@ -14,16 +14,17 @@ class d3Chart {
     this.svg.selectAll('*').remove();
     let width = el.offsetWidth;
     let height = el.offsetHeight;
+    console.log(width);
 
-    let margin = {top: 50, right: 100, bottom: 50, left: 80};
+    let margin = {top: 50, right: 100, bottom: 50, left: 100};
 
     let parseDate = d3.time.format("%Y%m%d").parse;
 
     let x = d3.time.scale()
-      .range([0, width]);
+      .range([0, width-margin.right-margin.left]);
 
     let y = d3.scale.linear()
-      .range([height, 0]);
+      .range([height - margin.top - margin.bottom, 0]);
 
     let color = d3.scale
       .category10()
@@ -38,6 +39,7 @@ class d3Chart {
 
     let yAxis = d3.svg.axis()
       .scale(y)
+      .tickFormat(function(d){ return "$" + d || 0; })
       .orient("left");
 
     let line = d3.svg.line()
@@ -47,7 +49,7 @@ class d3Chart {
 
 
     let svg = this.svg
-      .attr("width", width + margin.left + margin.right)
+      .attr("width", width)
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -71,7 +73,7 @@ class d3Chart {
 
     svg.append("g")
       .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
+      .attr("transform", "translate(0," + (height - margin.top - margin.bottom) + ")")
       .call(xAxis);
 
     svg.append('g')
@@ -79,7 +81,7 @@ class d3Chart {
       .call(yAxis)
       .append('text')
       .attr('transfrom', 'rotate(-90)')
-      .attr('y', 6)
+      .attr('y', -20)
       .attr('dy', '.71em')
       .attr('text-anchor', 'end')
       .text('Contributions');
@@ -99,6 +101,7 @@ class d3Chart {
       .attr('transform', function(d){ return 'translate(' + x(d.value.date) + ',' + y(d.value.amount) + ')';})
       .attr('x', 3)
       .attr('dy', '.35em')
+      .attr('text-anchor', 'start')
       .text(function(d){ return d.name; });
   }
 

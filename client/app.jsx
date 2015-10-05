@@ -1,6 +1,8 @@
 import React from 'react/addons';
 import Chart from './js/chart.jsx'
 import CandidateSelector from './js/candidateSelector.jsx';
+import ChartSelector from './js/chartSelector.jsx';
+import {ProcessContributionsOverTime} from './js/chartDataProcessor';
 import Rest from 'restler';
 import Promise from 'bluebird';
 import Client from './js/api';
@@ -23,26 +25,16 @@ class AppRoot extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: sampleData,
       domain: {x: [0, 30], y: [0, 100]},
       selectedCandidates: []
     }
   }
 
-  componentDidMount(){
-    Client
-      .getCandidates()
-      .bind(this)
-      .then(function(response){
-        this.setState({candidates: response[0]});
-      })
-      .catch(function(err){
-        console.log(err);
-      });
+  componentDidMount() {
+
   }
 
   _handleCandidateSelection(id) {
-    console.log('id selected',id);
     var selectedCandidates = this.state.selectedCandidates;
     selectedCandidates.push(id);
     this.setState({selectedCandidates: selectedCandidates});
@@ -55,11 +47,23 @@ class AppRoot extends React.Component {
     this.setState({selectedCandidates: selectedCandidates});
   }
 
+  _handleChartSelection(chart) {
+    this.setState({selectedChart: chart});
+  }
+
   _getChartData(candidates, range) {
-    console.log(candidates);
-    Client
-      .getContributionChart(candidates, range)
-      .bind(this)
+    var dataPromise;
+    var chart = this.state.selectedChart;
+    switch(chart) {
+      case "contributionOverTime":
+        dataPromise = ProcessContributionsOverTime(candidates, range)
+        break;
+      case "contributorBreakdown":
+        break;
+      default:
+        break;
+    }
+    dataPromise.bind(this)
       .then(function(results){
         results.forEach(function(d){
           d.date = parseDate(d.date);
@@ -75,18 +79,30 @@ class AppRoot extends React.Component {
   render() {
     var candidates = this.state.candidates || [];
     return (
-      <div>
-        <h1>DC Campaign Finance</h1>
-        <CandidateSelector onSelectedCandidatesSumbitted={this._getChartData.bind(this)}/>
-        <div>
-          {(() =>{
-            if(this.state.data) {
-              return (<Chart data={this.state.data}
-                    domain={this.state.domain}/>)
-            }
-          })()}
-        </div>
-
+      <div className="mdl-layout mdl-js-layout">
+        <header className="mdl-layout__header">
+          <div className="mdl-layout__header-row">
+            <span className="mdl-layout-title">DC Campaign Finance</span>
+            <div className="mdl-layout-spacer"></div>
+          </div>
+        </header>
+        <main className="mdl-layout__content">
+          <div className="mdl-grid">
+            <div className="mdl-cell mdl-cell--2-col">
+              <ChartSelector onChartSelected={this._handleChartSelection.bind(this)}/>
+              <CandidateSelector onSelectedCandidatesSumbitted={this._getChartData.bind(this)}/>
+            </div>
+            <div className="mdl-cell mdl-cell--10-col">
+              {(() =>{
+                if(this.state.data) {
+                  return (<Chart data={this.state.data}
+                        chartType={this.state.selectedChart}
+                        domain={this.state.domain}/>)
+                }
+              })()}
+            </div>
+          </div>
+        </main>
       </div>
     )
   }

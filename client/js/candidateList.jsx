@@ -13,20 +13,23 @@ class CandidatesListComponent extends React.Component {
     var onCandidateSelection = this.props.onCandidateSelection;
     var checks = this.props.candidates.map(function(candidate){
       return (
-        <span key={candidate.id}>
-          <input type="checkbox"
-                  htmlId={candidate.id}
-                  checked={candidate.selected}
-                  onChange={onCandidateSelection.bind(this, candidate.id)}/>
-                <label htmlFor={candidate.id}>{candidate.name}</label>
-        </span>
-      )
+          <label key={candidate.id} htmlFor={candidate.id} className="mdl-checkbox">
+            <input type="checkbox"
+                    className="mdl-checkbox__input"
+                    id={candidate.id}
+                    htmlId={candidate.id}
+                    checked={candidate.selected}
+                    onChange={onCandidateSelection.bind(this, candidate.id)}/>
+            <span className="mdl-checkbox__label">{candidate.name}</span>
+          </label>
+      );
     });
     return (
-      <form>
-        <h1>All Candidates</h1>
-        {checks}
-      </form>
+      <div className="candidate-list">
+        <form>
+          {checks}
+        </form>
+      </div>
     );
   }
 }
