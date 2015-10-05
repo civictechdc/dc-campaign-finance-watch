@@ -55,7 +55,7 @@ class CandidateSelectorComponent extends React.Component {
         <CandidatesListComponent
           candidates={this.state.candidates}
           onCandidateSelection={(id) => this._candidateSelected(id)}/>
-        <button onClick={this._submitSelectedCandidates.bind(this)}>Create Chart</button>
+        <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onClick={this._submitSelectedCandidates.bind(this)}>Create Chart</button>
       </div>
     );
   }

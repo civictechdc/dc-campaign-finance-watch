@@ -1,8 +1,10 @@
 'use strict';
 
 var Promise = require('bluebird');
+var Moment = require('moment');
 Promise.promisifyAll(require("mongoose"));
 var _  = require('lodash');
+var oldestDate = Moment('01/01/2006', 'mm/dd/yyyy');
 
 var Candidate = require('../../models/candidate');
 Promise.promisifyAll(Candidate);
@@ -25,7 +27,7 @@ exports.findAllCandidates = function(toDate, fromDate) {
     });
 }
 
-exports.findCandidate = function(candidateId) {
+exports.findCandidate = function(candidateId, toDate, fromDate) {
   var contributionsPromise = Contribution.findAsync({candidate: candidateId});
   var candidatePromise = Candidate.findByIdAsync(candidateId);
   var candidateResponse = {};
@@ -39,7 +41,11 @@ exports.findCandidate = function(candidateId) {
 
   })
   .then(function(populatedContributions){
-    candidateResponse.contributions = populatedContributions;
+    fromDate = Moment(fromDate) || oldestDate;
+    toDate = Moment(toDate) || Moment();
+    candidateResponse.contributions = _.filter(populatedContributions, function(c) {
+      return Moment(c.date).isBetween(fromDate, toDate);
+    });
     return candidateResponse;
   });
 }

@@ -1,5 +1,37 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   font: 10px sans-serif;
+}
+
+
+input::-webkit-datetime-edit-fields-wrapper{
+  -webkit-user-modify: read-only !important;
+  display: none;
+  padding: 1px 0;
+  white-space: pre;
+}
+
+input:focus::-webkit-datetime-edit-fields-wrapper{
+  -webkit-user-modify: read-only !important;
+  display: inline-block;
+  padding: 1px 0;
+  white-space: pre;
+}
+
+div.mdl-textfield--floating-label.is-dirty > input::-webkit-datetime-edit-fields-wrapper{
+  -webkit-user-modify: read-only !important;
+  display: inline-block;
+  padding: 1px 0;
+  white-space: pre;
+}
+
+.candidate-list {
+  max-height: 300px;
+  overflow-y: scroll;
+  padding-bottom: 15px;
 }
 
 .axis path,
@@ -11,6 +43,7 @@ body {
 
 .x.axis path {
   display: none;
+  max-height: 100%;
 }
 
 .line {
@@ -20,6 +53,10 @@ body {
 }
 
 .chart {
-  width: 800px;
-  height: 500px;
+  width: 100%;
+  min-height: 500px;
+}
+
+.content-grid {
+  max-width: 960px;
 }
