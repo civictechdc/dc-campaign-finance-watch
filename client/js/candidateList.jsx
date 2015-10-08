@@ -26,6 +26,7 @@ class CandidatesListComponent extends React.Component {
     });
     return (
       <div className="candidate-list">
+        <span>Due to resource constraints, please select a maximum of two candidates</span>
         <form>
           {checks}
         </form>

@@ -2,7 +2,7 @@ import d3 from 'd3';
 
 class d3Chart {
   constructor(el, props, state) {
-    this.svg = d3.select(el).append('svg');
+    this.svg = d3.select(el).select('.chart').append('svg');
     this.update(el, state);
   }
 
