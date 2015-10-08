@@ -171,7 +171,7 @@ var AppRoot = (function (_React$Component) {
 _reactAddons2['default'].render(_reactAddons2['default'].createElement(AppRoot, null), document.body);
 
 },{"./js/api":3,"./js/candidateSelector.jsx":5,"./js/chart.jsx":6,"./js/chartDataProcessor":7,"./js/chartSelector.jsx":8,"bluebird":12,"d3":70,"react/addons":132,"restler":305}],2:[function(require,module,exports){
-module.exports={"env":"prod"}
+module.exports={"env":"local"}
 },{}],3:[function(require,module,exports){
 'use strict';
 
@@ -353,6 +353,11 @@ var CandidatesListComponent = (function (_React$Component) {
         'div',
         { className: 'candidate-list' },
         _reactAddons2['default'].createElement(
+          'span',
+          null,
+          'Due to resource constraints, please select a maximum of two candidates'
+        ),
+        _reactAddons2['default'].createElement(
           'form',
           null,
           checks
@@ -517,6 +522,7 @@ var Chart = (function (_React$Component) {
     _classCallCheck(this, Chart);
 
     _get(Object.getPrototypeOf(Chart.prototype), 'constructor', this).call(this, props);
+    this.state = {};
   }
 
   _createClass(Chart, [{
@@ -527,6 +533,7 @@ var Chart = (function (_React$Component) {
         width: '100%',
         height: '300px'
       }, this.getChartState());
+      this.setState({ svg: chart.svg });
     }
   }, {
     key: 'shouldComponentUpdate',
@@ -542,6 +549,7 @@ var Chart = (function (_React$Component) {
     value: function componentDidUpdate() {
       var el = _reactAddons2['default'].findDOMNode(this);
       chart.update(el, this.getChartState());
+      this.setState({ svg: chart.svg });
     }
   }, {
     key: 'getChartState',
@@ -555,12 +563,16 @@ var Chart = (function (_React$Component) {
     key: 'componentWillUpdate',
     value: function componentWillUpdate() {
       var el = _reactAddons2['default'].findDOMNode(this);
-      chart.destroy(el);
+      this.chart.destroy(el);
     }
   }, {
     key: 'render',
     value: function render() {
-      return _reactAddons2['default'].createElement('div', { className: 'chart' });
+      return _reactAddons2['default'].createElement(
+        'div',
+        null,
+        _reactAddons2['default'].createElement('div', { className: 'chart' })
+      );
     }
   }]);
 
@@ -707,18 +719,13 @@ var ChartSelectorComponent = (function (_React$Component) {
           { ref: "chart", onChange: this._handleChange.bind(this) },
           _reactAddons2["default"].createElement(
             "option",
+            { value: "" },
+            "Choose a chart"
+          ),
+          _reactAddons2["default"].createElement(
+            "option",
             { value: "contributionOverTime" },
             "Contributions Over Time"
-          ),
-          _reactAddons2["default"].createElement(
-            "option",
-            { value: "contributorBreakdown" },
-            "Contributor Breakdown"
-          ),
-          _reactAddons2["default"].createElement(
-            "option",
-            { value: "contributionsBreakdown" },
-            "Contribution Breakdown"
           )
         )
       );
@@ -752,7 +759,7 @@ var d3Chart = (function () {
   function d3Chart(el, props, state) {
     _classCallCheck(this, d3Chart);
 
-    this.svg = _d32['default'].select(el).append('svg');
+    this.svg = _d32['default'].select(el).select('.chart').append('svg');
     this.update(el, state);
   }
 

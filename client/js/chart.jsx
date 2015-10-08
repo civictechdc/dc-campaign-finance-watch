@@ -6,6 +6,7 @@ var chart;
 class Chart extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {};
   }
 
   componentDidMount() {
@@ -13,7 +14,8 @@ class Chart extends React.Component {
     chart = new d3Chart(el, {
       width: '100%',
       height: '300px'
-    }, this.getChartState())
+    }, this.getChartState());
+    this.setState({svg: chart.svg});
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -27,6 +29,7 @@ class Chart extends React.Component {
   componentDidUpdate() {
     let el = React.findDOMNode(this);
     chart.update(el, this.getChartState());
+    this.setState({svg: chart.svg});
   }
 
   getChartState() {
@@ -38,12 +41,14 @@ class Chart extends React.Component {
 
   componentWillUpdate(){
     let el = React.findDOMNode(this);
-    chart.destroy(el);
+    this.chart.destroy(el);
   }
 
   render() {
     return (
-      <div className="chart"></div>
+      <div>
+        <div className="chart"></div>
+      </div>
     );
   }
 }
