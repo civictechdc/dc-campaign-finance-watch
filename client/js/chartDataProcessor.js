@@ -3,6 +3,26 @@ import _  from 'lodash';
 import Promise from 'bluebird';
 import Client from './api';
 
+export function ProcessContributorBreakdown(ids, dateRange) {
+  var candidatePromises = _.map(ids, function(i){
+    return Client
+      .getCandidate(i, dateRange)
+      .then(function(results){
+        var results = results[0];
+        let individualCount = _.filter(results.contributions, function(c){ return c.contributor.contributionType === 'Individual'; }).length;
+        let corporateCount = _.filter(results.contributions, function(c){ return c.contributor.contributionType === 'Corporation'; }).length;
+        let pacCount = _.filter(results.contributions, function(c){ return c.contributor.contributionType === 'Other'; }).length;
+        return {
+          name: results.candidate.displayName,
+          individual: (individualCount/results.contributions.length) * 100,
+          corporate: (corporateCount/results.contributions.length) * 100,
+          pac: (pacCount/results.contributions.length) * 100
+        };
+      });
+  });
+  return Promise.all(candidatePromises);
+}
+
 export function ProcessContributionsOverTime(ids, dateRange) {
   var candidatePromises = _.map(ids, function(i){
     return Client

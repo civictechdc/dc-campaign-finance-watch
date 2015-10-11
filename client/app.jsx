@@ -2,7 +2,7 @@ import React from 'react/addons';
 import Chart from './js/chart.jsx'
 import CandidateSelector from './js/candidateSelector.jsx';
 import ChartSelector from './js/chartSelector.jsx';
-import {ProcessContributionsOverTime} from './js/chartDataProcessor';
+import {ProcessContributionsOverTime, ProcessContributorBreakdown} from './js/chartDataProcessor';
 import Rest from 'restler';
 import Promise from 'bluebird';
 import Client from './js/api';
@@ -56,18 +56,16 @@ class AppRoot extends React.Component {
     var chart = this.state.selectedChart;
     switch(chart) {
       case "contributionOverTime":
-        dataPromise = ProcessContributionsOverTime(candidates, range)
+        dataPromise = ProcessContributionsOverTime(candidates, range);
         break;
       case "contributorBreakdown":
+        dataPromise = ProcessContributorBreakdown(candidates, range);
         break;
       default:
         break;
     }
     dataPromise.bind(this)
       .then(function(results){
-        results.forEach(function(d){
-          d.date = parseDate(d.date);
-        });
         this.setState({data: results});
         this.state.selectedCandidates = [];
       })
@@ -93,13 +91,9 @@ class AppRoot extends React.Component {
               <CandidateSelector onSelectedCandidatesSumbitted={this._getChartData.bind(this)}/>
             </div>
             <div className="mdl-cell mdl-cell--10-col">
-              {(() =>{
-                if(this.state.data) {
-                  return (<Chart data={this.state.data}
+                  <Chart data={this.state.data}
                         chartType={this.state.selectedChart}
-                        domain={this.state.domain}/>)
-                }
-              })()}
+                        domain={this.state.domain}/>
             </div>
           </div>
         </main>

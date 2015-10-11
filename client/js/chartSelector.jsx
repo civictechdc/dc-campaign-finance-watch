@@ -16,6 +16,7 @@ class ChartSelectorComponent extends React.Component {
         <select ref="chart" onChange={this._handleChange.bind(this)}>
           <option value="">Choose a chart</option>
           <option value="contributionOverTime">Contributions Over Time</option>
+          <option value="contributorBreakdown">Breakdown of Contributions</option>
         </select>
       </div>
     );

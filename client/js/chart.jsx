@@ -1,7 +1,6 @@
 import React from 'react/addons';
-import d3Chart from './d3Chart';
-
-var chart;
+import ContributionOverTimeChart from './contributionOverTimeChart';
+import ContributorBreakdownChart from './contributorBreakdownChart';
 
 class Chart extends React.Component {
   constructor(props) {
@@ -11,11 +10,10 @@ class Chart extends React.Component {
 
   componentDidMount() {
     let el = React.findDOMNode(this);
-    chart = new d3Chart(el, {
-      width: '100%',
-      height: '300px'
-    }, this.getChartState());
-    this.setState({svg: chart.svg});
+    if(this.props.data && this.props.chartType) {
+      let chart = ChartFactory(this.props.chartType, el);
+      this.setState({chart: chart});
+    }
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -26,10 +24,14 @@ class Chart extends React.Component {
     }
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     let el = React.findDOMNode(this);
-    chart.update(el, this.getChartState());
-    this.setState({svg: chart.svg});
+    if(this.state.chart && (this.state.chart.type === this.props.chartType)) {
+      this.state.chart.update(el, this.getChartState());
+    } else {
+        let chart = this.ChartFactory(this.props.chartType, el);
+        this.setState({chart: chart});
+    }
   }
 
   getChartState() {
@@ -39,9 +41,17 @@ class Chart extends React.Component {
     }
   }
 
+  ChartFactory(type, el) {
+    switch(type) {
+      case 'contributionOverTime':
+        return new ContributionOverTimeChart(el, this.getChartState());
+      case 'contributorBreakdown':
+        return new ContributorBreakdownChart(el, this.getChartState());
+    }
+  }
+
   componentWillUpdate(){
     let el = React.findDOMNode(this);
-    this.chart.destroy(el);
   }
 
   render() {
