@@ -1,9 +1,13 @@
 import d3 from 'd3';
 
-class d3Chart {
-  constructor(el, props, state) {
-    this.svg = d3.select(el).select('.chart').append('svg');
-    this.update(el, state);
+class ContributionOverTimeChart {
+  constructor(el, state) {
+    d3.select(el).select('.chart').append('svg');
+    this.svg = d3.select(el).select('svg');
+    this.type = 'contributionOverTime';
+    if(state.data) {
+      this.update(el, state);
+    }
   }
 
   update(el, state) {
@@ -14,11 +18,14 @@ class d3Chart {
     this.svg.selectAll('*').remove();
     let width = el.offsetWidth;
     let height = el.offsetHeight;
-    console.log(width);
 
     let margin = {top: 50, right: 100, bottom: 50, left: 100};
 
     let parseDate = d3.time.format("%Y%m%d").parse;
+
+    data.forEach(function(d){
+      d.date = parseDate(d.date);
+    });
 
     let x = d3.time.scale()
       .range([0, width-margin.right-margin.left]);
@@ -111,4 +118,4 @@ class d3Chart {
   }
 }
 
-export default d3Chart;
+export default ContributionOverTimeChart;
