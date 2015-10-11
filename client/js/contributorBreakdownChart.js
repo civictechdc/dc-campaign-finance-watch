@@ -23,7 +23,7 @@ class ContributorBreakdownChart {
   _drawPoints(el, data) {
     this.svg.selectAll('*').remove();
     let width = el.offsetWidth;
-    let height = el.offsetHeight;
+    let height = el.offsetHeight < 600 ? el.offsetHeight : 600;
 
     let margin = {top: 50, right: 100, bottom: 50, left: 100};
 
@@ -31,7 +31,7 @@ class ContributorBreakdownChart {
       .rangeRoundBands([0, width], .5);
 
     let y = d3.scale.linear()
-      .rangeRound([height, 0], .4);
+      .rangeRound([height, 0], .9);
 
     let color = d3.scale.ordinal()
       .range(['#98abc5', '#8a89a6', '#7b6888']);
