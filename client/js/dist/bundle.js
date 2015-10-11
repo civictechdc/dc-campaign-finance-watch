@@ -948,13 +948,13 @@ var ContributorBreakdownChart = (function () {
     value: function _drawPoints(el, data) {
       this.svg.selectAll('*').remove();
       var width = el.offsetWidth;
-      var height = el.offsetHeight;
+      var height = el.offsetHeight < 600 ? el.offsetHeight : 600;
 
       var margin = { top: 50, right: 100, bottom: 50, left: 100 };
 
       var x = _d32['default'].scale.ordinal().rangeRoundBands([0, width], .5);
 
-      var y = _d32['default'].scale.linear().rangeRound([height, 0], .4);
+      var y = _d32['default'].scale.linear().rangeRound([height, 0], .9);
 
       var color = _d32['default'].scale.ordinal().range(['#98abc5', '#8a89a6', '#7b6888']);
 
