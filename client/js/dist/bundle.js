@@ -163,7 +163,7 @@ var AppRoot = (function (_React$Component) {
 _reactAddons2['default'].render(_reactAddons2['default'].createElement(AppRoot, null), document.body);
 
 },{"./js/api":3,"./js/candidateSelector.jsx":5,"./js/chart.jsx":6,"./js/chartDataProcessor":7,"./js/chartSelector.jsx":8,"bluebird":13,"d3":71,"react/addons":133,"restler":306}],2:[function(require,module,exports){
-module.exports={"env":"local"}
+module.exports={"env":"production"}
 },{}],3:[function(require,module,exports){
 'use strict';
 
