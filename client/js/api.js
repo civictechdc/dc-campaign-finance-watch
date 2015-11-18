@@ -5,17 +5,6 @@ import Moment from 'moment';
 import _  from 'lodash';
 import SimpleWorkerWrapper from '../../lib/simpleWorker';
 
-var worker = new SimpleWorkerWrapper(function(foo){
-  let x = 6;
-  return foo + x;
-});
-
-// worker
-//   .execute(6)
-//   .then(function(r){
-//     console.log(r);
-//   });
-
 var methodNamesToPromisify = "get post put del head patch json postJson putJson".split(" ");
 
 function EventEmitterPromisifier(originalMethod) {
@@ -74,10 +63,10 @@ class Client {
       });
   }
 
-  getCandidate(id, dateRange) {
+  getCandidate(candidate, dateRange) {
     return this.Rest.getAsync(this.baseUrl
       + '/candidate/'
-      + id
+      + candidate.id
       + '?fromDate='
       + dateRange.fromDate.format()
       + '&toDate='

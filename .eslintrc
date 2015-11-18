@@ -1,0 +1,19 @@
+{
+    "ecmaFeatures": {
+        "blockBindings": true,
+        "forOf": true,
+        "jsx": true,
+        "classes": true,
+        "destructuring": true,
+        "modules": true,
+        "blockBindings": true,
+        "arrowFunctions": true
+    },
+    "rules": {
+        "semi": 2
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    }
+}

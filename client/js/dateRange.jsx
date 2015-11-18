@@ -1,52 +1,55 @@
-import Moment from 'moment';
+'use strict';
+
+import moment from 'moment';
 import React from 'react/addons';
+import DateRangePicker from 'react-bootstrap-daterangepicker';
+import {Button, Glyphicon} from 'react-bootstrap';
 
 class DateRangeComponent extends React.Component {
-  constructor(props){
-    super(props);
-    this.minimumDate = Moment('01/01/2007', 'MM/DD/YYYY');
-    this.maximumDate = Moment(new Date());
-  }
-
-  handleChange() {
-    let toDate = Moment(this.refs.to.getDOMNode().value, 'YYYY-MM-DD');
-    let fromDate = Moment(this.refs.from.getDOMNode().value, 'YYYY-MM-DD');
-    if(this.areDatesValid(fromDate, toDate)) {
-      this.props.onRangeInput(toDate, fromDate);
+    constructor (props) {
+        super(props);
+        this.minimumDate = moment('01/01/2007', 'MM/DD/YYYY');
+        this.maximumDate = moment(new Date());
+        this.state =  {
+			ranges: {
+				'Last Year': [moment().subtract(1, 'years'), moment()],
+				'Last Two Years': [moment().subtract(2, 'years'), moment()]
+			},
+			startDate: moment().subtract(4, 'years'),
+			endDate: moment()
+		};
     }
-  }
 
-  areDatesValid(fromD, toD) {
-    return fromD.isValid() && toD.isValid() &&
-      fromD.isBetween(this.minimumDate, this.maximumDate)
-      && toD.isBetween(this.minimumDate, this.maximumDate);
-  }
+    handleChange (event, picker) {
+        this.setState({'startDate': picker.startDate, 'endDate': picker.endDate});
+        this.props.onRangeInput(picker.endDate, picker.startDate);
+    }
 
-  render(){
-    return (
-      <div>
-        <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input type="date"
-            className="mdl-textfield__input"
-            name="dateFrom"
-            value={this.props.range.from}
-            ref="from"
-            id="from"
-            onChange={this.handleChange.bind(this)}/>
-          <label className="mdl-textfield__label" htmlFor="from">From:</label>
-        </div>
-        <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input type="date"
-            className="mdl-textfield__input"
-            name="dateTo"
-            value={this.props.range.to}
-            ref="to"
-            onChange={this.handleChange.bind(this)}/>
-          <label className="mdl-textfield__label" htmlFor="from">To:</label>
-        </div>
-      </div>
-    )
-  }
+    render () {
+        var start = this.state.startDate.format('YYYY-MM-DD');
+		var end = this.state.endDate.format('YYYY-MM-DD');
+		var label = start + ' - ' + end;
+		if (start === end) {
+			label = start;
+		}
+        return (
+            <div className="block-group">
+                <div className="block date-range">
+                    <DateRangePicker startDate={this.state.startDate} endDate={this.state.endDate} ranges={this.state.ranges} onApply={this.handleChange.bind(this)}>
+    						<Button className="selected-date-range-btn" style={{width:'100%'}}>
+    							<div className="pull-left"><Glyphicon glyph="calendar" /></div>
+    							<div className="pull-right">
+    								<span>
+    									{label}
+    								</span>
+    								<span className="caret"></span>
+    							</div>
+    						</Button>
+    				</DateRangePicker>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default DateRangeComponent;

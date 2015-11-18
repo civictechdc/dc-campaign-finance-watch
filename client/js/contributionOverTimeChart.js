@@ -35,7 +35,7 @@ class ContributionOverTimeChart {
 
     let color = d3.scale
       .category10()
-      .domain(d3.keys(data[0]).filter(function(key){ return key !== 'date'}));
+      .domain(d3.keys(data[0]).filter(function(key){ return key !== 'date'; }));
 
     let xAxis = d3.svg.axis()
       .scale(x)
@@ -71,11 +71,11 @@ class ContributionOverTimeChart {
     });
 
     // Grab the min and max contribution dates
-    x.domain(d3.extent(data, function(d){ return d.date }));
+    x.domain(d3.extent(data, function(d){ return d.date; }));
 
     y.domain([
-        d3.min(candidates, function(c){ return d3.min(c.values, function(v){return v.amount }) }),
-        d3.max(candidates, function(c){ return d3.max(c.values, function(v){ return v.amount }) })
+        d3.min(candidates, function(c){ return d3.min(c.values, function(v){return v.amount; }); }),
+        d3.max(candidates, function(c){ return d3.max(c.values, function(v){ return v.amount; }); })
     ]);
 
     svg.append("g")

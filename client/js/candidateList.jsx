@@ -1,38 +1,34 @@
 'use strict';
 
 import React from 'react/addons';
+import {
+    Input
+} from 'react-bootstrap';
 import Client from './api';
 
-
 class CandidatesListComponent extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+    constructor (props) {
+        super(props);
+    }
 
-  render() {
-    var onCandidateSelection = this.props.onCandidateSelection;
-    var checks = this.props.candidates.map(function(candidate){
-      return (
-          <label key={candidate.id} htmlFor={candidate.id} className="mdl-checkbox">
-            <input type="checkbox"
-                    className="mdl-checkbox__input"
-                    id={candidate.id}
-                    htmlId={candidate.id}
-                    checked={candidate.selected}
-                    onChange={onCandidateSelection.bind(this, candidate.id)}/>
-            <span className="mdl-checkbox__label">{candidate.name}</span>
-          </label>
-      );
-    });
-    return (
-      <div className="candidate-list">
-        <span>Due to resource constraints, please select a maximum of two candidates</span>
-        <form>
-          {checks}
-        </form>
-      </div>
-    );
-  }
+    render () {
+        var onCandidateSelected = this.props.onCandidateSelected;
+        var checks = this
+            .props
+            .availableCandidates
+            .map(function (candidate) {
+                return (
+                    <Input type="checkbox" label={candidate.name} key={candidate.id} checked={candidate.selected} onChange={onCandidateSelected.bind(this, candidate)}></Input>
+                );
+            });
+        return (
+            <div className="candidate-list">
+                <form>
+                    {checks}
+                </form>
+            </div>
+        );
+    }
 }
 
 export default CandidatesListComponent;

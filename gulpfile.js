@@ -15,7 +15,7 @@ var path = require('path');
 var fs = require('fs');
 
 
-var watchifyOpts = { poll: true }
+var watchifyOpts = { poll: true };
 var bundler = watchify(browserify('./client/app.jsx', watchify.args), watchifyOpts);
 
 bundler.transform(babelify);
@@ -61,7 +61,7 @@ gulp.task('nodemon', function(){
   });
 });
 
-gulp.task('serve-dev', ['browsersync']);
+gulp.task('serve', ['browsersync']);
 
 gulp.task('browsersync', ['bundle', 'nodemon'], function() {
   browserSync({
