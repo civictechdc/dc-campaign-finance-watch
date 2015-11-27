@@ -10,12 +10,15 @@ import {
     ProcessContributionsOverTime,
     ProcessContributorBreakdown
 } from './chartDataProcessor';
+import CandidateSearchComponent from './candidateSearchComponent.jsx';
+import SelectedCandidatesComponent from './selectedCandidatesComponent.jsx';
+import _ from 'lodash';
 
 class CreateChartComponent extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
-            candidates: [],
+            selectedCandidates: [],
             dataSet: null,
             beginning: null,
             end: null
@@ -23,8 +26,9 @@ class CreateChartComponent extends React.Component {
     }
 
     _handleCandidateSelected (candidate) {
-        candidate.selected = !candidate.selected;
-        console.log('candidate ', candidate);
+        let selectedCandidates = this.state.selectedCandidates;
+        selectedCandidates.unshift(candidate);
+        this.setState({selectedCandidates: selectedCandidates});
     }
 
     _handleSetSelected (set) {
@@ -54,6 +58,14 @@ class CreateChartComponent extends React.Component {
         this.setState({candidates: unselected});
     }
 
+    _handleRemoveSelectedCandidate(candidate) {
+        let selectedCandidates = this.state.selectedCandidates;
+        _.remove(selectedCandidates, function(c){
+            return c.id === candidate.id;
+        });
+        this.setState({selectedCandidates: selectedCandidates});
+    }
+
     _handleCreateChart () {
         var dataPromise;
         var range = {
@@ -61,12 +73,7 @@ class CreateChartComponent extends React.Component {
             toDate: this.state.end
         };
         var chart = this.state.dataSet;
-        var candidates = this
-            .state
-            .candidates
-            .filter(function (c) {
-                return c.selected;
-            });
+        var candidates = this.state.selectedCandidates;
         switch (chart) {
             case "contributionOverTime":
                 dataPromise = ProcessContributionsOverTime(candidates, range);
@@ -80,7 +87,7 @@ class CreateChartComponent extends React.Component {
         dataPromise
             .bind(this)
             .then(function (results) {
-                this.props.setChartData({data:results, type: chart});
+                this.props.setChartData({data: results, type: chart});
                 this._clearSelectedCandidates();
             })
             .catch(function (err) {
@@ -90,19 +97,25 @@ class CreateChartComponent extends React.Component {
 
     render () {
         return (
-            <div>
+            <div className="block-group">
                 <ChartSelectorComponent onChartSelected={this
                     ._handleSetSelected
                     .bind(this)}></ChartSelectorComponent>
+                <CandidateSearchComponent onCandidateClicked={this
+                    ._handleCandidateSelected
+                    .bind(this)}></CandidateSearchComponent>
+                <SelectedCandidatesComponent selectedCandidates={this.state.selectedCandidates} onCandidateRemove={this
+                    ._handleRemoveSelectedCandidate
+                    .bind(this)}></SelectedCandidatesComponent>
                 <DateRangeComponent onRangeInput={this
                     ._handleRangeSelected
                     .bind(this)}></DateRangeComponent>
-                <CandidatesListComponent availableCandidates={this.state.candidates} onCandidateSelected={this
-                    ._handleCandidateSelected
-                    .bind(this)}></CandidatesListComponent>
-                <Button onClick={this
-                    ._handleCreateChart
-                    .bind(this)}>Create visualization</Button>
+                <div className="block-group">
+                    <h4 className="instructions">4. View the visualization</h4>
+                    <Button onClick={this
+                        ._handleCreateChart
+                        .bind(this)}>Create visualization</Button>
+                </div>
             </div>
         );
     }

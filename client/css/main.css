@@ -96,3 +96,11 @@ div.mdl-textfield--floating-label.is-dirty > input::-webkit-datetime-edit-fields
     width: 30%;
     margin-left: 30%;
 }
+
+.block.selected-candidates {
+    width: 50%;
+}
+
+.block.candidate-search {
+    width: 50%;
+}

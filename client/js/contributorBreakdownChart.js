@@ -51,11 +51,10 @@ class ContributorBreakdownChart {
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    color.domain(d3.keys(data[0]).filter(function(key){ return key !== 'name' }));
+    color.domain(d3.keys(data[0]).filter(function(key){ return key !== 'name'; }));
 
     data.forEach(function(d){
       let y0 = 0;
-      console.log(d);
       d.percents = color.domain().map(function(type){ return { type: type, y0: y0, y1: y0 += +d[type] }; });
       d.total = 100;
     });
@@ -82,7 +81,7 @@ class ContributorBreakdownChart {
       .data(data)
       .enter().append('g')
       .attr('class', 'g')
-      .attr('transform', function(d){ return 'translate(' + x(d.name) + ',0)'});
+      .attr('transform', function(d){ return 'translate(' + x(d.name) + ',0)';});
 
     candidate.selectAll('rect')
       .data(function(d){ return d.percents; })
