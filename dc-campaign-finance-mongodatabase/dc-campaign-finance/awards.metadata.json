@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"dc-campaign-finance.awards"},{"v":1,"unique":true,"key":{"contractNumber":1},"name":"contractNumber_1","ns":"dc-campaign-finance.awards","background":true,"safe":null}]}
