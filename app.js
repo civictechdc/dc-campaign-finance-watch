@@ -8,6 +8,7 @@ var config = require('./config/environment');
 var restify = require('restify');
 var server = restify.createServer({name: 'dc-campaign-finance'});
 server.use(restify.queryParser());
+server.use(restify.bodyParser({ mapParams: true }));
 server.use(function crossOrigin(req, res, next){
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
@@ -37,6 +38,10 @@ server.get('/dc-campaign-finance/api/electionCountdown', electionController.getN
 // Contribution
 var contributionController = require('./api/contribution/contribution.controller');
 server.get('/dc-campaign-finance/api/individual/contributors/:limit', contributionController.getTopIndividaulContributors);
+
+// Visualization
+var visualizationController = require('./api/visualization/visualization.controller');
+server.post('/dc-campaign-finance/api/visualization', visualizationController.convertToPng);
 
 server.listen(process.env.PORT || 3000, function(){
     console.log('%s listening at %s', server.name, server.url);

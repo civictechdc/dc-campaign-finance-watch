@@ -54,7 +54,7 @@ gulp.task('nodemon', function(){
   nodemon({
     script: './app.js',
     ext: 'js',
-    ignore: ['client/**/*.*']
+    ignore: ['client/**/*.*', 'node_modules']
   })
   .on('restart', function(){
     gutil.log('restarting the process');

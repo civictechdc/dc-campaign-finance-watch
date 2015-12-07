@@ -36,15 +36,7 @@ class CreateChartComponent extends React.Component {
     }
 
     _handleRangeSelected (end, beginning) {
-        var self = this;
-        Client
-            .getCandidates(end, beginning)
-            .then(function (candidates) {
-                self.setState({candidates: candidates, beginning: beginning, end: end});
-            })
-            .catch(function (err) {
-                console.log(err);
-            });
+        this.setState({beginning: beginning, end: end});
     }
 
     _clearSelectedCandidates () {
@@ -72,6 +64,7 @@ class CreateChartComponent extends React.Component {
             fromDate: this.state.beginning,
             toDate: this.state.end
         };
+        console.log(range);
         var chart = this.state.dataSet;
         var candidates = this.state.selectedCandidates;
         switch (chart) {

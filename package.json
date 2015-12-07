@@ -17,6 +17,7 @@
     "bunyan": "^1.2.3",
     "d3": "^3.5.6",
     "fbjs": "^0.2.1",
+    "gm": "^1.21.1",
     "lodash": "^3.3.1",
     "moment": "^2.10.6",
     "moment-range": "^2.0.3",
@@ -28,7 +29,9 @@
     "restify": "~2.8.3",
     "restler": "^3.2.2",
     "rx": "^4.0.7",
-    "rx-react": "^0.3.0"
+    "rx-react": "^0.3.0",
+    "svg-to-png": "^2.0.1",
+    "svg2png": "^2.0.0"
   },
   "devDependencies": {
     "babelify": "^6.3.0",

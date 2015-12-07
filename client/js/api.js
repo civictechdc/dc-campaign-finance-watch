@@ -73,6 +73,12 @@ class Client {
                 return result[0];
             });
     }
+
+    convertSvg(svg) {
+        let data = {svg: (new XMLSerializer).serializeToString(svg)};
+        console.log(data);
+        return this.Rest.postAsync(this.baseUrl + '/visualization', {data: data});
+    }
 }
 
 let endPoints = {

@@ -11,9 +11,9 @@ class Chart extends React.Component {
 
     componentDidMount () {
         let el = ReactDOM.findDOMNode(this);
-        if (this.props.chartInfo) {
-            let chart = ChartFactory(this.props.chartInfo.type, el);
-            this.setState({chart: chart});
+        if (this.props.chartInfo.type) {
+            let chart = this.ChartFactory(this.props.chartInfo.type, el);
+            this.props.onSvgCreate(chart.svg);
         }
     }
 
@@ -29,9 +29,11 @@ class Chart extends React.Component {
         let el = ReactDOM.findDOMNode(this);
         if (this.state.chart && (this.state.chart.type === this.props.chartInfo.type)) {
             this.state.chart.update(el, this.getChartState());
+            this.props.onSvgCreate(chart.svg);
         } else {
             let chart = this.ChartFactory(this.props.chartInfo.type, el);
             this.setState({chart: chart});
+            this.props.onSvgCreate(chart.svg);
         }
     }
 
