@@ -18,7 +18,7 @@ class ChartContainerComponent extends React.Component {
 
     _downloadChart () {
         console.info('beginning chart download', this.state.svg);
-        Client.convertSvg(this.state.svg[0][0]);
+        alert('This feature is still pending work.');
     }
 
     render () {
