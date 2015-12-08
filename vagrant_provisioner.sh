@@ -18,4 +18,4 @@ mongorestore --host localhost:27017 --drop /vagrant/dc-campaign-finance-mongodat
 
 cd /vagrant
 npm install
-echo "Run 'gulp serve --env=local' to get started"
+echo "To start the server run: vagrant ssh -c 'cd /vagrant && gulp serve --env=local'"
