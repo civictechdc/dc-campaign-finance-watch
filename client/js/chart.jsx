@@ -2,6 +2,7 @@ import React from 'react/addons';
 import ReactDOM from 'react-dom';
 import ContributionOverTimeChart from './contributionOverTimeChart';
 import ContributorBreakdownChart from './contributorBreakdownChart';
+import ContributorDendogram from './contributorDendogramChart';
 
 class Chart extends React.Component {
     constructor (props) {
@@ -29,7 +30,7 @@ class Chart extends React.Component {
         let el = ReactDOM.findDOMNode(this);
         if (this.state.chart && (this.state.chart.type === this.props.chartInfo.type)) {
             this.state.chart.update(el, this.getChartState());
-            this.props.onSvgCreate(chart.svg);
+            this.props.onSvgCreate(this.state.chart.svg);
         } else {
             let chart = this.ChartFactory(this.props.chartInfo.type, el);
             this.setState({chart: chart});
@@ -47,6 +48,8 @@ class Chart extends React.Component {
                 return new ContributionOverTimeChart(el, this.getChartState());
             case 'contributorBreakdown':
                 return new ContributorBreakdownChart(el, this.getChartState());
+            case 'contributorDendogram':
+                return new ContributorDendogram(el, this.getChartState());
         }
     }
 
