@@ -8,7 +8,8 @@ import DateRangeComponent from './dateRange.jsx';
 import CandidatesListComponent from './candidateList.jsx';
 import {
     ProcessContributionsOverTime,
-    ProcessContributorBreakdown
+    ProcessContributorBreakdown,
+    ProcessContributionsToTree
 } from './chartDataProcessor';
 import CandidateSearchComponent from './candidateSearchComponent.jsx';
 import SelectedCandidatesComponent from './selectedCandidatesComponent.jsx';
@@ -42,7 +43,7 @@ class CreateChartComponent extends React.Component {
     _clearSelectedCandidates () {
         var unselected = this
             .state
-            .candidates
+            .selectedCandidates
             .map(function (c) {
                 c.selected = false;
                 return c;
@@ -73,6 +74,9 @@ class CreateChartComponent extends React.Component {
                 break;
             case "contributorBreakdown":
                 dataPromise = ProcessContributorBreakdown(candidates, range);
+                break;
+            case "contributorDendogram":
+                dataPromise = ProcessContributionsToTree(candidates, range);
                 break;
             default:
                 break;
