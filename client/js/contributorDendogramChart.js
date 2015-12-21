@@ -30,7 +30,7 @@ class ContributorDendogramChart {
         let diagonal = d3.svg.diagonal()
             .projection(function(d) { return [d.y, d.x]; });
 
-        let svg = this.svg
+        var svg = this.svg
             .attr("width", width)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
@@ -59,7 +59,7 @@ class ContributorDendogramChart {
             nodes.forEach(function(d) { d.y = d.depth * 180; });
 
             // Update the nodes…
-            var node = self.svg.selectAll("g.node")
+            var node = svg.selectAll("g.node")
                 .data(nodes, function(d) { return d.id || (d.id = ++i); });
 
             // Enter any new nodes at the parent's previous position.
@@ -104,7 +104,7 @@ class ContributorDendogramChart {
                 .style("fill-opacity", 1e-6);
 
             // Update the links…
-            var link = self.svg.selectAll("path.link")
+            var link = svg.selectAll("path.link")
                 .data(links, function(d) { return d.target.id; });
 
             // Enter any new links at the parent's previous position.
