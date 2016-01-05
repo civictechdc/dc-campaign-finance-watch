@@ -13,6 +13,7 @@ import {
 } from './chartDataProcessor';
 import CandidateSearchComponent from './candidateSearchComponent.jsx';
 import SelectedCandidatesComponent from './selectedCandidatesComponent.jsx';
+import LoaderComponent from './loader.component.jsx';
 import _ from 'lodash';
 
 class CreateChartComponent extends React.Component {
@@ -60,6 +61,7 @@ class CreateChartComponent extends React.Component {
     }
 
     _handleCreateChart () {
+        this.setState({loading: true});
         var dataPromise;
         var range = {
             fromDate: this.state.beginning,
@@ -84,6 +86,7 @@ class CreateChartComponent extends React.Component {
         dataPromise
             .bind(this)
             .then(function (results) {
+                this.setState({loading: false});
                 this.props.setChartData({data: results, type: chart});
                 this._clearSelectedCandidates();
             })
@@ -95,6 +98,7 @@ class CreateChartComponent extends React.Component {
     render () {
         return (
             <div className="block-group">
+                <LoaderComponent isLoading={this.state.loading}></LoaderComponent>
                 <ChartSelectorComponent onChartSelected={this
                     ._handleSetSelected
                     .bind(this)}></ChartSelectorComponent>

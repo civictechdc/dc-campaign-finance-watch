@@ -6,26 +6,12 @@ body {
   margin: 0px;
 }
 
-
-input::-webkit-datetime-edit-fields-wrapper{
-  -webkit-user-modify: read-only !important;
-  display: none;
-  padding: 1px 0;
-  white-space: pre;
-}
-
-input:focus::-webkit-datetime-edit-fields-wrapper{
-  -webkit-user-modify: read-only !important;
-  display: inline-block;
-  padding: 1px 0;
-  white-space: pre;
-}
-
-div.mdl-textfield--floating-label.is-dirty > input::-webkit-datetime-edit-fields-wrapper{
-  -webkit-user-modify: read-only !important;
-  display: inline-block;
-  padding: 1px 0;
-  white-space: pre;
+.loader {
+    z-index: 1000;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 24px;
 }
 
 .candidate-list {
@@ -33,6 +19,8 @@ div.mdl-textfield--floating-label.is-dirty > input::-webkit-datetime-edit-fields
   overflow-y: scroll;
   padding-bottom: 15px;
 }
+
+/* Graphs */
 
 .axis path,
 .axis line {
