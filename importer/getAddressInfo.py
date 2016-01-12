@@ -23,9 +23,12 @@ def getAddrInfo(addr):
     'http://citizenatlas.dc.gov/newwebservices/locationverifier.asmx/findLocation2',
     data={'f': 'json', 'str': addr})
     r2=r.json()
-
-
+    
+    if(r2.get('returnDataset')==None):
+        return None
+    
     c=(r2.get('returnDataset')).get('Table1')[0]
+    
 
     return [c.get('ConfidenceLevel'),
     r2.get('UNITNUMBER'),
