@@ -3,7 +3,6 @@ import Promise from 'bluebird';
 import config from '../config.json';
 import Moment from 'moment';
 import _ from 'lodash';
-import SimpleWorkerWrapper from '../../lib/simpleWorker';
 
 var methodNamesToPromisify = "get post put del head patch json postJson putJson".split(" ");
 
