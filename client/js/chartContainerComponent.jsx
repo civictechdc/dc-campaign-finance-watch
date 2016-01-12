@@ -27,7 +27,7 @@ class ChartContainerComponent extends React.Component {
                 <div>
                     <Chart onSvgCreate={this
                         ._setSvg
-                        .bind(this)} chartInfo={this.props.chartInfo} domain={this.props.domain}></Chart>
+                        .bind(this)} chartInfo={this.props.chartInfo}></Chart>
                     <ClearChartComponent onClear={this.props.clearChart}></ClearChartComponent>
                     <Button onClick={this._downloadChart.bind(this)}>Download Visualization</Button>
                 </div>
