@@ -55,9 +55,9 @@ class AppRoot extends React.Component {
                             <CreateChartComponent setCandidates={(candidates) => this.setCandidatesForView(candidates)}></CreateChartComponent>
                         </div>
                     </div>
-                    <div className="block graph">
+                    <div className="block graph row">
                         {this.state.candidates.map(function(candidate, idx){
-                            return (<CandidateCard key={idx} candidateName={candidate.name} data={candidate.data} />);
+                            return (<CandidateCard key={idx} candidateName={candidate.candidateName} data={candidate.data} />);
                         })}
                     </div>
                 </main>
