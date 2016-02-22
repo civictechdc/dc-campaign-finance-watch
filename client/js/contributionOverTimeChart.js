@@ -41,7 +41,7 @@ class ContributionOverTimeChart {
       .scale(x)
       .ticks(d3.time.months)
       .tickSize(16, 0)
-      .tickFormat(d3.time.format("%B"))
+      .tickFormat(d3.time.format("%b"))
       .orient("bottom");
 
     let yAxis = d3.svg.axis()
