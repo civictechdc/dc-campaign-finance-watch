@@ -14,7 +14,7 @@ class CandidateSearchComponent extends React.Component {
             .bind(this);
         this.state = {
             availableCandidates: [],
-            candidateSearchLimit: 10
+            candidateSearchLimit: 9
         };
     }
 
