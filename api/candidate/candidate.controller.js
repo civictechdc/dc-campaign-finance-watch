@@ -43,7 +43,7 @@ exports.searchForCandidate = function (req, res) {
         candidateService
             .searchForCandidate(query.search)
             .then(function (results) {
-                res.send(_.map(results, function (result) {
+                res.send(_.map(results.slice(0,query.limit), function (result) {
                     return result.toObject({
                         virtuals: true
                     });

@@ -13,7 +13,8 @@ class CandidateSearchComponent extends React.Component {
             .componentWillMount
             .bind(this);
         this.state = {
-            availableCandidates: []
+            availableCandidates: [],
+            candidateSearchLimit: 10
         };
     }
 
@@ -28,11 +29,11 @@ class CandidateSearchComponent extends React.Component {
             .debounce(500)
             .distinctUntilChanged()
             .flatMapLatest(function (value) {
-                return Client.search(value);
-            })
+                return Client.search(value, this.state.candidateSearchLimit);
+            }.bind(this))
             .subscribe(function (data) {
                 self.setState({availableCandidates: data});
-            }, function (errorr) {
+            }, function (error) {
                 console.log(error);
             });
     }
@@ -44,7 +45,7 @@ class CandidateSearchComponent extends React.Component {
     render () {
         let _handleAvailableCandidateClicked = this._handleAvailableCandidateClicked;
         let self = this;
-        let candidates = this.state.availableCandidates.slice(0,9).map(function(c, index){
+        let candidates = this.state.availableCandidates.map(function(c, index){
             return (
                 <ListGroupItem
                         key={'available' + index}
