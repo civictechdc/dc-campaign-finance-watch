@@ -2,7 +2,7 @@
 """
 Created on Mon Dec  7 19:44:57 2015
 
-@author: brentselby
+@author: fgz4dc
 """
 
 #Available data:
@@ -18,21 +18,39 @@ Created on Mon Dec  7 19:44:57 2015
 
 import requests
 
-def getAddrInfo(addr):
+#### getAddrInfo - This is the  ####
+# takes in an address in string form and state abbreviation (optional)
+# returns [ConfidenceLevel,UNITNUMBER,ZIPCODE,WARD,STNAME,STATE,
+#    ADDRNUM,QUADRANT,FULLADDRESS,RES_TYPE]
+# num, num, num, string, string, string, num, string, string, string, 
+def getAddrInfo(addr, state="DC"):
+    #if not dc?
+    if(state != "DC"):
+        return [None,None,None,"Outside DC",None,None,None,None,None,None]
+    if(addr[:9]=="Requested"):
+        return [None,None,None,"Requested",None,None,None,None,None,None]
+    if(addr[:3]=="P.O" or addr[:2]=="PO"):
+        return [None,None,None,"PO Box",None,None,None,None,None,None]
+    if(addr[:9]=="Requested"):
+        return [None,None,None,"Requested",None,None,None,None,None,None]
     r = requests.post(
     'http://citizenatlas.dc.gov/newwebservices/locationverifier.asmx/findLocation2',
     data={'f': 'json', 'str': addr})
-    r2=r.json()
+    try:
+        r2=r.json()
+    except:
+        return None
     
-    if(r2.get('returnDataset')==None):
+    if(r2.get('returnDataset')==None or 1-bool(r2.get('returnDataset'))):
         return None
     
     c=(r2.get('returnDataset')).get('Table1')[0]
     
 
-    return [c.get('ConfidenceLevel'),
+    return [c.get('ConfidenceLevel'), 
     r2.get('UNITNUMBER'),
     c.get('ZIPCODE'),
+    #int((c.get('WARD'))[5:]),
     c.get('WARD'),
     c.get('STNAME'),
     c.get('STATE'),
@@ -42,6 +60,47 @@ def getAddrInfo(addr):
     c.get('RES_TYPE')]
 
 
+
+
+#### OTHER FUNCTIONS #########
+def getAddrInfo2(addr, state="DC"):
+    #if not dc?
+    if(state != "DC"):
+        return [None,None,None,"Outside DC",None,None,None,None,None,None]
+    if(addr[:9]=="Requested"):
+        return [None,None,None,"Requested",None,None,None,None,None,None]
+    if(addr[:3]=="P.O" or addr[:2]=="PO"):
+        return [None,None,None,"PO Box",None,None,None,None,None,None]
+    if(addr[:9]=="Requested"):
+        return [None,None,None,"Requested",None,None,None,None,None,None]
+    r = requests.post(
+    'http://citizenatlas.dc.gov/newwebservices/locationverifier.asmx/findLocation2',
+    data={'f': 'json', 'str': addr})
+    try:
+        r2=r.json()
+    except:
+        return None
+    
+    if(r2.get('returnDataset')==None or 1-bool(r2.get('returnDataset'))):
+        return None
+    
+    c=(r2.get('returnDataset')).get('Table1')[0]
+    
+
+    return [c.get('ConfidenceLevel'),
+    r2.get('UNITNUMBER'),
+    c.get('ZIPCODE'),
+    #int((c.get('WARD'))[5:]),
+    c.get('WARD'),
+    c.get('STNAME'),
+    c.get('STATE'),
+    c.get('ADDRNUM'),
+    c.get('QUADRANT'),
+    c.get('FULLADDRESS'),
+    c.get('RES_TYPE')]
+
+### returns only ward
+### does not catch errors currently
 def getWard(addr):
     r = requests.post(
     'http://citizenatlas.dc.gov/newwebservices/locationverifier.asmx/findLocation2',
@@ -53,7 +112,8 @@ def getWard(addr):
 
     return [c.get('ConfidenceLevel'),c.get('WARD')]
 
-
+### returns all information
+### does not catch errors currently
 def getAllAddrInfo(addr):
     r = requests.post(
     'http://citizenatlas.dc.gov/newwebservices/locationverifier.asmx/findLocation2',
