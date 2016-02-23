@@ -44,12 +44,19 @@ class CandidateSearchComponent extends React.Component {
     render () {
         let _handleAvailableCandidateClicked = this._handleAvailableCandidateClicked;
         let self = this;
-        let candidates = this.state.availableCandidates.map(function(c, index){
-            return (<ListGroupItem key={'available' + index} onClick={_handleAvailableCandidateClicked.bind(self, c)}>{c.displayName}</ListGroupItem>);
+        let candidates = this.state.availableCandidates.slice(0,9).map(function(c, index){
+            return (
+                <ListGroupItem
+                        key={'available' + index}
+                        onClick={_handleAvailableCandidateClicked.bind(self, c)}
+                >
+                    {c.displayName}
+                </ListGroupItem>
+            );
         });
         return (
             <div className="block candidate-search">
-                <h4 className="instructions">2. Search for candidates to visualize</h4>
+                <h4 className="instructions">1. Search for candidates to visualize</h4>
                 <input onInput={this.inputValue} placeholder="Search for a candidate"/>
                 <ListGroup>
                     {candidates}
