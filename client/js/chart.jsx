@@ -39,7 +39,7 @@ class Chart extends React.Component {
     }
 
     getChartState () {
-        return {data: this.props.chartInfo.data, domain: this.props.domain};
+        return {data: this.props.chartInfo.data};
     }
 
     ChartFactory (type, el) {

@@ -26,7 +26,7 @@ var bundler = browserify({
 bundler.plugin(watchify, {
         delay: 100,
         ignoreWatch: ['**/node_modules/**'],
-        poll: false
+        poll: true
     })
     .transform(babelify);
 
