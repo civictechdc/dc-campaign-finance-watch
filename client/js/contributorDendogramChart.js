@@ -36,7 +36,7 @@ class ContributorDendogramChart {
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        let root = data[0];
+        let root = data;
         root.x0 = height/2;
         root.y0 = 0;
 
