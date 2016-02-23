@@ -18,6 +18,7 @@ server.use(function crossOrigin(req, res, next){
 //Mongoose
 var mongoose = require('mongoose');
 mongoose.connect(config.mongo.uri);
+// mongoose.set('debug', true);
 
 // Candidate
 var candidateController = require('./api/candidate/candidate.controller');

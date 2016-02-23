@@ -3,6 +3,44 @@ import _ from 'lodash';
 import Promise from 'bluebird';
 import Client from './api';
 
+export function ProcessContributionsToTree(ids, dateRange) {
+    var candidatePromises = _.map(ids, (i) => {
+        return Client
+            .getCandidate(i, dateRange)
+            .then((results) => {
+                let data = results[0];
+
+                let individual = _.filter(data.contributions, function (c) {
+                    return c.contributor.contributionType === 'Individual';
+                }).map(createChildNodes);
+                let corporate = _.filter(data.contributions, function (c) {
+                    return c.contributor.contributionType === 'Corporation';
+                }).map(createChildNodes);
+                let pac = _.filter(data.contributions, function (c) {
+                    return c.contributor.contributionType === 'Other';
+                }).map(createChildNodes);
+
+                return {
+                    "name": data.candidate.displayName,
+                    "children": [{
+                            "name": "Individual Contributions",
+                            "children": individual
+                    },
+                        {
+                            "name": "Corporate Contributions",
+                            "children": corporate
+                    },
+                        {
+                            "name": "PACs Contributions",
+                            "children": pac
+                    }]
+                };
+            });
+    });
+
+    return Promise.all(candidatePromises);
+}
+
 export function ProcessContributorBreakdown(ids, dateRange) {
     var candidatePromises = _.map(ids, function (i) {
         return Client
@@ -69,6 +107,13 @@ export function ProcessContributionsOverTime(ids, dateRange) {
 
 
 // private
+function createChildNodes(contribution) {
+    return {
+        name: contribution.contributor.name,
+        amount: contribution.amount
+    };
+}
+
 function convertToDateContrib(results) {
     let formattedResults = results.contributions.map(function (contribution) {
         return {

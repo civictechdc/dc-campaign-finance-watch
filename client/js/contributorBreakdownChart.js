@@ -14,11 +14,6 @@ class ContributorBreakdownChart {
     this._drawPoints(el, state.data);
   }
 
-  // let data = []
-  //   {name: 'Cand1', individual: '45', corporate: '25', other: '30'},
-  //   {name: 'Cand2', individual: '25', corporate: '45', other: '30'},
-  //   {name: 'Cand3', individual: '45', corporate: '30', other: '25'}
-  // ];
 
   _drawPoints(el, data) {
     this.svg.selectAll('*').remove();

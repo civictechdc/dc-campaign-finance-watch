@@ -17,6 +17,9 @@ Now you can just start up everything with Vagrant:
 
 	sudo apt-get install vagrant virtualbox
 	vagrant up
+	vagrant ssh -c 'cd /vagrant/'
+	npm install
+	gulp serve --env=local
 
 or continue setting up the local service...
 
