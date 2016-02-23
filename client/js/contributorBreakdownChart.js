@@ -16,6 +16,7 @@ class ContributorBreakdownChart {
 
 
   _drawPoints(el, data) {
+    data = [data];
     this.svg.selectAll('*').remove();
     let width = el.offsetWidth;
     let height = el.offsetHeight < 600 ? el.offsetHeight : 600;
