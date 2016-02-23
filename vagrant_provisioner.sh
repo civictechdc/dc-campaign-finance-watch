@@ -17,4 +17,6 @@ echo "Loading up the db"
 mongorestore --host localhost:27017 --drop /vagrant/dc-campaign-finance-mongodatabase
 
 cd /vagrant
-echo "Run 'gulp serve --env=local' to get started"
+echo "Installing local node modules"
+npm install
+echo "To start the server run: vagrant ssh -c 'cd /vagrant && gulp serve --env=local'"
