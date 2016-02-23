@@ -1,6 +1,4 @@
 import React from 'react/addons';
-import ClearChartComponent from './clearChartComponent.jsx';
-import DownloadChartComponent from './downloadChartComponent.jsx';
 import Chart from './chart.jsx';
 import {
     Button
@@ -28,8 +26,6 @@ class ChartContainerComponent extends React.Component {
                     <Chart onSvgCreate={this
                         ._setSvg
                         .bind(this)} chartInfo={this.props.chartInfo}></Chart>
-                    <ClearChartComponent onClear={this.props.clearChart}></ClearChartComponent>
-                    <Button onClick={this._downloadChart.bind(this)}>Download Visualization</Button>
                 </div>
             );
         } else {
