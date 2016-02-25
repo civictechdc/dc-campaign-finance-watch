@@ -80,16 +80,16 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 
   ***$500 limit***
 
-  | Indicator Value | Score |
-  | :---: | :---: |
+| Indicator Value | Score |
+| :---: | :---: |
 | $50 | 10 points |
 | $100 | 6 points |
 | $250 | 0 points |
 
   ***$1K limit***
 
-  | Indicator Value | Score |
-  | :---: | :---: |
+| Indicator Value | Score |
+| :---: | :---: |
 | $50 | 10 points |
 | $100 | 7 points |
 | $300 | 2 points |
@@ -97,8 +97,8 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 
   ***$1.5K limit***
 
-  | Indicator Value | Score |
-  | :---: | :---: |
+| Indicator Value | Score |
+| :---: | :---: |
 | $50 | 10 points |
 | $100 | 8 points |
 | $200 | 5 points |
@@ -106,8 +106,8 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 
   ***$2K limit***
 
-  | Indicator Value | Score |
-  | :---: | :---: |
+| Indicator Value | Score |
+| :---: | :---: |
 | $50 | 10 points |
 | $100 | 8 points |
 | $400 | 2 points |
