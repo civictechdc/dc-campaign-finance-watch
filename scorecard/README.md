@@ -45,6 +45,7 @@ Contribution data for Area Neighborhood Commissioner candidates is likewise not 
 **2. % of Money from Ward**
 ***Ward candidates only***
 *(15 points)*
+
 | Indicator Value | Score |
 | :---: | :---: |
 | 20% | 0 points |
@@ -55,6 +56,7 @@ Contribution data for Area Neighborhood Commissioner candidates is likewise not 
 **3. Geographic Concentration Score by Ward**
 ***Citywide candidates only***
 *(15 points)*
+
 | Indicator Value | Score |
 | :---: | :---: |
 | 0.15 | 15 points |
@@ -65,9 +67,10 @@ Contribution data for Area Neighborhood Commissioner candidates is likewise not 
 
 Explanation: the Geographic Concentration Score is a formula that takes the share of DC-based contributions from each ward, squares it, and sums up the results:
 
+```
   ward score = (ward i contribs / DC contribs)^2
   concentration score = sum of ward scores
-
+```
 
 ## Amount (30 total points)
 ### Are candidates raising money from small donors or large donors?
@@ -76,6 +79,7 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 *(10 points)*
 
   ***$500 limit***
+
   | Indicator Value | Score |
   | :---: | :---: |
 | $50 | 10 points |
@@ -83,6 +87,7 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 | $250 | 0 points |
 
   ***$1K limit***
+
   | Indicator Value | Score |
   | :---: | :---: |
 | $50 | 10 points |
@@ -91,6 +96,7 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 | $400 | 0 points |
 
   ***$1.5K limit***
+
   | Indicator Value | Score |
   | :---: | :---: |
 | $50 | 10 points |
@@ -99,6 +105,7 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 | $500 | 0 points |
 
   ***$2K limit***
+
   | Indicator Value | Score |
   | :---: | :---: |
 | $50 | 10 points |
@@ -109,6 +116,7 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 
 **2. % of Contributions at Maximum Amount**
 *(10 points)*
+
 | Indicator Value | Score |
 | :---: | :---: |
 | 5% | 10 points |
@@ -119,6 +127,7 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 
 **3. % of Contributions <$100**
 *(10 points)*
+
 | Indicator Value | Score |
 | :---: | :---: |
 | 15% | 0 points |
@@ -132,6 +141,7 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 
 **1. Any Corporate Contributions?**
 *(3 points)*
+
 | Indicator Value | Score |
 | :---: | :---: |
 | 0 | 3 points |
@@ -139,6 +149,7 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 
 **2. Any PAC/Party Contributions?**
 *(2 points)*
+
 | Indicator Value | Score |
 | :---: | :---: |
 | 0 | 2 points |
@@ -147,6 +158,7 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 **3. % of Money Contributed by Candidate**
 *(3 points)
 Note: does not count loans.*
+
 | Indicator Value | Score |
 | :---: | :---: |
 | 0 | 3 points |
@@ -155,6 +167,7 @@ Note: does not count loans.*
 **4. % of Individuals Contribs from DC with Business Addresses**
 *(2 points)
 Note: per master address repository*
+
 | Indicator Value | Score |
 | :---: | :---: |
 | 5% | 2 points |
@@ -163,6 +176,7 @@ Note: per master address repository*
 **5. % of Money from All Sources but Individuals with Residential Addresses**
 *(15 points)
 Note: does not include candidate self-funding. Includes corporate, PAC, unlisted/other, or individuals with business addresses*
+
 | Indicator Value | Score |
 | :---: | :---: |
 | 0 | 15 points |
@@ -182,6 +196,7 @@ Note: does not include candidate self-funding. Includes corporate, PAC, unlisted
 
 **2. % of Contributions With No Discernable Name and/or Address**
 *(7 points)*
+
 | Indicator Value | Score |
 | :---: | :---: |
 | 0 | 7 points |
