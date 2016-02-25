@@ -37,27 +37,31 @@ Contribution data for Area Neighborhood Commissioner candidates is likewise not 
 **1. % of Money Raised from DC Addresses**
 *(20 points)*
 
-  50%: 0 points
-  100%: 15 points
+| Indicator Value | Score |
+| :---: | :---: |
+| 50% | 0 points |
+| 100% | 15 points |
 
 **2. % of Money from Ward**
 ***Ward candidates only***
 *(15 points)*
-
-  20%: 0 points
-  50%: 6 points
-  70%: 12 points
-  100%: 15 points
+| Indicator Value | Score |
+| :---: | :---: |
+| 20% | 0 points |
+| 50% | 6 points |
+| 70% | 12 points |
+| 100% | 15 points |
 
 **3. Geographic Concentration Score by Ward**
 ***Citywide candidates only***
 *(15 points)*
-
-  0.15: 15 points
-  0.2: 12 points
-  0.25: 6 points
-  0.3: 3 points
-  0.4: 0 points
+| Indicator Value | Score |
+| :---: | :---: |
+| 0.15 | 15 points |
+| 0.2 | 12 points |
+| 0.25 | 6 points |
+| 0.3 | 3 points |
+| 0.4 | 0 points |
 
 Explanation: the Geographic Concentration Score is a formula that takes the share of DC-based contributions from each ward, squares it, and sums up the results:
 
@@ -72,45 +76,55 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 *(10 points)*
 
   ***$500 limit***
-  $50: 10 points
-  $100: 6 points
-  $250: 0 points
+  | Indicator Value | Score |
+  | :---: | :---: |
+| $50 | 10 points |
+| $100 | 6 points |
+| $250 | 0 points |
 
   ***$1K limit***
-  $50: 10 points
-  $100: 7 points
-  $300: 2 points
-  $400: 0 points
+  | Indicator Value | Score |
+  | :---: | :---: |
+| $50 | 10 points |
+| $100 | 7 points |
+| $300 | 2 points |
+| $400 | 0 points |
 
   ***$1.5K limit***
-  $50: 10 points
-  $100: 8 points
-  $200: 5 points
-  $500: 0 points
+  | Indicator Value | Score |
+  | :---: | :---: |
+| $50 | 10 points |
+| $100 | 8 points |
+| $200 | 5 points |
+| $500 | 0 points |
 
   ***$2K limit***
-  $50: 10 points
-  $100: 8 points
-  $400: 2 points
-  $600: 0 points
+  | Indicator Value | Score |
+  | :---: | :---: |
+| $50 | 10 points |
+| $100 | 8 points |
+| $400 | 2 points |
+| $600 | 0 points |
 
 
 **2. % of Contributions at Maximum Amount**
 *(10 points)*
-
-  5%: 10 points
-  15%: 8 points
-  25%: 5 points
-  50%: 0 points
+| Indicator Value | Score |
+| :---: | :---: |
+| 5% | 10 points |
+| 15% | 8 points |
+| 25% | 5 points |
+| 50% | 0 points |
 
 
 **3. % of Contributions <$100**
 *(10 points)*
-
-  15%: 0 points
-  30%: 3 points
-  70%: 7 points
-  85%: 10 points
+| Indicator Value | Score |
+| :---: | :---: |
+| 15% | 0 points |
+| 30% | 3 points |
+| 70% | 7 points |
+| 85% | 10 points |
 
 
 ## Contributor Type (25 total points)
@@ -118,36 +132,41 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 
 **1. Any Corporate Contributions?**
 *(3 points)*
-
-  0: 3 points
-  1: 0 points
+| Indicator Value | Score |
+| :---: | :---: |
+| 0 | 3 points |
+| 1 | 0 points |
 
 **2. Any PAC/Party Contributions?**
 *(2 points)*
-
-  0: 2 points
-  1: 0 points
+| Indicator Value | Score |
+| :---: | :---: |
+| 0 | 2 points |
+| 1 | 0 points |
 
 **3. % of Money Contributed by Candidate**
 *(3 points)
 Note: does not count loans.*
-
-  0: 3 points
-  20%: 0 points
+| Indicator Value | Score |
+| :---: | :---: |
+| 0 | 3 points |
+| 20% | 0 points |
 
 **4. % of Individuals Contribs from DC with Business Addresses**
 *(2 points)
 Note: per master address repository*
-
-  5%: 2 points
-  25%: 0 points
+| Indicator Value | Score |
+| :---: | :---: |
+| 5% | 2 points |
+| 25% | 0 points |
 
 **5. % of Money from All Sources but Individuals with Residential Addresses**
 *(15 points)
 Note: does not include candidate self-funding. Includes corporate, PAC, unlisted/other, or individuals with business addresses*
-
-  0: 15 points
-  50%: 0 points
+| Indicator Value | Score |
+| :---: | :---: |
+| 0 | 15 points |
+| 50% | 0 points |
 
 
 ## Reporting (10 total points)
@@ -156,14 +175,17 @@ Note: does not include candidate self-funding. Includes corporate, PAC, unlisted
 **1. Any Records Not Meeting Minimum Requirements?**
 *(3 points)*
 
-  0: 3 points
-  1: 0 points
+| Indicator Value | Score |
+| :---: | :---: |
+| 0 | 3 points |
+| 1 | 0 points |
 
 **2. % of Contributions With No Discernable Name and/or Address**
 *(7 points)*
-
-  0: 7 points
-  5%: 0 points
+| Indicator Value | Score |
+| :---: | :---: |
+| 0 | 7 points |
+| 5% | 0 points |
 
 **BONUS/ICEBOX: % of Contributions With Incorrect/Inconsistent Information**
 *Note: this indicator is too difficult to evaluate reliably at this time, but it would be helpful to explore options for future versions.
