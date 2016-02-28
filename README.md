@@ -11,8 +11,6 @@ Get this code:
 	git clone https://github.com/codefordc/dc-campaign-finance-watch
 	cd dc-campaign-finance-watch
 
-Get the data from anther collaborator. It'll come in the form of a Mongo dump directory called `dc-campaign-finance-mongodatabase`. (It was created using `mongodump --host localhost:27017`.) Put that directory within your `dc-campaign-finance-watch` directory.
-
 Now you can just start up everything with Vagrant:
 
 	sudo apt-get install vagrant virtualbox
