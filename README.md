@@ -16,7 +16,7 @@ Get the data from anther collaborator. It'll come in the form of a Mongo dump di
 Now you can just start up everything with Vagrant:
 
 	sudo apt-get install vagrant virtualbox
-	vagrant up
+	vagrant up 
 	vagrant ssh -c 'cd /vagrant/'
 	npm install
 	gulp serve --env=local
