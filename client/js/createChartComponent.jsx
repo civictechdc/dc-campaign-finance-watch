@@ -6,13 +6,9 @@ import Client from './api';
 import ChartSelectorComponent from './chartSelector.jsx';
 import DateRangeComponent from './dateRange.jsx';
 import CandidatesListComponent from './candidateList.jsx';
-import {
-    ProcessContributionsOverTime,
-    ProcessContributorBreakdown,
-    ProcessContributionsToTree
-} from './chartDataProcessor';
 import CandidateSearchComponent from './candidateSearchComponent.jsx';
 import SelectedCandidatesComponent from './selectedCandidatesComponent.jsx';
+import LoaderComponent from './loader.component.jsx';
 import _ from 'lodash';
 
 class CreateChartComponent extends React.Component {
@@ -60,44 +56,34 @@ class CreateChartComponent extends React.Component {
     }
 
     _handleCreateChart () {
-        var dataPromise;
+        this.setState({loading: true});
         var range = {
             fromDate: this.state.beginning,
             toDate: this.state.end
         };
-        console.log(range);
-        var chart = this.state.dataSet;
         var candidates = this.state.selectedCandidates;
-        switch (chart) {
-            case "contributionOverTime":
-                dataPromise = ProcessContributionsOverTime(candidates, range);
-                break;
-            case "contributorBreakdown":
-                dataPromise = ProcessContributorBreakdown(candidates, range);
-                break;
-            case "contributorDendogram":
-                dataPromise = ProcessContributionsToTree(candidates, range);
-                break;
-            default:
-                break;
-        }
-        dataPromise
-            .bind(this)
-            .then(function (results) {
-                this.props.setChartData({data: results, type: chart});
-                this._clearSelectedCandidates();
-            })
-            .catch(function (err) {
-                console.log(err);
-            });
+        var that = this;
+        Promise.all(candidates.map(function(candidate){
+            return Client
+                .getCandidate(candidate, range)
+                .then(function(results){
+                    return {candidateName: candidate.displayName, data: results[0]};
+                });
+        }))
+        .then(function(candidates){
+            that.setState({loading: false});
+            that.props.setCandidates(candidates);
+            that._clearSelectedCandidates();
+        })
+        .catch(function (err) {
+            console.log(err);
+        });
     }
 
     render () {
         return (
             <div className="block-group">
-                <ChartSelectorComponent onChartSelected={this
-                    ._handleSetSelected
-                    .bind(this)}></ChartSelectorComponent>
+                <LoaderComponent isLoading={this.state.loading}></LoaderComponent>
                 <CandidateSearchComponent onCandidateClicked={this
                     ._handleCandidateSelected
                     .bind(this)}></CandidateSearchComponent>

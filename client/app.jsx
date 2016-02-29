@@ -4,6 +4,7 @@ import ChartContainerComponent from './js/chartContainerComponent.jsx';
 import CandidateSelector from './js/candidateSelector.jsx';
 import ChartSelector from './js/chartSelector.jsx';
 import CreateChartComponent from './js/createChartComponent.jsx';
+import CandidateCard from './js/candidateCard.component.jsx';
 import {
     ProcessContributionsOverTime,
     ProcessContributorBreakdown
@@ -16,62 +17,20 @@ import d3 from 'd3';
 class AppRoot extends React.Component {
     constructor (props) {
         super(props);
-        this.state = {
-            domain: {
-                x: [0, 30],
-                y: [0, 100]
-            },
-            chartInfo: {}
-        };
+        this.state = {candidates :[]};
+        this.setsetCandidatesForView = this.setCandidatesForView.bind(this);
     }
 
     _setChartData(chartInfo) {
         this.setState({chartInfo: chartInfo});
     }
 
-    // _handleCandidateSelection (id) {
-    //     var selectedCandidates = this.state.selectedCandidates;
-    //     selectedCandidates.push(id);
-    //     this.setState({selectedCandidates: selectedCandidates});
-    // }
-
-    // _handleCandidateDeselection (id) {
-    //     var selectedCandidates = _.remove(this.state.selectedCandidates, function (c) {
-    //         return c === id;
-    //     });
-    //     this.setState({selectedCandidates: selectedCandidates});
-    // }
-
-    // _handleChartSelection (chart) {
-    //     this.setState({selectedChart: chart});
-    // }
-
-    // _getChartData (candidates, range) {
-    //     var dataPromise;
-    //     var chart = this.state.selectedChart;
-    //     switch (chart) {
-    //         case "contributionOverTime":
-    //             dataPromise = ProcessContributionsOverTime(candidates, range);
-    //             break;
-    //         case "contributorBreakdown":
-    //             dataPromise = ProcessContributorBreakdown(candidates, range);
-    //             break;
-    //         default:
-    //             break;
-    //     }
-    //     dataPromise
-    //         .bind(this)
-    //         .then(function (results) {
-    //             this.setState({data: results});
-    //             this.state.selectedCandidates = [];
-    //         })
-    //         .catch(function (err) {
-    //             console.log(err);
-    //         });
-    // }
+    setCandidatesForView(candidates) {
+        console.log(candidates);
+        this.setState({candidates: candidates});
+    }
 
     render () {
-        var candidates = this.state.candidates || [];
         return (
             <div className="block-group">
                 <header>
@@ -93,11 +52,13 @@ class AppRoot extends React.Component {
                             <div className="block main-header">
                                 <h5>How does it work?</h5>
                             </div>
-                            <CreateChartComponent setChartData={this._setChartData.bind(this)}></CreateChartComponent>
+                            <CreateChartComponent setCandidates={(candidates) => this.setCandidatesForView(candidates)}></CreateChartComponent>
                         </div>
                     </div>
-                    <div className="block graph">
-                        <ChartContainerComponent chartInfo={this.state.chartInfo} domain={this.state.domain}/>
+                    <div className="block graph row">
+                        {this.state.candidates.map(function(candidate, idx){
+                            return (<CandidateCard key={idx} candidateName={candidate.candidateName} data={candidate.data} />);
+                        })}
                     </div>
                 </main>
             </div>
