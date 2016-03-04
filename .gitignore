@@ -4,3 +4,4 @@ client/config.json
 node_modules
 .bundle
 .idea
+/dc-campaign-finance-mongodatabase
