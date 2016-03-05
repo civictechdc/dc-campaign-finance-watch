@@ -64,8 +64,8 @@ export default class CandidateCard extends React.Component {
         let chartInfo = {type: this.state.activeChart, data: shapedData};
         console.log(chartInfo);
         return (
-            <div className="col-xs-6">
-                <Well>
+            <div className="candidate-card">
+                <Well bsSize="small">
                     <h1>{candidateName}</h1>
                     <CandidateInfo/>
                     <hr/>
