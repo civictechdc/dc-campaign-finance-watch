@@ -36,17 +36,23 @@ class DateRangeComponent extends React.Component {
         return (
             <div className="block">
                 <h4 className="instructions">3. Select a range of dates to pull data from.</h4>
-                <DateRangePicker style={dateStyle} startDate={this.state.startDate} endDate={this.state.endDate} ranges={this.state.ranges} onApply={this.handleChange.bind(this)}>
-    						<Button className="selected-date-range-btn" style={{width:'100%'}}>
-    							<div className="pull-left"><Glyphicon glyph="calendar" /></div>
-    							<div className="pull-right">
-    								<span>
-    									{label}
-    								</span>
-    								<span className="caret"></span>
-    							</div>
-    						</Button>
-    				</DateRangePicker>
+                <DateRangePicker
+					style={dateStyle}
+					startDate={this.state.startDate}
+					endDate={this.state.endDate}
+					ranges={this.state.ranges}
+					onApply={this.handleChange.bind(this)}
+				>
+					<Button className="selected-date-range-btn" style={{width:'100%'}}>
+						<div className="pull-left"><Glyphicon glyph="calendar" /></div>
+						<div className="pull-right">
+							<span>
+								{label}
+							</span>
+							<span className="caret"></span>
+						</div>
+					</Button>
+				</DateRangePicker>
             </div>
         );
     }

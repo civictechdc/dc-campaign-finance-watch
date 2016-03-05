@@ -7,3 +7,4 @@ node_modules
 .vscode
 lib/**
 /dc-campaign-finance-mongodatabase
+.DS_Store

@@ -22,10 +22,12 @@ class ChartContainerComponent extends React.Component {
     render () {
         if(this.props.chartInfo) {
             return (
-                <div>
-                    <Chart onSvgCreate={this
-                        ._setSvg
-                        .bind(this)} chartInfo={this.props.chartInfo}></Chart>
+                <div className="chart-container">
+                    <hr/>
+                    <Chart
+                        onSvgCreate={this._setSvg.bind(this)}
+                        chartInfo={this.props.chartInfo}
+                    />
                 </div>
             );
         } else {
