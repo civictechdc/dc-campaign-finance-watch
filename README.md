@@ -31,7 +31,8 @@ Continue in a new terminal...
 
 Add this into your local Mongo database:
 
-	mongorestore --host localhost:27017 dc-campaign-finance-mongodatabase/
+    unzip dc-campaign-finance-mongodatabase.zip -d dc-campaign-finance-mongodatabase
+	mongorestore --host localhost:27017 --drop ./dc-campaign-finance-mongodatabase
 
 For the API server, you will need node.js. A good way to do that is via [nvm](https://github.com/creationix/nvm). Once you have node.js set up, do this:
 
