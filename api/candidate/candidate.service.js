@@ -4,7 +4,7 @@ var Promise = require('bluebird');
 var Moment = require('moment');
 Promise.promisifyAll(require("mongoose"));
 var _ = require('lodash');
-var oldestDate = Moment('01/01/2006', 'mm/dd/yyyy');
+var oldestDate = Moment(new Date('01/01/2006', 'MM/DD/YYYY'));
 
 var Candidate = require('../../models/candidate');
 Promise.promisifyAll(Candidate);
@@ -31,8 +31,24 @@ exports.findAllCandidates = function (toDate, fromDate) {
 };
 
 exports.findCandidate = function (candidateId, toDate, fromDate) {
+    if(!!toDate) {
+        toDate = Moment(toDate);
+    } else {
+        toDate = Moment();
+    }
+
+    if(!!fromDate) {
+        fromDate = Moment(fromDate);
+    } else {
+        fromDate = oldestDate;
+    }
+
     var contributionsPromise = Contribution.findAsync({
-        candidate: candidateId
+        candidate: candidateId,
+        date: {
+            $gte: fromDate.toDate(),
+            $lt: toDate.toDate()
+        }
     });
     var candidatePromise = Candidate.findByIdAsync(candidateId);
     var candidateResponse = {};
@@ -46,11 +62,40 @@ exports.findCandidate = function (candidateId, toDate, fromDate) {
 
         })
         .then(function (populatedContributions) {
-            fromDate = Moment(fromDate) || oldestDate;
-            toDate = Moment(toDate) || Moment();
-            candidateResponse.contributions = _.filter(populatedContributions, function (c) {
-                return Moment(c.date)
-                    .isBetween(fromDate, toDate);
+            var totalAmount = populatedContributions.reduce(function(total, c){
+                return total + c.amount;
+            }, 0);
+
+            var candidateContributionAmount = populatedContributions.reduce(function(total, c){
+                if(c.contributor.contributorType === 'Candidate') {
+                    return total + c.amount;
+                }
+                return total;
+            }, 0);
+
+            var dcContributions = populatedContributions.filter(function(c){
+                return c.contributor.address.state === 'DC';
+            });
+
+            var contributionsLessThan100 = populatedContributions.filter(function(c){
+                return c.amount < 100;
+            });
+
+            var individualsAtCorporateAddress = populatedContributions.filter(function(c){
+                return c.contributor.contributorType === 'Individual' && c.contributor.address.use !== 'RESIDENTIAL';
+            });
+
+            candidateResponse.contributions = populatedContributions;
+            candidateResponse.totalAmount = totalAmount;
+            candidateResponse.individualContributionAtCorporateAddress = individualsAtCorporateAddress.length/ populatedContributions.length;
+            candidateResponse.amountContributedByCandidate = candidateContributionAmount/totalAmount;
+            candidateResponse.localContributionPercentage = dcContributions.length/populatedContributions.length;
+            candidateResponse.smallContributionPercentage = contributionsLessThan100.length/populatedContributions.length;
+            candidateResponse.areCorporateContributions = _.some(populatedContributions, function(c){
+                return c.contributor.contributorType === 'Corporation' ||
+                    c.contributor.contributorType === 'Corporate Sponsored PAC' ||
+                    c.contributor.contributorType === 'Limited Liability Company' ||
+                    c.contributor.contributorType === 'Sole Proprietorship';
             });
             return candidateResponse;
         });
@@ -67,7 +112,7 @@ exports.searchForCandidate = function (search) {
         }
     });
     var nameRegex = new RegExp('\w*' + search + '\w*');
-    
+
     var nameSearch = Candidate.findAsync({
         'name.last': {$regex: nameRegex, $options: "si"}
     });
