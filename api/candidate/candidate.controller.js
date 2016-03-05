@@ -16,8 +16,8 @@ exports.getCandidates = function (req, res) {
 
 exports.getCandidateById = function (req, res) {
     var candidateId = req.params.id;
-    var toDate = req.params.toDate;
-    var fromDate = req.params.fromDate;
+    var toDate = req.query.toDate;
+    var fromDate = req.query.fromDate;
 
     candidateService
         .findCandidate(candidateId, toDate, fromDate)
