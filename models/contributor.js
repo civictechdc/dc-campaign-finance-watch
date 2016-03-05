@@ -1,39 +1,55 @@
 var path = require('path'),
-  mongoose = require('mongoose')
-  , Schema = mongoose.Schema;
+    mongoose = require('mongoose'),
+    Schema = mongoose.Schema;
 
 var config = require('../config/environment');
 
 var contributorTypes = ['Individual', 'Other', 'Corporation'];
 
 var contributorSchema = new Schema({
-  name: {type: String, required: true},
-  address: {
-    type: {
-      zip: String,
-      city: String,
-      state: String,
-      street: String,
-      _id: false
+    name: {
+        type: String,
+        required: true
     },
-    required: true,
-    unique: true
-  },
-  contributionType:{
-    type: String,
-    enum: contributorTypes,
-    required: true
-  },
-  alias: [{
-      name: Schema.Types.Mixed,
-      rule: String
-  }]
+    groupId: {
+        type: Number,
+        index: true
+    },
+    employers: [{
+        name: String,
+        address: String
+    }],
+    address: {
+        type: {
+            raw: String,
+            zip: {
+                type: String,
+                index: true
+            },
+            city: String,
+            state: String,
+            street: String,
+            ward: {
+                type: String,
+                index: true
+            },
+            quadrant: String,
+            unitNumber: String,
+            use: String,
+            _id: false
+        },
+        required: true
+    },
+    contributorType: String
 });
 
-contributorSchema.virtual('resource').get(function(){
-  return path.join(config.baseUrl, 'contributor', this._id.toString());
-});
+contributorSchema.virtual('resource')
+    .get(function () {
+        return path.join(config.baseUrl, 'contributor', this._id.toString());
+    });
 
-contributorSchema.index({'$**': 'text'});
+contributorSchema.index({
+    '$**': 'text'
+});
 
 module.exports = mongoose.model('Contributor', contributorSchema);
