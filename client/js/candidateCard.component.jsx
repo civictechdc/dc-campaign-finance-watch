@@ -43,6 +43,14 @@ export default class CandidateCard extends React.Component {
         this.setState({activeChart: chart});
     }
 
+    componentDidMount() {
+        window.addEventListener('resize', this.changeChart(this.state.activeChart));
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.changeChart(this.state.activeChart));
+    }
+
     render() {
         const {candidateName, data} = this.props;
         let shapedData = null;
