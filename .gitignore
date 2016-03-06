@@ -8,3 +8,5 @@ node_modules
 lib/**
 /dc-campaign-finance-mongodatabase
 .DS_Store
+.vscode/
+lib/**
