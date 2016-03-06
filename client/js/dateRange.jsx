@@ -3,7 +3,7 @@
 import moment from 'moment';
 import React from 'react/addons';
 import DayPicker, { DateUtils } from "react-day-picker";
-import {Button, Glyphicon} from 'react-bootstrap';
+import {Button, Glyphicon, Grid, Col} from 'react-bootstrap';
 
 class DateRangeComponent extends React.Component {
     constructor(props){
@@ -21,7 +21,6 @@ class DateRangeComponent extends React.Component {
     }
 
     handleStartDateClick(event, day, modifiers){
-        console.log(day.toISOString());
         this.setState({
             startDate: modifiers.indexOf("selected") > -1 ? null : moment(day.toISOString())
         });
@@ -32,15 +31,12 @@ class DateRangeComponent extends React.Component {
         this.setState({
             endDate: modifiers.indexOf("selected") > -1 ? null : moment(day.toISOString())
         });
+        this.props.onRangeInput(this.state.endDate, this.state.startDate);
     }
 
     render(){
         var start = this.state.startDate.format('YYYY-MM-DD');
         var end = this.state.endDate.format('YYYY-MM-DD');
-
-        console.log(start);
-        console.log(end);
-
         var label = start + ' - ' + end;
         if (start === end) {
             label = start;
@@ -48,21 +44,31 @@ class DateRangeComponent extends React.Component {
 
         return (
 
-            <div className="date-range">
+            <Grid className="date-range">
                 <h4 className="instructions">
                     3. Select a range of dates to pull data from
                 </h4>
-                <h3> Start Date </h3>
-                <DayPicker
-                    initialMonth={ moment().subtract(4, 'years').toDate()}
-                    onDayClick={this.handleStartDateClick.bind(this)}
-                />
-                <h3> End Date </h3>
-                <DayPicker
-                    initialMonth={moment().toDate()}
-                    onDayClick={this.handleEndDateClick.bind(this)}
-                />
-            </div>
+                <Col className="show-grid" xs={6} md={4}>
+                    <h5> Start Date </h5>
+                    <DayPicker
+                        initialMonth={ moment().subtract(4, 'years').toDate()}
+                        onDayClick={this.handleStartDateClick.bind(this)}
+                        modifiers={{
+                        selected: day => DateUtils.isSameDay(this.state.startDate.toDate(), day)
+                      }}
+                    />
+                </Col>
+                <Col className="show-grid" xs={6} md={4}>
+                    <h5> End Date </h5>
+                    <DayPicker
+                        initialMonth={moment().toDate()}
+                        onDayClick={this.handleEndDateClick.bind(this)}
+                        modifiers={{
+                        selected: day => DateUtils.isSameDay(this.state.endDate.toDate(), day)
+                      }}
+                    />
+                </Col>
+            </Grid>
         );
     }
 }
