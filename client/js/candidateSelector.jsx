@@ -1,4 +1,4 @@
-import React from 'react/addons';
+import React from 'react';
 import DateRangeComponent from './dateRange.jsx';
 import CandidatesListComponent from './candidateList.jsx';
 import {Button} from 'react-bootstrap';
