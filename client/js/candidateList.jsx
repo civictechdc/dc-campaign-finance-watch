@@ -18,7 +18,13 @@ class CandidatesListComponent extends React.Component {
             .availableCandidates
             .map(function (candidate) {
                 return (
-                    <Input type="checkbox" label={candidate.name} key={candidate.id} checked={candidate.selected} onChange={onCandidateSelected.bind(this, candidate)}></Input>
+                    <Input
+                        type="checkbox"
+                        label={candidate.name}
+                        key={candidate.id}
+                        checked={candidate.selected}
+                        onChange={onCandidateSelected.bind(this, candidate)}
+                    />
                 );
             });
         return (

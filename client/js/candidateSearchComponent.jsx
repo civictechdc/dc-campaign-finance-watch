@@ -45,7 +45,15 @@ class CandidateSearchComponent extends React.Component {
         let _handleAvailableCandidateClicked = this._handleAvailableCandidateClicked;
         let self = this;
         let candidates = this.state.availableCandidates.map(function(c, index){
-            return (<ListGroupItem key={'available' + index} onClick={_handleAvailableCandidateClicked.bind(self, c)}>{c.displayName}</ListGroupItem>);
+            return (
+                <ListGroupItem
+                    key={'available' + index}
+                    onClick={_handleAvailableCandidateClicked.bind(self, c)}
+                    className="candidate-search-item"
+                >
+                    {c.name}
+                </ListGroupItem>
+            );
         });
         return (
             <div className="candidate-search">
