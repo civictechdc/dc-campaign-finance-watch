@@ -28,7 +28,7 @@ class SelectedCandidatesComponent extends React.Component {
                 );
             });
             return (
-                <div className="block selected-candidates">
+                <div className="selected-candidates">
                     {candidates}
                 </div>
             );

@@ -48,7 +48,7 @@ class CandidateSearchComponent extends React.Component {
             return (<ListGroupItem key={'available' + index} onClick={_handleAvailableCandidateClicked.bind(self, c)}>{c.displayName}</ListGroupItem>);
         });
         return (
-            <div className="block candidate-search">
+            <div className="candidate-search">
                 <h4 className="instructions">2. Search for candidates to visualize</h4>
                 <input onInput={this.inputValue} placeholder="Search for a candidate"/>
                 <ListGroup>
