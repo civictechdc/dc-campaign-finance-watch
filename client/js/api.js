@@ -66,8 +66,8 @@ class Client {
         return this.Rest.getAsync(this.baseUrl + '/candidate/' + candidate.id + '?fromDate=' + dateRange.fromDate.format() + '&toDate=' + dateRange.toDate.format());
     }
 
-    search(value) {
-        return this.Rest.getAsync(this.baseUrl + '/candidate?search=' + value)
+    search(value, limit) {
+        return this.Rest.getAsync(this.baseUrl + '/candidate?search=' + value +'&limit=' + limit)
             .then(function (result) {
                 return result[0];
             });
