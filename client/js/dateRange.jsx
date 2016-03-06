@@ -1,21 +1,15 @@
 'use strict';
 
 import moment from 'moment';
-import React from 'react/addons';
+import React from 'react';
 import DayPicker, { DateUtils } from "react-day-picker";
 import {Button, Glyphicon, Grid, Col, ButtonGroup} from 'react-bootstrap';
 
 class DateRangeComponent extends React.Component {
     constructor(props){
         super(props);
-        this.minimumDate = moment('01/01/2007', 'MM/DD/YYYY');
-        this.maximumDate = moment(new Date());
         this.state = {
-            ranges: {
-                'Last Year': [moment().subtract(1, 'years'), moment()],
-                'Last Two Years': [moment().subtract(2, 'years'), moment()]
-            },
-            startDate: moment().subtract(4, 'years'),
+            startDate: moment().subtract(4,'years'),
             endDate: moment()
         };
     }
@@ -31,8 +25,6 @@ class DateRangeComponent extends React.Component {
         this.setState({
             endDate: modifiers.indexOf("selected") > -1 ? null : moment(day.toISOString())
         });
-        console.log(this.state.endDate);
-        console.log(this.state.startDate);
         this.props.onRangeInput(this.state.endDate, this.state.startDate);
     }
 
@@ -41,6 +33,7 @@ class DateRangeComponent extends React.Component {
             startDate: moment().subtract(years, 'years'),
             endDate: moment()
         });
+        this.props.onRangeInput(this.state.endDate, this.state.startDate);
     }
 
     handleYearPreset(){

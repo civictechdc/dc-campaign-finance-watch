@@ -1,4 +1,4 @@
-import React from 'react/addons';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import {Input} from 'react-bootstrap';
 

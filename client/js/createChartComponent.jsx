@@ -1,4 +1,4 @@
-import React from 'react/addons';
+import React from 'react';
 import {
     Button
 } from 'react-bootstrap';
@@ -64,7 +64,8 @@ class CreateChartComponent extends React.Component {
         var candidates = this.state.selectedCandidates;
         var that = this;
         Promise.all(candidates.map(function(candidate){
-            return Client
+                console.log("This range exist:", range);
+                return Client
                 .getCandidate(candidate, range)
                 .then(function(results){
                     return {candidateName: candidate.name, data: results[0]};
