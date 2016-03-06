@@ -86,7 +86,9 @@ class CreateChartComponent extends React.Component {
                 <LoaderComponent isLoading={this.state.loading}></LoaderComponent>
                 <CandidateSearchComponent onCandidateClicked={this
                     ._handleCandidateSelected
-                    .bind(this)}></CandidateSearchComponent>
+                    .bind(this)}>
+                </CandidateSearchComponent>
+                <hr/>
                 <SelectedCandidatesComponent selectedCandidates={this.state.selectedCandidates} onCandidateRemove={this
                     ._handleRemoveSelectedCandidate
                     .bind(this)}></SelectedCandidatesComponent>
