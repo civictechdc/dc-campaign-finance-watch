@@ -34,6 +34,20 @@ class DateRangeComponent extends React.Component {
         this.props.onRangeInput(this.state.endDate, this.state.startDate);
     }
 
+    handleYearPreset(){
+        this.setState({
+            startDate: moment().subtract(1, 'years'),
+            endDate: moment()
+        });
+    }
+
+    handleTwoYearPreset(){
+        this.setState({
+            startDate: moment().subtract(2, 'years'),
+            endDate: moment()
+        });
+    }
+
     render(){
         var start = this.state.startDate.format('YYYY-MM-DD');
         var end = this.state.endDate.format('YYYY-MM-DD');
@@ -48,10 +62,14 @@ class DateRangeComponent extends React.Component {
                 <h4 className="instructions">
                     3. Select a range of dates to pull data from
                 </h4>
+                <hr/>
+                <Button onClick={this.handleYearPreset.bind(this)}> Last Year </Button>
+                <Button onClick={this.handleTwoYearPreset.bind(this)}> Last 2 Years </Button>
+                <hr/>
                 <Col className="show-grid" xs={6} md={4}>
                     <h5> Start Date </h5>
                     <DayPicker
-                        initialMonth={ moment().subtract(4, 'years').toDate()}
+                        initialMonth={ this.state.startDate.toDate()}
                         onDayClick={this.handleStartDateClick.bind(this)}
                         modifiers={{
                         selected: day => DateUtils.isSameDay(this.state.startDate.toDate(), day)
@@ -61,7 +79,7 @@ class DateRangeComponent extends React.Component {
                 <Col className="show-grid" xs={6} md={4}>
                     <h5> End Date </h5>
                     <DayPicker
-                        initialMonth={moment().toDate()}
+                        initialMonth={this.state.endDate.toDate()}
                         onDayClick={this.handleEndDateClick.bind(this)}
                         modifiers={{
                         selected: day => DateUtils.isSameDay(this.state.endDate.toDate(), day)
