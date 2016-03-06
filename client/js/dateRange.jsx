@@ -3,7 +3,7 @@
 import moment from 'moment';
 import React from 'react/addons';
 import DayPicker, { DateUtils } from "react-day-picker";
-import {Button, Glyphicon, Grid, Col} from 'react-bootstrap';
+import {Button, Glyphicon, Grid, Col, ButtonGroup} from 'react-bootstrap';
 
 class DateRangeComponent extends React.Component {
     constructor(props){
@@ -68,9 +68,11 @@ class DateRangeComponent extends React.Component {
                     3. Select a range of dates to pull data from
                 </h4>
                 <hr/>
-                <Button onClick={this.handleYearPreset.bind(this)}> Last Year </Button>
-                <Button onClick={this.handleTwoYearsPreset.bind(this)}> Last 2 Years </Button>
-                <Button onClick={this.handleTenYearsPreset.bind(this)}> Last 10 Years </Button>
+                <ButtonGroup>
+                    <Button onClick={this.handleYearPreset.bind(this)}> Last Year </Button>
+                    <Button onClick={this.handleTwoYearsPreset.bind(this)}> Last 2 Years </Button>
+                    <Button onClick={this.handleTenYearsPreset.bind(this)}> Last 10 Years </Button>
+                </ButtonGroup>
                 <hr/>
                 <Col className="show-grid" xs={6} md={4}>
                     <h5> Start Date </h5>

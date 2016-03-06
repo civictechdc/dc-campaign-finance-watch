@@ -25,7 +25,7 @@ class CreateChartComponent extends React.Component {
     _handleCandidateSelected (candidate) {
         let selectedCandidates = this.state.selectedCandidates;
         selectedCandidates.unshift(candidate);
-        this.setState({selectedCandidates: selectedCandidates});
+        this.setState({selectedCandidates: _.uniq(selectedCandidates)});
     }
 
     _handleSetSelected (set) {
@@ -95,6 +95,7 @@ class CreateChartComponent extends React.Component {
                 <DateRangeComponent onRangeInput={this
                     ._handleRangeSelected
                     .bind(this)}></DateRangeComponent>
+                <hr/>
                 <div className="block-group">
                     <h4 className="instructions">4. View the visualization</h4>
                     <Button onClick={this
