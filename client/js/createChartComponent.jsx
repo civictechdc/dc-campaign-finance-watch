@@ -89,12 +89,14 @@ class CreateChartComponent extends React.Component {
                     .bind(this)}>
                 </CandidateSearchComponent>
                 <hr/>
-                <SelectedCandidatesComponent selectedCandidates={this.state.selectedCandidates} onCandidateRemove={this
-                    ._handleRemoveSelectedCandidate
-                    .bind(this)}></SelectedCandidatesComponent>
-                <DateRangeComponent onRangeInput={this
-                    ._handleRangeSelected
-                    .bind(this)}></DateRangeComponent>
+                <SelectedCandidatesComponent
+                    selectedCandidates={this.state.selectedCandidates}
+                    onCandidateRemove={this._handleRemoveSelectedCandidate.bind(this)}
+                />
+                <hr/>
+                <DateRangeComponent
+                    onRangeInput={this._handleRangeSelected.bind(this)}
+                />
                 <hr/>
                 <div className="block-group">
                     <h4 className="instructions">4. View the visualization</h4>
