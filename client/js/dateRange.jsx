@@ -34,19 +34,11 @@ class DateRangeComponent extends React.Component {
         this.props.onRangeInput(this.state.endDate, this.state.startDate);
     }
 
-    handleYearPreset(){
+    handleYearsPreset(years){
         this.setState({
-            startDate: moment().subtract(1, 'years'),
+            startDate: moment().subtract(years, 'years'),
             endDate: moment()
         });
-    }
-
-    handleTwoYearPreset(){
-        this.setState({
-            startDate: moment().subtract(2, 'years'),
-            endDate: moment()
-        });
-    }
 
     render(){
         var start = this.state.startDate.format('YYYY-MM-DD');
@@ -63,8 +55,9 @@ class DateRangeComponent extends React.Component {
                     3. Select a range of dates to pull data from
                 </h4>
                 <hr/>
-                <Button onClick={this.handleYearPreset.bind(this)}> Last Year </Button>
-                <Button onClick={this.handleTwoYearPreset.bind(this)}> Last 2 Years </Button>
+                <Button onClick={this.handleYearsPreset(1).bind(this)}> Last Year </Button>
+                <Button onClick={this.handleYearsPreset(2)t.bind(this)}> Last 2 Years </Button>
+                <Button onClick={this.handleYearsPreset(15)t.bind(this)}> Last 15 Years </Button>
                 <hr/>
                 <Col className="show-grid" xs={6} md={4}>
                     <h5> Start Date </h5>
