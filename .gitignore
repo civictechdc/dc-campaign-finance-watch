@@ -5,3 +5,6 @@ node_modules
 .bundle
 .idea
 /dc-campaign-finance-mongodatabase
+.DS_Store
+.vscode/
+.lib/
