@@ -25,7 +25,7 @@ class CreateChartComponent extends React.Component {
     _handleCandidateSelected (candidate) {
         let selectedCandidates = this.state.selectedCandidates;
         selectedCandidates.unshift(candidate);
-        this.setState({selectedCandidates: selectedCandidates});
+        this.setState({selectedCandidates: _.uniq(selectedCandidates)});
     }
 
     _handleSetSelected (set) {
@@ -86,13 +86,18 @@ class CreateChartComponent extends React.Component {
                 <LoaderComponent isLoading={this.state.loading}></LoaderComponent>
                 <CandidateSearchComponent onCandidateClicked={this
                     ._handleCandidateSelected
-                    .bind(this)}></CandidateSearchComponent>
-                <SelectedCandidatesComponent selectedCandidates={this.state.selectedCandidates} onCandidateRemove={this
-                    ._handleRemoveSelectedCandidate
-                    .bind(this)}></SelectedCandidatesComponent>
-                <DateRangeComponent onRangeInput={this
-                    ._handleRangeSelected
-                    .bind(this)}></DateRangeComponent>
+                    .bind(this)}>
+                </CandidateSearchComponent>
+                <hr/>
+                <SelectedCandidatesComponent
+                    selectedCandidates={this.state.selectedCandidates}
+                    onCandidateRemove={this._handleRemoveSelectedCandidate.bind(this)}
+                />
+                <hr/>
+                <DateRangeComponent
+                    onRangeInput={this._handleRangeSelected.bind(this)}
+                />
+                <hr/>
                 <div className="block-group">
                     <h4 className="instructions">4. View the visualization</h4>
                     <Button onClick={this

@@ -73,9 +73,12 @@ gulp.task('nodemon', function () {
 
 gulp.task('serve', ['browsersync']);
 
-gulp.task('browsersync', ['bundle', 'nodemon'], function () {
-    browserSync({
-        files: ['client/**/*.jsx'],
+gulp.task('css-inject', function(){
+   browserSync.reload('*.css');
+});
+gulp.task('browsersync', ['bundle', 'nodemon','css-inject'], function () {
+    browserSync.init({
+        files: ["client/css/*.css", 'client/**/*.jsx', 'client/**/*.js'],
         open: 'local',
         server: 'client',
         ui: {
