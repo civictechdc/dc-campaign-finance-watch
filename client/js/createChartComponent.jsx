@@ -82,15 +82,6 @@ class CreateChartComponent extends React.Component {
         });
     }
 
-    _handleOnMouseOverCreateChart(){
-        return(<div>
-                <Tooltip placement="top" className="in">
-                    Tooltip top
-                </Tooltip>
-        </div>
-        )
-    }
-
     render () {
         return (
             <div className="block-group">
@@ -102,7 +93,7 @@ class CreateChartComponent extends React.Component {
                 />
                 <DateRangeComponent onRangeInput={this._handleRangeSelected.bind(this)}/>
                 <hr/>
-                <div className="block-group">
+                <div className="create-visualization">
                     <h4 className="instructions">3. View the visualization</h4>
                     <h5> Complete the above steps to enable the create visualization button.</h5>
                     <Button
