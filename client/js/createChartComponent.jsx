@@ -83,25 +83,24 @@ class CreateChartComponent extends React.Component {
 
     render () {
         return (
-            <div className="block-group">
+            <div className="dc-campaign-finance">
                 <LoaderComponent isLoading={this.state.loading}></LoaderComponent>
                 <CandidateSearchComponent onCandidateClicked={this
                     ._handleCandidateSelected
                     .bind(this)}>
                 </CandidateSearchComponent>
-                <hr/>
                 <SelectedCandidatesComponent
                     selectedCandidates={this.state.selectedCandidates}
                     onCandidateRemove={this._handleRemoveSelectedCandidate.bind(this)}
                 />
-                <hr/>
                 <DateRangeComponent
                     onRangeInput={this._handleRangeSelected.bind(this)}
                 />
                 <hr/>
                 <div className="block-group">
-                    <h4 className="instructions">4. View the visualization</h4>
+                    <h4 className="instructions">3. View the visualization</h4>
                     <Button
+                        disabled={this.state.loading}
                         onClick={this._handleCreateChart.bind(this)}
                     >
                         Create visualization

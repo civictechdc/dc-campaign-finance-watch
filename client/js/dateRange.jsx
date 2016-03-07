@@ -52,7 +52,7 @@ class DateRangeComponent extends React.Component {
         return (
             <Grid className="date-range">
                 <h4 className="instructions">
-                    3. Select a range of dates to pull data from
+                    2. Select a range of dates to pull data from
                 </h4>
                 <ButtonGroup>
                     <Button onClick={this.handleYearPreset.bind(this)}> Last Year </Button>
