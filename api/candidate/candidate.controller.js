@@ -16,11 +16,12 @@ exports.getCandidates = function (req, res) {
 
 exports.getCandidateById = function (req, res) {
     var candidateId = req.params.id;
+    var campaignIds = req.query.campaigns || [];
     var toDate = req.query.toDate;
     var fromDate = req.query.fromDate;
 
     candidateService
-        .findCandidate(candidateId, toDate, fromDate)
+        .findCandidate(candidateId, campaignIds, toDate, fromDate)
         .then(function (result) {
             result.candidate = result.candidate.toObject({
                 virtuals: true

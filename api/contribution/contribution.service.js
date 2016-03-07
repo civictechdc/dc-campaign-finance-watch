@@ -1,21 +1,27 @@
 // Bluebird
 var Promise = require('bluebird');
-
+var mongoose = require('mongoose');
+mongoose.Promise = Promise;
 var _ = require('lodash');
-
-
-//
 
 // Contribution Model
 var Contribution = require('../../models/contribution');
-Promise.promisifyAll(Contribution);
-
 //Company model
 var Contributor = require('../../models/contributor');
-Promise.promisifyAll(Contributor);
-
 // Company service
 var contributorService = require('../contributor/contributor.service');
+
+exports.getContributionsForCampaign = function(campaignId) {
+    return Contribution.find({
+        campaignId: campaignId
+    })
+    .then(function(contributions){
+        return Contribution.populate(contributions, {
+            path: 'contributor',
+            model: 'Contributor'
+        });
+    });
+};
 
 exports.findTopContributingCompanies = function(limit, year) {
   return Contribution
@@ -31,11 +37,11 @@ exports.findTopContributingCompanies = function(limit, year) {
             .then(function(company){
               result.company = company;
               return result;
-            })
+          });
         });
         return Promise.all(populatedCompanies);
       });
-}
+};
 
 exports.findTopIndividualContributors = function(year) {
   return Contribution
@@ -48,11 +54,11 @@ exports.findTopIndividualContributors = function(year) {
     .then(function(results){
       return results;
     });
-}
+};
 
 exports.addContribution = function(contribution) {
 
-}
+};
 
 function populateCompanyPromise(id, amount) {
   return contributorService
