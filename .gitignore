@@ -4,6 +4,8 @@ client/config.json
 node_modules
 .bundle
 .idea
+.vscode
+lib/**
 /dc-campaign-finance-mongodatabase
 .DS_Store
 .vscode/

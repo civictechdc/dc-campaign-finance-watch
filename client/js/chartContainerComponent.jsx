@@ -1,4 +1,4 @@
-import React from 'react/addons';
+import React from 'react';
 import Chart from './chart.jsx';
 import {
     Button
@@ -22,10 +22,12 @@ class ChartContainerComponent extends React.Component {
     render () {
         if(this.props.chartInfo) {
             return (
-                <div>
-                    <Chart onSvgCreate={this
-                        ._setSvg
-                        .bind(this)} chartInfo={this.props.chartInfo}></Chart>
+                <div className="chart-container">
+                    <hr/>
+                    <Chart
+                        onSvgCreate={this._setSvg.bind(this)}
+                        chartInfo={this.props.chartInfo}
+                    />
                 </div>
             );
         } else {

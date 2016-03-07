@@ -1,4 +1,4 @@
-import React from 'react/addons';
+import React from 'react';
 import DateRangeComponent from './dateRange.jsx';
 import CandidatesListComponent from './candidateList.jsx';
 import {Button} from 'react-bootstrap';
@@ -50,14 +50,18 @@ class CandidateSelectorComponent extends React.Component {
   render() {
     return (
       <div>
-        <h4>2. Select a beginning and end date for the visualization, followed by which candidates should be shown. Due to resource constraints, please select a maximum of two candidates.</h4>
+        <h4>Select a beginning and end date for the visualization,
+          followed by which candidates should be shown. Due to resource constraints,
+          please select a maximum of two candidates.</h4>
         <DateRangeComponent
           range={this.state.range}
           onRangeInput={(toDate, fromDate) => this._rangeSelected(toDate, fromDate)}>
         </DateRangeComponent>
         <CandidatesListComponent
           candidates={this.state.candidates}
-          onCandidateSelection={(id) => this._candidateSelected(id)}></CandidatesListComponent>
+          onCandidateSelection={(id) => this._candidateSelected(id)}
+        >
+        </CandidatesListComponent>
       </div>
     );
   }

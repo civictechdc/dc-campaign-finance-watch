@@ -1,6 +1,7 @@
-import React from 'react/addons';
+import React from 'react';
 import {
-    Button
+    Button,
+Tooltip
 } from 'react-bootstrap';
 import Client from './api';
 import ChartSelectorComponent from './chartSelector.jsx';
@@ -64,10 +65,11 @@ class CreateChartComponent extends React.Component {
         var candidates = this.state.selectedCandidates;
         var that = this;
         Promise.all(candidates.map(function(candidate){
-            return Client
+                console.log("This range exist:", range);
+                return Client
                 .getCandidate(candidate, range)
                 .then(function(results){
-                    return {candidateName: candidate.displayName, data: results[0]};
+                    return {candidateName: candidate.name, data: results[0]};
                 });
         }))
         .then(function(candidates){
@@ -84,26 +86,29 @@ class CreateChartComponent extends React.Component {
         return (
             <div className="block-group">
                 <LoaderComponent isLoading={this.state.loading}></LoaderComponent>
-                <CandidateSearchComponent onCandidateClicked={this
-                    ._handleCandidateSelected
-                    .bind(this)}>
-                </CandidateSearchComponent>
-                <hr/>
+                <CandidateSearchComponent onCandidateClicked={this._handleCandidateSelected.bind(this)}/>
                 <SelectedCandidatesComponent
                     selectedCandidates={this.state.selectedCandidates}
                     onCandidateRemove={this._handleRemoveSelectedCandidate.bind(this)}
                 />
+                <DateRangeComponent onRangeInput={this._handleRangeSelected.bind(this)}/>
                 <hr/>
-                <DateRangeComponent
-                    onRangeInput={this._handleRangeSelected.bind(this)}
-                />
-                <hr/>
-                <div className="block-group">
-                    <h4 className="instructions">4. View the visualization</h4>
-                    <Button onClick={this
-                        ._handleCreateChart
-                        .bind(this)}>Create visualization</Button>
+                <div className="create-visualization">
+                    <h4 className="instructions">3. View the visualization</h4>
+                    <h5> Complete the above steps to enable the create visualization button.</h5>
+                    <Button
+                        disabled={
+                        this.state.loading
+                        || this.state.selectedCandidates.length === 0
+                        || this.state.beginning === null
+                        || this.state.end === null
+                        }
+                        onClick={this._handleCreateChart.bind(this)}
+                    >
+                        Create visualization
+                    </Button>
                 </div>
+                <hr/>
             </div>
         );
     }

@@ -1,4 +1,4 @@
-import React from 'react/addons';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import ContributionOverTimeChart from './contributionOverTimeChart';
 import ContributorBreakdownChart from './contributorBreakdownChart';
