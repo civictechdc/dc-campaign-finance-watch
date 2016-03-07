@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-    Button
+    Button,
+Tooltip
 } from 'react-bootstrap';
 import Client from './api';
 import ChartSelectorComponent from './chartSelector.jsx';
@@ -81,6 +82,15 @@ class CreateChartComponent extends React.Component {
         });
     }
 
+    _handleOnMouseOverCreateChart(){
+        return(<div>
+                <Tooltip placement="top" className="in">
+                    Tooltip top
+                </Tooltip>
+        </div>
+        )
+    }
+
     render () {
         return (
             <div className="block-group">
@@ -94,12 +104,14 @@ class CreateChartComponent extends React.Component {
                 <hr/>
                 <div className="block-group">
                     <h4 className="instructions">3. View the visualization</h4>
+                    <h5> Complete the above steps to enable the create visualization button.</h5>
                     <Button
                         disabled={
                         this.state.loading
                         || this.state.selectedCandidates.length === 0
                         || this.state.beginning === null
-                        || this.state.end === null}
+                        || this.state.end === null
+                        }
                         onClick={this._handleCreateChart.bind(this)}
                     >
                         Create visualization
