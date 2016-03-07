@@ -2,15 +2,14 @@
 
 var Promise = require('bluebird');
 var Moment = require('moment');
-Promise.promisifyAll(require("mongoose"));
+var mongoose = require('mongoose');
+mongoose.Promise = Promise;
 var _ = require('lodash');
-var oldestDate = Moment(new Date('01/01/2006', 'MM/DD/YYYY'));
 
+// Models
 var Candidate = require('../../models/candidate');
-Promise.promisifyAll(Candidate);
-
 var Contribution = require('../../models/contribution');
-Promise.promisifyAll(Contribution);
+var oldestDate = Moment(new Date('01/01/2006', 'MM/DD/YYYY'));
 
 exports.findAllCandidates = function (toDate, fromDate) {
     return Contribution
@@ -30,7 +29,7 @@ exports.findAllCandidates = function (toDate, fromDate) {
         });
 };
 
-exports.findCandidate = function (candidateId, toDate, fromDate) {
+exports.findCandidate = function (candidateId, campaignIds, toDate, fromDate) {
     if(!!toDate) {
         toDate = Moment(toDate);
     } else {
@@ -43,66 +42,112 @@ exports.findCandidate = function (candidateId, toDate, fromDate) {
         fromDate = oldestDate;
     }
 
-    var contributionsPromise = Contribution.findAsync({
-        candidate: candidateId,
-        date: {
-            $gte: fromDate.toDate(),
-            $lt: toDate.toDate()
-        }
-    });
-    var candidatePromise = Candidate.findByIdAsync(candidateId);
     var candidateResponse = {};
-    return Promise.join(candidatePromise, contributionsPromise, function (candidate, contributions) {
+
+    return Candidate.findById(candidateId)
+        .then(function(candidate){
             candidateResponse.candidate = candidate;
-
-            return Contribution.populate(contributions, {
-                path: 'contributor',
-                model: 'Contributor'
+            candidateResponse.candidate.campaigns = candidate.campaigns.filter(function(campaign){
+                return _.contains(campaignIds, campaign.campaignId) || campaignIds.length === 0;
             });
+            var campaignContributionPromises = candidate.campaigns
+                .filter(function(campaign){
+                    return _.contains(campaignIds, campaign.campaignId) || campaignIds.length === 0;
+                })
+                .map(function(campaign){
+                    return Contribution.find({
+                        candidate: candidateId,
+                        campaignId: campaign.campaignId
+                    })
+                    .then(function(contributions){
+                        return Contribution.populate(contributions, {
+                            path: 'contributor',
+                            model: 'Contributor'
+                        });
+                    })
+                    .then(function(contributions){
+                        var campaignModel = candidate.campaigns.find(function(camp){
+                            return camp.campaignId === contributions[0].campaignId;
+                        });
 
+                        var contributionLimit = getContributionLimit(campaignModel.raceTypeDetail);
+
+                        var total = contributions.reduce(function(total, c){
+                            return total + c.amount;
+                        }, 0);
+
+                        var contributionForMaximum = contributions.filter(function(c){
+                            return c.amount === contributionLimit;
+                        });
+
+                        var candidateContributionAmount = contributions.reduce(function(total, c){
+                            if(c.contributor.contributorType === 'Candidate') {
+                                return total + c.amount;
+                            }
+                            return total;
+                        }, 0);
+
+                        var dcContributions = contributions.filter(function(c){
+                            return c.contributor.address.state === 'DC';
+                        });
+
+                        var contributionsLessThan100 = contributions.filter(function(c){
+                            return c.amount < 100;
+                        });
+
+                        var individualsAtCorporateAddress = contributions.filter(function(c){
+                            return c.contributor.contributorType === 'Individual' && c.contributor.address.use !== 'RESIDENTIAL';
+                        });
+
+                        var nonIndividualsAtResidentailAddress = contributions.filter(function(c){
+                            return c.contributor.contributorType !== 'Individual' && c.contributor.address.use !== 'NON RESIDENTIAL';
+                        });
+
+                        var corporateContributionsExist = _.some(contributions, function(c){
+                            return c.contributor.contributorType === 'Corporation' ||
+                                c.contributor.contributorType === 'Corporate Sponsored PAC' ||
+                                c.contributor.contributorType === 'Limited Liability Company' ||
+                                c.contributor.contributorType === 'Sole Proprietorship';
+                        });
+
+
+                        var campaign = {
+                            campaignId: contributions[0].campaignId,
+                            total: total,
+                            campaignContributionLimit: contributionLimit,
+                            maximumContributionPercentage: contributionForMaximum.length / contributions.length,
+                            averageContribution: total / contributions.length,
+                            individualsAtCorporateAddress: individualsAtCorporateAddress.length / contributions.length,
+                            nonIndividualsAtResidentialAddress: nonIndividualsAtResidentailAddress.length / contributions.length,
+                            amountContributedByCandidate: candidateContributionAmount / total,
+                            localContributionPercentage: dcContributions.length / contributions.length,
+                            smallContributionPercentage: contributionsLessThan100.length / contributions.length,
+                            corporateContributionsExist: corporateContributionsExist,
+                            wardConcentrationScore: processWardConcentration(contributions)
+                        };
+                        if(campaignModel.ward) {
+                            //processWardConcentration(campaignModel, contributions);
+                            var wardContributions = contributions.reduce(function(total, c){
+                                if(c.contributor.address.ward === campaignModel.ward) {
+                                    return total + c.amount;
+                                }
+                                return total;
+                            }, 0);
+                            campaign.percentFromWard = wardContributions / total;
+                        }
+                        return campaign;
+                    });
+            });
+            return Promise.all(campaignContributionPromises);
         })
-        .then(function (populatedContributions) {
-            var totalAmount = populatedContributions.reduce(function(total, c){
-                return total + c.amount;
-            }, 0);
-
-            var candidateContributionAmount = populatedContributions.reduce(function(total, c){
-                if(c.contributor.contributorType === 'Candidate') {
-                    return total + c.amount;
-                }
-                return total;
-            }, 0);
-
-            var dcContributions = populatedContributions.filter(function(c){
-                return c.contributor.address.state === 'DC';
-            });
-
-            var contributionsLessThan100 = populatedContributions.filter(function(c){
-                return c.amount < 100;
-            });
-
-            var individualsAtCorporateAddress = populatedContributions.filter(function(c){
-                return c.contributor.contributorType === 'Individual' && c.contributor.address.use !== 'RESIDENTIAL';
-            });
-
-            candidateResponse.contributions = populatedContributions;
-            candidateResponse.totalAmount = totalAmount;
-            candidateResponse.individualContributionAtCorporateAddress = individualsAtCorporateAddress.length/ populatedContributions.length;
-            candidateResponse.amountContributedByCandidate = candidateContributionAmount/totalAmount;
-            candidateResponse.localContributionPercentage = dcContributions.length/populatedContributions.length;
-            candidateResponse.smallContributionPercentage = contributionsLessThan100.length/populatedContributions.length;
-            candidateResponse.areCorporateContributions = _.some(populatedContributions, function(c){
-                return c.contributor.contributorType === 'Corporation' ||
-                    c.contributor.contributorType === 'Corporate Sponsored PAC' ||
-                    c.contributor.contributorType === 'Limited Liability Company' ||
-                    c.contributor.contributorType === 'Sole Proprietorship';
-            });
+        .then(function(campaignContributions){
+            candidateResponse.campaigns = campaignContributions;
             return candidateResponse;
         });
 };
 
 exports.searchForCandidate = function (search) {
-    var textSearch = Candidate.findAsync({
+    var textSearch = Candidate.find({
         $text: {
             $search: search
         }
@@ -113,7 +158,7 @@ exports.searchForCandidate = function (search) {
     });
     var nameRegex = new RegExp('\w*' + search + '\w*');
 
-    var nameSearch = Candidate.findAsync({
+    var nameSearch = Candidate.find({
         'name.last': {$regex: nameRegex, $options: "si"}
     });
     return Promise.join(textSearch, nameSearch)
@@ -122,12 +167,44 @@ exports.searchForCandidate = function (search) {
         });
 };
 
-exports.findElectedCandidates = function (year) {
-    return Candidate.findAsync({
-        positions: {
-            $elemMatch: {
-                'period.from': 2014
-            }
-        }
+function getContributionLimit(campaignType) {
+    switch(campaignType) {
+        case 'Mayor':
+        case 'Shadow U.S. Representative':
+        case 'Shadow U.S. Senator':
+            return 2000;
+        case 'Attorney General':
+        case 'Council - Chair':
+        case 'Council - Chair (Special)':
+            return 1500;
+        case 'Council - At-Large':
+        case 'Council - At-Large (Special)':
+            return 1000;
+        default:
+            return 500;
+    }
+}
+
+
+function processWardConcentration(contributions) {
+    var uniqueDcContributors = _.uniq(contributions.filter(function(contrib){
+        return contrib.contributor.address.state === 'DC';
+    }));
+
+    var wards = _.uniq(contributions.map(function(contrib){
+        return contrib.contributor.address.ward;
+    })).filter(function(ward){
+        return ward !== 'Outside DC' && ward !== 'PO Box';
     });
-};
+    var wardScores = wards.map(function(ward){
+        var uniqueWardContributors = _.uniq(contributions.filter(function(contrib){
+            return contrib.contributor.address.ward === ward;
+        }));
+
+        return Math.pow((uniqueWardContributors.length/uniqueDcContributors.length), 2);
+    });
+
+    return wardScores.reduce(function(total, w){
+        return total + w;
+    }, 0);
+}

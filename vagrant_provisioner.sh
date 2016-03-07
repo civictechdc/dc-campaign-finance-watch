@@ -16,6 +16,10 @@ sudo service mongod start
 echo "Loading up the db"
 mongorestore --host localhost:27017 --drop /vagrant/dc-campaign-finance-mongodatabase
 
+#Intall Redis
+sudo add-apt-repository ppa:chris-lea/redis-server
+sudo apt-get update
+
 cd /vagrant
 echo "Installing local node modules"
 npm install
