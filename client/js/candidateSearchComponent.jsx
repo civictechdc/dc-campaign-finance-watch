@@ -5,6 +5,7 @@ import {
 } from 'rx-react';
 import Client from './api';
 import {ListGroup, ListGroupItem} from 'react-bootstrap';
+import _ from 'lodash';
 
 class CandidateSearchComponent extends React.Component {
     constructor (props) {
