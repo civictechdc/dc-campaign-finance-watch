@@ -29,6 +29,7 @@ class SelectedCandidatesComponent extends React.Component {
             });
             return (
                 <div className="selected-candidates">
+                    <h5>{this.props.selectedCandidates.length > 0 ? 'List of Selected Candidates:' : 'No Candidate Selected' }</h5>
                     {candidates}
                 </div>
             );
