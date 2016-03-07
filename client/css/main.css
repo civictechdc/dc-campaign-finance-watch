@@ -120,3 +120,7 @@ body {
     stroke: #ccc;
     stroke-width: 1.5px;
 }
+
+.date-range.container{
+    padding-left: 0px;
+}

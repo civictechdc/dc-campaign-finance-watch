@@ -19,7 +19,7 @@ export function ProcessContributionsToTree(data) {
         .map(createChildNodes);
 
     return {
-        "name": data.candidate.displayName,
+        "name": data.candidate.name,
         "children": [{
                 "name": "Individual Contributions",
                 "children": individual
@@ -50,7 +50,7 @@ export function ProcessContributorBreakdown(results) {
         })
         .length;
     return {
-        name: results.candidate.displayName,
+        name: results.candidate.name,
         individual: (individualCount / results.contributions.length) * 100,
         corporate: (corporateCount / results.contributions.length) * 100,
         pac: (pacCount / results.contributions.length) * 100
@@ -98,7 +98,7 @@ function convertToDateContrib(results) {
         return {
             amount: contribution.amount,
             date: contribution.date,
-            candidate: results.candidate.displayName
+            candidate: results.candidate.name
         };
     });
     formattedResults = _.sortBy(formattedResults, 'date');
