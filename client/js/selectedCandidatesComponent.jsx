@@ -20,10 +20,10 @@ class SelectedCandidatesComponent extends React.Component {
             let candidates = this.props.selectedCandidates.map(function (c, index) {
                 return (
                     <div key={'selected_' + index}>
-                        <span>{c.name}</span>
                         <Button onClick={removeCandidate.bind(self, c)}>
                             <Glyphicon glyph="remove"></Glyphicon>
                         </Button>
+                        <span>{c.name}</span>
                     </div>
                 );
             });

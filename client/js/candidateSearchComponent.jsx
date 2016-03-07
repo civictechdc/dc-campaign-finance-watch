@@ -57,7 +57,7 @@ class CandidateSearchComponent extends React.Component {
         });
         return (
             <div className="candidate-search">
-                <h4 className="instructions">2. Search for candidates to visualize</h4>
+                <h4 className="instructions">1. Search for candidates to visualize</h4>
                 <input onInput={this.inputValue} placeholder="Search for a candidate"/>
                 <ListGroup>
                     {candidates}
