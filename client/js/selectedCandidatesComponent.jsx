@@ -1,4 +1,4 @@
-import React from 'react/addons';
+import React from 'react';
 import {
     Button,
     Glyphicon
@@ -20,15 +20,16 @@ class SelectedCandidatesComponent extends React.Component {
             let candidates = this.props.selectedCandidates.map(function (c, index) {
                 return (
                     <div key={'selected_' + index}>
-                        <span>{c.displayName}</span>
                         <Button onClick={removeCandidate.bind(self, c)}>
                             <Glyphicon glyph="remove"></Glyphicon>
                         </Button>
+                        <span>{c.name}</span>
                     </div>
                 );
             });
             return (
-                <div className="block selected-candidates">
+                <div className="selected-candidates">
+                    <h5>{this.props.selectedCandidates.length > 0 ? 'List of Selected Candidates:' : 'No Candidate Selected' }</h5>
                     {candidates}
                 </div>
             );
