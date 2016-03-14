@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 sudo apt-get update
 
 # Install node and npm

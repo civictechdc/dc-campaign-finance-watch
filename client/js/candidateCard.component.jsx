@@ -1,4 +1,4 @@
-import React from 'react/addons';
+import React from 'react';
 import ChartSelectorComponent from './chartSelector.jsx';
 import ChartContainerComponent from './chartContainerComponent.jsx';
 import {
@@ -43,6 +43,14 @@ export default class CandidateCard extends React.Component {
         this.setState({activeChart: chart});
     }
 
+    componentDidMount() {
+        window.addEventListener('resize', this.changeChart(this.state.activeChart));
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.changeChart(this.state.activeChart));
+    }
+
     render() {
         const {candidateName, data} = this.props;
         let shapedData = null;
@@ -64,8 +72,8 @@ export default class CandidateCard extends React.Component {
         let chartInfo = {type: this.state.activeChart, data: shapedData};
         console.log(chartInfo);
         return (
-            <div className="col-xs-6">
-                <Well>
+            <div className="candidate-card">
+                <Well bsSize="small">
                     <h1>{candidateName}</h1>
                     <CandidateInfo/>
                     <hr/>
