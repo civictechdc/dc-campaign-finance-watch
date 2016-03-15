@@ -72,6 +72,7 @@ exports.findCandidate = function (candidateId, campaignIds, toDate, fromDate) {
 
                         var contributionLimit = getContributionLimit(campaignModel.raceTypeDetail);
 
+                        // TODO: exclude committee values
                         var total = contributions.reduce(function(total, c){
                             return total + c.amount;
                         }, 0);

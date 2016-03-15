@@ -52,6 +52,13 @@ class Client {
         this.Rest = restClient;
     }
 
+    getCampaignData(campaignId) {
+        return this.Rest.getAsync(this.baseUrl + '/contributions/' + campaignId)
+            .then((result) => {
+                return result[0];
+            });
+    }
+
     getCandidates(toDate, fromDate) {
         let toDateString = toDate.format();
         let fromDateString = fromDate.format();
