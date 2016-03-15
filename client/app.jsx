@@ -32,33 +32,39 @@ class AppRoot extends React.Component {
 
     render () {
         return (
-            <div className="block-group">
+            <div className="container">
                 <header>
-                    <div className="header block">
-                        <span>DC Campaign Finance</span>
+                    <div className="row">
+                        <div className="col-sm-12">
+                            <span>DC Campaign Finance</span>
+                        </div>
                     </div>
                 </header>
                 <main>
-                    <div className="block sub-header">
-                        <h2>Welcome to DC Campaign Finance</h2>
-                        <h3>What information is on this site?</h3>
-                        <ul>
-                            <li>Where political campaign funds come from</li>
-                            <li>How much money different candidates have raised over time</li>
-                        </ul>
+                    <div className="row">
+                        <div className="col-sm-12">
+                            <h2>Welcome to DC Campaign Finance</h2>
+                            <h3>What information is on this site?</h3>
+                            <ul>
+                                <li>Where political campaign funds come from</li>
+                                <li>How much money different candidates have raised over time</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div className="block main">
-                        <div className="block-group">
+                    <div className="row">
+                        <div className="col-sm-12">
                             <div className="block main-header">
                                 <h5>How does it work?</h5>
                             </div>
                             <CreateChartComponent setCandidates={(candidates) => this.setCandidatesForView(candidates)}></CreateChartComponent>
                         </div>
                     </div>
-                    <div className="block graph row">
-                        {this.state.candidates.map(function(candidate, idx){
-                            return (<CandidateCard key={idx} candidateName={candidate.candidateName} data={candidate.data} />);
-                        })}
+                    <div className="graph row">
+                        <div className="col-sm-12">
+                            {this.state.candidates.map(function(candidate, idx){
+                                return (<CandidateCard key={idx} candidateName={candidate.candidateName} data={candidate.data} />);
+                            })}
+                        </div>
                     </div>
                 </main>
             </div>

@@ -3,23 +3,23 @@ import _ from 'lodash';
 import Promise from 'bluebird';
 import Client from './api';
 
-export function ProcessContributionsToTree(data) {
+export function ProcessContributionsToTree(data, name) {
 
     let individual = _.filter(data.contributions, function (c) {
-            return c.contributor.contributionType === 'Individual';
+            return c.contributor.contributorType === 'Individual';
         })
         .map(createChildNodes);
     let corporate = _.filter(data.contributions, function (c) {
-            return c.contributor.contributionType === 'Corporation';
+            return c.contributor.contributorType === 'Corporation';
         })
         .map(createChildNodes);
     let pac = _.filter(data.contributions, function (c) {
-            return c.contributor.contributionType === 'Other';
+            return c.contributor.contributorType === 'Other';
         })
         .map(createChildNodes);
 
     return {
-        "name": data.candidate.name,
+        "name": name,
         "children": [{
                 "name": "Individual Contributions",
                 "children": individual
@@ -35,29 +35,32 @@ export function ProcessContributionsToTree(data) {
     };
 }
 
-export function ProcessContributorBreakdown(results) {
+export function ProcessContributorBreakdown(contributions, name) {
 
-    let individualCount = _.filter(results.contributions, function (c) {
-            return c.contributor.contributionType === 'Individual';
+    let individualCount = _.filter(contributions, function (c) {
+            return c.contributor.contributorType === 'Individual';
         })
         .length;
-    let corporateCount = _.filter(results.contributions, function (c) {
-            return c.contributor.contributionType === 'Corporation';
+    let corporateCount = _.filter(contributions, function (c) {
+            return c.contributor.contributorType === 'Corporation';
         })
         .length;
-    let pacCount = _.filter(results.contributions, function (c) {
-            return c.contributor.contributionType === 'Other';
+    let pacCount = _.filter(contributions, function (c) {
+            return c.contributor.contributorType === 'Other';
         })
         .length;
+    let candidate = _.filter(contributions, (c) => {
+        return c.contributor.contributorType === 'Candidate';
+    });
     return {
-        name: results.candidate.name,
-        individual: (individualCount / results.contributions.length) * 100,
-        corporate: (corporateCount / results.contributions.length) * 100,
-        pac: (pacCount / results.contributions.length) * 100
+        name: name,
+        individual: (individualCount / contributions.length) * 100,
+        corporate: (corporateCount / contributions.length) * 100,
+        pac: (pacCount / contributions.length) * 100
     };
 }
 
-export function ProcessContributionsOverTime(results) {
+export function ProcessContributionsOverTime(results, name) {
     results = [results].map(convertToDateContrib);
 
     let candidates = _.map(results, function (result) {
@@ -82,6 +85,46 @@ export function ProcessContributionsOverTime(results) {
         })
         .sortBy('date');
     return dates.value();
+
+    function convertToDateContrib(contributions) {
+        let formattedResults = contributions.map(function (contribution) {
+            return {
+                amount: contribution.amount,
+                date: contribution.date,
+                candidate: name
+            };
+        });
+        formattedResults = _.sortBy(formattedResults, 'date');
+        let minDate = Moment(formattedResults[0].date, Moment.UTC)
+            .date(1);
+        let maxDate = Moment(_.last(formattedResults)
+                .date, Moment.UTC)
+            .date(1);
+        formattedResults = _.groupBy(formattedResults, function (result) {
+            let tempMin = minDate;
+            let date = Moment(result.date, Moment.UTC);
+            while (tempMin.isBefore(maxDate)) {
+                let tempMinPlusMonth = Moment(tempMin, Moment.UTC)
+                    .add(1, 'months');
+                if (date.isBetween(tempMin, tempMinPlusMonth) || date.isSame(tempMin)) {
+                    return tempMin;
+                }
+                else {
+                    tempMin.add(1, 'months');
+                }
+            }
+            return maxDate;
+        });
+        return _.map(formattedResults, function (contributions, date) {
+            let entry = {
+                date: Moment(date, Moment.UTC)
+            };
+            entry[contributions[0].candidate] = _.reduce(_.pluck(contributions, 'amount'), function (result, contribution) {
+                return result + contribution;
+            }, 0);
+            return entry;
+        });
+    }
 }
 
 
@@ -91,44 +134,4 @@ function createChildNodes(contribution) {
         name: contribution.contributor.name,
         amount: contribution.amount
     };
-}
-
-function convertToDateContrib(results) {
-    let formattedResults = results.contributions.map(function (contribution) {
-        return {
-            amount: contribution.amount,
-            date: contribution.date,
-            candidate: results.candidate.name
-        };
-    });
-    formattedResults = _.sortBy(formattedResults, 'date');
-    let minDate = Moment(formattedResults[0].date, Moment.UTC)
-        .date(1);
-    let maxDate = Moment(_.last(formattedResults)
-            .date, Moment.UTC)
-        .date(1);
-    formattedResults = _.groupBy(formattedResults, function (result) {
-        let tempMin = minDate;
-        let date = Moment(result.date, Moment.UTC);
-        while (tempMin.isBefore(maxDate)) {
-            let tempMinPlusMonth = Moment(tempMin, Moment.UTC)
-                .add(1, 'months');
-            if (date.isBetween(tempMin, tempMinPlusMonth) || date.isSame(tempMin)) {
-                return tempMin;
-            }
-            else {
-                tempMin.add(1, 'months');
-            }
-        }
-        return maxDate;
-    });
-    return _.map(formattedResults, function (contributions, date) {
-        let entry = {
-            date: Moment(date, Moment.UTC)
-        };
-        entry[contributions[0].candidate] = _.reduce(_.pluck(contributions, 'amount'), function (result, contribution) {
-            return result + contribution;
-        }, 0);
-        return entry;
-    });
 }
