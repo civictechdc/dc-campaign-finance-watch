@@ -19,7 +19,7 @@ var watchifyOpts = {
     poll: true
 };
 var bundler = browserify({
-    entries: ['./client/app.jsx'],
+    entries: ['./client/index.jsx'],
     debug: true
 });
 

@@ -1,20 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ChartContainerComponent from './js/chartContainerComponent.jsx';
-import CandidateSelector from './js/candidateSelector.jsx';
-import ChartSelector from './js/chartSelector.jsx';
-import CreateChartComponent from './js/createChartComponent.jsx';
-import CandidateCard from './js/candidateCard.component.jsx';
+import ChartContainerComponent from './chartContainerComponent.jsx';
+import CandidateSelector from './candidateSelector.jsx';
+import ChartSelector from './chartSelector.jsx';
+import CreateChartComponent from './createChartComponent.jsx';
+import CandidateCard from './candidateCard.component.jsx';
 import {
     ProcessContributionsOverTime,
     ProcessContributorBreakdown
-} from './js/chartDataProcessor';
+} from './chartDataProcessor';
 import Rest from 'restler';
 import Promise from 'bluebird';
-import Client from './js/api';
+import Client from './api';
 import d3 from 'd3';
 
-class AppRoot extends React.Component {
+class DataComponent extends React.Component {
     constructor (props) {
         super(props);
         this.state = {candidates :[]};
@@ -32,14 +32,7 @@ class AppRoot extends React.Component {
 
     render () {
         return (
-            <div className="container">
-                <header>
-                    <div className="row">
-                        <div className="col-sm-12">
-                            <span>DC Campaign Finance</span>
-                        </div>
-                    </div>
-                </header>
+            <div>
                 <main>
                     <div className="row">
                         <div className="col-sm-12">
@@ -72,5 +65,4 @@ class AppRoot extends React.Component {
     }
 }
 
-ReactDOM.render(
-    <AppRoot/>, document.getElementById('app'));
+export default DataComponent;
