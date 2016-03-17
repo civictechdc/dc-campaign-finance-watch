@@ -10,7 +10,8 @@ import {
 import {
     ProcessContributionsOverTime,
     ProcessContributorBreakdown,
-    ProcessContributionsToTree
+    ProcessContributionsToTree,
+    ProcessContributionByWard
 } from './chartDataProcessor';
 
 const CandidateInfo = (props) => {
@@ -94,6 +95,9 @@ export default class CandidateCard extends React.Component {
                         case "contributorDendogram":
                             shapedData = ProcessContributionsToTree(cData.data, data.candidate.name);
                             break;
+                        case "contributionByWard":
+                            shapedData = ProcessContributionByWard(cData.data, data.candidate.name);
+                        break;
                         default:
                             break;
                     }
