@@ -15,6 +15,7 @@ class ChartSelectorComponent extends React.Component {
           <option value="contributionOverTime">Contributions Over Time</option>
           <option value="contributorBreakdown">Breakdown of Contributions</option>
           <option value="contributorDendogram">Tree of Contributors</option>
+          <option value="contributionByWard">Contributions by Ward</option>
         </select>
       </div>
     );
