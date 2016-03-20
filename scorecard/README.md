@@ -31,16 +31,16 @@ Contribution data for Area Neighborhood Commissioner candidates is likewise not 
 # Race Parameters
 *Technical Note: the indicator scores are calculated dynamically with linear equations, and the values listed below are the endpoints or breakpoints in the equations used to derive those scores*
 
-## Location (35 total points)
+## Location (40 total points)
 ###Are candidates raising money from their constituents?
 
 **1. % of Money Raised from DC Addresses**
-*(20 points)*
+*(25 points)*
 
 | Indicator Value | Score |
 | :---: | :---: |
 | 50% | 0 points |
-| 100% | 15 points |
+| 100% | 25 points |
 
 **2. % of Money from Ward**
 ***Ward candidates only***
@@ -136,7 +136,7 @@ Explanation: the Geographic Concentration Score is a formula that takes the shar
 | 85% | 10 points |
 
 
-## Contributor Type (25 total points)
+## Contributor Type (30 total points)
 ### Is the money coming from people or from special interests?
 
 **1. Any Corporate Contributions?**
@@ -174,15 +174,17 @@ Note: per master address repository*
 | 25% | 0 points |
 
 **5. % of Money from All Sources but Individuals with Residential Addresses**
-*(15 points)
+*(20 points)
 Note: does not include candidate self-funding. Includes corporate, PAC, unlisted/other, or individuals with business addresses*
 
 | Indicator Value | Score |
 | :---: | :---: |
-| 0 | 15 points |
+| 0 | 20 points |
 | 50% | 0 points |
 
 
+
+# Not Included
 ## Reporting (10 total points)
 ### Is the candidate meeting legal reporting requirements?
 
