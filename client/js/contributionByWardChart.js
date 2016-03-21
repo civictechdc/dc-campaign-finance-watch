@@ -17,18 +17,20 @@ class ContributionByWardChart {
     _drawPoints(el, data) {
         console.log(data);
         this.svg.selectAll('*').remove();
-        var margin = { top: 50, right: 0, bottom: 100, left: 50 },
+        var margin = { top: 50, right: 0, bottom: 100, left: 30 },
         width = 960 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom,
         gridSize = Math.floor(width / 24),
+        height = (data.contributorTypes.length + 3.5) * gridSize  - margin.top - margin.bottom,
         legendElementWidth = gridSize*2,
-        buckets = 9,
         //TODO: better colors?
         //colors = ['#d7191c','#fdae61','#ffffbf','#a6d96a','#1a9641'],
-        colors = /*["#ffffd9","#edf8b1","#c7e9b4",*/ ["#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"], 
+        /*["#ffffd9","#edf8b1","#c7e9b4",*/ 
+        // greens
+        colors = ['#a1d99b','#74c476','#41ab5d','#238b45','#006d2c','#00441b'],
+        //blues
+        //colors = ["#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"], 
         contributions = data.contributions,
-        //TODO: the key currently uses the CampaignId which doesn't mean much by itself
-        campaigns = data.campaigns,
+        contributors = data.contributorTypes,
         wards = ["OSDC", "W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8"];
 
         var svg = this.svg
@@ -37,15 +39,17 @@ class ContributionByWardChart {
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        var campaignLabels = svg.selectAll(".campaignLabel")
-            .data(campaigns)
+        var contributorLabels = svg.selectAll(".contributorLabel")
+            .data(contributors)
             .enter().append("text")
                 .text(function (d) { return d; })
-                .attr("x", 0)
+                .attr("x", gridSize * 9.3 )
                 .attr("y", function (d, i) { return i * gridSize; })
-                .style("text-anchor", "end")
+                .style("text-anchor", "start")
                 .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
-                .attr("class", function (d, i) { return ((i >= 0 && i <= 4) ? "campaignLabel mono axis axis-workweek" : "campaignLabel mono axis"); });
+                .attr("class", "contributorLabel mono axis"); 
+                
+                //function (d, i) { return ((i >= 0 && i <= 4) ? "contributorLabel mono axis axis-workweek" : "contributorLabel mono axis"); });
 
         var wardLabels = svg.selectAll(".wardLabel")
             .data(wards)
@@ -55,18 +59,15 @@ class ContributionByWardChart {
                 .attr("y", 0)
                 .style("text-anchor", "middle")
                 .attr("transform", "translate(" + gridSize / 2 + ", -6)")
-                .attr("class", function(d, i) { return ((i >= 7 && i <= 16) ? "wardLabel mono axis axis-worktime" : "wardLabel mono axis"); });
-                
+                .attr("class", "wardLabel mono axis");
         var colorScale = d3.scale.quantile()
-        .domain([0, buckets - 1, d3.max(contributions, function (d) { 
-            return d.amount; 
-        })])
+        .domain(d3.extent(contributions, function (d){return d.amount;}))
         .range(colors);
 
         var cards = svg.selectAll(".card")
             .data(contributions, function(d) {
             	var ward = d.ward.split(" ")[1];
-            	var coords = (campaigns.indexOf(d.campaignId))+":"+(!isNaN(ward)?ward:0);
+            	var coords = (contributors.indexOf(d.contributorType))+":"+(!isNaN(ward)?ward:0);
                console.log(coords);
                return coords; 
             });
@@ -79,8 +80,8 @@ class ContributionByWardChart {
                 return (!isNaN(ward)?ward:0) * gridSize;
             })
             .attr("y", function(d) { 
-                return (campaigns.indexOf(d.campaignId)) * gridSize })
-            .attr("rx", 4) // border radius
+                return (contributors.indexOf(d.contributorType)) * gridSize })
+            .attr("rx", 4)
             .attr("ry", 4)
             .attr("class", "card bordered")
             .attr("width", gridSize)
@@ -94,7 +95,7 @@ class ContributionByWardChart {
         
         cards.exit().remove();
 
-        var legend = svg.selectAll(".legend") //legend data bound here....
+        var legend = svg.selectAll(".legend")
             .data([0].concat(colorScale.quantiles()), function(d) { return d; });
 
         legend.enter().append("g")
@@ -102,16 +103,16 @@ class ContributionByWardChart {
 
         legend.append("rect")
             .attr("x", function(d, i) { return legendElementWidth * i; })
-            .attr("y", height)
+            .attr("y", (height + gridSize ) )
             .attr("width", legendElementWidth)
             .attr("height", gridSize / 2)
             .style("fill", function(d, i) { return colors[i]; });
 
         legend.append("text")
             .attr("class", "mono")
-            .text(function(d) { return "≥ " + Math.round(d); })
+            .text(function(d) { return "≥ $" + Math.round(d); })
             .attr("x", function(d, i) { return legendElementWidth * i; })
-            .attr("y", height + gridSize);
+            .attr("y", (height + gridSize * 2) );
 
         legend.exit().remove();
   
