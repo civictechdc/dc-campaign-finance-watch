@@ -129,20 +129,16 @@ export function ProcessContributionsOverTime(results, name) {
 
 export function ProcessContributionByWard(results) {
     //nest results by campaignId and ward;
-    let byCampaignId = function(c) {
-        return c.campaignId;
-    };
-    let byWard = function(c) {
-        return c.contributor.address.ward;
-    };
-    var nested = nest(results, [byCampaignId, byWard]) 
+    var nested = nest(results, [
+    function(c) { return c.contributor.contributorType; }, 
+    function(c) { return c.contributor.address.ward; } ]); 
         
     //Map reduce the nested results to [{campaignId, ward, ammount}].
     let combined = [];
-    _.each(nested, function(e, camp) {
+    _.each(nested, function(e, c) {
         let mapped = _.map(e, function(e,ward) {
             return {
-            campaignId: camp,
+            contributorType: c,
             ward: ward,
             amount: _.sum(e, function(o) { return o.amount; }) 
             };
@@ -154,7 +150,7 @@ export function ProcessContributionByWard(results) {
     var flat = _.flatten(combined);
    
     return {
-   	    campaigns: _.chain(flat).map(byCampaignId).uniq().value(),
+   	    contributorTypes: _.chain(flat).map("contributorType").uniq().value(),
    	    contributions: flat
     }
 }
