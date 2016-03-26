@@ -127,6 +127,33 @@ export function ProcessContributionsOverTime(results, name) {
     }
 }
 
+export function ProcessContributionByWard(results) {
+    //nest results by campaignId and ward;
+    var nested = nest(results, [
+    function(c) { return c.contributor.contributorType; }, 
+    function(c) { return c.contributor.address.ward; } ]); 
+        
+    //Map reduce the nested results to [{campaignId, ward, ammount}].
+    let combined = [];
+    _.each(nested, function(e, c) {
+        let mapped = _.map(e, function(e,ward) {
+            return {
+            contributorType: c,
+            ward: ward,
+            amount: _.sum(e, function(o) { return o.amount; }) 
+            };
+        }); //map
+        //add to result set.
+        combined.push(mapped);
+    }); //each
+    
+    var flat = _.flatten(combined);
+   
+    return {
+   	    contributorTypes: _.chain(flat).map("contributorType").uniq().value(),
+   	    contributions: flat
+    }
+}
 
 // private
 function createChildNodes(contribution) {
@@ -135,3 +162,13 @@ function createChildNodes(contribution) {
         amount: contribution.amount
     };
 }
+
+var nest = function (seq, keys) {
+    if (!keys.length)
+        return seq;
+    var first = keys[0];
+    var rest = keys.slice(1);
+    return _.mapValues(_.groupBy(seq, first), function (value) { 
+        return nest(value, rest)
+    });
+};
