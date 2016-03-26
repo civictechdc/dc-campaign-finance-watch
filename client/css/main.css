@@ -124,3 +124,8 @@ body {
 .date-range.container{
     padding-left: 0px;
 }
+
+rect.bordered {
+    stroke: #E6E6E6;
+    stroke-width:2px;   
+}
