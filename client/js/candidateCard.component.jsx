@@ -1,32 +1,34 @@
 import React from 'react';
 import ChartSelectorComponent from './chartSelector.jsx';
 import ChartContainerComponent from './chartContainerComponent.jsx';
+import _ from 'lodash';
+import Client from './api';
+import Promise from 'bluebird';
 import {
-    Well
+    Panel
 } from 'react-bootstrap';
 import {
     ProcessContributionsOverTime,
     ProcessContributorBreakdown,
-    ProcessContributionsToTree
+    ProcessContributionsToTree,
+    ProcessContributionByWard
 } from './chartDataProcessor';
 
-const CandidateInfo = () => {
+const CandidateInfo = (props) => {
+    const { info } = props;
+    const ward = info.percentFromWard ? (<div>Percentage Raised from Ward: {(_.round(info.percentFromWard, 3)) *100}%</div>) : (false);
     return (
-        <div className="row">
-            <div className="col-xs-6">
-                <h4>Contribution Breakdown</h4>
-                <ul>
-                    <li>65% from within DC: -10</li>
-                    <li>85% of contributions were for the maximum: -5</li>
-                </ul>
-            </div>
-            <div className="col-xs-6">
-                <h4>Transparency</h4>
-                <ul>
-                    <li>85% of records completed to the legal limit: -5</li>
-                    <li>15% fo recrods were complte: -5</li>
-                </ul>
-            </div>
+        <div className="col-sm-12">
+            <h4>Campaign Statistics</h4>
+            <div>Total Raised: ${_.round(info.total, 2)}</div>
+            <div>Average Contribution: ${_.round(info.averageContribution, 2)}</div>
+            <div>Amount Contributed by Candidate: {(_.round(info.amountContributedByCandidate, 3)) * 100}%</div>
+            <div>Percentage Raised in D.C.: {(_.round(info.localContributionPercentage,3)) * 100}%</div>
+            <div>Contributions less than $100: {(_.round(info.smallContributionPercentage, 3)) * 100}%</div>
+            <div>Percentage of Contributions for the Maxium Allowed: {(_.round(info.maximumContributionPercentage, 3)) * 100}%</div>
+            <div>Individuals Contributing from a Corporate Address: {(_.round(info.individualsAtCorporateAddress,3)) * 100}%</div>
+            {ward}
+            <div>Ward Concentration Score: {_.round(info.wardConcentrationScore, 5)}</div>
         </div>
     );
 };
@@ -43,6 +45,18 @@ export default class CandidateCard extends React.Component {
         this.setState({activeChart: chart});
     }
 
+    componentWillMount() {
+        const { data } = this.props;
+        return Client.getCampaignData(data.campaignId)
+            .then((data) => {
+                return {campaignId: data.campaignId, data: data };
+            })
+            .then((campaign) =>{
+                this.setState({chartData: campaign});
+            });
+
+    }
+
     componentDidMount() {
         window.addEventListener('resize', this.changeChart(this.state.activeChart));
     }
@@ -53,33 +67,44 @@ export default class CandidateCard extends React.Component {
 
     render() {
         const {candidateName, data} = this.props;
-        let shapedData = null;
-        if(this.state.activeChart) {
-            switch (this.state.activeChart) {
-                case "contributionOverTime":
-                    shapedData = ProcessContributionsOverTime(data);
-                    break;
-                case "contributorBreakdown":
-                    shapedData = ProcessContributorBreakdown(data);
-                    break;
-                case "contributorDendogram":
-                    shapedData = ProcessContributionsToTree(data);
-                    break;
-                default:
-                    break;
-            }
+        let chart = false;
+        if(this.state.chartData) {
+                let shapedData = null;
+                if(this.state.activeChart) {
+                    switch (this.state.activeChart) {
+                        case "contributionOverTime":
+                            shapedData = ProcessContributionsOverTime(this.state.chartData.data, candidateName);
+                            break;
+                        case "contributorBreakdown":
+                            shapedData = ProcessContributorBreakdown(this.state.chartData.data, candidateName);
+                            break;
+                        case "contributorDendogram":
+                            shapedData = ProcessContributionsToTree(this.state.chartData.data, candidateName);
+                            break;
+                        case "contributionByWard":
+                            shapedData = ProcessContributionByWard(this.state.chartData.data, candidateName);
+                        break;
+                        default:
+                            break;
+                    }
+                }
+                const chartInfo = { type: this.state.activeChart, data: shapedData };
+                chart = (
+                    <div>
+                        <ChartContainerComponent chartInfo={chartInfo} />
+                    </div>
+                );
         }
-        let chartInfo = {type: this.state.activeChart, data: shapedData};
-        console.log(chartInfo);
         return (
             <div className="candidate-card">
-                <Well bsSize="small">
+                <Panel>
                     <h1>{candidateName}</h1>
-                    <CandidateInfo/>
+                    <h3>Race: {data.raceType} {data.year}</h3>
+                    <CandidateInfo info={data}/>
                     <hr/>
                     <ChartSelectorComponent onChartSelected={this.changeChart}/>
-                    <ChartContainerComponent chartInfo={chartInfo} />
-                </Well>
+                    {chart || false}
+                </Panel>
             </div>
         );
     }

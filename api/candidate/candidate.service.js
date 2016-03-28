@@ -11,6 +11,22 @@ var Candidate = require('../../models/candidate');
 var Contribution = require('../../models/contribution');
 var oldestDate = Moment(new Date('01/01/2006', 'MM/DD/YYYY'));
 
+exports.findCandidateByRaceAndYear = function(race, fromYear, toYear) {
+    console.log(toYear);
+    return Candidate.find({'campaigns.raceType': race, 'campaigns.year': {'$gte': Number(fromYear), '$lte': Number(toYear)}})
+        .then(function(candidates) {
+            return candidates.map(function(c){
+                return {
+                    id: c.id,
+                    name: c.name,
+                    campaigns: c.campaigns.filter(function(ca){
+                        return ca.year >= fromYear && ca.year <= toYear  && ca.raceType === race;
+                    })
+                };
+            });
+        });
+};
+
 exports.findAllCandidates = function (toDate, fromDate) {
     return Contribution
         .find({
@@ -48,11 +64,11 @@ exports.findCandidate = function (candidateId, campaignIds, toDate, fromDate) {
         .then(function(candidate){
             candidateResponse.candidate = candidate;
             candidateResponse.candidate.campaigns = candidate.campaigns.filter(function(campaign){
-                return _.contains(campaignIds, campaign.campaignId) || campaignIds.length === 0;
+                return _.includes(campaignIds, campaign.campaignId) || campaignIds.length === 0;
             });
             var campaignContributionPromises = candidate.campaigns
                 .filter(function(campaign){
-                    return _.contains(campaignIds, campaign.campaignId) || campaignIds.length === 0;
+                    return _.includes(campaignIds, campaign.campaignId) || campaignIds.length === 0;
                 })
                 .map(function(campaign){
                     return Contribution.find({
@@ -141,6 +157,8 @@ exports.findCandidate = function (candidateId, campaignIds, toDate, fromDate) {
 
                         var campaign = {
                             campaignId: contributions[0].campaignId,
+                            year: campaignModel.year,
+                            raceType: campaignModel.raceTypeDetail,
                             total: total,
                             campaignContributionLimit: contributionLimit,
                             maximumContributionPercentage: contributionForMaximum.length / newContribs.length,
@@ -181,7 +199,7 @@ exports.searchForCandidate = function (search) {
     var nameRegex = new RegExp('\w*' + search + '\w*');
 
     var nameSearch = Candidate.find({
-        'name.last': {$regex: nameRegex, $options: "si"}
+        'name': {$regex: nameRegex, $options: "si"}
     });
     return Promise.join(textSearch, nameSearch)
         .then(function (textResults, nameResults) {

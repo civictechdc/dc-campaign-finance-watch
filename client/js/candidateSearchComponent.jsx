@@ -4,8 +4,9 @@ import {
     FuncSubject
 } from 'rx-react';
 import Client from './api';
-import {ListGroup, ListGroupItem} from 'react-bootstrap';
+import {ButtonToolbar, Button, Row, Col} from 'react-bootstrap';
 import _ from 'lodash';
+import Promise from 'bluebird';
 
 class CandidateSearchComponent extends React.Component {
     constructor (props) {
@@ -29,7 +30,10 @@ class CandidateSearchComponent extends React.Component {
             .debounce(500)
             .distinctUntilChanged()
             .flatMapLatest(function (value) {
-                return Client.search(value);
+                if(value) {
+                    return Client.search(value);
+                }
+                return Promise.resolve([]);
             })
             .subscribe(function (data) {
                 self.setState({availableCandidates: data});
@@ -43,26 +47,42 @@ class CandidateSearchComponent extends React.Component {
     }
 
     render () {
-        let _handleAvailableCandidateClicked = this._handleAvailableCandidateClicked;
-        let self = this;
-        let candidates = this.state.availableCandidates.map(function(c, index){
-            return (
-                <ListGroupItem
-                    key={'available' + index}
-                    onClick={_handleAvailableCandidateClicked.bind(self, c)}
-                    className="candidate-search-item"
-                >
-                    {c.name}
-                </ListGroupItem>
-            );
-        });
+        const { handleCampaignSelection } = this.props;
+        const { availableCandidates } = this.state;
         return (
-            <div className="candidate-search">
-                <h4 className="instructions">1. Search for candidates to visualize</h4>
-                <input onInput={this.inputValue} placeholder="Search for a candidate"/>
-                <ListGroup>
-                    {candidates}
-                </ListGroup>
+            <div>
+                <Row>
+                    <Col xs={3}>
+                        <h5>Search by candidate name</h5>
+                        <input onInput={this.inputValue} placeholder="Search for a candidate"/>
+                    </Col>
+                    <Col xs={9}>
+                        <h3>Search Results:</h3>
+                        {
+                            availableCandidates.map((c, idx) => {
+                                return (
+                                    <Row key={idx}>
+                                        <Col xs={4}>
+                                            <h5>{c.name}: </h5>
+                                        </Col>
+                                        <Col xs={8}>
+                                            <ButtonToolbar key={idx}>
+                                                {
+                                                    c.campaigns.map((ca, idx) => {
+                                                        return (
+                                                            <Button onClick={() => handleCampaignSelection(c.name, c.id, ca)} bsSize="small" key={idx}>{ca.raceTypeDetail} {ca.year}</Button>
+                                                        );
+                                                    })
+                                                }
+                                            </ButtonToolbar>
+                                        </Col>
+                                        <hr/>
+                                    </Row>
+                                );
+                            })
+                        }
+                    </Col>
+                </Row>
             </div>
         );
     }

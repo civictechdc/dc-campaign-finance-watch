@@ -15,6 +15,7 @@ class ContributionOverTimeChart {
   }
 
   _drawPoints(el, data) {
+      console.log(data);
     this.svg.selectAll('*').remove();
     let width = el.offsetWidth;
     let height = el.offsetHeight;
