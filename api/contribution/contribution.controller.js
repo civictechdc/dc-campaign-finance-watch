@@ -1,5 +1,6 @@
 // Contributor Service
 var contributionService = require('../contribution/contribution.service');
+var redis = require('../redisClient').client;
 
 exports.getTopIndividaulContributors = function(req, res){
   contributionService
@@ -11,9 +12,20 @@ exports.getTopIndividaulContributors = function(req, res){
 
 exports.getContributionsForCampaign = function(req, res) {
     var campaign = req.params.campaign;
-
-    contributionService.getContributionsForCampaign(campaign)
+    redis.getAsync(req.url)
+        .then(function(value){
+            if(value) {
+                return value.results;
+            }
+            return contributionService.getContributionsForCampaign(campaign);
+        })
         .then(function(contributions){
-            return res.send(contributions);
+            if(contributions.length < 500) {
+                redis.setAsync(req.url, {results: contributions});
+            }
+            res.send(contributions);
+        })
+        .catch(function(err){
+            console.log(err);
         });
 };

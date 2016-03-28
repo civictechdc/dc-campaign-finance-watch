@@ -17,7 +17,8 @@ var candidateSchema = new Schema({
         campaignId: String,
         raceType: String,
         raceTypeDetail: String,
-        ward: String
+        ward: String,
+        year: Number
     }]
 });
 
