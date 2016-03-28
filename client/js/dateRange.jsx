@@ -3,7 +3,7 @@
 import moment from 'moment';
 import React from 'react';
 import DayPicker, { DateUtils } from "react-day-picker";
-import {Button, Glyphicon, Grid, Col, ButtonGroup} from 'react-bootstrap';
+import {Button, Glyphicon, Grid, Col, ButtonGroup, Row} from 'react-bootstrap';
 
 class DateRangeComponent extends React.Component {
     constructor(props){
@@ -29,11 +29,13 @@ class DateRangeComponent extends React.Component {
     }
 
     handleYearsPreset(years){
+        let startDate = moment().subtract(years, 'years');
+        let endDate = moment();
         this.setState({
-            startDate: moment().subtract(years, 'years'),
-            endDate: moment()
+            startDate: startDate,
+            endDate: endDate
         });
-        this.props.onRangeInput(this.state.endDate, this.state.startDate);
+        this.props.onRangeInput(endDate, startDate);
     }
 
     handleYearPreset(){
@@ -50,37 +52,43 @@ class DateRangeComponent extends React.Component {
 
     render(){
         return (
-            <Grid className="date-range">
-                <h4 className="instructions">
-                    2. Select a range of dates to pull data from
-                </h4>
-                <ButtonGroup>
-                    <Button onClick={this.handleYearPreset.bind(this)}> Last Year </Button>
-                    <Button onClick={this.handleTwoYearsPreset.bind(this)}> Last 2 Years </Button>
-                    <Button onClick={this.handleTenYearsPreset.bind(this)}> Last 10 Years </Button>
-                </ButtonGroup>
-                <hr/>
-                <Col className="show-grid" xs={6} md={4}>
-                    <h5> Custom Start Date </h5>
-                    <DayPicker
-                        initialMonth={ this.state.startDate.toDate()}
-                        onDayClick={this.handleStartDateClick.bind(this)}
-                        modifiers={{
-                        selected: day => DateUtils.isSameDay(this.state.startDate.toDate(), day)
-                      }}
-                    />
-                </Col>
-                <Col className="show-grid" xs={6} md={4}>
-                    <h5>Custom End Date </h5>
-                    <DayPicker
-                        initialMonth={this.state.endDate.toDate()}
-                        onDayClick={this.handleEndDateClick.bind(this)}
-                        modifiers={{
-                        selected: day => DateUtils.isSameDay(this.state.endDate.toDate(), day)
-                      }}
-                    />
-                </Col>
-            </Grid>
+            <div>
+                <Row>
+                    <Col xs={12}>
+                        <ButtonGroup>
+                            <Button onClick={this.handleYearPreset.bind(this)}> Last Year </Button>
+                            <Button onClick={this.handleTwoYearsPreset.bind(this)}> Last 2 Years </Button>
+                            <Button onClick={this.handleTenYearsPreset.bind(this)}> Last 10 Years </Button>
+                        </ButtonGroup>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={12}>
+                        <Row>
+                            <Col className="show-grid" xs={6}>
+                                <h5> Custom Start Date </h5>
+                                <DayPicker
+                                    initialMonth={ this.state.startDate.toDate()}
+                                    onDayClick={this.handleStartDateClick.bind(this)}
+                                    modifiers={{
+                                    selected: day => DateUtils.isSameDay(this.state.startDate.toDate(), day)
+                                  }}
+                                />
+                            </Col>
+                            <Col className="show-grid" xs={6}>
+                                <h5>Custom End Date </h5>
+                                <DayPicker
+                                    initialMonth={this.state.endDate.toDate()}
+                                    onDayClick={this.handleEndDateClick.bind(this)}
+                                    modifiers={{
+                                    selected: day => DateUtils.isSameDay(this.state.endDate.toDate(), day)
+                                  }}
+                                />
+                            </Col>
+                        </Row>
+                    </Col>
+                </Row>
+            </div>
         );
     }
 }
