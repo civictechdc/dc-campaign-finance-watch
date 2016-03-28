@@ -7,7 +7,6 @@ export default class LoaderComponent extends React.Component {
 
     render() {
         if(this.props.isLoading) {
-            console.log('SHOWING LOADER');
             return (
                 <div className="loader">Loading...</div>
             );

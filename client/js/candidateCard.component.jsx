@@ -5,7 +5,7 @@ import _ from 'lodash';
 import Client from './api';
 import Promise from 'bluebird';
 import {
-    Well
+    Panel
 } from 'react-bootstrap';
 import {
     ProcessContributionsOverTime,
@@ -16,30 +16,19 @@ import {
 
 const CandidateInfo = (props) => {
     const { info } = props;
-    const campaigns = info.campaigns.map((camp, idx) => {
-        let campaignInfo = info.candidate.campaigns.find((c) => {
-            return c.campaignId === camp.campaignId;
-        });
-        const ward = camp.percentFromWard ? (<div>Percentage Raised from Ward: {(_.round(camp.percentFromWard, 3)) *100}%</div>) : (false);
-        return (
-            <div key={idx} className="col-sm-6">
-                <h3>Race: {campaignInfo.raceTypeDetail}</h3>
-                <h4>Campaign Statistics</h4>
-                <div>Total Raised: ${_.round(camp.total, 2)}</div>
-                <div>Average Contribution: ${_.round(camp.averageContribution, 2)}</div>
-                <div>Amount Contributed by Candidate: {(_.round(camp.amountContributedByCandidate, 3)) * 100}%</div>
-                <div>Percentage Raised in D.C.: {(_.round(camp.localContributionPercentage,3)) * 100}%</div>
-                <div>Contributions less than $100: {(_.round(camp.smallContributionPercentage, 3)) * 100}%</div>
-                <div>Percentage of Contributions for the Maxium Allowed: {(_.round(camp.maximumContributionPercentage, 3)) * 100}%</div>
-                <div>Individuals Contributing from a Corporate Address: {(_.round(camp.individualsAtCorporateAddress,3)) * 100}%</div>
-                {ward}
-                <div>Ward Concentration Score: {_.round(camp.wardConcentrationScore, 5)}</div>
-            </div>
-        );
-    });
+    const ward = info.percentFromWard ? (<div>Percentage Raised from Ward: {(_.round(info.percentFromWard, 3)) *100}%</div>) : (false);
     return (
-        <div className="row">
-                {campaigns}
+        <div className="col-sm-12">
+            <h4>Campaign Statistics</h4>
+            <div>Total Raised: ${_.round(info.total, 2)}</div>
+            <div>Average Contribution: ${_.round(info.averageContribution, 2)}</div>
+            <div>Amount Contributed by Candidate: {(_.round(info.amountContributedByCandidate, 3)) * 100}%</div>
+            <div>Percentage Raised in D.C.: {(_.round(info.localContributionPercentage,3)) * 100}%</div>
+            <div>Contributions less than $100: {(_.round(info.smallContributionPercentage, 3)) * 100}%</div>
+            <div>Percentage of Contributions for the Maxium Allowed: {(_.round(info.maximumContributionPercentage, 3)) * 100}%</div>
+            <div>Individuals Contributing from a Corporate Address: {(_.round(info.individualsAtCorporateAddress,3)) * 100}%</div>
+            {ward}
+            <div>Ward Concentration Score: {_.round(info.wardConcentrationScore, 5)}</div>
         </div>
     );
 };
@@ -58,16 +47,14 @@ export default class CandidateCard extends React.Component {
 
     componentWillMount() {
         const { data } = this.props;
-        const campaignPromises = data.campaigns.map((c) =>{
-            return Client.getCampaignData(c.campaignId)
-                .then((data) => {
-                    return {campaignId: c.campaignId, data: data };
-                });
-        });
-        return Promise.all(campaignPromises)
-            .then((campaigns) =>{
-                this.setState({chartData: campaigns});
+        return Client.getCampaignData(data.campaignId)
+            .then((data) => {
+                return {campaignId: data.campaignId, data: data };
+            })
+            .then((campaign) =>{
+                this.setState({chartData: campaign});
             });
+
     }
 
     componentDidMount() {
@@ -80,46 +67,44 @@ export default class CandidateCard extends React.Component {
 
     render() {
         const {candidateName, data} = this.props;
-        let charts = false;
+        let chart = false;
         if(this.state.chartData) {
-            charts = this.state.chartData.map((cData) => {
                 let shapedData = null;
                 if(this.state.activeChart) {
                     switch (this.state.activeChart) {
                         case "contributionOverTime":
-                            shapedData = ProcessContributionsOverTime(cData.data, data.candidate.name);
+                            shapedData = ProcessContributionsOverTime(this.state.chartData.data, candidateName);
                             break;
                         case "contributorBreakdown":
-                            shapedData = ProcessContributorBreakdown(cData.data, data.candidate.name);
+                            shapedData = ProcessContributorBreakdown(this.state.chartData.data, candidateName);
                             break;
                         case "contributorDendogram":
-                            shapedData = ProcessContributionsToTree(cData.data, data.candidate.name);
+                            shapedData = ProcessContributionsToTree(this.state.chartData.data, candidateName);
                             break;
                         case "contributionByWard":
-                            shapedData = ProcessContributionByWard(cData.data, data.candidate.name);
+                            shapedData = ProcessContributionByWard(this.state.chartData.data, candidateName);
                         break;
                         default:
                             break;
                     }
                 }
                 const chartInfo = { type: this.state.activeChart, data: shapedData };
-                return (
+                chart = (
                     <div>
-                        <h4>{cData.campaignId}</h4>
                         <ChartContainerComponent chartInfo={chartInfo} />
                     </div>
                 );
-            });
         }
         return (
             <div className="candidate-card">
-                <Well bsSize="small">
+                <Panel>
                     <h1>{candidateName}</h1>
+                    <h3>Race: {data.raceType} {data.year}</h3>
                     <CandidateInfo info={data}/>
                     <hr/>
                     <ChartSelectorComponent onChartSelected={this.changeChart}/>
-                    {charts || false}
-                </Well>
+                    {chart || false}
+                </Panel>
             </div>
         );
     }
