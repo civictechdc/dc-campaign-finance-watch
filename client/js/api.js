@@ -52,6 +52,13 @@ class Client {
         this.Rest = restClient;
     }
 
+    getCampaignData(campaignId) {
+        return this.Rest.getAsync(this.baseUrl + '/contributions/' + campaignId)
+            .then((result) => {
+                return result[0];
+            });
+    }
+
     getCandidates(toDate, fromDate) {
         let toDateString = toDate.format();
         let fromDateString = fromDate.format();
@@ -62,8 +69,22 @@ class Client {
             });
     }
 
-    getCandidate(candidate, dateRange) {
-        return this.Rest.getAsync(this.baseUrl + '/candidate/' + candidate.id + '?fromDate=' + dateRange.fromDate.format() + '&toDate=' + dateRange.toDate.format());
+    getCandidate(candidate) {
+        const campaignSearch = _.join(candidate.campaigns.map((ca) => {
+            return 'campaigns=' + ca.campaignId;
+        }), '&');
+        return this.Rest.getAsync(this.baseUrl + '/candidate/' + candidate.id + '?' + campaignSearch);
+    }
+
+    getCampaigns(race, dateRange) {
+        if(!dateRange) {
+            return this.Rest.getAsync(this.baseUrl + '/electionSearch' + '?raceType=' + race);
+        }
+        return this.Rest.getAsync(this.baseUrl + '/electionSearch' + '?raceType=' + race + '&fromDate=' + dateRange.fromDate.format() + '&toDate=' + dateRange.toDate.format());
+    }
+
+    getRaces() {
+        return this.Rest.getAsync(this.baseUrl + '/races');
     }
 
     search(value) {

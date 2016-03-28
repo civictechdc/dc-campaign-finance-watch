@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import ContributionOverTimeChart from './contributionOverTimeChart';
 import ContributorBreakdownChart from './contributorBreakdownChart';
 import ContributorDendogram from './contributorDendogramChart';
+import ContributionByWardChart from './contributionByWardChart';
 
 class Chart extends React.Component {
     constructor (props) {
@@ -50,6 +51,8 @@ class Chart extends React.Component {
                 return new ContributorBreakdownChart(el, this.getChartState());
             case 'contributorDendogram':
                 return new ContributorDendogram(el, this.getChartState());
+            case 'contributionByWard':
+                return new ContributionByWardChart(el, this.getChartState());
         }
     }
 

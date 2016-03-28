@@ -6,7 +6,6 @@ Tooltip
 import Client from './api';
 import ChartSelectorComponent from './chartSelector.jsx';
 import DateRangeComponent from './dateRange.jsx';
-import CandidatesListComponent from './candidateList.jsx';
 import CandidateSearchComponent from './candidateSearchComponent.jsx';
 import SelectedCandidatesComponent from './selectedCandidatesComponent.jsx';
 import LoaderComponent from './loader.component.jsx';
