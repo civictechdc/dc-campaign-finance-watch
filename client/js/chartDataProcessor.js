@@ -68,7 +68,7 @@ export function ProcessContributionsOverTime(results, name) {
     });
     let dates = _.chain(results)
         .map(function (result) {
-            return _.pluck(result, 'date');
+            return _.map(result, 'date');
         })
         .flatten()
         .map(function (date) {
@@ -119,7 +119,7 @@ export function ProcessContributionsOverTime(results, name) {
             let entry = {
                 date: Moment(date, Moment.UTC)
             };
-            entry[contributions[0].candidate] = _.reduce(_.pluck(contributions, 'amount'), function (result, contribution) {
+            entry[contributions[0].candidate] = _.reduce(_.map(contributions, 'amount'), function (result, contribution) {
                 return result + contribution;
             }, 0);
             return entry;
@@ -130,9 +130,9 @@ export function ProcessContributionsOverTime(results, name) {
 export function ProcessContributionByWard(results) {
     //nest results by campaignId and ward;
     var nested = nest(results, [
-    function(c) { return c.contributor.contributorType; }, 
-    function(c) { return c.contributor.address.ward; } ]); 
-        
+    function(c) { return c.contributor.contributorType; },
+    function(c) { return c.contributor.address.ward; } ]);
+
     //Map reduce the nested results to [{campaignId, ward, ammount}].
     let combined = [];
     _.each(nested, function(e, c) {
@@ -140,19 +140,19 @@ export function ProcessContributionByWard(results) {
             return {
             contributorType: c,
             ward: ward,
-            amount: _.sum(e, function(o) { return o.amount; }) 
+            amount: _.sum(e, function(o) { return o.amount; })
             };
         }); //map
         //add to result set.
         combined.push(mapped);
     }); //each
-    
+
     var flat = _.flatten(combined);
-   
+
     return {
    	    contributorTypes: _.chain(flat).map("contributorType").uniq().value(),
    	    contributions: flat
-    }
+    };
 }
 
 // private
@@ -168,7 +168,7 @@ var nest = function (seq, keys) {
         return seq;
     var first = keys[0];
     var rest = keys.slice(1);
-    return _.mapValues(_.groupBy(seq, first), function (value) { 
-        return nest(value, rest)
+    return _.mapValues(_.groupBy(seq, first), function (value) {
+        return nest(value, rest);
     });
 };
