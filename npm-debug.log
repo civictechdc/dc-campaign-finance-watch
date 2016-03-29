@@ -1,0 +1,409 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.11.2
+3 info using node@v0.12.5
+4 verbose node symlink /usr/local/bin/node
+5 verbose readDependencies loading dependencies from /Users/JKoul/codefordc/dc-campaign-finance-watch/package.json
+6 warn package.json finance-endpoints@0.0.0 No repository field.
+7 verbose install where, deps [ '/Users/JKoul/codefordc/dc-campaign-finance-watch',
+7 verbose install   [ 'bluebird',
+7 verbose install     'bunyan',
+7 verbose install     'd3',
+7 verbose install     'fast-csv',
+7 verbose install     'fbjs',
+7 verbose install     'gm',
+7 verbose install     'jquery',
+7 verbose install     'lodash',
+7 verbose install     'moment',
+7 verbose install     'moment-range',
+7 verbose install     'mongodb',
+7 verbose install     'mongoose',
+7 verbose install     'react',
+7 verbose install     'react-bootstrap',
+7 verbose install     'react-day-picker',
+7 verbose install     'react-dom',
+7 verbose install     'react-router',
+7 verbose install     'redis',
+7 verbose install     'redis-jsonify',
+7 verbose install     'rest',
+7 verbose install     'restify',
+7 verbose install     'restler',
+7 verbose install     'rx',
+7 verbose install     'rx-react',
+7 verbose install     'svg-to-png',
+7 verbose install     'svg2png',
+7 verbose install     'underscore',
+7 verbose install     'babel-cli',
+7 verbose install     'babel-core',
+7 verbose install     'babel-preset-es2015',
+7 verbose install     'babel-preset-react',
+7 verbose install     'babel-preset-stage-0',
+7 verbose install     'babelify',
+7 verbose install     'browser-sync',
+7 verbose install     'browserify',
+7 verbose install     'chai',
+7 verbose install     'coveralls',
+7 verbose install     'eslint',
+7 verbose install     'gulp',
+7 verbose install     'gulp-concat',
+7 verbose install     'gulp-nodemon',
+7 verbose install     'gulp-util',
+7 verbose install     'istanbul',
+7 verbose install     'jsdom',
+7 verbose install     'mocha',
+7 verbose install     'react-addons-test-utils',
+7 verbose install     'reactify',
+7 verbose install     'sinon',
+7 verbose install     'sinon-chai',
+7 verbose install     'testdom',
+7 verbose install     'vinyl-buffer',
+7 verbose install     'vinyl-source-stream',
+7 verbose install     'watchify' ] ]
+8 verbose install where, peers [ '/Users/JKoul/codefordc/dc-campaign-finance-watch', [] ]
+9 verbose installManyTop reading for lifecycle /Users/JKoul/codefordc/dc-campaign-finance-watch/package.json
+10 info preinstall finance-endpoints@0.0.0
+11 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async/package.json
+12 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-cli/package.json
+13 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-core/package.json
+14 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-preset-es2015/package.json
+15 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-preset-react/package.json
+16 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-preset-stage-0/package.json
+17 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babelify/package.json
+18 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/bluebird/package.json
+19 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/browser-sync/package.json
+20 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/browserify/package.json
+21 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/bunyan/package.json
+22 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/chai/package.json
+23 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/coveralls/package.json
+24 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/d3/package.json
+25 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/eslint/package.json
+26 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/fast-csv/package.json
+27 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/fbjs/package.json
+28 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/g/package.json
+29 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gm/package.json
+30 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gulp/package.json
+31 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gulp-concat/package.json
+32 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gulp-nodemon/package.json
+33 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gulp-util/package.json
+34 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/istanbul/package.json
+35 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/jquery/package.json
+36 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/jsdom/package.json
+37 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash/package.json
+38 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/mocha/package.json
+39 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/moment/package.json
+40 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/moment-range/package.json
+41 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/mongodb/package.json
+42 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/mongoose/package.json
+43 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/node/package.json
+44 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react/package.json
+45 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-addons-test-utils/package.json
+46 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-bootstrap/package.json
+47 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-bootstrap-daterangepicker/package.json
+48 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-day-picker/package.json
+49 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-dom/package.json
+50 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-router/package.json
+51 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/reactify/package.json
+52 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/redis/package.json
+53 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/redis-jsonify/package.json
+54 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/rest/package.json
+55 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/restify/package.json
+56 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/restler/package.json
+57 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/rx/package.json
+58 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/rx-react/package.json
+59 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/sinon/package.json
+60 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/sinon-chai/package.json
+61 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/svg-to-png/package.json
+62 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/svg2png/package.json
+63 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/testdom/package.json
+64 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/underscore/package.json
+65 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/vinyl-buffer/package.json
+66 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/vinyl-source-stream/package.json
+67 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/watchify/package.json
+68 info package.json g@2.0.0 license should be a valid SPDX license expression
+69 info package.json node@0.0.0 No description
+70 info package.json node@0.0.0 No repository field.
+71 info package.json node@0.0.0 No README data
+72 info package.json node@0.0.0 No license field.
+73 info package.json redis-jsonify@1.0.0 No license field.
+74 info package.json restify@2.8.5 No license field.
+75 info package.json rest@1.3.1 No license field.
+76 info package.json testdom@2.0.0 license should be a valid SPDX license expression
+77 info package.json svg-to-png@2.0.1 No license field.
+78 info package.json rx-react@0.3.0 No license field.
+79 info package.json moment-range@2.2.0 license should be a valid SPDX license expression
+80 verbose readDependencies loading dependencies from /Users/JKoul/codefordc/dc-campaign-finance-watch/package.json
+81 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async/package.json
+82 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-cli/package.json
+83 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-core/package.json
+84 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-preset-es2015/package.json
+85 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-preset-react/package.json
+86 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-preset-stage-0/package.json
+87 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babelify/package.json
+88 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/bluebird/package.json
+89 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/browser-sync/package.json
+90 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/browserify/package.json
+91 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/bunyan/package.json
+92 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/chai/package.json
+93 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/coveralls/package.json
+94 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/d3/package.json
+95 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/eslint/package.json
+96 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/fast-csv/package.json
+97 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/fbjs/package.json
+98 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/g/package.json
+99 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gm/package.json
+100 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gulp/package.json
+101 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gulp-concat/package.json
+102 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gulp-nodemon/package.json
+103 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gulp-util/package.json
+104 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/istanbul/package.json
+105 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/jquery/package.json
+106 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/jsdom/package.json
+107 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash/package.json
+108 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/mocha/package.json
+109 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/moment/package.json
+110 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/moment-range/package.json
+111 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/mongodb/package.json
+112 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/mongoose/package.json
+113 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/node/package.json
+114 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react/package.json
+115 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-addons-test-utils/package.json
+116 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-bootstrap/package.json
+117 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-bootstrap-daterangepicker/package.json
+118 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-day-picker/package.json
+119 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-dom/package.json
+120 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-router/package.json
+121 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/reactify/package.json
+122 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/redis/package.json
+123 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/redis-jsonify/package.json
+124 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/rest/package.json
+125 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/restify/package.json
+126 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/restler/package.json
+127 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/rx/package.json
+128 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/rx-react/package.json
+129 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/sinon/package.json
+130 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/sinon-chai/package.json
+131 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/svg-to-png/package.json
+132 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/svg2png/package.json
+133 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/testdom/package.json
+134 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/underscore/package.json
+135 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/vinyl-buffer/package.json
+136 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/vinyl-source-stream/package.json
+137 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/watchify/package.json
+138 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/.bin/babel/package.json
+139 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/.bin/babel-doctor/package.json
+140 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/.bin/babel-external-helpers/package.json
+141 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/.bin/babel-node/package.json
+142 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/.bin/browser-sync/package.json
+143 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/.bin/browserify/package.json
+144 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/.bin/bunyan/package.json
+145 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/.bin/coveralls/package.json
+146 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/.bin/eslint/package.json
+147 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/.bin/gulp/package.json
+148 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/.bin/istanbul/package.json
+149 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/.bin/mocha/package.json
+150 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/.bin/report-latency/package.json
+151 verbose targetResolver reading package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/.bin/watchify/package.json
+152 verbose already installed skipping gulp-nodemon@^2.0.4 /Users/JKoul/codefordc/dc-campaign-finance-watch
+153 verbose already installed skipping gulp-util@^3.0.6 /Users/JKoul/codefordc/dc-campaign-finance-watch
+154 verbose already installed skipping istanbul@^0.4.2 /Users/JKoul/codefordc/dc-campaign-finance-watch
+155 verbose already installed skipping jsdom@^8.1.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+156 verbose already installed skipping mocha@^2.4.5 /Users/JKoul/codefordc/dc-campaign-finance-watch
+157 verbose already installed skipping react-addons-test-utils@^0.14.7 /Users/JKoul/codefordc/dc-campaign-finance-watch
+158 verbose already installed skipping reactify@^1.1.1 /Users/JKoul/codefordc/dc-campaign-finance-watch
+159 verbose already installed skipping sinon@^1.17.3 /Users/JKoul/codefordc/dc-campaign-finance-watch
+160 verbose already installed skipping sinon-chai@^2.8.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+161 verbose already installed skipping testdom@^2.0.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+162 verbose already installed skipping vinyl-buffer@^1.0.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+163 verbose already installed skipping vinyl-source-stream@^1.1.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+164 verbose already installed skipping watchify@^3.3.1 /Users/JKoul/codefordc/dc-campaign-finance-watch
+165 verbose already installed skipping bluebird@^2.10.2 /Users/JKoul/codefordc/dc-campaign-finance-watch
+166 verbose already installed skipping bunyan@^1.2.3 /Users/JKoul/codefordc/dc-campaign-finance-watch
+167 verbose already installed skipping d3@^3.5.6 /Users/JKoul/codefordc/dc-campaign-finance-watch
+168 verbose already installed skipping fast-csv@^1.0.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+169 verbose already installed skipping fbjs@^0.2.1 /Users/JKoul/codefordc/dc-campaign-finance-watch
+170 verbose already installed skipping gm@^1.21.1 /Users/JKoul/codefordc/dc-campaign-finance-watch
+171 verbose already installed skipping jquery@^2.2.1 /Users/JKoul/codefordc/dc-campaign-finance-watch
+172 verbose already installed skipping lodash@^4.6.1 /Users/JKoul/codefordc/dc-campaign-finance-watch
+173 verbose already installed skipping moment@^2.10.6 /Users/JKoul/codefordc/dc-campaign-finance-watch
+174 verbose already installed skipping moment-range@^2.0.3 /Users/JKoul/codefordc/dc-campaign-finance-watch
+175 verbose already installed skipping mongodb@^2.1.8 /Users/JKoul/codefordc/dc-campaign-finance-watch
+176 verbose already installed skipping mongoose@4.4.5 /Users/JKoul/codefordc/dc-campaign-finance-watch
+177 verbose already installed skipping react@^0.14.7 /Users/JKoul/codefordc/dc-campaign-finance-watch
+178 verbose already installed skipping react-bootstrap@^0.28.4 /Users/JKoul/codefordc/dc-campaign-finance-watch
+179 verbose already installed skipping react-day-picker@^1.3.1 /Users/JKoul/codefordc/dc-campaign-finance-watch
+180 verbose already installed skipping react-dom@^0.14.2 /Users/JKoul/codefordc/dc-campaign-finance-watch
+181 verbose already installed skipping react-router@^2.0.1 /Users/JKoul/codefordc/dc-campaign-finance-watch
+182 verbose already installed skipping redis@^2.4.2 /Users/JKoul/codefordc/dc-campaign-finance-watch
+183 verbose already installed skipping redis-jsonify@^1.0.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+184 verbose already installed skipping rest@^1.3.1 /Users/JKoul/codefordc/dc-campaign-finance-watch
+185 verbose already installed skipping restify@~2.8.3 /Users/JKoul/codefordc/dc-campaign-finance-watch
+186 verbose already installed skipping restler@^3.2.2 /Users/JKoul/codefordc/dc-campaign-finance-watch
+187 verbose already installed skipping rx@^4.0.7 /Users/JKoul/codefordc/dc-campaign-finance-watch
+188 verbose already installed skipping rx-react@^0.3.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+189 verbose already installed skipping svg-to-png@^2.0.1 /Users/JKoul/codefordc/dc-campaign-finance-watch
+190 verbose already installed skipping svg2png@^2.0.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+191 verbose already installed skipping underscore@^1.8.3 /Users/JKoul/codefordc/dc-campaign-finance-watch
+192 verbose already installed skipping babel-cli@^6.6.5 /Users/JKoul/codefordc/dc-campaign-finance-watch
+193 verbose already installed skipping babel-core@^6.6.5 /Users/JKoul/codefordc/dc-campaign-finance-watch
+194 verbose already installed skipping babel-preset-es2015@^6.6.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+195 verbose already installed skipping babel-preset-react@^6.5.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+196 verbose already installed skipping babel-preset-stage-0@^6.5.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+197 verbose already installed skipping babelify@^6.3.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+198 verbose already installed skipping browser-sync@^2.8.2 /Users/JKoul/codefordc/dc-campaign-finance-watch
+199 verbose already installed skipping browserify@^11.0.1 /Users/JKoul/codefordc/dc-campaign-finance-watch
+200 verbose already installed skipping chai@^3.5.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+201 verbose already installed skipping coveralls@^2.11.8 /Users/JKoul/codefordc/dc-campaign-finance-watch
+202 verbose already installed skipping eslint@^1.9.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+203 verbose already installed skipping gulp@^3.9.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+204 verbose already installed skipping gulp-concat@^2.6.0 /Users/JKoul/codefordc/dc-campaign-finance-watch
+205 silly install resolved []
+206 info build /Users/JKoul/codefordc/dc-campaign-finance-watch
+207 info linkStuff finance-endpoints@0.0.0
+208 silly linkStuff finance-endpoints@0.0.0 has /Users/JKoul/codefordc as its parent node_modules
+209 verbose linkBins finance-endpoints@0.0.0
+210 verbose linkMans finance-endpoints@0.0.0
+211 verbose rebuildBundles finance-endpoints@0.0.0
+212 verbose rebuildBundles [ '.bin',
+212 verbose rebuildBundles   'async',
+212 verbose rebuildBundles   'babel-cli',
+212 verbose rebuildBundles   'babel-core',
+212 verbose rebuildBundles   'babel-preset-es2015',
+212 verbose rebuildBundles   'babel-preset-react',
+212 verbose rebuildBundles   'babel-preset-stage-0',
+212 verbose rebuildBundles   'babelify',
+212 verbose rebuildBundles   'bluebird',
+212 verbose rebuildBundles   'browser-sync',
+212 verbose rebuildBundles   'browserify',
+212 verbose rebuildBundles   'bunyan',
+212 verbose rebuildBundles   'chai',
+212 verbose rebuildBundles   'coveralls',
+212 verbose rebuildBundles   'd3',
+212 verbose rebuildBundles   'eslint',
+212 verbose rebuildBundles   'fast-csv',
+212 verbose rebuildBundles   'fbjs',
+212 verbose rebuildBundles   'g',
+212 verbose rebuildBundles   'gm',
+212 verbose rebuildBundles   'gulp',
+212 verbose rebuildBundles   'gulp-concat',
+212 verbose rebuildBundles   'gulp-nodemon',
+212 verbose rebuildBundles   'gulp-util',
+212 verbose rebuildBundles   'istanbul',
+212 verbose rebuildBundles   'jquery',
+212 verbose rebuildBundles   'jsdom',
+212 verbose rebuildBundles   'lodash',
+212 verbose rebuildBundles   'mocha',
+212 verbose rebuildBundles   'moment',
+212 verbose rebuildBundles   'moment-range',
+212 verbose rebuildBundles   'mongodb',
+212 verbose rebuildBundles   'mongoose',
+212 verbose rebuildBundles   'node',
+212 verbose rebuildBundles   'react',
+212 verbose rebuildBundles   'react-addons-test-utils',
+212 verbose rebuildBundles   'react-bootstrap',
+212 verbose rebuildBundles   'react-bootstrap-daterangepicker',
+212 verbose rebuildBundles   'react-day-picker',
+212 verbose rebuildBundles   'react-dom',
+212 verbose rebuildBundles   'react-router',
+212 verbose rebuildBundles   'reactify',
+212 verbose rebuildBundles   'redis',
+212 verbose rebuildBundles   'redis-jsonify',
+212 verbose rebuildBundles   'rest',
+212 verbose rebuildBundles   'restify',
+212 verbose rebuildBundles   'restler',
+212 verbose rebuildBundles   'rx',
+212 verbose rebuildBundles   'rx-react',
+212 verbose rebuildBundles   'sinon',
+212 verbose rebuildBundles   'sinon-chai',
+212 verbose rebuildBundles   'svg-to-png',
+212 verbose rebuildBundles   'svg2png',
+212 verbose rebuildBundles   'testdom',
+212 verbose rebuildBundles   'underscore',
+212 verbose rebuildBundles   'vinyl-buffer',
+212 verbose rebuildBundles   'vinyl-source-stream',
+212 verbose rebuildBundles   'watchify' ]
+213 verbose rebuild bundle /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async
+214 info build /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async
+215 info preinstall async@1.5.2
+216 info linkStuff async@1.5.2
+217 silly linkStuff async@1.5.2 has /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules as its parent node_modules
+218 verbose linkBins async@1.5.2
+219 verbose linkMans async@1.5.2
+220 verbose rebuildBundles async@1.5.2
+221 info install async@1.5.2
+222 info postinstall async@1.5.2
+223 verbose rebuild bundle /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/g
+224 info build /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/g
+225 info preinstall g@2.0.0
+226 info linkStuff g@2.0.0
+227 silly linkStuff g@2.0.0 has /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules as its parent node_modules
+228 verbose linkBins g@2.0.0
+229 verbose linkMans g@2.0.0
+230 verbose rebuildBundles g@2.0.0
+231 info install g@2.0.0
+232 info postinstall g@2.0.0
+233 verbose rebuild bundle /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/node
+234 info build /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/node
+235 info preinstall node@0.0.0
+236 info linkStuff node@0.0.0
+237 silly linkStuff node@0.0.0 has /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules as its parent node_modules
+238 verbose linkBins node@0.0.0
+239 verbose linkMans node@0.0.0
+240 verbose rebuildBundles node@0.0.0
+241 info install node@0.0.0
+242 info postinstall node@0.0.0
+243 verbose rebuild bundle /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-bootstrap-daterangepicker
+244 info build /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-bootstrap-daterangepicker
+245 info preinstall react-bootstrap-daterangepicker@1.0.6
+246 info linkStuff react-bootstrap-daterangepicker@1.0.6
+247 silly linkStuff react-bootstrap-daterangepicker@1.0.6 has /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules as its parent node_modules
+248 verbose linkBins react-bootstrap-daterangepicker@1.0.6
+249 verbose linkMans react-bootstrap-daterangepicker@1.0.6
+250 verbose rebuildBundles react-bootstrap-daterangepicker@1.0.6
+251 verbose rebuildBundles [ 'bootstrap-daterangepicker' ]
+252 info install react-bootstrap-daterangepicker@1.0.6
+253 info postinstall react-bootstrap-daterangepicker@1.0.6
+254 info install finance-endpoints@0.0.0
+255 info postinstall finance-endpoints@0.0.0
+256 info prepublish finance-endpoints@0.0.0
+257 verbose validateInstall loading /Users/JKoul/codefordc/dc-campaign-finance-watch/package.json for validation
+258 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/browser-sync requires lodash@'^3.9.3' but will load
+258 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash,
+258 warn unmet dependency which is version 4.6.1
+259 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/browser-sync/node_modules/easy-extender requires lodash@'^3.10.1' but will load
+259 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash,
+259 warn unmet dependency which is version 4.6.1
+260 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/browser-sync/node_modules/eazy-logger requires lodash@'^3.0.1' but will load
+260 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash,
+260 warn unmet dependency which is version 4.6.1
+261 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/browser-sync/node_modules/eazy-logger/node_modules/opt-merger requires lodash@'^3.10.1' but will load
+261 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash,
+261 warn unmet dependency which is version 4.6.1
+262 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/eslint/node_modules/inquirer requires lodash@'^3.3.1' but will load
+262 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash,
+262 warn unmet dependency which is version 4.6.1
+263 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babelify/node_modules/babel-core requires lodash@'^3.10.0' but will load
+263 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash,
+263 warn unmet dependency which is version 4.6.1
+264 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babelify/node_modules/babel-core/node_modules/babel-plugin-proto-to-assign requires lodash@'^3.9.3' but will load
+264 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash,
+264 warn unmet dependency which is version 4.6.1
+265 verbose stack Error: The package jquery does not satisfy its siblings' peerDependencies requirements!
+265 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+265 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:267:7
+265 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:138:5
+265 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+265 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+265 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+265 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+265 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+265 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+265 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+266 verbose cwd /Users/JKoul/codefordc/dc-campaign-finance-watch
+267 error Darwin 14.0.0
+268 error argv "node" "/usr/local/bin/npm" "install"
+269 error node v0.12.5
+270 error npm  v2.11.2
+271 error code EPEERINVALID
+272 error peerinvalid The package jquery does not satisfy its siblings' peerDependencies requirements!
+272 error peerinvalid Peer react-bootstrap-daterangepicker@1.0.6 wants jquery@^1.11.3
+273 verbose exit [ 1, true ]
