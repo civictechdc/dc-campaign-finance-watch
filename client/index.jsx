@@ -10,7 +10,7 @@ import { browserHistory } from 'react-router';
 
 render((
     <Router history={browserHistory}>
-        <Route path="/" component={ShellComponent}>
+        <Route path="/dc-campaign-finance-watch/client/" component={ShellComponent}>
             <IndexRoute component={SearchComponent}/>
             <Route path="faq" component={FaqComponent}/>
             <Route path="about" component={AboutComponent}/>
