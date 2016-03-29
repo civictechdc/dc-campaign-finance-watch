@@ -65,8 +65,7 @@ class RaceSearch extends React.Component {
                         <DateRangeComponent onRangeInput={this._handleRangeSelected.bind(this)}/>
                     </Col>
                     <Col xs={6}>
-                        <h3>Search Results</h3>
-                        <h7>Sorted by Name</h7>
+                        <h3>Search Results (A-Z)</h3>
                         {
                             _.sortBy(campaigns, 'name').map((c, idx) => {
                                 return (
