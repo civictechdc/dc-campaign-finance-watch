@@ -32,11 +32,11 @@ const ShellComponent = (props) => {
                     </LinkContainer>
                 </Nav>
                 <Nav pullRight>
-                    <a href="http://www.codefordc.org"><img src="images/logo_100px.png" alt="Code For DC"/></a>
+                    <a href="http://www.codefordc.org"><img src="dc-campaign-finance-watch/images/logo_100px.png" alt="Code For DC"/></a>
                 </Nav>
             </Navbar>
             <div className="container">
-                <img src="images/dc_flag.svg" className="background"/>
+                <img src="dc-campaign-finance-watch/images/dc_flag.svg" className="background"/>
                 {props.children}
             </div>
         </div>
