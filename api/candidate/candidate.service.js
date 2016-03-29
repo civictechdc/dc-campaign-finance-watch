@@ -108,9 +108,12 @@ exports.findCandidate = function (candidateId, campaignIds, toDate, fromDate) {
                             return total;
                         }, 0);
 
-                        var dcContributions = newContribs.filter(function(c){
-                            return c.contributor.address.state === 'DC';
-                        });
+                        var dcContributions = newContribs.reduce(function(total, c){
+                            if(c.contributor.address.state === 'DC') {
+                              return total + c.amount;
+                            }
+                            return total;
+                        }, 0);
 
                         var contributionsLessThan100 = newContribs.filter(function(c){
                             return c.amount < 100;
@@ -145,15 +148,17 @@ exports.findCandidate = function (candidateId, campaignIds, toDate, fromDate) {
                         });
 
 
-                        // var wardContributions = newContribs.reduce(function(total, c){
-                        //   if(campaignModel.ward) {
-                        //
-                        //     if(c.contributor.address.ward === campaignModel.ward) {
-                        //         return total + c.amount;
-                        //     }
-                        //   }
-                        //   return total;
-                        // }, 0);
+                        var wardContributions = newContribs.reduce(function(total, c){
+                            // console.log(c.contributor.address.ward);
+                            // console.log(campaignModel.ward);
+                            if(c.contributor.address.ward === campaignModel.ward) {
+                                return total + c.amount;
+                            }
+                          return total;
+                        }, 0);
+
+                        console.log(wardContributions);
+                        console.log(dcContributions);
 
                         var campaign = {
                             campaignId: contributions[0].campaignId,
@@ -166,7 +171,7 @@ exports.findCandidate = function (candidateId, campaignIds, toDate, fromDate) {
                             individualsAtCorporateAddress: individualsAtCorporateAddress.length / newContribs.length,
                             nonIndividualsOrCorporateAddress: nonIndividualsOrCorporateAddress.length / newContribs.length,
                             amountContributedByCandidate: candidateContributionAmount / total,
-                            localContributionPercentage: dcContributions.length / newContribs.length,
+                            localContributionPercentage: dcContributions / total,
                             smallContributionPercentage: contributionsLessThan100.length / newContribs.length,
                             corporateContributionsExist: corporateContributionsExist,
                             pacContribsExist: pacContribsExist,
@@ -240,11 +245,9 @@ function processWardConcentration(newContribs) {
         ward === 'Ward 4' || ward === 'Ward 5' || ward === 'Ward 6' || ward === 'Ward 7' || ward === 'Ward 8';
     });
     var wardScores = wards.map(function(ward){
-      console.log(ward);
         var uniqueWardContributors = _.uniq(newContribs.filter(function(contrib){
             return contrib.contributor.address.ward === ward;
         }));
-        console.log(uniqueWardContributors.length);
         return Math.pow((uniqueWardContributors.length/uniqueDcContributors.length), 2);
     });
 
