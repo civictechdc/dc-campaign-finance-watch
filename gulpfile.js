@@ -13,6 +13,8 @@ var browserSync = require('browser-sync');
 var nodemon = require('gulp-nodemon');
 var path = require('path');
 var fs = require('fs');
+var child_process = require('child_process');
+
 
 
 var watchifyOpts = {
@@ -71,7 +73,18 @@ gulp.task('nodemon', function () {
         });
 });
 
-gulp.task('serve', ['browsersync']);
+gulp.task('redis-start', function() {
+    if(gutil.env.env === 'local'){
+        child_process.exec('redis-server', function(err, stdout, stderr) {
+            console.log(stdout);
+            if (err !== null) {
+                console.log('exec error: ' + err);
+            }
+        });
+    }
+});
+
+gulp.task('serve', ['redis-start', 'browsersync']);
 
 gulp.task('css-inject', function(){
    browserSync.reload('*.css');
