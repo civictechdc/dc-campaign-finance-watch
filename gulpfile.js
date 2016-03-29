@@ -14,6 +14,7 @@ var nodemon = require('gulp-nodemon');
 var path = require('path');
 var fs = require('fs');
 var child_process = require('child_process');
+var shell = require('gulp-shell');
 
 
 
@@ -74,7 +75,8 @@ gulp.task('nodemon', function () {
 });
 
 gulp.task('redis-start', function() {
-    if(gutil.env.env === 'local'){
+    if(gutil.env.env === 'local' && shell.task(['ps cax | grep redis']).length === 0){
+        console.log('meow');
         child_process.exec('redis-server', function(err, stdout, stderr) {
             console.log(stdout);
             if (err !== null) {
