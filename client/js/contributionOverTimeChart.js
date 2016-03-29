@@ -17,11 +17,11 @@ class ContributionOverTimeChart {
   _drawPoints(el, data) {
       console.log(data);
     this.svg.selectAll('*').remove();
-    let width = el.offsetWidth;
-    let height = el.offsetHeight;
-
+    
     let margin = {top: 50, right: 100, bottom: 50, left: 100};
-
+    let width = el.offsetWidth;
+    let height = 700;
+    
     let parseDate = d3.time.format("%Y%m%d").parse;
 
     data.forEach(function(d){
