@@ -1,0 +1,325 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '--save', 'async' ]
+2 info using npm@2.11.2
+3 info using node@v0.12.5
+4 verbose node symlink /usr/local/bin/node
+5 verbose install initial load of /Users/JKoul/codefordc/dc-campaign-finance-watch/package.json
+6 warn package.json finance-endpoints@0.0.0 No repository field.
+7 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-cli/package.json
+8 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-core/package.json
+9 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-preset-es2015/package.json
+10 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-preset-react/package.json
+11 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babel-preset-stage-0/package.json
+12 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babelify/package.json
+13 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/bluebird/package.json
+14 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/browser-sync/package.json
+15 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/browserify/package.json
+16 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/bunyan/package.json
+17 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/chai/package.json
+18 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/coveralls/package.json
+19 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/d3/package.json
+20 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/eslint/package.json
+21 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/fast-csv/package.json
+22 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/fbjs/package.json
+23 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/g/package.json
+24 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gm/package.json
+25 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gulp/package.json
+26 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gulp-concat/package.json
+27 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gulp-nodemon/package.json
+28 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/gulp-util/package.json
+29 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/istanbul/package.json
+30 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/jquery/package.json
+31 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/jsdom/package.json
+32 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash/package.json
+33 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/mocha/package.json
+34 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/moment/package.json
+35 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/moment-range/package.json
+36 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/mongodb/package.json
+37 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/mongoose/package.json
+38 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/node/package.json
+39 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react/package.json
+40 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-addons-test-utils/package.json
+41 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-bootstrap/package.json
+42 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-bootstrap-daterangepicker/package.json
+43 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-day-picker/package.json
+44 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-dom/package.json
+45 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/react-router/package.json
+46 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/reactify/package.json
+47 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/redis/package.json
+48 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/redis-jsonify/package.json
+49 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/rest/package.json
+50 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/restify/package.json
+51 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/restler/package.json
+52 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/rx/package.json
+53 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/rx-react/package.json
+54 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/sinon/package.json
+55 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/sinon-chai/package.json
+56 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/svg-to-png/package.json
+57 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/svg2png/package.json
+58 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/testdom/package.json
+59 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/underscore/package.json
+60 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/vinyl-buffer/package.json
+61 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/vinyl-source-stream/package.json
+62 verbose installManyTop reading scoped package data from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/watchify/package.json
+63 info package.json g@2.0.0 license should be a valid SPDX license expression
+64 info package.json node@0.0.0 No description
+65 info package.json node@0.0.0 No repository field.
+66 info package.json node@0.0.0 No README data
+67 info package.json node@0.0.0 No license field.
+68 info package.json moment-range@2.2.0 license should be a valid SPDX license expression
+69 info package.json redis-jsonify@1.0.0 No license field.
+70 info package.json rx-react@0.3.0 No license field.
+71 info package.json rest@1.3.1 No license field.
+72 info package.json svg-to-png@2.0.1 No license field.
+73 info package.json restify@2.8.5 No license field.
+74 info package.json testdom@2.0.0 license should be a valid SPDX license expression
+75 verbose readDependencies loading dependencies from /Users/JKoul/codefordc/dc-campaign-finance-watch/package.json
+76 silly cache add args [ 'async', null ]
+77 verbose cache add spec async
+78 silly cache add parsed spec { raw: 'async',
+78 silly cache add   scope: null,
+78 silly cache add   name: 'async',
+78 silly cache add   rawSpec: '',
+78 silly cache add   spec: '*',
+78 silly cache add   type: 'range' }
+79 silly addNamed async@*
+80 verbose addNamed "*" is a valid semver range for async
+81 silly addNameRange { name: 'async', range: '*', hasData: false }
+82 silly mapToRegistry name async
+83 silly mapToRegistry using default registry
+84 silly mapToRegistry registry https://registry.npmjs.org/
+85 silly mapToRegistry uri https://registry.npmjs.org/async
+86 verbose addNameRange registry:https://registry.npmjs.org/async not in flight; fetching
+87 verbose request uri https://registry.npmjs.org/async
+88 verbose request no auth needed
+89 info attempt registry request try #1 at 19:38:42
+90 verbose request id 3ee3dd44809ac731
+91 verbose etag "BV37UW4KW9EFAKOVFOLLVEBFZ"
+92 http request GET https://registry.npmjs.org/async
+93 http 304 https://registry.npmjs.org/async
+94 silly get cb [ 304,
+94 silly get   { date: 'Mon, 28 Mar 2016 23:38:40 GMT',
+94 silly get     via: '1.1 varnish',
+94 silly get     'cache-control': 'max-age=300',
+94 silly get     etag: '"BV37UW4KW9EFAKOVFOLLVEBFZ"',
+94 silly get     age: '286',
+94 silly get     connection: 'keep-alive',
+94 silly get     'x-served-by': 'cache-iad2137-IAD',
+94 silly get     'x-cache': 'HIT',
+94 silly get     'x-cache-hits': '19',
+94 silly get     'x-timer': 'S1459208320.405194,VS0,VE0',
+94 silly get     vary: 'Accept' } ]
+95 verbose etag https://registry.npmjs.org/async from cache
+96 verbose get saving async to /Users/JKoul/.npm/registry.npmjs.org/async/.cache.json
+97 silly addNameRange number 2 { name: 'async', range: '*', hasData: true }
+98 silly addNameRange versions [ 'async',
+98 silly addNameRange   [ '0.1.0',
+98 silly addNameRange     '0.1.1',
+98 silly addNameRange     '0.1.2',
+98 silly addNameRange     '0.1.3',
+98 silly addNameRange     '0.1.4',
+98 silly addNameRange     '0.1.5',
+98 silly addNameRange     '0.1.6',
+98 silly addNameRange     '0.1.7',
+98 silly addNameRange     '0.1.8',
+98 silly addNameRange     '0.1.9',
+98 silly addNameRange     '0.1.10',
+98 silly addNameRange     '0.1.11',
+98 silly addNameRange     '0.1.12',
+98 silly addNameRange     '0.1.13',
+98 silly addNameRange     '0.1.14',
+98 silly addNameRange     '0.1.15',
+98 silly addNameRange     '0.1.16',
+98 silly addNameRange     '0.1.17',
+98 silly addNameRange     '0.1.18',
+98 silly addNameRange     '0.1.19',
+98 silly addNameRange     '0.1.20',
+98 silly addNameRange     '0.1.21',
+98 silly addNameRange     '0.1.22',
+98 silly addNameRange     '0.2.0',
+98 silly addNameRange     '0.2.1',
+98 silly addNameRange     '0.2.2',
+98 silly addNameRange     '0.2.3',
+98 silly addNameRange     '0.2.4',
+98 silly addNameRange     '0.2.5',
+98 silly addNameRange     '0.2.6',
+98 silly addNameRange     '0.2.7',
+98 silly addNameRange     '0.2.8',
+98 silly addNameRange     '0.2.9',
+98 silly addNameRange     '0.2.10',
+98 silly addNameRange     '0.3.0',
+98 silly addNameRange     '0.4.0',
+98 silly addNameRange     '0.4.1',
+98 silly addNameRange     '0.5.0',
+98 silly addNameRange     '0.6.0',
+98 silly addNameRange     '0.6.1',
+98 silly addNameRange     '0.6.2',
+98 silly addNameRange     '0.7.0',
+98 silly addNameRange     '0.8.0',
+98 silly addNameRange     '0.9.0',
+98 silly addNameRange     '0.9.2',
+98 silly addNameRange     '1.0.0',
+98 silly addNameRange     '1.1.0',
+98 silly addNameRange     '1.2.0',
+98 silly addNameRange     '1.1.1',
+98 silly addNameRange     '1.2.1',
+98 silly addNameRange     '1.3.0',
+98 silly addNameRange     '1.4.0',
+98 silly addNameRange     '1.4.1',
+98 silly addNameRange     '1.4.2',
+98 silly addNameRange     '1.5.0',
+98 silly addNameRange     '1.5.1',
+98 silly addNameRange     '1.5.2',
+98 silly addNameRange     '2.0.0-alpha.0',
+98 silly addNameRange     '2.0.0-rc.1',
+98 silly addNameRange     '2.0.0-rc.2' ] ]
+99 silly addNamed async@1.5.2
+100 verbose addNamed "1.5.2" is a plain semver version for async
+101 silly cache afterAdd async@1.5.2
+102 verbose afterAdd /Users/JKoul/.npm/async/1.5.2/package/package.json not in flight; writing
+103 verbose afterAdd /Users/JKoul/.npm/async/1.5.2/package/package.json written
+104 silly install resolved [ { name: 'async',
+104 silly install resolved     description: 'Higher-order functions and common patterns for asynchronous code',
+104 silly install resolved     main: 'lib/async.js',
+104 silly install resolved     files: [ 'lib', 'dist/async.js', 'dist/async.min.js' ],
+104 silly install resolved     author: { name: 'Caolan McMahon' },
+104 silly install resolved     version: '1.5.2',
+104 silly install resolved     keywords: [ 'async', 'callback', 'utility', 'module' ],
+104 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/caolan/async.git' },
+104 silly install resolved     bugs: { url: 'https://github.com/caolan/async/issues' },
+104 silly install resolved     license: 'MIT',
+104 silly install resolved     devDependencies:
+104 silly install resolved      { benchmark: 'github:bestiejs/benchmark.js',
+104 silly install resolved        bluebird: '^2.9.32',
+104 silly install resolved        chai: '^3.1.0',
+104 silly install resolved        coveralls: '^2.11.2',
+104 silly install resolved        'es6-promise': '^2.3.0',
+104 silly install resolved        jscs: '^1.13.1',
+104 silly install resolved        jshint: '~2.8.0',
+104 silly install resolved        karma: '^0.13.2',
+104 silly install resolved        'karma-browserify': '^4.2.1',
+104 silly install resolved        'karma-firefox-launcher': '^0.1.6',
+104 silly install resolved        'karma-mocha': '^0.2.0',
+104 silly install resolved        'karma-mocha-reporter': '^1.0.2',
+104 silly install resolved        lodash: '^3.9.0',
+104 silly install resolved        mkdirp: '~0.5.1',
+104 silly install resolved        mocha: '^2.2.5',
+104 silly install resolved        'native-promise-only': '^0.8.0-a',
+104 silly install resolved        nodeunit: '>0.0.0',
+104 silly install resolved        nyc: '^2.1.0',
+104 silly install resolved        rsvp: '^3.0.18',
+104 silly install resolved        semver: '^4.3.6',
+104 silly install resolved        'uglify-js': '~2.4.0',
+104 silly install resolved        xyz: '^0.5.0',
+104 silly install resolved        yargs: '~3.9.1' },
+104 silly install resolved     jam: { main: 'lib/async.js', include: [Object], categories: [Object] },
+104 silly install resolved     scripts:
+104 silly install resolved      { 'mocha-node-test': 'mocha mocha_test/',
+104 silly install resolved        'mocha-browser-test': 'karma start',
+104 silly install resolved        'mocha-test': 'npm run mocha-node-test && npm run mocha-browser-test',
+104 silly install resolved        'nodeunit-test': 'nodeunit test/test-async.js',
+104 silly install resolved        test: 'npm run-script lint && npm run nodeunit-test && npm run mocha-test',
+104 silly install resolved        lint: 'jshint lib/*.js test/*.js perf/*.js && jscs lib/*.js test/*.js perf/*.js',
+104 silly install resolved        coverage: 'nyc npm test && nyc report',
+104 silly install resolved        coveralls: 'nyc npm test && nyc report --reporter=text-lcov | coveralls' },
+104 silly install resolved     spm: { main: 'lib/async.js' },
+104 silly install resolved     volo: { main: 'lib/async.js', ignore: [Object] },
+104 silly install resolved     gitHead: '9ab5c67b7cb3a4c3dad4a2d4552a2f6775545d6c',
+104 silly install resolved     homepage: 'https://github.com/caolan/async#readme',
+104 silly install resolved     _id: 'async@1.5.2',
+104 silly install resolved     _shasum: 'ec6a61ae56480c0c3cb241c95618e20892f9672a',
+104 silly install resolved     _from: 'async@*',
+104 silly install resolved     _npmVersion: '3.5.2',
+104 silly install resolved     _nodeVersion: '4.2.3',
+104 silly install resolved     _npmUser: { name: 'aearly', email: 'alexander.early@gmail.com' },
+104 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+104 silly install resolved     dist:
+104 silly install resolved      { shasum: 'ec6a61ae56480c0c3cb241c95618e20892f9672a',
+104 silly install resolved        tarball: 'http://registry.npmjs.org/async/-/async-1.5.2.tgz' },
+104 silly install resolved     directories: {},
+104 silly install resolved     _resolved: 'https://registry.npmjs.org/async/-/async-1.5.2.tgz',
+104 silly install resolved     readme: 'ERROR: No README data found!' } ]
+105 info install async@1.5.2 into /Users/JKoul/codefordc/dc-campaign-finance-watch
+106 info installOne async@1.5.2
+107 verbose installOne of async to /Users/JKoul/codefordc/dc-campaign-finance-watch not in flight; installing
+108 verbose lock using /Users/JKoul/.npm/_locks/async-07010649a4ca00e4.lock for /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async
+109 silly install write writing async 1.5.2 to /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async
+110 verbose unbuild node_modules/async
+111 silly gentlyRm /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async is being purged from base /Users/JKoul/codefordc/dc-campaign-finance-watch
+112 verbose gentlyRm don't care about contents; nuking /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async
+113 verbose tar unpack /Users/JKoul/.npm/async/1.5.2/package.tgz
+114 verbose tar unpacking to /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async
+115 silly gentlyRm /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async is being purged
+116 verbose gentlyRm don't care about contents; nuking /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async
+117 silly gunzTarPerm modes [ '755', '644' ]
+118 silly gunzTarPerm extractEntry package.json
+119 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+120 silly gunzTarPerm extractEntry README.md
+121 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+122 silly gunzTarPerm extractEntry LICENSE
+123 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+124 silly gunzTarPerm extractEntry CHANGELOG.md
+125 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+126 silly gunzTarPerm extractEntry dist/async.js
+127 silly gunzTarPerm modified mode [ 'dist/async.js', 436, 420 ]
+128 silly gunzTarPerm extractEntry dist/async.min.js
+129 silly gunzTarPerm modified mode [ 'dist/async.min.js', 436, 420 ]
+130 silly gunzTarPerm extractEntry lib/async.js
+131 silly gunzTarPerm modified mode [ 'lib/async.js', 436, 420 ]
+132 verbose write writing to /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async/package.json
+133 info preinstall async@1.5.2
+134 verbose readDependencies loading dependencies from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async/package.json
+135 verbose readDependencies loading dependencies from /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async/package.json
+136 silly install resolved []
+137 verbose about to build /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async
+138 info build /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async
+139 info linkStuff async@1.5.2
+140 silly linkStuff async@1.5.2 has /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules as its parent node_modules
+141 verbose linkBins async@1.5.2
+142 verbose linkMans async@1.5.2
+143 verbose rebuildBundles async@1.5.2
+144 info install async@1.5.2
+145 info postinstall async@1.5.2
+146 verbose unlock done using /Users/JKoul/.npm/_locks/async-07010649a4ca00e4.lock for /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/async
+147 verbose validateInstall loading /Users/JKoul/codefordc/dc-campaign-finance-watch/package.json for validation
+148 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/browser-sync requires lodash@'^3.9.3' but will load
+148 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash,
+148 warn unmet dependency which is version 4.6.1
+149 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/browser-sync/node_modules/easy-extender requires lodash@'^3.10.1' but will load
+149 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash,
+149 warn unmet dependency which is version 4.6.1
+150 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/browser-sync/node_modules/eazy-logger requires lodash@'^3.0.1' but will load
+150 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash,
+150 warn unmet dependency which is version 4.6.1
+151 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/browser-sync/node_modules/eazy-logger/node_modules/opt-merger requires lodash@'^3.10.1' but will load
+151 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash,
+151 warn unmet dependency which is version 4.6.1
+152 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/eslint/node_modules/inquirer requires lodash@'^3.3.1' but will load
+152 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash,
+152 warn unmet dependency which is version 4.6.1
+153 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babelify/node_modules/babel-core requires lodash@'^3.10.0' but will load
+153 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash,
+153 warn unmet dependency which is version 4.6.1
+154 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/babelify/node_modules/babel-core/node_modules/babel-plugin-proto-to-assign requires lodash@'^3.9.3' but will load
+154 warn unmet dependency /Users/JKoul/codefordc/dc-campaign-finance-watch/node_modules/lodash,
+154 warn unmet dependency which is version 4.6.1
+155 verbose stack Error: The package jquery does not satisfy its siblings' peerDependencies requirements!
+155 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+155 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:267:7
+155 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:138:5
+155 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+155 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+155 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+155 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+155 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+155 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+155 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+156 verbose cwd /Users/JKoul/codefordc/dc-campaign-finance-watch/importer
+157 error Darwin 14.0.0
+158 error argv "node" "/usr/local/bin/npm" "install" "--save" "async"
+159 error node v0.12.5
+160 error npm  v2.11.2
+161 error code EPEERINVALID
+162 error peerinvalid The package jquery does not satisfy its siblings' peerDependencies requirements!
+162 error peerinvalid Peer react-bootstrap-daterangepicker@1.0.6 wants jquery@^1.11.3
+163 verbose exit [ 1, true ]
