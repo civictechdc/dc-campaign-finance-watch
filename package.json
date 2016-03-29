@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "node app.js",
+    "dev": "gulp serve --env=local",
     "test": "mocha --compilers js:babel-core/register --recursive --reporter spec",
     "test:watch": "npm test -- --watch",
     "cover": "babel-node ./node_modules/istanbul/lib/cli cover -- _mocha --recursive --reporter spec"
@@ -58,6 +59,7 @@
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-nodemon": "^2.0.4",
+    "gulp-shell": "^0.5.2",
     "gulp-util": "^3.0.6",
     "istanbul": "^0.4.2",
     "jsdom": "^8.1.0",
