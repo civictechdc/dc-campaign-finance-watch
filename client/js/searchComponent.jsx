@@ -60,6 +60,7 @@ class SearchComponent extends React.Component {
                     <div className="row">
                         <div className="col-sm-9">
                             <h2>Campaign Search</h2>
+                            <h5>Selected campaigns will appear in the "Selections" tab.</h5>
                         </div>
                         <div className="col-sm-3">
                             {
