@@ -57,7 +57,7 @@ class CandidateSearchComponent extends React.Component {
                         <input onInput={this.inputValue} placeholder="Search for a candidate"/>
                     </Col>
                     <Col xs={9}>
-                        <h3>Search Results:</h3>
+                        <h3>Search Results (A-Z)</h3>
                         {
                             _.sortBy(availableCandidates,'name').map((c, idx) => {
                                 return (
