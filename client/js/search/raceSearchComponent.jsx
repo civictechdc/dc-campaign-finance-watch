@@ -46,8 +46,9 @@ class RaceSearch extends React.Component {
     }
 
     render() {
-        const { races, campaigns } = this.state;
+        const { races, campaigns} = this.state;
         const { handleCampaignSelection, selections } = this.props;
+
         return (
             <div>
                 <LoaderComponent isLoading={this.state.loading}></LoaderComponent>
@@ -65,8 +66,9 @@ class RaceSearch extends React.Component {
                     </Col>
                     <Col xs={6}>
                         <h3>Search Results</h3>
+                        <h7>Sorted by Name</h7>
                         {
-                            campaigns.map((c, idx) => {
+                            _.sortBy(this.state.campaigns, 'name').map((c, idx) => {
                                 return (
                                     <Row key={idx}>
                                         <Col xs={4}>
@@ -75,7 +77,7 @@ class RaceSearch extends React.Component {
                                         <Col xs={8}>
                                             <ButtonToolbar key={idx}>
                                                 {
-                                                    c.campaigns.map((ca, idx) => {
+                                                    _.sortBy(c.campaigns,'year').map((ca, idx) => {
                                                         if(selections[c.id] && _.includes(selections[c.id].campaigns, ca)) {
                                                             return (
                                                                 <Button bsStyle="info" bsSize="small" key={idx} disabled>{ca.raceTypeDetail} {ca.year}</Button>
