@@ -18,18 +18,33 @@ const CandidateInfo = (props) => {
     const { info } = props;
     const ward = info.percentFromWard ? (<div>Percentage Raised from Ward: {(_.round(info.percentFromWard, 3)) *100}%</div>) : (false);
     return (
-        <div className="col-sm-12">
-            <h4>Campaign Statistics</h4>
-            <div>Total Raised: ${_.round(info.total, 2)}</div>
-            <div>Average Contribution: ${_.round(info.averageContribution, 2)}</div>
-            <div>Amount Contributed by Candidate: {(_.round(info.amountContributedByCandidate, 3)) * 100}%</div>
-            <div>Percentage Raised in D.C.: {(_.round(info.localContributionPercentage,3)) * 100}%</div>
-            <div>Contributions less than $100: {(_.round(info.smallContributionPercentage, 3)) * 100}%</div>
-            <div>Percentage of Contributions for the Maxium Allowed: {(_.round(info.maximumContributionPercentage, 3)) * 100}%</div>
-            <div>Individuals Contributing from a Corporate Address: {(_.round(info.individualsAtCorporateAddress,3)) * 100}%</div>
-            {ward}
-            <div>Ward Concentration Score: {_.round(info.wardConcentrationScore, 5)}</div>
+        <div>
+            <div className="col-sm-12">
+                <h4>Campaign Statistics</h4>
+                <div>Total Raised: ${_.round(info.total, 2)}</div>
+                <div>Average Contribution: ${_.round(info.averageContribution, 2)}</div>
+                <div>Amount Contributed by Candidate: {(_.round(info.amountContributedByCandidate, 3)) * 100}%</div>
+                <div>Percentage Raised in D.C.: {(_.round(info.localContributionPercentage,3)) * 100}%</div>
+                <div>Contributions less than $100: {(_.round(info.smallContributionPercentage, 3)) * 100}%</div>
+                <div>Percentage of Contributions for the Maxium Allowed: {(_.round(info.maximumContributionPercentage, 3)) * 100}%</div>
+                <div>Individuals Contributing from a Corporate Address: {(_.round(info.individualsAtCorporateAddress,3)) * 100}%</div>
+                {ward}
+                <div>Ward Concentration Score: {_.round(info.wardConcentrationScore, 5)}</div>
+            </div>
+            <div className="col-sm-12">
+                <h4>Campaign Score</h4>
+                <div>Total Raised: ${_.round(info.total, 2)}</div>
+                <div>Average Contribution: ${_.round(info.averageContribution, 2)}</div>
+                <div>Amount Contributed by Candidate: {(_.round(info.amountContributedByCandidate, 3)) * 100}%</div>
+                <div>Percentage Raised in D.C.: {(_.round(info.localContributionPercentage,3)) * 100}%</div>
+                <div>Contributions less than $100: {(_.round(info.smallContributionPercentage, 3)) * 100}%</div>
+                <div>Percentage of Contributions for the Maxium Allowed: {(_.round(info.maximumContributionPercentage, 3)) * 100}%</div>
+                <div>Individuals Contributing from a Corporate Address: {(_.round(info.individualsAtCorporateAddress,3)) * 100}%</div>
+                {ward}
+                <div>Ward Concentration Score: {_.round(info.wardConcentrationScore, 5)}</div>
+            </div>
         </div>
+
     );
 };
 
