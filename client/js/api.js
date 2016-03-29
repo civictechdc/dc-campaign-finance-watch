@@ -103,7 +103,7 @@ class Client {
 
 let endPoints = {
     local: 'http://localhost:3000/dc-campaign-finance/api',
-    prod: 'http://dc-finance-backend.herokuapp.com/dc-campaign-finance/api'
+    prod: 'http://ec2-52-73-208-76.compute-1.amazonaws.com/dc-campaign-finance/api'
 };
 
 config.env = config.env || 'local';
