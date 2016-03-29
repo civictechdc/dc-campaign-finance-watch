@@ -51,7 +51,7 @@ class SearchComponent extends React.Component {
     render () {
         const { candidates, activeTab } = this.state;
         const locationDescriptor = {
-            pathname: 'data',
+            pathname: '/dc-campaign-finance-watch/client/data',
             state: candidates
         };
         return (
