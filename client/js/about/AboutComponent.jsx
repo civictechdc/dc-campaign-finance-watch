@@ -18,7 +18,7 @@ const AboutComponent = () => (
             <Col xs={12}>
                 <h3>What is Code for DC?</h3>
                 <div>
-                    Code for DC is a Code for America Brigade located here in Washington, DC. Founded in 2012, we are a a non-partisan, non-political group of volunteer civic hackers working together to solve local issues and help people engage with the city.
+                    Code for DC is a Code for America Brigade located here in Washington, D.C. Founded in 2012, we are a a non-partisan, non-political group of volunteer civic hackers working together to solve local issues and help people engage with the city.
                     We host twice-monthly hacknights and other events to gather, discuss, and get stuff done.
                 </div>
             </Col>
