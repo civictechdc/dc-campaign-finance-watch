@@ -21,13 +21,13 @@ const ShellComponent = (props) => {
                     </Navbar.Brand>
                 </Navbar.Header>
                 <Nav eventKey={1}>
-                    <IndexLinkContainer to="/">
+                    <IndexLinkContainer to="/dc-campaign-finance-watch/client/">
                         <NavItem eventKey={1.1}>Home</NavItem>
                     </IndexLinkContainer>
-                    <LinkContainer to="/about">
+                    <LinkContainer to="/dc-campaign-finance-watch/client/about">
                         <NavItem eventKey={1.2}>About</NavItem>
                     </LinkContainer>
-                    <LinkContainer to="/faq">
+                    <LinkContainer to="/dc-campaign-finance-watch/client/faq">
                         <NavItem eventKey={1.3}>FAQ</NavItem>
                     </LinkContainer>
                 </Nav>
