@@ -34,6 +34,24 @@ Add this into your local Mongo database:
     unzip dc-campaign-finance-mongodatabase.zip -d dc-campaign-finance-mongodatabase
 	mongorestore --host localhost:27017 --drop ./dc-campaign-finance-mongodatabase
 
+
+Install, and start redis server:
+	brew install redis
+	redis-server
+
+Continue in a new terminal...
+
+Update your local database through import
+
+	cd importer
+	NODE_ENV=development node addYearToCampaign.js
+		** wait a few minutes
+		** Ctrl - C
+	NODE_ENV=development node updateWardCampaigns.js
+		** wait a few minutes
+		** Ctrl - C
+
+
 For the API server, you will need node.js. A good way to do that is via [nvm](https://github.com/creationix/nvm). Once you have node.js set up, do this:
 
 	npm install

@@ -136,11 +136,11 @@ export function ProcessContributionByWard(results) {
     //Map reduce the nested results to [{campaignId, ward, ammount}].
     let combined = [];
     _.each(nested, function(e, c) {
-        let mapped = _.map(e, function(e,ward) {
+        let mapped = _.map(e, function(e, ward) {
             return {
             contributorType: c,
             ward: ward,
-            amount: _.sum(e, function(o) { return o.amount; })
+            amount: _.sumBy(e, function( o ) { return o.amount; })
             };
         }); //map
         //add to result set.
