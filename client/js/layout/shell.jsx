@@ -15,7 +15,7 @@ const ShellComponent = (props) => {
             <Navbar staticTop={true}>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <Link to="/">
+                        <Link to="/dc-campaign-finance-watch/client/">
                             DC Campaign Finance
                         </Link>
                     </Navbar.Brand>
