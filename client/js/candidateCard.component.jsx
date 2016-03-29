@@ -19,7 +19,7 @@ const CandidateInfo = (props) => {
     const ward = info.percentFromWard ? (<div>Percentage Raised from Ward: {(_.round(info.percentFromWard, 3)) *100}%</div>) : (false);
     const wardScore = info.percentFromWard ? (<div>Percentage Raised from Ward: {(_.round(info.scores.wardScore, 2))}/15/</div>) : (false);
     return (
-        <div className="row">
+        <div>
             <div className="col-sm-12">
                 <h4>Campaign Statistics</h4>
                 <div>Total Raised: ${_.round(info.total, 2)}</div>
@@ -27,14 +27,14 @@ const CandidateInfo = (props) => {
                 <div>Amount Contributed by Candidate: {(_.round(info.amountContributedByCandidate, 3)) * 100}%</div>
                 <div>Percentage Raised in D.C.: {(_.round(info.localContributionPercentage,3)) * 100}%</div>
                 <div>Contributions less than $100: {(_.round(info.smallContributionPercentage, 3)) * 100}%</div>
-                <div>Percentage of Contributions for the Maximum Allowed: {(_.round(info.maximumContributionPercentage, 3)) * 100}%</div>
+                <div>Percentage of Contributions for the Maxium Allowed: {(_.round(info.maximumContributionPercentage, 3)) * 100}%</div>
                 <div>Individuals Contributing from a Corporate Address: {(_.round(info.individualsAtCorporateAddress,3)) * 100}%</div>
                 {ward}
                 <div>Ward Concentration Score: {_.round(info.wardConcentrationScore, 5)}</div>
             </div>
             <div className="col-sm-12">
                 <h4>Campaign Scores</h4>
-                <h4>Combined Score: ${(_.round(info.scores.total,2))} / 100</h4>
+                <h4>Combined Score: {(_.round(info.scores.total,2))} / 100</h4>
                 <h5>Scores range from 0-100. See here for explanation.</h5>
 
                 <h5>Location (40 points)</h5>
@@ -54,6 +54,7 @@ const CandidateInfo = (props) => {
                 <div>Money from non-Individual Sources: %{(_.round(info.scores.nonIndividualsCompositeScore,2))} / 15</div>
             </div>
         </div>
+
     );
 };
 
