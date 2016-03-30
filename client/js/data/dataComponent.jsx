@@ -47,7 +47,7 @@ class DataComponent extends React.Component {
                         return candidate.data.campaigns.map((campaign, idx) => {
                             console.log(campaign);
                             return (
-                                <Col xs={6} key={idx}>
+                                <Col xs={12} md={6} key={idx}>
                                     <CandidateCard candidateName={candidate.candidateName} data={campaign} />
                                 </Col>
                             );
