@@ -136,3 +136,9 @@ rect.bordered {
     left: 22%;
     top: 25%;
 }
+
+@media (max-width: 768px) {
+    .search-tab {
+        max-width: 9em;
+    }
+}

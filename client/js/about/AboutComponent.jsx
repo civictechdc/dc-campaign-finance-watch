@@ -24,7 +24,7 @@ const AboutComponent = () => (
             </Col>
         </Row>
         <Row>
-            <Col>
+            <Col xs={12}>
                 <h3>Who we are?</h3>
                 <Row>
                     <Col xs={3}>Michael Kalish</Col>
