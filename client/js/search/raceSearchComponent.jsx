@@ -52,7 +52,7 @@ class RaceSearch extends React.Component {
             <div>
                 <LoaderComponent isLoading={this.state.loading}></LoaderComponent>
                 <Row>
-                    <Col xs={6}>
+                    <Col md={6} xs={12}>
                         <Input ref="raceType" type="select" label="Select a race type" onChange={this._handleRaceSelection.bind(this)}>
                             {
                                 races.map((r, idx) => {
@@ -63,7 +63,7 @@ class RaceSearch extends React.Component {
                         <h3>Filter by a date range</h3>
                         <DateRangeComponent onRangeInput={this._handleRangeSelected.bind(this)}/>
                     </Col>
-                    <Col xs={6}>
+                    <Col md={6} xs={12}>
                         <h3>Search Results</h3>
                         {
                             campaigns.map((c, idx) => {

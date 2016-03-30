@@ -58,11 +58,11 @@ class SearchComponent extends React.Component {
             <div>
                 <main>
                     <div className="row">
-                        <div className="col-sm-9">
+                        <div className="col-xs-9">
                             <h2>Campaign Search</h2>
                             <h5>Selected campaigns will appear in the "Selections" tab.</h5>
                         </div>
-                        <div className="col-sm-3">
+                        <div className="col-xs-3">
                             {
                                 _.isEmpty(candidates) ? false : <Link to={locationDescriptor}><Button bsStyle="primary" bsSize="large">Go<i className="fa fa-search-plus"></i></Button></Link>
                             }
@@ -71,15 +71,15 @@ class SearchComponent extends React.Component {
                     <div className="row">
                         <div className="col-sm-12">
                             <Tabs activeKey={activeTab} onSelect={this.handleSelect.bind(this)}>
-                                <Tab eventKey={1} title="Search By Year and Race">
+                                <Tab eventKey={1} title="Search By Year and Race" tabClassName="search-tab">
                                     <RaceSearch selections={candidates} handleCampaignSelection={this._handleCampaignSelection.bind(this)}></RaceSearch>
                                 </Tab>
-                                <Tab eventKey={2} title="Search by candidate name">
+                                <Tab tabClassName="search-tab" eventKey={2} title="Search by candidate name">
                                     <CandidateSearchComponent selections={candidates} handleCampaignSelection={this._handleCampaignSelection.bind(this)}/>
                                 </Tab>
                                 {
                                     _.isEmpty(candidates) ? false :
-                                    <Tab eventKey={3} title="Selections">
+                                    <Tab tabClassName="search-tab" eventKey={3} title="Selections">
                                         <Row>
                                             <Col xs={12}>
                                                 <h4>Candidates/Campaigns to create date for: </h4>
