@@ -11,3 +11,5 @@ lib/**
 .vscode/
 lib/**
 *.rdb
+npm-debug.log
+
