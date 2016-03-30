@@ -5,6 +5,8 @@ import {
     Nav,
     NavbarHeader,
     NavbarBrand,
+    NavBarToggle,
+    NavBarCollapse,
     NavItem
 } from 'react-bootstrap';
 import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
@@ -19,21 +21,26 @@ const ShellComponent = (props) => {
                             DC Campaign Finance
                         </Link>
                     </Navbar.Brand>
+                    <Navbar.Toggle/>
                 </Navbar.Header>
-                <Nav eventKey={1}>
-                    <IndexLinkContainer to="/">
-                        <NavItem eventKey={1.1}>Home</NavItem>
-                    </IndexLinkContainer>
-                    <LinkContainer to="/about">
-                        <NavItem eventKey={1.2}>About</NavItem>
-                    </LinkContainer>
-                    <LinkContainer to="/faq">
-                        <NavItem eventKey={1.3}>FAQ</NavItem>
-                    </LinkContainer>
-                </Nav>
-                <Nav pullRight>
-                    <a href="http://www.codefordc.org"><img src="images/logo_100px.png" alt="Code For DC"/></a>
-                </Nav>
+                <Navbar.Collapse>
+                    <Nav eventKey={1}>
+                        <IndexLinkContainer to="/">
+                            <NavItem eventKey={1.1}>Home</NavItem>
+                        </IndexLinkContainer>
+                        <LinkContainer to="/about">
+                            <NavItem eventKey={1.2}>About</NavItem>
+                        </LinkContainer>
+                        <LinkContainer to="/faq">
+                            <NavItem eventKey={1.3}>FAQ</NavItem>
+                        </LinkContainer>
+                    </Nav>
+                    <Nav pullRight>
+                        <NavItem href="http://www.codefordc.org" className="code-for-dc-logo">
+                            <img src="images/logo_100px.png" alt="Code For DC"/>
+                        </NavItem>
+                    </Nav>
+                </Navbar.Collapse>
             </Navbar>
             <div className="container">
                 <img src="images/dc_flag.svg" className="background"/>
