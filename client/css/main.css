@@ -142,3 +142,10 @@ rect.bordered {
         max-width: 9em;
     }
 }
+
+@media (min-width: 769px) {
+    nav li.code-for-dc-logo a {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
