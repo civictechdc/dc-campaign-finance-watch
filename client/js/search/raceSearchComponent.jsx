@@ -53,7 +53,7 @@ class RaceSearch extends React.Component {
             <div>
                 <LoaderComponent isLoading={this.state.loading}></LoaderComponent>
                 <Row>
-                    <Col xs={6}>
+                    <Col md={6} xs={12}>
                         <Input ref="raceType" type="select" label="Select a race type" onChange={this._handleRaceSelection.bind(this)}>
                             {
                                 races.map((r, idx) => {
@@ -66,8 +66,8 @@ class RaceSearch extends React.Component {
                     </Col>
                     <Col xs={6}>
                         <h3>Search Results (A-Z)</h3>
-                        {
-                            _.sortBy(campaigns, 'name').map((c, idx) => {
+                            {
+			     _.sortBy(campaigns, 'name').map((c, idx) => {
                                 return (
                                     <Row key={idx}>
                                         <Col xs={4}>

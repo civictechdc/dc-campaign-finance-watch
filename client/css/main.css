@@ -136,3 +136,22 @@ rect.bordered {
     left: 22%;
     top: 25%;
 }
+
+@media (max-width: 768px) {
+    .search-tab {
+        max-width: 9em;
+    }
+
+    .background {
+        width: 90%;
+        top: 25%;
+        left: 5%;
+    }
+}
+
+@media (min-width: 769px) {
+    nav li.code-for-dc-logo a {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
