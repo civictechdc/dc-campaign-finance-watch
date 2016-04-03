@@ -57,20 +57,20 @@ class CandidateSearchComponent extends React.Component {
                         <input onInput={this.inputValue} placeholder="Search for a candidate"/>
                     </Col>
                     <Col xs={9}>
-                        <h3>Search Results:</h3>
+                        <h3>Search Results (A-Z)</h3>
                         {
-                            availableCandidates.map((c, idx) => {
+                            _.sortBy(availableCandidates,'name').map((c, idx) => {
                                 return (
                                     <Row key={idx}>
                                         <Col xs={4}>
                                             <h5>{c.name}: </h5>
                                         </Col>
                                         <Col xs={8}>
-                                            <ButtonToolbar key={idx}>
+                                            <ButtonToolbar className="well" key={idx}>
                                                 {
-                                                    c.campaigns.map((ca, idx) => {
+                                                    _.sortBy(c.campaigns,'year').map((ca, idx) => {
                                                         return (
-                                                            <Button onClick={() => handleCampaignSelection(c.name, c.id, ca)} bsSize="small" key={idx}>{ca.raceTypeDetail} {ca.year}</Button>
+                                                            <Button onClick={() => handleCampaignSelection(c.name, c.id, ca)} bsSize="small" bsStyle="info" key={idx} block>{ca.raceTypeDetail} {ca.year}</Button>
                                                         );
                                                     })
                                                 }

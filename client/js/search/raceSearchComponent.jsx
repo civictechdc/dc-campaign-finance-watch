@@ -46,8 +46,9 @@ class RaceSearch extends React.Component {
     }
 
     render() {
-        const { races, campaigns } = this.state;
+        const { races, campaigns} = this.state;
         const { handleCampaignSelection, selections } = this.props;
+
         return (
             <div>
                 <LoaderComponent isLoading={this.state.loading}></LoaderComponent>
@@ -63,26 +64,27 @@ class RaceSearch extends React.Component {
                         <h3>Filter by a date range</h3>
                         <DateRangeComponent onRangeInput={this._handleRangeSelected.bind(this)}/>
                     </Col>
-                    <Col md={6} xs={12}>
-                        <h3>Search Results</h3>
-                        {
-                            campaigns.map((c, idx) => {
+                    <Col xs={6}>
+                        <h3>Search Results (A-Z)</h3>
+                            {
+			     _.sortBy(campaigns, 'name').map((c, idx) => {
                                 return (
                                     <Row key={idx}>
                                         <Col xs={4}>
                                             <h5>{c.name}: </h5>
                                         </Col>
                                         <Col xs={8}>
-                                            <ButtonToolbar key={idx}>
+                                            <ButtonToolbar className="well" key={idx}>
                                                 {
-                                                    c.campaigns.map((ca, idx) => {
+                                                    _.sortBy(c.campaigns,'year').map((ca, idx) => {
                                                         if(selections[c.id] && _.includes(selections[c.id].campaigns, ca)) {
                                                             return (
-                                                                <Button bsStyle="info" bsSize="small" key={idx} disabled>{ca.raceTypeDetail} {ca.year}</Button>
+                                                                <Button bsStyle="info" bsSize="small" key={idx} block disabled>{ca.raceTypeDetail} {ca.year}</Button>
+
                                                             );
                                                         }
                                                         return (
-                                                            <Button bsStyle="info" onClick={() => handleCampaignSelection(c.name, c.id, ca)} bsSize="small" key={idx}>{ca.raceTypeDetail} {ca.year}</Button>
+                                                            <Button bsStyle="info" onClick={() => handleCampaignSelection(c.name, c.id, ca)} bsSize="small" key={idx} block>{ca.raceTypeDetail} {ca.year}</Button>
                                                         );
                                                     })
                                                 }
