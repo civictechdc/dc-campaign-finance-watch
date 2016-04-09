@@ -4,10 +4,15 @@
 This is the outline for a system to evaluate the fundraising integrity of candidates for local office in the District of Columbia. Each campaign has an associated score from 0-100, where 100 is best.
 
 **The score combines indicators encompassing four categories:**
-  - Location (35 points)
+<!-- ORIGINAL -->
+  <!-- - Location (35 points)
   - Amount (30 points)
   - Contributor Type (25 points)
-  - Reporting (10 points)
+  - Reporting (10 points) -->
+  - Location (40 points)
+  - Amount (30 points)
+  - Contributor Type (30 points)
+
 
 The specific indicators included in each categories can be found below.
 <!-- we should include a link to that section here -->
@@ -23,9 +28,19 @@ Any exploratory committee activities are considered candidate campaign contribut
 
 **Races Not Included**
 
-The seat of U.S. Delegate, currently held by Del. Eleanor Holmes Norton, is not included in the campaign finance database, as contributions are reported to the Federal Election Commission.
+Federal Campaigns:
+ - **U.S. Delegate for DC** (currently held by Del. Eleanor Holmes Norton)
+ - Contributions from DC residents to any **congressional and presidential candidates** in other states.
 
-Contribution data for Area Neighborhood Commissioner candidates is likewise not included in the Office of Campaign Finance database.
+ These races are not included in the DC local campaign finance database, as contributions are reported to the Federal Election Commission.
+
+ - **Area Neighborhood Commissioner (ANC)**
+
+ Contribution data for ANC's is likewise not included in the Office of Campaign Finance database.
+
+ - **Partisan positions** such as local party officials and convention delegates.
+
+ The contributions to candidates in these races are included in OCF data and available through the DC Campaign Finance Tracker site, but are not included in the scorecard.
 
 
 # Race Parameters

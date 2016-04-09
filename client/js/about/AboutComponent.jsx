@@ -13,8 +13,11 @@ const AboutComponent = () => (
                     each candidate's fundraising aligns with the constituency they seek to represent.
                     Hopefully, with insight from this data we can all work together to make elections in the District more transparent.
                 </div>
+            </Col>
+            <Col xs={12}>
+              <h4>About the Campaign Finance Integrity Scorecard</h4>
                 <div>
-                  Learn about the Candidate Fundraising Integrity Scorecard. (forthcoming)
+                  Learn about the <a href="https://github.com/codefordc/dc-campaign-finance-watch/blob/develop/scorecard/README.md">Candidate Fundraising Integrity Scorecard</a> (external link).
                 </div>
             </Col>
         </Row>
@@ -38,6 +41,7 @@ const AboutComponent = () => (
                         technologies to impart change.
                     </Col>
                 </Row>
+                <br/ >
                 <Row>
                     <Col xs={3}>Jeremy Koulish (no relation to Michael)</Col>
                     <Col xs={9}>
