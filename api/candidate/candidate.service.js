@@ -88,6 +88,7 @@ exports.findCandidate = function (candidateId, campaignIds, toDate, fromDate) {
 
                         var contributionLimit = getContributionLimit(campaignModel.raceTypeDetail);
 
+
                         var newContribs = contributions.filter(function(c) {
                           //REMOVE EXPLORATORY COMMITTEE TRANSFERS
                           return c.contributor.contributorType !== 'Committee';
@@ -98,8 +99,13 @@ exports.findCandidate = function (candidateId, campaignIds, toDate, fromDate) {
                         }, 0);
 
                         var contributionForMaximum = newContribs.filter(function(c){
-                            return c.amount === contributionLimit;
+                          console.log(c.amount);
+                            return c.amount == contributionLimit;
                         });
+
+                        console.log(campaignModel.campaignId);
+                        console.log(contributionLimit);
+                        console.log(contributionForMaximum.length);
 
                         var candidateContributionAmount = newContribs.reduce(function(total, c){
                             if(c.contributor.contributorType === 'Candidate') {
@@ -157,8 +163,6 @@ exports.findCandidate = function (candidateId, campaignIds, toDate, fromDate) {
                           return total;
                         }, 0);
 
-                        console.log(wardContributions);
-                        console.log(dcContributions);
 
                         var campaign = {
                             campaignId: contributions[0].campaignId,
