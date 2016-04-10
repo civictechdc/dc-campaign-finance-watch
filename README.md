@@ -1,71 +1,64 @@
-# dc-campaign-finance-backend
+# DC Campaign Finance Watch
 
-A node.js server for providing a DC Campaign Finance API.
+This project is aimed at providing greater transparency to local DC election finances, which have historically been pretty opaque.  The project provides an open API for querying the data as well as a front end that provides visualizations of the data and is eay to compare mulitple campaigns.
 
-## Running the server
+All of our data is pulled from the [Office of Campaign Finance](http://ocf.dc.gov/)
 
-To deploy this project locally you will need to get this code, get the data, set up a local MongoDB database, and then set up our API server.
+The site is very much in a beta status, so if you notice any issues or have any suggestions please open a ticket.
 
-Get this code:
+## Development
+The data is stored in several MongoDB collections on which an express based RESTish API sits and is run on AWS EC2.  The front end is built with React and is run through github pages.
 
-	git clone https://github.com/codefordc/dc-campaign-finance-watch
-	cd dc-campaign-finance-watch
+```
+git clone https://github.com/codefordc/dc-campaign-finance-watch
+cd dc-campaign-finance-watch
+```
 
-Now you can just start up everything with Vagrant:
+### Working on the front end
+Since the backend code is publicly available a backend does not have to be running locally in order to contribtue to the front end of the site.
 
-	sudo apt-get install vagrant virtualbox
-	vagrant up 
-	vagrant ssh -c 'cd /vagrant/'
-	npm install
-	gulp serve --env=local
+After cloning the repo, run the following commands from directory it was cloned into:
+```
+npm install -g gulp
+npm install
+gulp serve --env=prod
+```
+This will run a local instance of the frontend that will talk to the public API.  Any changes you make to source files should be automatically reloaded in the browser.
 
-or continue setting up the local service...
+### Working on the backend API
+The quickest/simplest way to work on the backend code is through [Vagrant](https://www.vagrantup.com/), which creates and sets up a virtual machine that is ready for development.  It can be found [here](https://www.vagrantup.com/downloads.html) or through varios package managers.
 
-Install MongoDB and then start a foregrounded instance of the Mongo server. On Ubuntu 14.04 that's:
+After installing vagrant, from the directory of source:
+```
+vagrant up
+vagrant ssh -c 'cd /vagrant'
+npm start
+```
 
-	sudo apt-get install mongodb
-	mkdir db
-	mongod --dbpath db --nojournal --noauth --setParameter textSearchEnabled=true
+or if you want to run the front end as well
 
-Continue in a new terminal...
+```
+gulp serve --env=local
+```
 
-Add this into your local Mongo database:
+The alternative to running vagrant is to install the various tools and technologies locally. Due to the variety in OS, this README just lists what will need to be installed
 
-    unzip dc-campaign-finance-mongodatabase.zip -d dc-campaign-finance-mongodatabase
-	mongorestore --host localhost:27017 --drop ./dc-campaign-finance-mongodatabase
+* MongoDB
+* NodeJS (version 5)
+* Redis
 
+After all the installations are complete run the following:
 
-Install, and start redis server:
-	brew install redis
-	redis-server
+```
+unzip dc-campaign-finance-mongodatabase.zip -d dc-campaign-finance-mongodatabase
+mongorestore --host localhost:27017 --drop ./dc-campaign-finance-mongodatabase
+npm install -g gulp
+npm install
+npm start
+```
 
-Continue in a new terminal...
-
-Update your local database through import
-
-	cd importer
-	NODE_ENV=development node addYearToCampaign.js
-		** wait a few minutes
-		** Ctrl - C
-	NODE_ENV=development node updateWardCampaigns.js
-		** wait a few minutes
-		** Ctrl - C
+The API will now be running on https://localhost:3000
 
 
-For the API server, you will need node.js. A good way to do that is via [nvm](https://github.com/creationix/nvm). Once you have node.js set up, do this:
-
-	npm install
-
-	npm install -g supervisor
-	supervisor server.js
-
-Then visit [http://localhost:3000/dc-campaign-finance/api](http://localhost:3000/dc-campaign-finance/api). You should see some very basic information about the API we've built, including the current version number of the API.
-
-## API Documentation
-
-All URLs below are relative to the API base path of `/dc-campaign-finance/api`.
-
-### [/candidate](http://localhost:3000/dc-campaign-finance/api/candidate)
-
-Lists all candidates in the data.
-
+## Contributing
+Contributions are always welcome!  We are in the process of pulling together a checklist for submitting a PR, but for now the only thing to keep in mind is to avoid adding a PR with linting errors.  There is an .eslintrc file included in the repo that should help out with that.
