@@ -102,7 +102,7 @@ exports.findCandidate = function (candidateId, campaignIds, toDate, fromDate) {
                         });
 
                         var candidateContributionAmount = newContribs.reduce(function(total, c){
-                            if(c.contributor.contributorType === 'Candidate') {
+                            if(c.selfContribution) {
                                 return total + c.amount;
                             }
                             return total;
