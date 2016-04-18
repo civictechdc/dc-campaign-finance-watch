@@ -24,7 +24,8 @@ var contributionSchema = new Schema({
     amount: Number,
     contributionType: String,
     rawContribution: String,
-    rawId: String
+    rawId: String,
+    selfContribution: Boolean
 });
 
 contributionSchema.index({candidate: 1, date: 1});
