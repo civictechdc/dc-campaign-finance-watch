@@ -64,7 +64,7 @@ class SearchComponent extends React.Component {
                             <ol>
 								<li className="instruction-item">To search for specific types of campaigns
 								within a certain date range, click on the "Search By Year and Race" tab. Note that you must choose both a type of race and a date range. 
-								To search races by candidate name, click on the "Search by candidate name" tab .</li> 
+								To search races by candidate name, click on the "Search by candidate name" tab.</li> 
 								<li className="instruction-item">Select one or more of the races shown in the search results.
 								You can view and edit these selections under the "Selections" tab (which will appear
 								to the left of the "Search by candidate" tab after you choose search terms).</li> 
