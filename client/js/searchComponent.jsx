@@ -60,20 +60,20 @@ class SearchComponent extends React.Component {
                     <div className="row">
                         <div className="col-xs-9">
                             <h2>Campaign Search</h2>
-                            <h3>How to search for campaign finance data on this website:</h3>
+                            <h4>How to search for campaign finance data on this website:</h4>
                             <ol>
 								<li className="instruction-item">To search for specific types of campaigns
-								within a certain date range, click on the "Search By Year and Race" tab. Note that you must choose both a type of race before selecting a date range. 
-								To search campaigns by candidate name, click on the "Search by candidate name" tab .</li> 
+								within a certain date range, click on the "Search By Year and Race" tab. Note that you must choose both a type of race and a date range. 
+								To search races by candidate name, click on the "Search by candidate name" tab .</li> 
 								<li className="instruction-item">Select one or more of the races shown in the search results.
 								You can view and edit these selections under the "Selections" tab (which will appear
-								to the left of the "Search by candidate" tab after you enter a search term).</li> 
+								to the left of the "Search by candidate" tab after you choose search terms).</li> 
 								<li className="instruction-item">To view data for the selected races, click on the "Go" button (which will appear in the upper right-hand corner of the page after you've selected a race).
 								You will be taken to a page with:</li> 
 								<ul>
-									<li>Data and graphs about the amount of money raised for each campaign</li>
-									<li>Information about the provenance of each selected campaign's funds.</li>
-									<li>An integrity score for each campaign</li> 
+									<li>Data and graphs about the amount of money raised for each race</li>
+									<li>Information about the origin of each selected race's funds.</li>
+									<li>An integrity score for each race</li> 
 								</ul>
 							</ol>
                         </div>
