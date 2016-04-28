@@ -92,15 +92,21 @@ export default class CandidateCard extends React.Component {
     }
 
     showCandidateProfilePicture() {
-        if(_.isEmpty(this.state.candidate.profilePictureUrl)){
-            return <Image src="/images/logo_500px.png" responsive/>;
-        }else{
-            return <Image src={this.state.candidate.profilePictureUrl} responsive/>;
-        }
+        const { data } = this.props;
+        console.log(data);
+        return (<div>
+            <Image src="/images/logo_500px.png" responsive/>
+        </div>);
+
+        // if(_.isBlank(data.profilePictureUrl)){
+        //     return <Image src="/images/logo_500px.png" responsive/>;
+        // }else{
+        //     return <Image src={data.profilePictureUrl} responsive/>;
+        // }
     }
 
     render() {
-        const {candidateName, data, profilePictureUrl} = this.props;
+        const {candidateName, data} = this.props;
         let chart = false;
         if(this.state.chartData) {
                 let shapedData = null;
