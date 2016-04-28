@@ -26,6 +26,9 @@ body {
     padding-bottom: 15px;
 }
 
+.instruction-item {
+	padding: 5px;
+}
 /* Graphs */
 
 .axis path,
