@@ -91,20 +91,6 @@ export default class CandidateCard extends React.Component {
         window.removeEventListener('resize', this.changeChart(this.state.activeChart));
     }
 
-    showCandidateProfilePicture() {
-        const { data } = this.props;
-        console.log(data);
-        return (<div>
-            <Image src="/images/logo_500px.png" responsive/>
-        </div>);
-
-        // if(_.isBlank(data.profilePictureUrl)){
-        //     return <Image src="/images/logo_500px.png" responsive/>;
-        // }else{
-        //     return <Image src={data.profilePictureUrl} responsive/>;
-        // }
-    }
-
     render() {
         const {candidateName, data} = this.props;
         let chart = false;
@@ -139,7 +125,10 @@ export default class CandidateCard extends React.Component {
             <div className="candidate-card">
                 <Panel>
                     <h1>{candidateName}</h1>
-                    {this.showCandidateProfilePicture}
+                    {!_.isEmpty(data.profilePictureUrl) ?
+                        <Image src={data.profilePictureUrl} responsive/> :
+                        <Image src="/images/logo_500px.png" responsive/>
+                    }
                     <h3>Race: {data.raceType} {data.year}</h3>
                     <CandidateInfo info={data}/>
                     <hr/>
