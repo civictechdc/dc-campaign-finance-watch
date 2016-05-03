@@ -31,9 +31,18 @@ const AboutComponent = () => (
                     <Col xs={9}>
                         I'm a lifelong DMV resident, who has been involved in this project since 2014.
                         I'm passionate about making technology more accessible and using open source
-                        technologies to impart change.
+                        technologies to impart change.  Contact me at kalishmichael@gmail.com or mkalish on github.
                     </Col>
                 </Row>
+                <hr/>
+                <Row>
+                     <Col xs={3}>Jeremy Koulish (no relation to Michael)</Col>
+                     <Col xs={9}>
+                         I moved to DC in 2007 for a career in politics, and came to love this strange, beautiful city despite the politics.
+                         A professional policy wonk and strategist turned web developer, I've long been passionate about using open data to enhance civic education and participation.
+                         My work on this project emerged from initial work toward a similar tool as part of my side project, <a href="http://dcfuture.com">DCFuture</a>.
+                     </Col>
+                 </Row>
             </Col>
         </Row>
     </Grid>
