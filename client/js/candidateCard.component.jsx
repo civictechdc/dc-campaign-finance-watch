@@ -2,6 +2,7 @@ import React from 'react';
 import ChartSelectorComponent from './chartSelector.jsx';
 import ChartContainerComponent from './chartContainerComponent.jsx';
 import _ from 'lodash';
+import { Link } from 'react-router';
 import Client from './api';
 import Promise from 'bluebird';
 import {
@@ -35,7 +36,7 @@ const CandidateInfo = (props) => {
             <div className="col-sm-12">
                 <h4>Campaign Scores</h4>
                 <h4>Combined Score: {(_.round(info.scores.total,2))} (out of 100 points)</h4>
-                <h5>Scores range from 0-100. See here for explanation.</h5>
+                <h5>Scores range from 0-100. See <Link to="faq#scorecard">here</Link> for explanation.</h5>
 
                 <h5>Location (40 points)</h5>
                 <div>% of Money from DC Addresses: {(_.round(info.scores.dcContribScore,2))} (out of 25 points)</div>
