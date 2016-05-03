@@ -27,7 +27,7 @@ const FaqComponent = () => (
                     <li>Added unique ids for both candidates and campaigns run.</li>
                     <li>Ran the contribution addresses through the Master Address Repository in order to verify addresses and collect additional information, such as ward</li>
                     <li>(Currently not in use) Ran contributor name/address combos through a deduplication process to accurately track the unique contributors</li>
-                    <li>Removed "committee" contributions from the total count.  "Committee" contributions are money a campaign has already received and is being transferred to the official campaing.  For example, an explotorary committee would "contribute" the funds already collected if an official campaign is launched.</li>
+                    <li>Removed "committee" contributions from the total count.  "Committee" contributions are money a campaign has already received and is being transferred to the official campaign.  For example, an exploratory committee would "contribute" the funds already collected if an official campaign is launched.</li>
                 </ul>
             </Col>
         </Row>
@@ -39,9 +39,9 @@ const FaqComponent = () => (
         </Row>
         <Row>
             <Col xs={12}>
-                <h4>What to do if the data seems wrong?</h4>
+                <h4>What can you do if the data seems wrong?</h4>
                 <div>
-                    Please contact us with the data that might incorrect.  We're striving to keep the data as accurate as possible.
+                    Please contact us with the data that might be incorrect.  We're striving to keep the data as accurate as possible.
                 </div>
             </Col>
         </Row>
