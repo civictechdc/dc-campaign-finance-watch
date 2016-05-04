@@ -15,6 +15,7 @@ var path = require('path');
 var fs = require('fs');
 var child_process = require('child_process');
 var shell = require('gulp-shell');
+var markdownify = require('markdownify');
 
 
 
@@ -23,7 +24,8 @@ var watchifyOpts = {
 };
 var bundler = browserify({
     entries: ['./client/index.jsx'],
-    debug: true
+    debug: true,
+    extensions: ['.md', 'markdown']
 });
 
 bundler.plugin(watchify, {
@@ -31,7 +33,8 @@ bundler.plugin(watchify, {
         ignoreWatch: ['**/node_modules/**'],
         poll: true
     })
-    .transform(babelify);
+    .transform(babelify)
+    .transform(markdownify);
 
 bundler.on('update', function () {
     gutil.log('file changed, browserify it');
