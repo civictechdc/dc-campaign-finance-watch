@@ -1,5 +1,11 @@
 import React from 'react';
-import {Grid, Row, Col} from 'react-bootstrap';
+import {Grid, Row, Col, Well} from 'react-bootstrap';
+
+var scorecard = require('../../../scorecard/README');
+
+function createScorecard() {
+    return { __html: scorecard};
+};
 
 const FaqComponent = () => (
     <Grid>
@@ -43,6 +49,14 @@ const FaqComponent = () => (
                 <div>
                     Please contact us with the data that might be incorrect.  We're striving to keep the data as accurate as possible.
                 </div>
+            </Col>
+        </Row>
+        <Row>
+            <Col xs={12} id="scorecard">
+                <h4>What do the scores mean?</h4>
+                <Well>
+                    <div dangerouslySetInnerHTML={createScorecard()}></div>
+                </Well>
             </Col>
         </Row>
         <Row>
