@@ -25,11 +25,11 @@ const AboutComponent = () => (
         </Row>
         <Row>
             <Col xs={12}>
-                <h3>Who we are?</h3>
+                <h3>Who are we?</h3>
                 <Row>
                     <Col xs={3}>Michael Kalish</Col>
                     <Col xs={9}>
-                        I'm a lifelong DMV resident, who has been involved in this project since 2014.
+                        I'm a lifelong DMV resident who has been involved in this project since 2014.
                         I'm passionate about making technology more accessible and using open source
                         technologies to impart change.
                     </Col>
