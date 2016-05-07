@@ -64,7 +64,6 @@ exports.findCandidate = function (candidateId, campaignIds, toDate, fromDate) {
     return Candidate.findById(candidateId)
         .then(function(candidate){
             candidateResponse.candidate = candidate;
-            candidateResponse.candidate.profilePictureUrl = candidate.profilePictureUrl;
             candidateResponse.candidate.campaigns = candidate.campaigns.filter(function(campaign){
                 return _.includes(campaignIds, campaign.campaignId) || campaignIds.length === 0;
             });
