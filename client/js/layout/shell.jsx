@@ -34,6 +34,9 @@ const ShellComponent = (props) => {
                         <LinkContainer to="/faq">
                             <NavItem eventKey={1.3}>FAQ</NavItem>
                         </LinkContainer>
+                        <LinkContainer to="/news">
+                            <NavItem eventKey={1.4}>News</NavItem>
+                        </LinkContainer>
                     </Nav>
                     <Nav pullRight>
                         <NavItem href="http://www.codefordc.org" className="code-for-dc-logo">
