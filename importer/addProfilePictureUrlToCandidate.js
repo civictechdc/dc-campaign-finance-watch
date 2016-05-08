@@ -18,7 +18,6 @@ mongoose.connect('mongodb://localhost:27017/dc-campaign-finance', {
 Candidates.find()
     .then(function(candidates){
         candidates.forEach(function(candidate){
-            console.log(candidate.id, candidate.name, candidate.profilePictureUrl);
             Candidates.findByIdAndUpdate(candidate.id, {
                 $set: {
                     profilePictureUrl: ""
