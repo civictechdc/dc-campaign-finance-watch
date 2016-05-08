@@ -1,4 +1,3 @@
-client/dist/**
 client/config.json
 .vagrant
 node_modules
