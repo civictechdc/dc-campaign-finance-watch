@@ -68,7 +68,7 @@ class CreateChartComponent extends React.Component {
                 return Client
                 .getCandidate(candidate, range)
                 .then(function(results){
-                    return {candidateName: candidate.name, data: results[0]};
+                    return {candidateName: candidate.name, profilePictureUrl: candidate.profilePictureUrl, data: results[0]};
                 });
         }))
         .then(function(candidates){

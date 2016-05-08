@@ -93,7 +93,7 @@ export default class CandidateCard extends React.Component {
     }
 
     render() {
-        const {candidateName, data} = this.props;
+        const {candidateName, data, candidateProfilePictureUrl} = this.props;
         let chart = false;
         if(this.state.chartData) {
                 let shapedData = null;
@@ -123,11 +123,11 @@ export default class CandidateCard extends React.Component {
                 );
         }
         return (
-            <div className="candidate-card">
+        <div className="candidate-card">
                 <Panel>
                     <h1>{candidateName}</h1>
-                    {!_.isEmpty(data.profilePictureUrl) ?
-                        <Image src={data.profilePictureUrl} responsive/> :
+                    {!_.isEmpty(candidateProfilePictureUrl) ?
+                        <Image src={candidateProfilePictureUrl} responsive/> :
                         <Image src="/images/logo_500px.png" responsive/>
                     }
                     <h3>Race: {data.raceType} {data.year}</h3>
