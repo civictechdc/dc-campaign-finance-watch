@@ -21,7 +21,8 @@ exports.findCandidateByRaceAndYear = function(race, fromYear, toYear) {
                     name: c.name,
                     campaigns: c.campaigns.filter(function(ca){
                         return ca.year >= fromYear && ca.year <= toYear  && ca.raceType === race;
-                    })
+                    }),
+                    profilePictureUrl: c.profilePictureUrl
                 };
             });
         });

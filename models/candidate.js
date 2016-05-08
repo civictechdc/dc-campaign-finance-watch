@@ -19,7 +19,8 @@ var candidateSchema = new Schema({
         raceTypeDetail: String,
         ward: String,
         year: Number
-    }]
+    }],
+    profilePictureUrl: String
 });
 
 candidateSchema.index({

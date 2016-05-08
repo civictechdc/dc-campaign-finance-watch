@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 import Client from './api';
 import Promise from 'bluebird';
 import {
-    Panel
+    Image, Panel
 } from 'react-bootstrap';
 import {
     ProcessContributionsOverTime,
@@ -71,6 +71,7 @@ export default class CandidateCard extends React.Component {
         this.setState({activeChart: chart});
     }
 
+
     componentWillMount() {
         const { data } = this.props;
         return Client.getCampaignData(data.campaignId)
@@ -92,7 +93,7 @@ export default class CandidateCard extends React.Component {
     }
 
     render() {
-        const {candidateName, data} = this.props;
+        const {candidateName, data, candidateProfilePictureUrl} = this.props;
         let chart = false;
         if(this.state.chartData) {
                 let shapedData = null;
@@ -122,9 +123,13 @@ export default class CandidateCard extends React.Component {
                 );
         }
         return (
-            <div className="candidate-card">
+        <div className="candidate-card">
                 <Panel>
                     <h1>{candidateName}</h1>
+                    {!_.isEmpty(candidateProfilePictureUrl) ?
+                        <Image src={candidateProfilePictureUrl} responsive/> :
+                        <Image src="/images/logo_500px.png" responsive/>
+                    }
                     <h3>Race: {data.raceType} {data.year}</h3>
                     <CandidateInfo info={data}/>
                     <hr/>

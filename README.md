@@ -26,7 +26,7 @@ gulp serve --env=prod
 This will run a local instance of the frontend that will talk to the public API.  Any changes you make to source files should be automatically reloaded in the browser.
 
 ### Working on the backend API
-The quickest/simplest way to work on the backend code is through [Vagrant](https://www.vagrantup.com/), which creates and sets up a virtual machine that is ready for development.  It can be found [here](https://www.vagrantup.com/downloads.html) or through varios package managers.
+The quickest/simplest way to work on the backend code is through [Vagrant](https://www.vagrantup.com/), which creates and sets up a virtual machine that is ready for development.  It can be found [here](https://www.vagrantup.com/downloads.html) or through various package managers.
 
 After installing vagrant, from the directory of source:
 ```
