@@ -31,9 +31,7 @@ bower_components/
 
 # Lib
 lib/*
-
 .vagrant
-node_modules
 .bundle
 .idea/**
 .vscode/**
@@ -42,4 +40,3 @@ lib/**
 .DS_Store
 .vscode/
 *.rdb
-npm-debug.log
