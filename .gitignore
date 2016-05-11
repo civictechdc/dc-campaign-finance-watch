@@ -33,7 +33,7 @@ bower_components/
 lib
 .vagrant
 .bundle
-.idea
+.idea/
 .vscode
 dc-campaign-finance-mongodatabase
 .DS_Store
