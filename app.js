@@ -9,11 +9,7 @@ var restify = require('restify');
 var server = restify.createServer({name: 'dc-campaign-finance'});
 server.use(restify.queryParser());
 server.use(restify.bodyParser({ mapParams: true }));
-server.use(function crossOrigin(req, res, next){
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  return next();
-});
+server.use(restify.CORS({credentials: true}));
 
 //Mongoose
 var mongoose = require('mongoose');

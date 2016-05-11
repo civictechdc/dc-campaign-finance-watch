@@ -30,12 +30,11 @@ node_modules
 bower_components/
 
 # Lib
-lib/*
+lib
 .vagrant
 .bundle
-.idea/**
-.vscode/**
-lib/**
+.idea
+.vscode
 /dc-campaign-finance-mongodatabase
 .DS_Store
 .vscode/

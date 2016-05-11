@@ -16,8 +16,10 @@
     "serve": "node server.js --env=dev",
     "serve:dist": "node server.js --env=dist",
     "start": "node server.js --env=dev",
+    "dev": "npm run api & node server.js --env=dev",
     "test": "karma start",
-    "test:watch": "karma start --autoWatch=true --singleRun=false"
+    "test:watch": "karma start --autoWatch=true --singleRun=false",
+    "api": "node app.js"
   },
   "repository": "",
   "keywords": [],
@@ -77,6 +79,7 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.4.0",
     "redux": "^3.5.2",
+    "restify": "^4.0.4",
     "restler": "^3.4.0",
     "rx-react": "^0.3.0"
   }
