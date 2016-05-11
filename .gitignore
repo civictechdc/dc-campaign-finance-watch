@@ -35,7 +35,7 @@ lib
 .bundle
 .idea
 .vscode
-/dc-campaign-finance-mongodatabase
+dc-campaign-finance-mongodatabase
 .DS_Store
 .vscode/
 *.rdb
