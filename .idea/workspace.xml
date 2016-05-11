@@ -1,49 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20dd0134-daec-480c-8e21-6f0a9a36cbdc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/config.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/js/dist/bundle.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/css/main.css" afterPath="$PROJECT_DIR$/src/styles/main.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/css/reactdaypicker.css" afterPath="$PROJECT_DIR$/src/styles/reactdaypicker.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/d3collapsibleDendrogram.html" afterPath="$PROJECT_DIR$/src/d3collapsibleDendrogram.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/images/dc_flag.svg" afterPath="$PROJECT_DIR$/src/images/dc_flag.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/images/logo_100px.png" afterPath="$PROJECT_DIR$/src/images/logo_100px.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/images/logo_500px.png" afterPath="$PROJECT_DIR$/src/images/logo_500px.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/index.jsx" afterPath="$PROJECT_DIR$/src/index.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/about/AboutComponent.jsx" afterPath="$PROJECT_DIR$/src/components/about/AboutComponent.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/api.js" afterPath="$PROJECT_DIR$/src/components/api.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/candidateCard.component.jsx" afterPath="$PROJECT_DIR$/src/components/candidateCard.component.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/candidateList.jsx" afterPath="$PROJECT_DIR$/src/components/candidateList.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/candidateSearchComponent.jsx" afterPath="$PROJECT_DIR$/src/components/candidateSearchComponent.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/candidateSelector.jsx" afterPath="$PROJECT_DIR$/src/components/candidateSelector.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/chart.jsx" afterPath="$PROJECT_DIR$/src/components/chart.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/chartContainerComponent.jsx" afterPath="$PROJECT_DIR$/src/containers/chartContainerComponent.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/chartDataProcessor.js" afterPath="$PROJECT_DIR$/src/components/chartDataProcessor.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/chartSelector.jsx" afterPath="$PROJECT_DIR$/src/components/chartSelector.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/contributionByWardChart.js" afterPath="$PROJECT_DIR$/src/components/contributionByWardChart.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/contributionOverTimeChart.js" afterPath="$PROJECT_DIR$/src/components/contributionOverTimeChart.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/contributorBreakdownChart.js" afterPath="$PROJECT_DIR$/src/components/contributorBreakdownChart.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/contributorDendogramChart.js" afterPath="$PROJECT_DIR$/src/components/contributorDendogramChart.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/createChartComponent.jsx" afterPath="$PROJECT_DIR$/src/components/createChartComponent.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/data/dataComponent.jsx" afterPath="$PROJECT_DIR$/src/components/data/dataComponent.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/dateRange.jsx" afterPath="$PROJECT_DIR$/src/components/dateRange.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/faq/faqComponent.jsx" afterPath="$PROJECT_DIR$/src/components/faq/faqComponent.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/layout/shell.jsx" afterPath="$PROJECT_DIR$/src/components/layout/shell.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/loader.component.jsx" afterPath="$PROJECT_DIR$/src/components/loader.component.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/news/newsComponent.jsx" afterPath="$PROJECT_DIR$/src/components/news/newsComponent.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/search/raceSearchComponent.jsx" afterPath="$PROJECT_DIR$/src/components/search/raceSearchComponent.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/searchComponent.jsx" afterPath="$PROJECT_DIR$/src/components/searchComponent.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/client/js/selectedCandidatesComponent.jsx" afterPath="$PROJECT_DIR$/src/components/selectedCandidatesComponent.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.eslintrc" afterPath="$PROJECT_DIR$/.eslintrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment/development.js" afterPath="$PROJECT_DIR$/config/environment/development.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment/index.js" afterPath="$PROJECT_DIR$/config/environment/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment/production.js" afterPath="$PROJECT_DIR$/config/environment/production.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-    </list>
+    <list default="true" id="20dd0134-daec-480c-8e21-6f0a9a36cbdc" name="Default" comment="" />
     <ignored path="dc-campaign-finance-watch.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -74,26 +32,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environment/production.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2184">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="raceSearchComponent.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/search/raceSearchComponent.jsx">
           <provider selected="true" editor-type-id="text-editor">
@@ -116,6 +54,46 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vagrantfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vagrantfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vagrant_provisioner.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vagrant_provisioner.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchOpenCorporate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searchOpenCorporate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -128,31 +106,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environment/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/config.json">
+      <file leaf-file-name="karma.conf.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/karma.conf.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+            <state relative-caret-position="536">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -205,7 +173,6 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/api/candidate/candidate.service.js" />
         <option value="$PROJECT_DIR$/importer/README.md" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/client/js/createChartComponent.jsx" />
         <option value="$PROJECT_DIR$/client/js/data/dataComponent.jsx" />
         <option value="$PROJECT_DIR$/importer/candidateNameToProfileUrl.js" />
@@ -234,6 +201,7 @@
         <option value="$PROJECT_DIR$/config/environment/production.js" />
         <option value="$PROJECT_DIR$/config/environment/development.js" />
         <option value="$PROJECT_DIR$/src/components/api.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -258,8 +226,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1920" />
-    <option name="width" value="1920" />
+    <option name="x" value="2060" />
+    <option name="y" value="29" />
+    <option name="width" value="960" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -334,60 +303,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dc-campaign-finance-watch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dc-campaign-finance-watch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dc-campaign-finance-watch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dc-campaign-finance-watch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dc-campaign-finance-watch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dc-campaign-finance-watch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dc-campaign-finance-watch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -557,12 +472,12 @@
       <workItem from="1462653305132" duration="13529000" />
       <workItem from="1462716988448" duration="6345000" />
       <workItem from="1462738646968" duration="220000" />
-      <workItem from="1462968595085" duration="8622000" />
+      <workItem from="1462968595085" duration="9061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62211000" />
+    <option name="totallyTimeSpent" value="62650000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -574,11 +489,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="2060" y="29" width="960" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20747761" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4195953" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -647,46 +562,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-361">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfg/dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/notindex.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.yo-rc.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1021,16 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/mongo.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1101,6 +966,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
           <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vagrantfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vagrant_provisioner.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searchOpenCorporate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/karma.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
