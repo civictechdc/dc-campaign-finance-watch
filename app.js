@@ -45,6 +45,6 @@ server.get('/dc-campaign-finance/api/contributions/:campaign', contributionContr
 var visualizationController = require('./api/visualization/visualization.controller');
 server.post('/dc-campaign-finance/api/visualization', visualizationController.convertToPng);
 
-server.listen(process.env.PORT || 3000, function(){
+server.listen(process.env.PORT || 8001, function(){
     console.log('%s listening at %s', server.name, server.url);
 });
