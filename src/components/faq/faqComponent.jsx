@@ -55,7 +55,7 @@ const FaqComponent = () => (
             <Col xs={12} id="scorecard">
                 <h4>What do the scores mean?</h4>
                 <Well>
-                    <div dangerouslySetInnerHTML={createScorecard()}></div>
+                    <a href="assets/d4d85ae49e726dcf637e2eacb3651afc.md">View Read Me</a>
                 </Well>
             </Col>
         </Row>

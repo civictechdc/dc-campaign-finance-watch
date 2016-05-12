@@ -24,4 +24,4 @@ sudo apt-get update
 cd /vagrant
 echo "Installing local node modules"
 npm install
-echo "To start the server run: vagrant ssh -c 'cd /vagrant && gulp serve --env=local'"
+echo "To start the server run: vagrant ssh -c 'cd /vagrant && npm run dev'"
