@@ -1,6 +1,6 @@
 import React from 'react';
 import ChartSelectorComponent from './chartSelector.jsx';
-import ChartContainerComponent from './../containers/chartContainerComponent.jsx';
+import ChartContainerComponent from './chartContainerComponent.jsx';
 import _ from 'lodash';
 import { Link } from 'react-router';
 import Client from './api';

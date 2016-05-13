@@ -95,7 +95,6 @@ class Client {
 
     convertSvg(svg) {
         let data = {svg: (new XMLSerializer).serializeToString(svg)};
-        console.log(data);
         return this.Rest.postAsync(this.baseUrl + '/visualization', {data: data});
     }
 }

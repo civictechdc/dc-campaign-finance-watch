@@ -41,18 +41,11 @@ module.exports = {
   resolve: {
     extensions: [ '', '.js', '.jsx' ],
     alias: {
-      actions: srcPath + 'actions/',
       helpers: path.join(__dirname, '/../test/helpers'),
       components: srcPath + 'components/',
-      sources: srcPath + 'sources/',
-      stores: srcPath + 'stores/',
       styles: srcPath + 'styles/',
       config: srcPath + 'config/' + process.env.REACT_WEBPACK_ENV
     }
   },
-  plugins: [
-    new BowerWebpackPlugin({
-      searchResolveModulesDirectories: false
-    })
-  ]
+  plugins: []
 };

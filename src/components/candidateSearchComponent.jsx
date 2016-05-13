@@ -36,7 +36,7 @@ class CandidateSearchComponent extends React.Component {
             })
             .subscribe(function (data) {
                 self.setState({availableCandidates: data});
-            }, function (errorr) {
+            }, function (error) {
                 console.log(error);
             });
     }

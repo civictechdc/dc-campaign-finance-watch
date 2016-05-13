@@ -60,7 +60,6 @@ class CreateChartComponent extends React.Component {
         var candidates = this.state.selectedCandidates;
         var that = this;
         Promise.all(candidates.map(function(candidate){
-                console.log("This range exist:", range);
                 return Client
                 .getCandidate(candidate, range)
                 .then(function(results){

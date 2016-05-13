@@ -49,12 +49,16 @@ function getDefaultModules() {
         loader: 'url-loader?limit=8192'
       },
       {
-        test: /\.(mp4|ogg|svg|md)$/,
+        test: /\.(mp4|ogg|svg)$/,
         loader: 'file-loader'
       },
       {
         test: /\.json/,
         loader: 'json-loader'
+      },
+      {
+        test: /\.md/,
+        loader: 'html!markdown'
       }
     ]
   };

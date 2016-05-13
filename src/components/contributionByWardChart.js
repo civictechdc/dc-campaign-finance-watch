@@ -15,7 +15,6 @@ class ContributionByWardChart {
     }
 
     _drawPoints(el, data) {
-        console.log(data);
         this.svg.selectAll('*').remove();
         var margin = { top: 50, right: 0, bottom: 100, left: 30 },
         width = 960 - margin.left - margin.right,

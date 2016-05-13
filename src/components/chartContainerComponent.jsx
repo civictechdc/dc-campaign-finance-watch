@@ -1,9 +1,9 @@
 import React from 'react';
-import Chart from './../components/chart.jsx';
+import Chart from './chart.jsx';
 import {
     Button
 } from 'react-bootstrap';
-import Client from './../components/api';
+import Client from './api';
 
 class ChartContainerComponent extends React.Component {
     constructor (props) {

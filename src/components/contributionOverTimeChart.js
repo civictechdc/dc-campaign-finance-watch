@@ -15,7 +15,6 @@ class ContributionOverTimeChart {
   }
 
   _drawPoints(el, data) {
-      console.log(data);
     this.svg.selectAll('*').remove();
     
     let margin = {top: 50, right: 100, bottom: 50, left: 100};
