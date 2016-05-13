@@ -4,7 +4,6 @@ sudo apt-get update
 # Install node and npm
 curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
 sudo apt-get install -y nodejs
-sudo npm install -g gulp
 
 # Install and start mongodb
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
@@ -24,4 +23,5 @@ sudo apt-get update
 cd /vagrant
 echo "Installing local node modules"
 npm install
-echo "To start the server run: vagrant ssh -c 'cd /vagrant && gulp serve --env=local'"
+echo "To start the server run: vagrant ssh -c 'cd /vagrant && npm run dev'"
+
