@@ -6,8 +6,9 @@ import { Link } from 'react-router';
 import Client from './api';
 import Promise from 'bluebird';
 import {
-    Image, Panel
+    Image, Panel, Button
 } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import {
     ProcessContributionsOverTime,
     ProcessContributorBreakdown,
@@ -132,6 +133,10 @@ export default class CandidateCard extends React.Component {
                     }
                     <h3>Race: {data.raceType} {data.year}</h3>
                     <CandidateInfo info={data}/>
+                    <hr/>
+                    <LinkContainer to={'/campaign/' + data.campaignId}>
+                        <Button>Details</Button>
+                    </LinkContainer>
                     <hr/>
                     <ChartSelectorComponent onChartSelected={this.changeChart}/>
                     {chart || false}

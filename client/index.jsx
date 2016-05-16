@@ -7,6 +7,7 @@ import DataComponent from './js/data/dataComponent.jsx';
 import FaqComponent from './js/faq/faqComponent.jsx';
 import AboutComponent from './js/about/aboutComponent.jsx';
 import NewsComponent from './js/news/newsComponent.jsx';
+import CampaignDetailComponent from './js/campaign/campaignDetailComponent.jsx';
 import { browserHistory } from 'react-router';
 
 render((
@@ -17,6 +18,7 @@ render((
             <Route path="about" component={AboutComponent}/>
             <Route path="data" component={DataComponent}/>
             <Route path="news" component={NewsComponent}/>
+            <Route path="campaign/:id" component={CampaignDetailComponent}></Route>
         </Route>
     </Router>
 ), document.getElementById('app'));
