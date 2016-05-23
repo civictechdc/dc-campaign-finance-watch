@@ -9,6 +9,9 @@ import AboutComponent from 'components/about/AboutComponent.jsx';
 import NewsComponent from 'components/news/newsComponent.jsx';
 import { browserHistory } from 'react-router';
 
+require('./styles/main.css');
+require('./styles/reactdaypicker.css');
+
 render((
     <Router history={browserHistory}>
         <Route path="/" component={ShellComponent}>
