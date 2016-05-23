@@ -18,7 +18,7 @@ render((
             <Route path="about" component={AboutComponent}/>
             <Route path="data" component={DataComponent}/>
             <Route path="news" component={NewsComponent}/>
-            <Route path="campaign/:id" component={CampaignDetailComponent}></Route>
+            <Route path="candidate/:candidateId/campaign/:id" component={CampaignDetailComponent}></Route>
         </Route>
     </Router>
 ), document.getElementById('app'));

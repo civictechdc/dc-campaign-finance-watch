@@ -19,7 +19,7 @@ class DataComponent extends React.Component {
                 return Client
                     .getCandidate(candidate)
                     .then(function(results){
-                        return {candidateName: candidate.name, data: results[0]};
+                        return {candidateName: candidate.name, data: results[0], id: candidate.id};
                     });
         }))
         .then(function(candidates){
@@ -47,10 +47,11 @@ class DataComponent extends React.Component {
                         return candidate.data.campaigns.map((campaign, idx) => {
                             return (
                                 <Col xs={12} md={6} key={idx}>
-                                    <CandidateCard 
-                                        candidateName={candidate.candidateName} 
+                                    <CandidateCard
+                                        candidateName={candidate.candidateName}
+                                        candidateId={candidate.id}
                                         candidateProfilePictureUrl={candidate.data.candidate.profilePictureUrl}
-                                        data={campaign} 
+                                        data={campaign}
                                     />
                                 </Col>
                             );

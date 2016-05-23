@@ -94,7 +94,8 @@ export default class CandidateCard extends React.Component {
     }
 
     render() {
-        const {candidateName, data, candidateProfilePictureUrl} = this.props;
+        const {candidateName, data, candidateProfilePictureUrl, candidateId} = this.props;
+        console.log(candidateId);
         let chart = false;
         if(this.state.chartData) {
                 let shapedData = null;
@@ -134,7 +135,7 @@ export default class CandidateCard extends React.Component {
                     <h3>Race: {data.raceType} {data.year}</h3>
                     <CandidateInfo info={data}/>
                     <hr/>
-                    <LinkContainer to={'/campaign/' + data.campaignId}>
+                    <LinkContainer to={`candidate/${candidateId}/campaign/${data.campaignId}`}>
                         <Button>Details</Button>
                     </LinkContainer>
                     <hr/>
