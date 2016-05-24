@@ -9,11 +9,7 @@ var restify = require('restify');
 var server = restify.createServer({name: 'dc-campaign-finance'});
 server.use(restify.queryParser());
 server.use(restify.bodyParser({ mapParams: true }));
-server.use(function crossOrigin(req, res, next){
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  return next();
-});
+server.use(restify.CORS({credentials: true}));
 
 //Mongoose
 var mongoose = require('mongoose');
@@ -45,6 +41,6 @@ server.get('/dc-campaign-finance/api/contributions/:campaign', contributionContr
 var visualizationController = require('./api/visualization/visualization.controller');
 server.post('/dc-campaign-finance/api/visualization', visualizationController.convertToPng);
 
-server.listen(process.env.PORT || 3000, function(){
+server.listen(process.env.PORT || 8001, function(){
     console.log('%s listening at %s', server.name, server.url);
 });
