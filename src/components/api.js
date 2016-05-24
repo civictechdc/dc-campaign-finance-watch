@@ -53,19 +53,18 @@ class Client {
     }
 
     getCampaignData(campaignId) {
-        return this.Rest.getAsync(this.baseUrl + '/contributions/' + campaignId)
-            .then((result) => {
-                return result[0];
+        return fetch(this.baseUrl + '/contributions/' + campaignId)
+            .then((rsp) => {
+                return rsp.json();
             });
     }
 
     getCandidates(toDate, fromDate) {
         let toDateString = toDate.format();
         let fromDateString = fromDate.format();
-        return this.Rest
-            .getAsync(this.baseUrl + '/candidate' + '?toDate=' + toDateString + '&fromDate=' + fromDateString)
-            .then(function (result) {
-                return result[0];
+        return fetch(this.baseUrl + '/candidate' + '?toDate=' + toDateString + '&fromDate=' + fromDateString)
+            .then((rsp) => {
+                return rsp.json();
             });
     }
 
@@ -73,30 +72,37 @@ class Client {
         const campaignSearch = _.join(candidate.campaigns.map((ca) => {
             return 'campaigns=' + ca.campaignId;
         }), '&');
-        return this.Rest.getAsync(this.baseUrl + '/candidate/' + candidate.id + '?' + campaignSearch);
+        return fetch(this.baseUrl + '/candidate/' + candidate.id + '?' + campaignSearch)
+            .then((rsp) => {
+                return rsp.json();
+            });
     }
 
     getCampaigns(race, dateRange) {
         if(!dateRange) {
-            return this.Rest.getAsync(this.baseUrl + '/electionSearch' + '?raceType=' + race);
+            return fetch(this.baseUrl + '/electionSearch' + '?raceType=' + race)
+                .then((rsp) =>{
+                    return rsp.json();
+                });
         }
-        return this.Rest.getAsync(this.baseUrl + '/electionSearch' + '?raceType=' + race + '&fromDate=' + dateRange.fromDate.format() + '&toDate=' + dateRange.toDate.format());
-    }
-
-    getRaces() {
-        return this.Rest.getAsync(this.baseUrl + '/races');
-    }
-
-    search(value) {
-        return this.Rest.getAsync(this.baseUrl + '/candidate?search=' + value)
-            .then(function (result) {
-                return result[0];
+        return fetch(this.baseUrl + '/electionSearch' + '?raceType=' + race + '&fromDate=' + dateRange.fromDate.format() + '&toDate=' + dateRange.toDate.format())
+            .then((rsp) =>{
+                rsp.json();
             });
     }
 
-    convertSvg(svg) {
-        let data = {svg: (new XMLSerializer).serializeToString(svg)};
-        return this.Rest.postAsync(this.baseUrl + '/visualization', {data: data});
+    getRaces() {
+        return fetch(this.baseUrl + '/races')
+            .then((rsp) => {
+                return rsp.json();
+            });
+    }
+
+    search(value) {
+        return fetch(this.baseUrl + '/candidate?search=' + value)
+            .then((rsp) => {
+                return rsp.json();
+            });
     }
 }
 
@@ -106,7 +112,6 @@ let endPoints = {
 };
 
 let env = 'local';
-console.log()
 if(config.default.api === 'production') {
     env = 'prod';
 }

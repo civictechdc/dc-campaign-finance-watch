@@ -14,9 +14,11 @@ class RaceSearch extends React.Component {
         var that = this;
         client.getRaces()
             .then(function(races){
-                races = races[0];
                 races.unshift('Select a race type');
                 that.setState({races: races});
+            })
+            .catch(function(err){
+                console.log(err);
             });
     }
 
@@ -31,7 +33,7 @@ class RaceSearch extends React.Component {
         if(this.state.selectedRace) {
             client.getCampaigns(this.state.selectedRace, range)
                 .then((campaigns) => {
-                    that.setState({campaigns: campaigns[0]});
+                    that.setState({campaigns: campaigns});
                 });
         }
     }
@@ -41,7 +43,7 @@ class RaceSearch extends React.Component {
         var that = this;
         client.getCampaigns(race, this.state.range)
             .then((campaigns) => {
-                that.setState({campaigns: campaigns[0], selectedRace: race});
+                that.setState({campaigns: campaigns, selectedRace: race});
             });
     }
 
