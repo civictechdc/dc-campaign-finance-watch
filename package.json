@@ -13,11 +13,10 @@
     "serve": "node server.js --env=dev",
     "serve:dist": "node server.js --env=dist",
     "start": "npm run dev",
-    "dev": "npm run api:dev & node server.js --env=dev",
+    "dev": "npm run api:dev & node server.js --env=dev-api",
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
-    "api:dev": "node app.js",
-    "api:prod": "NODE_ENV=production node app.js"
+    "api:dev": "node app.js"
   },
   "repository": "https://github.com/codefordc/dc-campaign-finance-watch.git",
   "devDependencies": {

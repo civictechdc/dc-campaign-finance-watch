@@ -1,7 +1,8 @@
 import Rest from 'restler';
 import Promise from 'bluebird';
-import config from '../config.json';
 import _ from 'lodash';
+
+let config = require('config');
 
 var methodNamesToPromisify = "get post put del head patch json postJson putJson".split(" ");
 
@@ -104,6 +105,11 @@ let endPoints = {
     prod: 'http://ec2-52-73-208-76.compute-1.amazonaws.com/dc-campaign-finance/api'
 };
 
-config.env = config.env || 'local';
+let env = 'local';
+console.log()
+if(config.default.api === 'production') {
+    env = 'prod';
+}
+console.log(endPoints[env]);
 
-export default new Client(endPoints[config.env], Rest);
+export default new Client(endPoints[env], Rest);
