@@ -70,7 +70,7 @@ class CampaignDetailComponent extends React.Component {
                                 />
                                 <Column header={<Cell>Date</Cell>}
                                     cell={props => (
-                                        <Cell {...props}>{Moment(contributions[props.rowIndex].date).format('MM/DD/YYY')}</Cell>
+                                        <Cell {...props}>{Moment(contributions[props.rowIndex].date).format('MM/DD/YYYY')}</Cell>
                                     )}
                                     width={200}
                                 />
