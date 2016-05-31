@@ -32,13 +32,13 @@ After installing vagrant, from the directory of source:
 ```
 vagrant up
 vagrant ssh -c 'cd /vagrant'
-npm start
+npm run dev
 ```
 
 or if you want to run the front end as well
 
 ```
-gulp serve --env=local
+npm run dev
 ```
 
 The alternative to running vagrant is to install the various tools and technologies locally. Due to the variety in OS, this README just lists what will need to be installed
@@ -52,7 +52,6 @@ After all the installations are complete run the following:
 ```
 unzip dc-campaign-finance-mongodatabase.zip -d dc-campaign-finance-mongodatabase
 mongorestore --host localhost:27017 --drop ./dc-campaign-finance-mongodatabase
-npm install -g gulp
 npm install
 npm start
 ```
