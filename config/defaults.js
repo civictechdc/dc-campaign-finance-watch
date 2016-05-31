@@ -8,7 +8,7 @@
 
 const path = require('path');
 const srcPath = path.join(__dirname, '/../src');
-const dfltPort = 3001;
+const dfltPort = 3000;
 
 /**
  * Get the default modules object for webpack
