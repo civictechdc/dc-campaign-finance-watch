@@ -12,7 +12,7 @@ class CampaignDetailComponent extends React.Component {
         this.state = { contributions: [] };
     }
 
-    componentWillMount(props) {
+    componentWillMount() {
         const { id, candidateId } = this.props.params;
         let that = this;
         const detailsPromise = Client.getCampaignData(id);
@@ -24,7 +24,6 @@ class CampaignDetailComponent extends React.Component {
 
     render() {
         const { contributions, campaignScore, candidate } = this.state;
-        console.log(campaignScore);
         if(contributions && campaignScore) {
             return (
                 <Row>
@@ -49,18 +48,20 @@ class CampaignDetailComponent extends React.Component {
                                         <Cell {...props}>{contributions[props.rowIndex].contributor.name}</Cell>
                                     )}
                                     width={200}
-                                />
-                                <Column header={<Cell>Address</Cell>}
-                                    cell={props => (
-                                        <Cell {...props}>{contributions[props.rowIndex].contributor.address.raw}</Cell>
-                                    )}
-                                    width={300}
+                                    fixed={true}
                                 />
                                 <Column header={<Cell>Amount</Cell>}
                                     cell={props => (
                                         <Cell {...props}>${contributions[props.rowIndex].amount}</Cell>
                                     )}
                                     width={100}
+                                    fixed={true}
+                                />
+                                <Column header={<Cell>Address</Cell>}
+                                    cell={props => (
+                                        <Cell {...props}>{contributions[props.rowIndex].contributor.address.raw}</Cell>
+                                    )}
+                                    width={300}
                                 />
                                 <Column header={<Cell>Contributor Type</Cell>}
                                     cell={props => (
