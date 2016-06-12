@@ -13,7 +13,7 @@ class Dashboard extends React.Component {
 
     componentWillMount() {
         let that = this;
-        const startYear = Moment('01/01/2015');
+        const startYear = Moment('01/01/2014');
         const endYear = Moment('01/01/2016');
         Client
             .getRaces()
@@ -38,19 +38,20 @@ class Dashboard extends React.Component {
                     <h2>DC Campaign Finance Watch</h2>
                     <Row>
                         <Col xs={12}>
-                            Viewing Year: 2015
+                            Viewing Years: 2014 - 2015
                         </Col>
                     </Row>
                     <Row>
                         {races.map((race, idx) => {
                             return (
-                                <Col key={idx} xs={12}>
+                                <Col key={idx} xs={6}>
                                     <h3>{race.type}</h3>
                                     <Accordion>
                                         {race.data.map((campaign, idx) =>{
                                             return (
                                                 <Panel eventKey={idx} header={campaign.name}>
                                                     Scorecard goes here
+                                                    {campaign.id}
                                                 </Panel>
                                             )
                                         })}

@@ -16,7 +16,7 @@
     "dev": "npm run api:dev & node server.js --env=dev-api",
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
-    "api:dev": "node app.js"
+    "api:dev": "nodemon app.js"
   },
   "repository": "https://github.com/codefordc/dc-campaign-finance-watch.git",
   "devDependencies": {
