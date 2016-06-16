@@ -1,14 +1,16 @@
 import React from 'react';
-import { Row, Col, Accordion, Panel } from 'react-bootstrap';
+import { Row, Col, Accordion, Panel, Button } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import Client from '../api';
 import Moment from 'moment';
 import Promise from 'bluebird';
-
+import {CandidateInfo} from '../candidateCard.component.jsx';
 
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {races: []};
+        this.state = {races: [], scores: {}};
+        this._loadCampaignData = this._loadCampaignData.bind(this);
     }
 
     componentWillMount() {
@@ -26,12 +28,38 @@ class Dashboard extends React.Component {
                 }));
             })
             .then((races) => {
-                that.setState({races: races})
+                const structuredData = races.map((r) => {
+                    return {
+                        type: r.type,
+                        campaigns: r.data.map((c) => {
+                            if(c.campaigns[0]) {
+                                return {
+                                    candidateId: c.id,
+                                    candidateName: c.name,
+                                    campaign: c.campaigns[0]
+                                }
+                            }
+                        }).filter(d => d !== undefined)
+                    }
+                });
+                that.setState({races: structuredData})
             });
     }
 
+    _loadCampaignData(candidateId, campaignId) {
+        Client.getCandidate({
+            id: candidateId,
+            campaigns: [{campaignId: campaignId}]
+        })
+        .then((data) => {
+            const {scores} = this.state;
+            scores[campaignId] = data.campaigns[0];
+            this.setState({scores: scores});
+        });
+    }
+
     render() {
-        const { races } = this.state;
+        const { races, scores } = this.state;
         return (
             <Row>
                 <Col xs={12}>
@@ -47,11 +75,21 @@ class Dashboard extends React.Component {
                                 <Col key={idx} xs={6}>
                                     <h3>{race.type}</h3>
                                     <Accordion>
-                                        {race.data.map((campaign, idx) =>{
+                                        {race.campaigns.map((campaign, idx) => {
+                                            if(scores && scores[campaign.campaign.campaignId]) {
+                                                return (
+                                                    <Panel eventKey={idx} header={campaign.candidateName}>
+                                                        <CandidateInfo info={scores[campaign.campaign.campaignId]}/>
+                                                        <LinkContainer to={`candidate/${campaign.candidateId}/campaign/${campaign.campaign.campaignId}`}>
+                                                            <Button>Details</Button>
+                                                        </LinkContainer>
+                                                    </Panel>
+                                                )
+
+                                            }
                                             return (
-                                                <Panel eventKey={idx} header={campaign.name}>
-                                                    Scorecard goes here
-                                                    {campaign.id}
+                                                <Panel eventKey={idx} header={campaign.candidateName}  onEnter={() => this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)}>
+                                                    Loading...
                                                 </Panel>
                                             )
                                         })}

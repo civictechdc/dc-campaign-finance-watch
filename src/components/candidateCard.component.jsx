@@ -16,7 +16,7 @@ import {
     ProcessContributionByWard
 } from './chartDataProcessor';
 
-const CandidateInfo = (props) => {
+export const CandidateInfo = (props) => {
     const { info } = props;
     const ward = info.percentFromWard ? (<div>Percentage Raised from Ward: {(_.round(info.percentFromWard, 3)) *100}%</div>) : (false);
     const wardScore = info.percentFromWard ? (<div>Percentage Raised from Ward: {(_.round(info.scores.wardScore, 2))}/15/</div>) : (false);
@@ -59,7 +59,6 @@ const CandidateInfo = (props) => {
 
     );
 };
-
 
 export default class CandidateCard extends React.Component {
     constructor(props) {
