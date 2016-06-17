@@ -9,14 +9,68 @@ import {CandidateInfo} from '../candidateCard.component.jsx';
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {races: [], scores: {}};
+        this.state = {races: [], scores: {}, startYear: Moment('01/01/2014'), endYear: Moment('01/01/2016')};
         this._loadCampaignData = this._loadCampaignData.bind(this);
+        this._changeYearsViewed = this._changeYearsViewed.bind(this);
     }
 
     componentWillMount() {
         let that = this;
-        const startYear = Moment('01/01/2014');
-        const endYear = Moment('01/01/2016');
+        const {startYear, endYear} = this.state;
+        Client
+            .getRaces()
+            .then((races) => {
+                return Promise.all(races.map((race) => {
+                    return Client.getCampaigns(race, {fromDate: startYear, toDate: endYear})
+                        .then((data) => {
+                            return {type: race, data: data};
+                        });
+                }));
+            })
+            .then((races) => {
+                const structuredData = races.map((r) => {
+                    return {
+                        type: r.type,
+                        campaigns: r.data.map((c) => {
+                            if(c.campaigns[0]) {
+                                return {
+                                    candidateId: c.id,
+                                    candidateName: c.name,
+                                    campaign: c.campaigns[0]
+                                }
+                            }
+                        }).filter(d => d !== undefined)
+                    }
+                });
+                that.setState({races: structuredData})
+            });
+    }
+
+    _changeYearsViewed(selection) {
+        let startYear, endYear;
+        switch(selection) {
+            case '14-16':
+                startYear =  Moment('01/01/2014');
+                endYear =   Moment('01/01/2016');
+                break;
+            case '12-14':
+                startYear =  Moment('01/01/2012');
+                endYear =   Moment('01/01/2014');
+                break;
+            case '10-12':
+                startYear =  Moment('01/01/2010');
+                endYear =   Moment('01/01/2012');
+                break;
+            case '08-10':
+                startYear =  Moment('01/01/2008');
+                endYear =   Moment('01/01/2010');
+                break;
+            default:
+                startYear =  Moment('01/01/2014');
+                endYear =   Moment('01/01/2016');
+        }
+
+        let that = this;
         Client
             .getRaces()
             .then((races) => {
@@ -66,7 +120,13 @@ class Dashboard extends React.Component {
                     <h2>DC Campaign Finance Watch</h2>
                     <Row>
                         <Col xs={12}>
-                            Viewing Years: 2014 - 2015
+                            Viewing Years:   
+                            <select name="years" onChange={(evt) => this._changeYearsViewed(evt.target.value)}>
+                                <option value="14-16">2014 - 2016</option>
+                                <option value="12-14">2012 - 2014</option>
+                                <option value="10-12">2010 - 2012</option>
+                                <option value="08-10">2008 - 2010</option>
+                            </select>
                         </Col>
                     </Row>
                     <Row>
