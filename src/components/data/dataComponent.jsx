@@ -3,7 +3,8 @@ import _ from 'lodash';
 import Client from '../api';
 import CandidateCard  from '../candidateCard.component.jsx';
 import LoaderComponent from '../loader.component.jsx';
-import {Grid, Row, Col} from 'react-bootstrap';
+import {Grid, Row, Col, Button} from 'react-bootstrap';
+import { Link } from 'react-router';
 
 class DataComponent extends React.Component {
     constructor(props) {
@@ -32,6 +33,12 @@ class DataComponent extends React.Component {
 
     render() {
         const { candidates, loading } = this.state;
+
+        //define route to compare contribution graphs with candidate data
+        const contributionsGraph = {
+            pathname: 'contribution_graph',
+            state: candidates
+        };
         if(loading || !candidates) {
             return (
                 <LoaderComponent isLoading={loading}></LoaderComponent>
@@ -41,6 +48,17 @@ class DataComponent extends React.Component {
             <Grid>
                 <Row>
                     <h4>Data Set</h4>
+                </Row>
+                <Row>
+                {
+                  candidates.length >= 2 ?
+                    <Link to={contributionsGraph}>
+                      <Button bsStyle="primary" bsSize="large">
+                      Compare candidate contributions
+                      </Button>
+                    </Link> :
+                  false
+                }
                 </Row>
                 <Row>
                     {_.map(candidates, function(candidate, idx){

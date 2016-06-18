@@ -8,6 +8,7 @@ import FaqComponent from 'components/faq/faqComponent.jsx';
 import AboutComponent from 'components/about/AboutComponent.jsx';
 import NewsComponent from 'components/news/newsComponent.jsx';
 import { browserHistory } from 'react-router';
+import ContributionsGraphContainer from './components/graphs/contributions/contributionsGraphContainer'
 
 require('./styles/main.css');
 require('./styles/reactdaypicker.css');
@@ -20,6 +21,7 @@ render((
             <Route path="about" component={AboutComponent}/>
             <Route path="data" component={DataComponent}/>
             <Route path="news" component={NewsComponent}/>
+            <Route path="contribution_graph" component={ContributionsGraphContainer} />
         </Route>
     </Router>
 ), document.getElementById('app'));
