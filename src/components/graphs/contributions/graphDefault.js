@@ -16,7 +16,7 @@ class ChartDefault {
 
   update(el, state) {
     // mutate data.
-    console.log(state.data)
+    // console.log(state.data)
     let firstData = state.data[0]
 
     this._drawPoints(el, firstData);
@@ -24,15 +24,30 @@ class ChartDefault {
 
   _drawPoints(el,data) {
     let formatDate = d3.time.format("%Y-%m-%d")
-    //mutating dates.
+    // formatting dates for use.
+    let prevDate = ''
+    let prev = 0
+    // console.log(data.length)
+
+    for (let i = 1; i < data.length; i++) {
+      if (data[i].date == data[prev].date) {
+        data[i].amount += data[prev].amount
+        data.splice(prev, 1)
+        i-=1
+        prev = i
+      } else {
+        prev = i
+      }
+    }
+    console.log(data)
     for (let k of data) {
       let digits = k.date.match(/^\d+|\d+\b|\d+(?=\w)/g).slice(0,3);
       k.date = digits[0]+'-'+digits[1]+'-'+digits[2]
       k.date = formatDate.parse(k.date);
       k.amount = +k.amount;
-      // append same dates and add amounts.
     }
-    console.log(data[0])
+
+    console.log(data)
     console.log("drawing points!")
     this.svg.selectAll('*').remove();
 
@@ -93,10 +108,6 @@ svg.append("g")
       .attr('class', 'line')
       .attr("d", line)
 
-// svg.append("path")
-//     .datum(data)
-//     .attr("class", line)
-//     .attr("d", line);
 
   }
 }
