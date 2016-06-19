@@ -33,7 +33,7 @@ class DataComponent extends React.Component {
 
     render() {
         const { candidates, loading } = this.state;
-
+        console.log(candidates)
         //define route to compare contribution graphs with candidate data
         const contributionsGraph = {
             pathname: 'contribution_graph',

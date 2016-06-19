@@ -1,13 +1,6 @@
 import React from 'react'
 import Client from '../../api'
-// import ContributionsOverTimeGraph from '../../../components/ContributionOverTimeChart'
 import ChartWrapper from './chartWrapper'
-
-// const styles = {
-//   width : 800,
-//   height: 400,
-//   padding: 30,
-// }
 
 class ContributionsGraphContainer extends React.Component {
   constructor(props) {
@@ -20,19 +13,15 @@ class ContributionsGraphContainer extends React.Component {
   }
 
   componentWillMount() {
-    // iterating through candidates and their campaigns and appending chart
-    // data to an array.
-    console.log(this.props.location)
-    let dataArray = []
-    let candidates = this.props.location.state
-    let successfulFetches = this.state.successfulFetches
+    let dataArray = [],
+      candidates = this.props.location.state,
+      successfulFetches = this.state.successfulFetches;
+
     for (let candidate of candidates) {
       for (let campaign of candidate.data.campaigns) {
         Client.getCampaignData(campaign.campaignId)
           .then((data) => {
             dataArray.push(data)
-            console.log("incrementing fetch")
-            console.log(dataArray)
             this.setState({
               chartData: dataArray,
               successfulFetches: successfulFetches+=1})
@@ -55,21 +44,27 @@ class ContributionsGraphContainer extends React.Component {
 
   render() {
 
-    let chartType = this.state.chartType
-    let candidates = this.props.location.state
-    let chartData = this.state.chartData
+    let chartType = this.state.chartType,
+        candidates = this.props.location.state,
+        chartData = this.state.chartData
 
-    console.log(chartData)
+    let candidateCampaigns = candidates.map((candidate) => {
+      for (let campaign of candidate.data.campaigns) {
+        return <p> {candidate.candidateName} - {campaign.raceType} </p>
+      }
+    })
     // check for data integrity
     if (chartData.length == candidates.length) {
       return (
         <div>
-        <h1> Rendering comparison chart </h1>
+        <h1> Contribution Comparison Chart </h1>
+        <h3> Selected Campaigns </h3>
+        {candidateCampaigns}
         <ChartWrapper
         chartInfo = {chartData}
         chartType={chartType}
-        onSvgCreate = {this._setSvg.bind(this)}/>
-
+        onSvgCreate = {this._setSvg.bind(this)}
+        candidates = {candidates}/>
         </div>
       )
     } else {

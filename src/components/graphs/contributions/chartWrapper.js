@@ -9,17 +9,14 @@ export default class ChartWrapper extends React.Component {
   }
 
   componentDidMount () {
-    console.log("componentdidmount")
       let el = ReactDOM.findDOMNode(this);
       if (this.props.chartType) {
-        console.log("initiate factory call")
           let chart = this.ChartFactory(this.props.chartType, el);
           this.props.onSvgCreate(chart.svg);
       }
   }
 
   shouldComponentUpdate (nextProps, nextState) {
-    console.log("shouldupdate")
       if (nextProps.chartInfo === this.props.chartInfo) {
           return false;
       } else {
@@ -28,21 +25,18 @@ export default class ChartWrapper extends React.Component {
   }
 
   getChartState() {
-    console.log("fetching chart state")
-    console.log(this.props)
     return {
-      data: this.props.chartInfo
+      data: this.props.chartInfo,
+      candidates: this.props.candidates
     }
   }
 
   ChartFactory (type, el) {
       switch (type) {
           case 'default':
-              console.log("rendering default graph")
-              console.log(el)
               return new GraphDefault(el, this.getChartState());
           default:
-            console.log("do default")
+            console.log("foo")
       }
   }
 

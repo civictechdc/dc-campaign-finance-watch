@@ -1,10 +1,9 @@
 import d3 from 'd3';
-import styles from './style.css'
-
+import { reduceDuplicateMonths } from '../helpers/dataReducers'
+import { formatDatesByMonth } from '../helpers/dataFormat'
 
 class ChartDefault {
   constructor(el, state) {
-    console.log("appending svg")
     d3.select(el).select('.chart').append('svg')
     this.svg = d3.select(el).select('svg');
     this.type = 'default'
@@ -15,93 +14,26 @@ class ChartDefault {
   }
 
   update(el, state) {
-    // mutate data.
-    let firstData = state.data[1]
-
-    this._drawPoints(el, firstData);
+    let firstData = state.data,
+        candidateNames = state.candidates;
+    this._drawPoints(el, firstData, candidateNames);
   }
 
-  reduceDuplicateDates(data) {
-    let prevDate = ''
-    let prev = 0
-    for (let i = 1; i < data.length; i++) {
-      if (data[i].date == data[prev].date) {
-        data[i].amount += data[prev].amount
-        data.splice(prev, 1)
-        i-=1
-        prev = i
-      } else {
-        prev = i
-      }
-    }
-    return data
-  }
+  _drawPoints(el,data, candidates) {
 
-  reduceDuplicateMonths(data) {
-    let prevMonth = 0
-    let prevIdx = 0
-    // for first element, extract month.
-    for (let i = 0; i < data.length; i++) {
-      let curMonth = data[i].date.match(/^\d+|\d+\b|\d+(?=\w)/g).slice(0,3)[1];
-      if (i == 0) {
-        prevMonth = curMonth
-        continue
-      }
-      // check if month is duplicate.
-      if (curMonth == prevMonth) {
-        data[i].amount += data[prevIdx].amount
-        data.splice(prevIdx, 1)
-        i-=1
-        prevIdx = i
-      } else {
-        prevMonth = curMonth
-        prevIdx = i
-      }
-    }
-    return data
-  }
-
-  formatDates(data) {
-    let formatDate = d3.time.format("%Y-%m-%d")
-
-    for (let k of data) {
-      let digits = k.date.match(/^\d+|\d+\b|\d+(?=\w)/g).slice(0,3);
-      k.date = digits[0]+'-'+digits[1]+'-'+digits[2]
-      k.date = formatDate.parse(k.date);
-      k.amount = +k.amount;
-    }
-    return data
-  }
-
-  formatDateByMonth(data) {
-    let formatDate = d3.time.format("%Y-%m-%d")
-
-    for (let k of data) {
-      let digits = k.date.match(/^\d+|\d+\b|\d+(?=\w)/g).slice(0,3);
-      k.date = digits[0]+'-'+digits[1]+'-01'
-      k.date = formatDate.parse(k.date);
-      k.amount = +k.amount;
-    }
-    return data
-  }
-
-  _drawPoints(el,data) {
-
-    // reducing duplicate dates.
-    data = this.reduceDuplicateMonths(data)
-    console.log(data)
-    data = this.formatDateByMonth(data)
-
-
-
-
-    console.log("drawing points!")
     this.svg.selectAll('*').remove();
 
     let margin = {top: 50, right: 50, bottom: 50, left: 50},
     width = el.offsetWidth - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
-    padding = 50;
+    padding = 100;
+
+    for (let i of data) {
+      i = reduceDuplicateMonths(i)
+      i = formatDatesByMonth(i)
+    }
+
+    let mergedData = [].concat(...data)
 
 
     var x = d3.time.scale()
@@ -129,9 +61,8 @@ class ChartDefault {
 .append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    x.domain(d3.extent(data, function(d) { return d.date; }));
-    y.domain(d3.extent(data, function(d) { return d.amount; }));
-
+    x.domain(d3.extent(mergedData, function(d) { return d.date; }));
+    y.domain(d3.extent(mergedData, function(d) { return d.amount; }));
 svg.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + height + ")")
@@ -147,21 +78,24 @@ svg.append("g")
     .style("text-anchor", "end")
     .text("Contribution Amount ($)");
 
-    let candidates = svg.selectAll('.candidate')
-      .data(data)
+    let candidatePaths = svg.selectAll('.candidate')
+      .data(mergedData)
       .enter().append('g')
 
-    candidates.append('path')
-      .datum(data)
-      .attr('class', 'line')
-      .attr("d", line)
+    // using for in loop for index
+    for (let i in data) {
+      candidatePaths.append('path')
+        .datum(data[i])
+        .attr('class', 'line')
+        .attr('d', line)
 
-    candidates.append('text')
-        .text(data[0].campaignCommitteeName)
+      candidatePaths.append('text')
+        .text(candidates[i].candidateName)
         .attr('x', 3)
         .attr('dy', '.35em')
         .attr('text-anchor', 'start')
-        .attr('transform', 'translate(' + x(data[(data.length)-1].date) +',' + y(data[(data.length)-1].amount) + ')')
+        .attr('transform', 'translate(' + x(data[i][(data[i].length)-1].date) +',' + y(data[i][(data[i].length)-1].amount) + ')')
+    }
   }
 }
 
