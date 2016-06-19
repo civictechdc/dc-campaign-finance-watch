@@ -82,7 +82,6 @@ svg.append("g")
       .data(mergedData)
       .enter().append('g')
 
-    // using for in loop for index
     for (let i in data) {
       candidatePaths.append('path')
         .datum(data[i])
