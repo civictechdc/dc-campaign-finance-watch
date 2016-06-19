@@ -16,19 +16,14 @@ class ChartDefault {
 
   update(el, state) {
     // mutate data.
-    // console.log(state.data)
-    let firstData = state.data[0]
+    let firstData = state.data[1]
 
     this._drawPoints(el, firstData);
   }
 
-  _drawPoints(el,data) {
-    let formatDate = d3.time.format("%Y-%m-%d")
-    // formatting dates for use.
+  reduceDuplicateDates(data) {
     let prevDate = ''
     let prev = 0
-    // console.log(data.length)
-
     for (let i = 1; i < data.length; i++) {
       if (data[i].date == data[prev].date) {
         data[i].amount += data[prev].amount
@@ -39,25 +34,78 @@ class ChartDefault {
         prev = i
       }
     }
-    console.log(data)
+    return data
+  }
+
+  reduceDuplicateMonths(data) {
+    let prevMonth = 0
+    let prevIdx = 0
+    // for first element, extract month.
+    for (let i = 0; i < data.length; i++) {
+      let curMonth = data[i].date.match(/^\d+|\d+\b|\d+(?=\w)/g).slice(0,3)[1];
+      if (i == 0) {
+        prevMonth = curMonth
+        continue
+      }
+      // check if month is duplicate.
+      if (curMonth == prevMonth) {
+        data[i].amount += data[prevIdx].amount
+        data.splice(prevIdx, 1)
+        i-=1
+        prevIdx = i
+      } else {
+        prevMonth = curMonth
+        prevIdx = i
+      }
+    }
+    return data
+  }
+
+  formatDates(data) {
+    let formatDate = d3.time.format("%Y-%m-%d")
+
     for (let k of data) {
       let digits = k.date.match(/^\d+|\d+\b|\d+(?=\w)/g).slice(0,3);
       k.date = digits[0]+'-'+digits[1]+'-'+digits[2]
       k.date = formatDate.parse(k.date);
       k.amount = +k.amount;
     }
+    return data
+  }
 
+  formatDateByMonth(data) {
+    let formatDate = d3.time.format("%Y-%m-%d")
+
+    for (let k of data) {
+      let digits = k.date.match(/^\d+|\d+\b|\d+(?=\w)/g).slice(0,3);
+      k.date = digits[0]+'-'+digits[1]+'-01'
+      k.date = formatDate.parse(k.date);
+      k.amount = +k.amount;
+    }
+    return data
+  }
+
+  _drawPoints(el,data) {
+
+    // reducing duplicate dates.
+    data = this.reduceDuplicateMonths(data)
     console.log(data)
+    data = this.formatDateByMonth(data)
+
+
+
+
     console.log("drawing points!")
     this.svg.selectAll('*').remove();
 
     let margin = {top: 50, right: 50, bottom: 50, left: 50},
     width = el.offsetWidth - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    height = 500 - margin.top - margin.bottom,
+    padding = 50;
 
 
     var x = d3.time.scale()
-        .range([0, width]);
+        .range([0, width - padding]);
 
     var y = d3.scale.linear()
         .range([height, 0]);
@@ -80,10 +128,10 @@ class ChartDefault {
   .attr("height", height + margin.top + margin.bottom)
 .append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-    // Grab the min and max contribution dates
+
     x.domain(d3.extent(data, function(d) { return d.date; }));
-y.domain(d3.extent(data, function(d) { return d.amount; }));
-//
+    y.domain(d3.extent(data, function(d) { return d.amount; }));
+
 svg.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + height + ")")
@@ -108,7 +156,12 @@ svg.append("g")
       .attr('class', 'line')
       .attr("d", line)
 
-
+    candidates.append('text')
+        .text(data[0].campaignCommitteeName)
+        .attr('x', 3)
+        .attr('dy', '.35em')
+        .attr('text-anchor', 'start')
+        .attr('transform', 'translate(' + x(data[(data.length)-1].date) +',' + y(data[(data.length)-1].amount) + ')')
   }
 }
 
