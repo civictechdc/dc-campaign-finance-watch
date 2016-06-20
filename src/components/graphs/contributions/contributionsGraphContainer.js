@@ -31,7 +31,7 @@ class ContributionsGraphContainer extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    if (nextState.successfulFetches == (this.props.location.state).length) {
+    if (nextState.successfulFetches === (this.props.location.state).length) {
       return true
     }
     return false
