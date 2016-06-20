@@ -26,7 +26,6 @@ class ContributionsGraphContainer extends React.Component {
               chartData: dataArray,
               successfulFetches: successfulFetches+=1})
           })
-
       }
     }
   }
@@ -54,7 +53,7 @@ class ContributionsGraphContainer extends React.Component {
       }
     })
     // check for data integrity
-    if (chartData.length == candidates.length) {
+    if (chartData.length === candidates.length) {
       return (
         <div>
         <h1> Contribution Comparison Chart </h1>

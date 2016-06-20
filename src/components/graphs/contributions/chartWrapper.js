@@ -36,7 +36,7 @@ export default class ChartWrapper extends React.Component {
           case 'default':
               return new GraphDefault(el, this.getChartState());
           default:
-            console.log("foo")
+              return new GraphDefault(el, this.getChartState());
       }
   }
 

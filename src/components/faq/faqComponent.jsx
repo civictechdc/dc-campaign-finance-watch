@@ -1,7 +1,6 @@
 import React from 'react';
 import {Grid, Row, Col, Well} from 'react-bootstrap';
-
-var scorecard = require('html!markdown!../../../scorecard/README.md');
+import scorecard from '../../../scorecard/README.md';
 
 function createScorecard() {
     return { __html: scorecard};
