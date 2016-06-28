@@ -25503,6 +25503,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var ShellComponent = function ShellComponent(props) {
+	    console.log('shell loading');
 	    return _react2.default.createElement(
 	        'div',
 	        null,
