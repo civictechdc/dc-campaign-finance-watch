@@ -8,6 +8,7 @@ import FaqComponent from 'components/faq/faqComponent.jsx';
 import AboutComponent from 'components/about/AboutComponent.jsx';
 import NewsComponent from 'components/news/newsComponent.jsx';
 import CampaignDetailComponent from 'components/campaign/campaignDetailComponent.jsx';
+import Dashboard from 'components/dashboard/dashboardComponent.jsx';
 import { browserHistory } from 'react-router';
 import ContributionsGraphContainer from './components/graphs/contributions/contributionsGraphContainer'
 
@@ -18,7 +19,8 @@ require('./styles/fixed-data-table.min.css');
 render((
     <Router history={browserHistory}>
         <Route path="/" component={ShellComponent}>
-            <IndexRoute component={SearchComponent}/>
+            <IndexRoute component={Dashboard}/>
+            <Route path="compare" component={SearchComponent}/>
             <Route path="faq" component={FaqComponent}/>
             <Route path="about" component={AboutComponent}/>
             <Route path="data" component={DataComponent}/>

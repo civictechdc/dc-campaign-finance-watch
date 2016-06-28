@@ -3,10 +3,6 @@ import { Link } from 'react-router';
 import {
     Navbar,
     Nav,
-    NavbarHeader,
-    NavbarBrand,
-    NavBarToggle,
-    NavBarCollapse,
     NavItem
 } from 'react-bootstrap';
 import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
@@ -28,14 +24,17 @@ const ShellComponent = (props) => {
                         <IndexLinkContainer to="/">
                             <NavItem eventKey={1.1}>Home</NavItem>
                         </IndexLinkContainer>
+                        <LinkContainer to="/compare">
+                            <NavItem eventKey={1.2}>Compare</NavItem>
+                        </LinkContainer>
                         <LinkContainer to="/about">
-                            <NavItem eventKey={1.2}>About</NavItem>
+                            <NavItem eventKey={1.3}>About</NavItem>
                         </LinkContainer>
                         <LinkContainer to="/faq">
-                            <NavItem eventKey={1.3}>FAQ</NavItem>
+                            <NavItem eventKey={1.4}>FAQ</NavItem>
                         </LinkContainer>
                         <LinkContainer to="/news">
-                            <NavItem eventKey={1.4}>News</NavItem>
+                            <NavItem eventKey={1.5}>News</NavItem>
                         </LinkContainer>
                     </Nav>
                     <Nav pullRight>
