@@ -1,4 +1,6 @@
 import React from 'react';
+import logo from '../../images/logo_100px.png';
+import flag from '../../images/dc_flag.svg';
 import { Link } from 'react-router';
 import {
     Navbar,
@@ -39,13 +41,13 @@ const ShellComponent = (props) => {
                     </Nav>
                     <Nav pullRight>
                         <NavItem href="http://www.codefordc.org" className="code-for-dc-logo">
-                            <img src="images/logo_100px.png" alt="Code For DC"/>
+                            <img src={logo} alt="Code For DC"/>
                         </NavItem>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
             <div className="container">
-                <img src="images/dc_flag.svg" className="background"/>
+                <img src={flag} className="background"/>
                 {props.children}
             </div>
         </div>
