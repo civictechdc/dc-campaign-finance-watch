@@ -80,7 +80,7 @@ class CampaignDetailComponent extends React.Component {
                 </Row>
             );
         }
-        return false;
+        return (<h3>Loading...</h3>);
     }
 }
 
