@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+    - "6"
+    - "6.1"
+    - "6.2"
+branches:
+  only:
+    - develop
+script:
+  npm test
+notifications:
+  email:
+    recipients:
+      # add email here for CI updates.
