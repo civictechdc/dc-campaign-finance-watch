@@ -5,10 +5,11 @@ node_js:
     - "6.2"
 branches:
   only:
+    # add your branch here to test it, for now it will test the develop branch.
     - develop
 script:
   npm test
 notifications:
   email:
     recipients:
-      # add email here for CI updates.
+      # add your email here for CI updates.
