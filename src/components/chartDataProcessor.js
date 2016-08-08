@@ -1,6 +1,10 @@
 import Moment from 'moment';
 import _ from 'lodash';
 
+const contributorTypes = ['Individual', 'Corporation', 'Other',
+'Committee', 'Candidate', 'Sole Proprietorship', 'Democratic', 'Limited Liability Company', 'Corporate Sponsored PAC',
+'Labor Sponsored PAC', 'None', 'Partnership', 'Labor', '', 'Organization']
+
 export function ProcessContributionsToTree(data, name) {
 
     let individual = _.filter(data.contributions, function (c) {
@@ -33,7 +37,9 @@ export function ProcessContributionsToTree(data, name) {
     };
 }
 
+// TODO add contribution counts
 export function ProcessContributorBreakdown(contributions, name) {
+    console.log("ProcessContributorBreakdown")
 
     let individualCount = _.filter(contributions, function (c) {
             return c.contributor.contributorType === 'Individual';
@@ -47,14 +53,30 @@ export function ProcessContributorBreakdown(contributions, name) {
             return c.contributor.contributorType === 'Other';
         })
         .length;
+    let committeeCount = _.filter(contributions, function (c) {
+            return c.contributor.contributorType === 'Committee';
+        })
+        .length;
+    let unlistedCount = _.filter(contributions, function (c) {
+            return c.contributor.contributorType === '';
+        })
+        .length;
+    let soleProprietorshipCount = _.filter(contributions, function (c) {
+            return c.contributor.contributorType === 'Sole Proprietorship';
+        })
+        .length;
     let candidate = _.filter(contributions, (c) => {
         return c.contributor.contributorType === 'Candidate';
     });
+
     return {
         name: name,
         individual: (individualCount / contributions.length) * 100,
         corporate: (corporateCount / contributions.length) * 100,
-        pac: (pacCount / contributions.length) * 100
+        pac: (pacCount / contributions.length) * 100,
+        unlisted: (unlistedCount / contributions.length) * 100,
+        soleProrietorship: (soleProprietorshipCount / contributions.length) * 100,
+        committee: (committeeCount / contributions.length) * 100,
     };
 }
 
