@@ -15,8 +15,8 @@ class Dashboard extends React.Component {
           startYear: Moment('01/01/2014'),
           endYear: Moment('01/01/2016'),
           campaignData: [],
-          campaignCount: 0,
-          scoreLoading: false};
+          loading: true
+          };
         this._loadCampaignData = this._loadCampaignData.bind(this);
         this._changeYearsViewed = this._changeYearsViewed.bind(this);
 
@@ -32,11 +32,11 @@ class Dashboard extends React.Component {
       })
     }
 
+    // not working on node end.
     _getCandidates() {
       const {startYear, endYear} = this.state;
       return Client.getCandidates(startYear, endYear)
         .then((candidates) => {
-          // not working on node end.
         })
     }
 
@@ -52,37 +52,42 @@ class Dashboard extends React.Component {
         });
     }
 
-    _addCampaignData(candidateId, campaignId) {
-        Client.getCandidate({
+    _getCampaignData(candidateId, campaignId) {
+        return Client.getCandidate({
             id: candidateId,
             campaigns: [{campaignId: campaignId}]
         })
         .then((data) => {
           let campaignData = this.state.campaignData
-          let obj = this.state.campaignData
           let campaignID = data.campaigns[0].campaignId
+          let obj = {}
 
           obj[campaignID]= data
-          this.setState({campaignData: obj})
           return data;
         })
     }
 
     _loadAllCampaignData(races) {
-      let candidateIDList = []
       let combinedCampaigns = []
+      let data = []
 
       for (var i=0; i<races.length; i++) {
         combinedCampaigns = combinedCampaigns.concat(races[i]['campaigns'])
       }
 
-      Promise.all(combinedCampaigns.map((campaign) => {
+      return Promise.all(
+        combinedCampaigns.map((campaign) => {
         let campaignID = campaign.campaign.campaignId;
         let candidateID = campaign.candidateId;
-
-        return this._addCampaignData(candidateID, campaignID)
+        return this._getCampaignData(candidateID, campaignID)
+          .then((res)=> {
+            data[campaignID] = res
+          })
 
       }))
+      .then((res) => {
+        this.setState({campaignData: data, loading: false})
+      })
     }
 
     componentWillMount() {
@@ -112,43 +117,8 @@ class Dashboard extends React.Component {
             })
             .then(() => {
               let races = this.state.races
-              let campaignCount = 0
-              for (var i = 0; i< races.length; i++) {
-                campaignCount += races[i]['campaigns'].length
-              }
-              this.setState({
-                campaignCount: campaignCount
-              })
-            })
-            .then(() => {
-              let races = this.state.races
-              this.setState({scoreLoading: true})
               return this._loadAllCampaignData(races)
             })
-            .then((data) => {
-              this.setState({scoreLoading: false})
-            })
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-      //104 renders fix tomorrow.
-      // let campaignNum = 0;
-      //
-      // if (Object.keys(nextState.campaignData).length=== )
-      //
-      // if nextState.campaignData.length
-      // console.log("comparing lengths")
-      // console.log(Object.keys(nextState.campaignData).length)
-      // console.log(Object.keys(this.state.campaignData).length)
-      // console.log(nextState)
-      // console.log(this.state)
-      // console.log(nextState == this.state)
-      // console.log(nextState.campaignData == this.state.campaignData)
-      // console.log(nextState.campaignCount === this.state.campaignCount)
-      if (this.state.scoreLoading == true) {
-        return false;
-      }
-      return true;
     }
 
     _changeYearsViewed(selection) {
@@ -209,8 +179,8 @@ class Dashboard extends React.Component {
 
 
     render() {
-        const { races, scores, campaignData } = this.state;
-        console.log("rendering")
+        const { races, scores, campaignData, loading } = this.state;
+
         return (
             <Row>
                 <Col xs={12}>
@@ -233,7 +203,7 @@ class Dashboard extends React.Component {
                                     <h3>{race.type}</h3>
                                     <Accordion>
                                         {race.campaigns.map((campaign, idx) => {
-                                          let candidateName = campaign.candidateName
+                                          let candidateName = campaign.candidateName.trim()
                                           let campaignID = campaign.campaign.campaignId
                                           let header = `${candidateName}`
 
@@ -247,8 +217,26 @@ class Dashboard extends React.Component {
                                                     </Panel>
                                                 )
 
-                                            } else if (this.state.scoreLoading === false && campaignData[campaignID]) {
-                                              let header = `${candidateName + campaignData[campaignID]['campaigns'][0]['scores']['total'].toFixed(2)}`
+                                            } else if (!loading) {
+                                              let candidateScore = campaignData[campaignID]['campaigns'][0]['scores']['total'].toFixed(2)
+                                              let scoreColor = 'black'
+
+                                              if (candidateScore < 40) {
+                                                scoreColor = '#d43f3a'
+                                              }
+                                              else if (candidateScore >= 40 && candidateScore < 70) {
+                                                scoreColor = '#ec971f'
+                                              }
+                                              else {
+                                                scoreColor = '#5cb85c'
+                                              }
+
+                                              let style = {
+                                                color: scoreColor,
+                                              }
+                                              let header = (
+                                                  <div>{candidateName} - <span style={style}>{candidateScore}</span></div>
+                                              )
                                               return (
                                               <Panel eventKey={idx} header={header}
                                                 onEnter={() => {
