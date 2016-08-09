@@ -12,8 +12,6 @@ class Chart extends React.Component {
     }
 
     componentDidMount () {
-        console.log("mounted")
-        console.log(this.props.chartInfo)
         let el = ReactDOM.findDOMNode(this);
         if (this.props.chartInfo.type) {
             let chart = this.ChartFactory(this.props.chartInfo.type, el);
@@ -50,7 +48,6 @@ class Chart extends React.Component {
             case 'contributionOverTime':
                 return new ContributionOverTimeChart(el, this.getChartState());
             case 'contributorBreakdown':
-                console.log(this.props.chartInfo)
                 return new ContributorBreakdownChart(el, this.getChartState());
             case 'contributorDendogram':
                 return new ContributorDendogram(el, this.getChartState());
