@@ -37,46 +37,24 @@ export function ProcessContributionsToTree(data, name) {
     };
 }
 
-// TODO add contribution counts
 export function ProcessContributorBreakdown(contributions, name) {
-    console.log("ProcessContributorBreakdown")
+    let contributionsByType = []
 
-    let individualCount = _.filter(contributions, function (c) {
-            return c.contributor.contributorType === 'Individual';
-        })
-        .length;
-    let corporateCount = _.filter(contributions, function (c) {
-            return c.contributor.contributorType === 'Corporation';
-        })
-        .length;
-    let pacCount = _.filter(contributions, function (c) {
-            return c.contributor.contributorType === 'Other';
-        })
-        .length;
-    let committeeCount = _.filter(contributions, function (c) {
-            return c.contributor.contributorType === 'Committee';
-        })
-        .length;
-    let unlistedCount = _.filter(contributions, function (c) {
-            return c.contributor.contributorType === '';
-        })
-        .length;
-    let soleProprietorshipCount = _.filter(contributions, function (c) {
-            return c.contributor.contributorType === 'Sole Proprietorship';
-        })
-        .length;
-    let candidate = _.filter(contributions, (c) => {
-        return c.contributor.contributorType === 'Candidate';
-    });
+    for (let i=0; i<contributorTypes.length; i++) {
+      let count = _.filter(contributions, function (c) {
+              return c.contributor.contributorType === contributorTypes[i];
+          })
+          .length;
+      let contributionType = contributorTypes[i]
+      let percent = (count/contributions.length)*100
+      if (percent != 0) {
+        contributionsByType[contributionType] = percent
+      }
+    }
 
     return {
         name: name,
-        individual: (individualCount / contributions.length) * 100,
-        corporate: (corporateCount / contributions.length) * 100,
-        pac: (pacCount / contributions.length) * 100,
-        unlisted: (unlistedCount / contributions.length) * 100,
-        soleProrietorship: (soleProprietorshipCount / contributions.length) * 100,
-        committee: (committeeCount / contributions.length) * 100,
+        contributions: contributionsByType,
     };
 }
 
