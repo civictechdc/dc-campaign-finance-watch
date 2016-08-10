@@ -14,7 +14,6 @@ class ContributorBreakdownChart {
     this._drawPoints(el, state.data);
   }
 
-
   _drawPoints(el, data) {
     data = [data];
     this.svg.selectAll('*').remove();
@@ -30,7 +29,7 @@ class ContributorBreakdownChart {
       .rangeRound([height, 0], .9);
 
     let color = d3.scale.ordinal()
-      .range(['#98abc5', '#8a89a6', '#7b6888']);
+      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
     let xAxis = d3.svg.axis()
       .scale(x)
@@ -43,15 +42,20 @@ class ContributorBreakdownChart {
 
     let svg = this.svg
       .attr("width", width)
-      .attr("height", height + margin.top + margin.bottom)
+      .attr("height", height + margin.top + margin.bottom + (20 * Object.keys(data[0].contributions).length) -20)
+      .style("padding-top", 20 * Object.keys(data[0].contributions).length)
+      .style("padding-bottom", 20 * Object.keys(data[0].contributions).length)
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    color.domain(d3.keys(data[0]).filter(function(key){ return key !== 'name'; }));
+    color.domain(d3.keys(data[0].contributions).filter(function(key){
+      return key }));
+    color.domain()
 
     data.forEach(function(d){
       let y0 = 0;
-      d.percents = color.domain().map(function(type){ return { type: type, y0: y0, y1: y0 += +d[type] }; });
+      d.percents = color.domain().map(function(type){
+         return { type: type, y0: y0, y1: y0 += +d['contributions'][type] }; });
       d.total = 100;
     });
 
@@ -91,22 +95,22 @@ class ContributorBreakdownChart {
       .data(color.domain().slice().reverse())
       .enter().append('g')
       .attr('class', 'legend')
-      .attr('transform', function(d, i){ return 'translate(-' + i * 100 + ',-20)'; });
+      .attr('transform', function(d, i){ return 'translate(30,' + ((i*-20)-20) + ')'; });
 
     legend.append("rect")
-      .attr("x", width - 188)
+      .attr("x", 551 - 188)
       .attr("width", 18)
       .attr("height", 18)
       .style("fill", color);
 
     legend.append("text")
-      .attr("x", width - 194)
+      .attr("x", 551 - 194)
       .attr("y", 9)
       .attr("dy", ".35em")
       .style("text-anchor", "end")
-      .text(function(d) { return d; });
+      .text(function(d) {
+        return d; });
   }
-
 
   destroy(el) {
     // NOOP

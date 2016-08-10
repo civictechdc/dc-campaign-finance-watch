@@ -1,6 +1,10 @@
 import Moment from 'moment';
 import _ from 'lodash';
 
+const contributorTypes = ['Individual', 'Corporation', 'Other',
+'Committee', 'Candidate', 'Sole Proprietorship', 'Democratic', 'Limited Liability Company', 'Corporate Sponsored PAC',
+'Labor Sponsored PAC', 'None', 'Partnership', 'Labor', '', 'Organization']
+
 export function ProcessContributionsToTree(data, name) {
 
     let individual = _.filter(data.contributions, function (c) {
@@ -34,27 +38,23 @@ export function ProcessContributionsToTree(data, name) {
 }
 
 export function ProcessContributorBreakdown(contributions, name) {
+    let contributionsByType = []
 
-    let individualCount = _.filter(contributions, function (c) {
-            return c.contributor.contributorType === 'Individual';
-        })
-        .length;
-    let corporateCount = _.filter(contributions, function (c) {
-            return c.contributor.contributorType === 'Corporation';
-        })
-        .length;
-    let pacCount = _.filter(contributions, function (c) {
-            return c.contributor.contributorType === 'Other';
-        })
-        .length;
-    let candidate = _.filter(contributions, (c) => {
-        return c.contributor.contributorType === 'Candidate';
-    });
+    for (let i=0; i<contributorTypes.length; i++) {
+      let count = _.filter(contributions, function (c) {
+              return c.contributor.contributorType === contributorTypes[i];
+          })
+          .length;
+      let contributionType = contributorTypes[i]
+      let percent = (count/contributions.length)*100
+      if (percent != 0) {
+        contributionsByType[contributionType] = percent
+      }
+    }
+
     return {
         name: name,
-        individual: (individualCount / contributions.length) * 100,
-        corporate: (corporateCount / contributions.length) * 100,
-        pac: (pacCount / contributions.length) * 100
+        contributions: contributionsByType,
     };
 }
 
