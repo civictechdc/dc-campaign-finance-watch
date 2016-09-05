@@ -5,6 +5,7 @@ import { Table, Column, Cell } from 'fixed-data-table';
 import Moment from 'moment';
 import CampaignInfo from './campaignScorecard.jsx';
 import Promise from 'bluebird';
+import CampaignTable from './campaignTable.jsx';
 
 class CampaignDetailComponent extends React.Component {
     constructor(props){
@@ -38,47 +39,7 @@ class CampaignDetailComponent extends React.Component {
                         <CampaignInfo info={campaignScore}></CampaignInfo>
                     </Col>
                     <Col xs={9}>
-                        <Table rowsCount={contributions.length}
-                            rowHeight={50}
-                            headerHeight={50}
-                            width={900}
-                            height={500}>
-                                <Column header={<Cell>Name</Cell>}
-                                    cell={props => (
-                                        <Cell {...props}>{contributions[props.rowIndex].contributor.name}</Cell>
-                                    )}
-                                    width={200}
-                                    fixed={true}
-                                />
-                                <Column header={<Cell>Amount</Cell>}
-                                    cell={props => (
-                                        <Cell {...props}>${contributions[props.rowIndex].amount}</Cell>
-                                    )}
-                                    width={100}
-                                    fixed={true}
-                                />
-                                <Column header={<Cell>Address</Cell>}
-                                    cell={props => (
-                                        <Cell {...props}>{contributions[props.rowIndex].contributor.address.street + ' '
-                                            + contributions[props.rowIndex].contributor.address.city + ' '
-                                            + contributions[props.rowIndex].contributor.address.state + ' '
-                                            + String(contributions[props.rowIndex].contributor.address.zip.slice(0, 5))}</Cell>
-                                    )}
-                                    width={300}
-                                />
-                                <Column header={<Cell>Contributor Type</Cell>}
-                                    cell={props => (
-                                        <Cell {...props}>{contributions[props.rowIndex].contributor.contributorType}</Cell>
-                                    )}
-                                    width={100}
-                                />
-                                <Column header={<Cell>Date</Cell>}
-                                    cell={props => (
-                                        <Cell {...props}>{Moment(contributions[props.rowIndex].date).format('MM/DD/YYYY')}</Cell>
-                                    )}
-                                    width={200}
-                                />
-                        </Table>
+                        <CampaignTable contributions={contributions}/>
                     </Col>
                 </Row>
             );
