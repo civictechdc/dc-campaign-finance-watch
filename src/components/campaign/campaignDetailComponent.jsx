@@ -59,7 +59,10 @@ class CampaignDetailComponent extends React.Component {
                                 />
                                 <Column header={<Cell>Address</Cell>}
                                     cell={props => (
-                                        <Cell {...props}>{contributions[props.rowIndex].contributor.address.raw}</Cell>
+                                        <Cell {...props}>{contributions[props.rowIndex].contributor.address.street + ' '
+                                            + contributions[props.rowIndex].contributor.address.city + ' '
+                                            + contributions[props.rowIndex].contributor.address.state + ' '
+                                            + String(contributions[props.rowIndex].contributor.address.zip.slice(0, 5))}</Cell>
                                     )}
                                     width={300}
                                 />

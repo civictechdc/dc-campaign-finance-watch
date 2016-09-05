@@ -36,6 +36,7 @@ server.get('/dc-campaign-finance/api/races', electionController.getRaces);
 var contributionController = require('./api/contribution/contribution.controller');
 server.get('/dc-campaign-finance/api/individual/contributors/:limit', contributionController.getTopIndividaulContributors);
 server.get('/dc-campaign-finance/api/contributions/:campaign', contributionController.getContributionsForCampaign);
+server.get('/dc-campaign-finance/api/contributions/id/:contributionId', contributionController.getContributionById);
 
 // Visualization
 var visualizationController = require('./api/visualization/visualization.controller');
