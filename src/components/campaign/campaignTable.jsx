@@ -174,7 +174,10 @@ class CampaignTable extends React.Component {
                   </SortHeaderCell>
                 }
                 cell={props => (
-                          <Cell {...props}>{sortedDataList[props.rowIndex].contributor.address.raw}</Cell>
+                          <Cell {...props}>{sortedDataList[props.rowIndex].contributor.address.street + ' '
+                                            + sortedDataList[props.rowIndex].contributor.address.city + ' '
+                                            + sortedDataList[props.rowIndex].contributor.address.state + ' '
+                                            + String(sortedDataList[props.rowIndex].contributor.address.zip.slice(0, 5))}</Cell>
                       )}
 
                 width={300}

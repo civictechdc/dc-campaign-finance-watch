@@ -20,7 +20,7 @@ exports.getContributionsForCampaign = function(req, res) {
             return contributionService.getContributionsForCampaign(campaign);
         })
         .then(function(contributions){
-            if(contributions.length < 500) {
+            if(contributions.length < 1000) {
                 redis.setAsync(req.url, {results: contributions});
             }
             res.send(contributions);
@@ -29,3 +29,12 @@ exports.getContributionsForCampaign = function(req, res) {
             console.log(err);
         });
 };
+
+exports.getContributionById = function(req, res) {
+    var contributionId = req.params.contributionId;
+    return contributionService
+        .getContributionById(contributionId)
+        .then(function(contribution) {
+            res.send(contribution);
+        });
+}
