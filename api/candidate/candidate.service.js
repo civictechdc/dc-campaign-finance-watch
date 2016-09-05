@@ -12,7 +12,6 @@ var Contribution = require('../../models/contribution');
 var oldestDate = Moment(new Date('01/01/2006', 'MM/DD/YYYY'));
 
 exports.findCandidateByRaceAndYear = function(race, fromYear, toYear) {
-    console.log(toYear);
     return Candidate.find({'campaigns.raceType': race, 'campaigns.year': {'$gte': Number(fromYear), '$lte': Number(toYear)}})
         .then(function(candidates) {
             return candidates.map(function(c){
@@ -150,16 +149,11 @@ exports.findCandidate = function (candidateId, campaignIds, toDate, fromDate) {
 
 
                         var wardContributions = newContribs.reduce(function(total, c){
-                            // console.log(c.contributor.address.ward);
-                            // console.log(campaignModel.ward);
                             if(c.contributor.address.ward === campaignModel.ward) {
                                 return total + c.amount;
                             }
                           return total;
                         }, 0);
-
-                        console.log(wardContributions);
-                        console.log(dcContributions);
 
                         var campaign = {
                             campaignId: contributions[0].campaignId,
