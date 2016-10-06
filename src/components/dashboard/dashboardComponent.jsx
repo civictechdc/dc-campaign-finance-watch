@@ -228,10 +228,9 @@ class Dashboard extends React.Component {
                                         {race.campaigns.map((campaign, idx) => {
                                           let candidateName = campaign.candidateName.trim()
                                           let campaignID = campaign.campaign.campaignId
-                                          let header = `${candidateName}`
+                                          let header = this._loadPanelHeader(campaignData, campaignID, candidateName)
 
                                             if(scores && scores[campaign.campaign.campaignId]) {
-                                                header = this._loadPanelHeader(campaignData, campaignID, candidateName)
 
                                                 return (
                                                     <Panel eventKey={idx} header={header}>
@@ -243,7 +242,6 @@ class Dashboard extends React.Component {
                                                 )
 
                                             } else if (!loading) {
-                                                header = this._loadPanelHeader(campaignData, campaignID, candidateName)
                                               
                                               return (
                                               <Panel eventKey={idx} header={header}
