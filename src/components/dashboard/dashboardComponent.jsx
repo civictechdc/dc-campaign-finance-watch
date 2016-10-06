@@ -90,6 +90,29 @@ class Dashboard extends React.Component {
       })
     }
 
+    _loadPanelHeader(campaignData,campaignID, candidateName) {
+        let candidateScore = campaignData[campaignID]['campaigns'][0]['scores']['total'].toFixed(2)
+        let scoreColor = 'black'
+
+        if (candidateScore < 40) {
+        scoreColor = '#d43f3a'
+        }
+        else if (candidateScore >= 40 && candidateScore < 70) {
+        scoreColor = '#ec971f'
+        }
+        else {
+        scoreColor = '#5cb85c'
+        }
+
+        let style = {
+        color: scoreColor,
+        }
+        let header = (
+            <div>{candidateName} - <span style={style}>{candidateScore}</span></div>
+        )
+        return header
+    }
+
     componentWillMount() {
         let that = this;
         const {startYear, endYear} = this.state;
@@ -208,8 +231,10 @@ class Dashboard extends React.Component {
                                           let header = `${candidateName}`
 
                                             if(scores && scores[campaign.campaign.campaignId]) {
+                                                header = this._loadPanelHeader(campaignData, campaignID, candidateName)
+
                                                 return (
-                                                    <Panel eventKey={idx} header={campaign.candidateName}>
+                                                    <Panel eventKey={idx} header={header}>
                                                         <CandidateInfo info={scores[campaign.campaign.campaignId]}/>
                                                         <LinkContainer to={`candidate/${campaign.candidateId}/campaign/${campaign.campaign.campaignId}`}>
                                                             <Button>Details</Button>
@@ -218,25 +243,8 @@ class Dashboard extends React.Component {
                                                 )
 
                                             } else if (!loading) {
-                                              let candidateScore = campaignData[campaignID]['campaigns'][0]['scores']['total'].toFixed(2)
-                                              let scoreColor = 'black'
-
-                                              if (candidateScore < 40) {
-                                                scoreColor = '#d43f3a'
-                                              }
-                                              else if (candidateScore >= 40 && candidateScore < 70) {
-                                                scoreColor = '#ec971f'
-                                              }
-                                              else {
-                                                scoreColor = '#5cb85c'
-                                              }
-
-                                              let style = {
-                                                color: scoreColor,
-                                              }
-                                              let header = (
-                                                  <div>{candidateName} - <span style={style}>{candidateScore}</span></div>
-                                              )
+                                                header = this._loadPanelHeader(campaignData, campaignID, candidateName)
+                                              
                                               return (
                                               <Panel eventKey={idx} header={header}
                                                 onEnter={() => {
