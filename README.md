@@ -22,9 +22,8 @@ Since the backend code is publicly available a backend does not have to be runni
 
 After cloning the repo, run the following commands from directory it was cloned into:
 ```
-npm install -g gulp
 npm install
-gulp serve --env=prod
+npm run serve
 ```
 This will run a local instance of the frontend that will talk to the public API.  Any changes you make to source files should be automatically reloaded in the browser.
 
