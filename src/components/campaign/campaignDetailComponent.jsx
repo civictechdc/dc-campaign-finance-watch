@@ -6,6 +6,7 @@ import Moment from 'moment';
 import CampaignInfo from './campaignScorecard.jsx';
 import Promise from 'bluebird';
 import CampaignTable from './campaignTable.jsx';
+import { Tabs, Tab} from 'react-bootstrap';
 
 class CampaignDetailComponent extends React.Component {
     constructor(props){
@@ -25,6 +26,7 @@ class CampaignDetailComponent extends React.Component {
 
     render() {
         const { contributions, campaignScore, candidate } = this.state;
+        const {id} = this.props.params
         if(contributions && campaignScore) {
             return (
                 <Row>
@@ -39,7 +41,17 @@ class CampaignDetailComponent extends React.Component {
                         <CampaignInfo info={campaignScore}></CampaignInfo>
                     </Col>
                     <Col xs={9}>
-                        <CampaignTable contributions={contributions}/>
+                        <Tabs>
+                            <Tab id="keshif" eventKey={1} title="Search By Year and Race">
+                                <div className="campaign-visualizer">
+                                    <iframe src={'http://adilyalcin.me/campaign-finance-explorer/index.html?' + id}></iframe>
+                                </div>
+                            </Tab>
+                            <Tab id="table" eventKey={2} title="Search By Year and Race">
+                                <CampaignTable contributions={contributions}/>
+                            </Tab>
+                        </Tabs>
+                        
                     </Col>
                 </Row>
             );
