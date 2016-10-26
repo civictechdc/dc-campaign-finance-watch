@@ -44,7 +44,7 @@ class CampaignDetailComponent extends React.Component {
                         <Tabs>
                             <Tab id="keshif" eventKey={1} title="Search By Year and Race">
                                 <div className="campaign-visualizer">
-                                    <iframe src={'http://keshif.me/demo/CampaignFinance.html?' + id}></iframe>
+                                    <iframe src={'http://adilyalcin.me/campaign-finance-explorer/index.html?' + id}></iframe>
                                 </div>
                             </Tab>
                             <Tab id="table" eventKey={2} title="Search By Year and Race">
