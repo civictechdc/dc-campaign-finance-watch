@@ -5,6 +5,7 @@ import CandidateCard  from '../candidateCard.component.jsx';
 import LoaderComponent from '../loader.component.jsx';
 import {Grid, Row, Col, Button} from 'react-bootstrap';
 import { Link } from 'react-router';
+import { Tabs, Tab} from 'react-bootstrap';
 
 class DataComponent extends React.Component {
     constructor(props) {
@@ -43,6 +44,11 @@ class DataComponent extends React.Component {
                 <LoaderComponent isLoading={loading}></LoaderComponent>
             );
         }
+        const campaignIds = _.flattenDeep(candidates.map((c) => {
+            return c.data.campaigns.map((campaign) => {
+                return campaign.campaignId;
+            });
+        }));
         return (
             <Grid>
                 <Row>
@@ -61,20 +67,20 @@ class DataComponent extends React.Component {
                 </Row>
                 <Row>
                     {_.map(candidates, function(candidate, idx){
-                        return candidate.data.campaigns.map((campaign, idx) => {
-                            return (
-                                <Col xs={12} md={6} key={idx}>
-                                    <CandidateCard
-                                        candidateName={candidate.candidateName}
-                                        candidateId={candidate.id}
-                                        candidateProfilePictureUrl={candidate.data.candidate.profilePictureUrl}
-                                        data={campaign}
-                                    />
-                                </Col>
-                            );
-                        });
-                    })}
-                </Row>
+                                return candidate.data.campaigns.map((campaign, idx) => {
+                                    return (
+                                        <Col xs={12} md={6} key={idx}>
+                                            <CandidateCard
+                                                candidateName={candidate.candidateName}
+                                                candidateId={candidate.id}
+                                                candidateProfilePictureUrl={candidate.data.candidate.profilePictureUrl}
+                                                data={campaign}
+                                            />
+                                        </Col>
+                                    );
+                                });
+                            })}
+                </Row>                
             </Grid>
         );
     }
