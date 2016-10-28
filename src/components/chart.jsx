@@ -35,7 +35,7 @@ class Chart extends React.Component {
         } else {
             let chart = this.ChartFactory(this.props.chartInfo.type, el);
             this.setState({chart: chart});
-            this.props.onSvgCreate(chart.svg);
+            //this.props.onSvgCreate(chart.svg);
         }
     }
 
