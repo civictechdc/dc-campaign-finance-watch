@@ -42,12 +42,12 @@ class CampaignDetailComponent extends React.Component {
                     </Col>
                     <Col xs={9}>
                         <Tabs>
-                            <Tab id="keshif" eventKey={1} title="Search By Year and Race">
+                            <Tab id="keshif" eventKey={1} title="Contribution Table">
                                 <div className="campaign-visualizer">
                                     <iframe src={'http://adilyalcin.me/campaign-finance-explorer/index.html?' + id}></iframe>
                                 </div>
                             </Tab>
-                            <Tab id="table" eventKey={2} title="Search By Year and Race">
+                            <Tab id="table" eventKey={2} title="Campaign Data Visualization">
                                 <CampaignTable contributions={contributions}/>
                             </Tab>
                         </Tabs>
