@@ -9,9 +9,108 @@ import {CandidateInfo} from '../candidateCard.component.jsx';
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {races: [], scores: {}, startYear: Moment('01/01/2014'), endYear: Moment('01/01/2016')};
+        this.state = {
+          races: [],
+          scores: {},
+          startYear: Moment('01/01/2014'),
+          endYear: Moment('01/01/2016'),
+          campaignData: [],
+          loading: true
+          };
         this._loadCampaignData = this._loadCampaignData.bind(this);
         this._changeYearsViewed = this._changeYearsViewed.bind(this);
+
+    }
+
+    _getCampaigns(races) {
+      const {startYear, endYear} = this.state;
+      return races.map((race) => {
+          return Client.getCampaigns(race, {fromDate: startYear, toDate: endYear})
+              .then((data) => {
+                  return {type: race, data: data};
+              });
+      })
+    }
+
+    // not working on node end.
+    _getCandidates() {
+      const {startYear, endYear} = this.state;
+      return Client.getCandidates(startYear, endYear)
+        .then((candidates) => {
+        })
+    }
+
+    _loadCampaignData(candidateId, campaignId) {
+        Client.getCandidate({
+            id: candidateId,
+            campaigns: [{campaignId: campaignId}]
+        })
+        .then((data) => {
+            const {scores} = this.state;
+            scores[campaignId] = data.campaigns[0];
+            this.setState({scores: scores});
+        });
+    }
+
+    _getCampaignData(candidateId, campaignId) {
+        return Client.getCandidate({
+            id: candidateId,
+            campaigns: [{campaignId: campaignId}]
+        })
+        .then((data) => {
+          let campaignData = this.state.campaignData
+          let campaignID = data.campaigns[0].campaignId
+          let obj = {}
+
+          obj[campaignID]= data
+          return data;
+        })
+    }
+
+    _loadAllCampaignData(races) {
+      let combinedCampaigns = []
+      let data = []
+
+      for (var i=0; i<races.length; i++) {
+        combinedCampaigns = combinedCampaigns.concat(races[i]['campaigns'])
+      }
+
+      return Promise.all(
+        combinedCampaigns.map((campaign) => {
+        let campaignID = campaign.campaign.campaignId;
+        let candidateID = campaign.candidateId;
+        return this._getCampaignData(candidateID, campaignID)
+          .then((res)=> {
+            data[campaignID] = res
+          })
+
+      }))
+      .then((res) => {
+        this.setState({campaignData: data, loading: false})
+      })
+    }
+
+    _loadPanelHeader(campaignData,campaignID, candidateName) {
+        let candidateScore = campaignData[campaignID]['campaigns'][0]['scores']['total'].toFixed(2)
+        let scoreColor = 'black'
+
+        if (candidateScore < 40) {
+        scoreColor = '#d43f3a'
+        }
+        else if (candidateScore >= 40 && candidateScore < 70) {
+        scoreColor = '#ec971f'
+        }
+        else {
+        scoreColor = '#5cb85c'
+        }
+
+        let style = {
+        color: scoreColor,
+        }
+        let header = (
+            <div>{candidateName} - <span style={style}>{candidateScore}</span></div>
+        )
+        return header
     }
 
     componentWillMount() {
@@ -20,12 +119,7 @@ class Dashboard extends React.Component {
         Client
             .getRaces()
             .then((races) => {
-                return Promise.all(races.map((race) => {
-                    return Client.getCampaigns(race, {fromDate: startYear, toDate: endYear})
-                        .then((data) => {
-                            return {type: race, data: data};
-                        });
-                }));
+              return Promise.all(this._getCampaigns(races));
             })
             .then((races) => {
                 const structuredData = races.map((r) => {
@@ -43,7 +137,11 @@ class Dashboard extends React.Component {
                     }
                 });
                 that.setState({races: structuredData})
-            });
+            })
+            .then(() => {
+              let races = this.state.races
+              return this._loadAllCampaignData(races)
+            })
     }
 
     _changeYearsViewed(selection) {
@@ -100,27 +198,19 @@ class Dashboard extends React.Component {
             });
     }
 
-    _loadCampaignData(candidateId, campaignId) {
-        Client.getCandidate({
-            id: candidateId,
-            campaigns: [{campaignId: campaignId}]
-        })
-        .then((data) => {
-            const {scores} = this.state;
-            scores[campaignId] = data.campaigns[0];
-            this.setState({scores: scores});
-        });
-    }
+
+
 
     render() {
-        const { races, scores } = this.state;
+        const { races, scores, campaignData, loading } = this.state;
+
         return (
             <Row>
                 <Col xs={12}>
                     <h2>DC Campaign Finance Watch</h2>
                     <Row>
                         <Col xs={12}>
-                            Viewing Years:   
+                            Viewing Years:
                             <select name="years" onChange={(evt) => this._changeYearsViewed(evt.target.value)}>
                                 <option value="14-16">2014 - 2016</option>
                                 <option value="12-14">2012 - 2014</option>
@@ -136,9 +226,14 @@ class Dashboard extends React.Component {
                                     <h3>{race.type}</h3>
                                     <Accordion>
                                         {race.campaigns.map((campaign, idx) => {
+                                          let candidateName = campaign.candidateName.trim()
+                                          let campaignID = campaign.campaign.campaignId
+                                          let header = `${candidateName}`
                                             if(scores && scores[campaign.campaign.campaignId]) {
+                                                let header = this._loadPanelHeader(campaignData, campaignID, candidateName)
+
                                                 return (
-                                                    <Panel eventKey={idx} header={campaign.candidateName}>
+                                                    <Panel eventKey={idx} header={header}>
                                                         <CandidateInfo info={scores[campaign.campaign.campaignId]}/>
                                                         <LinkContainer to={`candidate/${campaign.candidateId}/campaign/${campaign.campaign.campaignId}`}>
                                                             <Button>Details</Button>
@@ -146,9 +241,25 @@ class Dashboard extends React.Component {
                                                     </Panel>
                                                 )
 
+                                            } else if (!loading) {
+                                              let header = this._loadPanelHeader(campaignData, campaignID, candidateName)
+
+                                              return (
+                                              <Panel eventKey={idx} header={header}
+                                                onEnter={() => {
+                                                  this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)
+                                                }
+                                                }>
+                                                  Loading...
+                                              </Panel>
+                                              )
                                             }
                                             return (
-                                                <Panel eventKey={idx} header={campaign.candidateName}  onEnter={() => this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)}>
+                                                <Panel eventKey={idx} header={header}
+                                                  onEnter={() => {
+                                                    this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)
+                                                  }
+                                                  }>
                                                     Loading...
                                                 </Panel>
                                             )

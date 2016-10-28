@@ -1,3 +1,6 @@
+
+### Status
+[![Build Status](https://travis-ci.org/codefordc/dc-campaign-finance-watch.png)](https://travis-ci.org/codefordc/dc-campaign-finance-watch/)
 # DC Campaign Finance Watch
 
 This project is aimed at providing greater transparency to local DC election finances, which have historically been pretty opaque.  The project provides an open API for querying the data as well as a front end that provides visualizations of the data and is eay to compare mulitple campaigns.
@@ -19,9 +22,8 @@ Since the backend code is publicly available a backend does not have to be runni
 
 After cloning the repo, run the following commands from directory it was cloned into:
 ```
-npm install -g gulp
 npm install
-gulp serve --env=prod
+npm run serve
 ```
 This will run a local instance of the frontend that will talk to the public API.  Any changes you make to source files should be automatically reloaded in the browser.
 

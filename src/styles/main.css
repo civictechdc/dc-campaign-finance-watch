@@ -140,6 +140,11 @@ rect.bordered {
     top: 25%;
 }
 
+.campaign-visualizer > iframe {
+    width: 100%;
+    height: 600px;
+}
+
 @media (max-width: 768px) {
     .search-tab {
         max-width: 9em;
