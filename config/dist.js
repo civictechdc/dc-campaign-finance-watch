@@ -7,7 +7,7 @@ let baseConfig = require('./base');
 let defaultSettings = require('./defaults');
 
 let config = Object.assign({}, baseConfig, {
-  entry: path.join(__dirname, '../src/index'),
+  entry: ['whatwg-fetch', path.join(__dirname, '../src/index')],
   cache: false,
   devtool: 'sourcemap',
   plugins: [
