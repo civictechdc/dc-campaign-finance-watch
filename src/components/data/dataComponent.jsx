@@ -55,15 +55,11 @@ class DataComponent extends React.Component {
                     <h4>Data Set</h4>
                 </Row>
                 <Row>
-                {
-                  candidates.length >= 2 ?
                     <Link to={contributionsGraph}>
                       <Button bsStyle="primary" bsSize="large">
                       Compare candidate contributions
                       </Button>
-                    </Link> :
-                  false
-                }
+                    </Link>
                 </Row>
                 <Row>
                     {_.map(candidates, function(candidate, idx){

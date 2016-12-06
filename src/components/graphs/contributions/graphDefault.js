@@ -22,9 +22,8 @@ class ChartDefault {
   _drawPoints(el,data, candidates) {
 
     this.svg.selectAll('*').remove();
-
     let margin = {top: 50, right: 50, bottom: 50, left: 50},
-    width = el.offsetWidth - margin.left - margin.right,
+    width = 1400- margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
     padding = 100;
 
