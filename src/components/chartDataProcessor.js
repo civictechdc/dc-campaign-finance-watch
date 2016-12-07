@@ -21,18 +21,18 @@ export function ProcessContributionsToTree(data, name) {
         .map(createChildNodes);
 
     return {
-        "name": name,
-        "children": [{
-                "name": "Individual Contributions",
-                "children": individual
+        'name': name,
+        'children': [{
+                'name': 'Individual Contributions',
+                'children': individual
                     },
             {
-                "name": "Corporate Contributions",
-                "children": corporate
+                'name': 'Corporate Contributions',
+                'children': corporate
                     },
             {
-                "name": "PACs Contributions",
-                "children": pac
+                'name': 'PACs Contributions',
+                'children': pac
                     }]
     };
 }
@@ -54,7 +54,7 @@ export function ProcessContributorBreakdown(contributions, name) {
 
     return {
         name: name,
-        contributions: contributionsByType,
+        contributions: contributionsByType
     };
 }
 
@@ -148,7 +148,7 @@ export function ProcessContributionByWard(results) {
     var flat = _.flatten(combined);
 
     return {
-   	    contributorTypes: _.chain(flat).map("contributorType").uniq().value(),
+   	    contributorTypes: _.chain(flat).map('contributorType').uniq().value(),
    	    contributions: flat
     };
 }

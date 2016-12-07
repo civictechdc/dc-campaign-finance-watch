@@ -43,11 +43,11 @@ class ChartDefault {
 
     var xAxis = d3.svg.axis()
         .scale(x)
-        .orient("bottom");
+        .orient('bottom');
 
     var yAxis = d3.svg.axis()
         .scale(y)
-        .orient("left");
+        .orient('left');
 
     var line = d3.svg.line()
         .x(function(d) { return x(d.date); })
@@ -55,27 +55,27 @@ class ChartDefault {
 
 
     let svg = this.svg
-    .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
-.append("g")
-  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    .attr('width', width + margin.left + margin.right)
+  .attr('height', height + margin.top + margin.bottom)
+.append('g')
+  .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
     x.domain(d3.extent(mergedData, function(d) { return d.date; }));
     y.domain(d3.extent(mergedData, function(d) { return d.amount; }));
-svg.append("g")
-    .attr("class", "x axis")
-    .attr("transform", "translate(0," + height + ")")
+svg.append('g')
+    .attr('class', 'x axis')
+    .attr('transform', 'translate(0,' + height + ')')
     .call(xAxis);
 
-svg.append("g")
-    .attr("class", "y axis")
+svg.append('g')
+    .attr('class', 'y axis')
     .call(yAxis)
-  .append("text")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 6)
-    .attr("dy", ".71em")
-    .style("text-anchor", "end")
-    .text("Contribution Amount ($)");
+  .append('text')
+    .attr('transform', 'rotate(-90)')
+    .attr('y', 6)
+    .attr('dy', '.71em')
+    .style('text-anchor', 'end')
+    .text('Contribution Amount ($)');
 
     let candidatePaths = svg.selectAll('.candidate')
       .data(mergedData)
