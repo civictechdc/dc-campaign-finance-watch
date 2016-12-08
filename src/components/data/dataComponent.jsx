@@ -1,3 +1,4 @@
+/*eslint no-console: ["error", { allow: ["warn", "error"] }] */
 import React from 'react';
 import _ from 'lodash';
 import Client from '../api';
@@ -5,7 +6,6 @@ import CandidateCard  from '../candidateCard.component.jsx';
 import LoaderComponent from '../loader.component.jsx';
 import {Grid, Row, Col, Button} from 'react-bootstrap';
 import { Link } from 'react-router';
-import { Tabs, Tab} from 'react-bootstrap';
 
 class DataComponent extends React.Component {
     constructor(props) {
@@ -28,7 +28,7 @@ class DataComponent extends React.Component {
             that.setState({candidates: candidates, loading: false});
         })
         .catch(function (err) {
-            console.log(err);
+            console.error(err);
         });
     }
 
@@ -44,11 +44,7 @@ class DataComponent extends React.Component {
                 <LoaderComponent isLoading={loading}></LoaderComponent>
             );
         }
-        const campaignIds = _.flattenDeep(candidates.map((c) => {
-            return c.data.campaigns.map((campaign) => {
-                return campaign.campaignId;
-            });
-        }));
+
         return (
             <Grid>
                 <Row>
@@ -76,7 +72,7 @@ class DataComponent extends React.Component {
                                     );
                                 });
                             })}
-                </Row>                
+                </Row>
             </Grid>
         );
     }

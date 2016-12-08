@@ -5,7 +5,6 @@ import { Link } from 'react-router';
 const CampaignInfo = (props) => {
     const { info } = props;
     const ward = info.percentFromWard ? (<div>Percentage Raised from Ward: {(_.round(info.percentFromWard, 3)) *100}%</div>) : (false);
-    const wardScore = info.percentFromWard ? (<div>Percentage Raised from Ward: {(_.round(info.scores.wardScore, 2))}/15/</div>) : (false);
     return (
         <div>
             <div className="col-sm-12">

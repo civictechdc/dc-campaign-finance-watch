@@ -2,7 +2,7 @@
 
 import moment from 'moment';
 import React from 'react';
-import DayPicker, { DateUtils } from "react-day-picker";
+import DayPicker, { DateUtils } from 'react-day-picker';
 import {Button, Col, ButtonGroup, Row} from 'react-bootstrap';
 
 class DateRangeComponent extends React.Component {
@@ -16,14 +16,14 @@ class DateRangeComponent extends React.Component {
 
     handleStartDateClick(event, day, modifiers){
         this.setState({
-            startDate: modifiers.indexOf("selected") > -1 ? null : moment(day.toISOString())
+            startDate: modifiers.indexOf('selected') > -1 ? null : moment(day.toISOString())
         });
         this.props.onRangeInput(this.state.endDate, this.state.startDate);
     }
 
     handleEndDateClick(event, day, modifiers){
         this.setState({
-            endDate: modifiers.indexOf("selected") > -1 ? null : moment(day.toISOString())
+            endDate: modifiers.indexOf('selected') > -1 ? null : moment(day.toISOString())
         });
         this.props.onRangeInput(this.state.endDate, this.state.startDate);
     }

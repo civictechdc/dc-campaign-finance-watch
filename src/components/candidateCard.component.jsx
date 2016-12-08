@@ -4,7 +4,6 @@ import ChartContainerComponent from './chartContainerComponent.jsx';
 import _ from 'lodash';
 import { Link } from 'react-router';
 import Client from './api';
-import Promise from 'bluebird';
 import {
     Image, Panel, Button
 } from 'react-bootstrap';
@@ -19,7 +18,6 @@ import {
 export const CandidateInfo = (props) => {
     const { info } = props;
     const ward = info.percentFromWard ? (<div>Percentage Raised from Ward: {(_.round(info.percentFromWard, 3)) *100}%</div>) : (false);
-    const wardScore = info.percentFromWard ? (<div>Percentage Raised from Ward: {(_.round(info.scores.wardScore, 2))}/15/</div>) : (false);
     return (
         <div>
             <div className="col-sm-12">
@@ -94,22 +92,21 @@ export default class CandidateCard extends React.Component {
 
     render() {
         const {candidateName, data, candidateProfilePictureUrl, candidateId} = this.props;
-        console.log(candidateId);
         let chart = false;
         if(this.state.chartData) {
                 let shapedData = null;
                 if(this.state.activeChart) {
                     switch (this.state.activeChart) {
-                        case "contributionOverTime":
+                        case 'contributionOverTime':
                             shapedData = ProcessContributionsOverTime(this.state.chartData.data, candidateName);
                             break;
-                        case "contributorBreakdown":
+                        case 'contributorBreakdown':
                             shapedData = ProcessContributorBreakdown(this.state.chartData.data, candidateName);
                             break;
-                        case "contributorDendogram":
+                        case 'contributorDendogram':
                             shapedData = ProcessContributionsToTree(this.state.chartData.data, candidateName);
                             break;
-                        case "contributionByWard":
+                        case 'contributionByWard':
                             shapedData = ProcessContributionByWard(this.state.chartData.data, candidateName);
                         break;
                         default:

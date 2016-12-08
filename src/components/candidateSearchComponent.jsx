@@ -1,3 +1,4 @@
+/*eslint no-console: ["error", { allow: ["warn", "error"] }] */
 import React from 'react';
 import {
     FuncSubject
@@ -37,7 +38,7 @@ class CandidateSearchComponent extends React.Component {
             .subscribe(function (data) {
                 self.setState({availableCandidates: data});
             }, function (error) {
-                console.log(error);
+                console.error(error);
             });
     }
 
