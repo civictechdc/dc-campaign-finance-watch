@@ -19,7 +19,7 @@ class Chart extends React.Component {
         }
     }
 
-    shouldComponentUpdate (nextProps, nextState) {
+    shouldComponentUpdate (nextProps) {
         if (nextProps.chartInfo === this.props.chartInfo) {
             return false;
         } else {
@@ -27,7 +27,7 @@ class Chart extends React.Component {
         }
     }
 
-    componentDidUpdate (prevProps) {
+    componentDidUpdate () {
         let el = ReactDOM.findDOMNode(this);
         if (this.state.chart && (this.state.chart.type === this.props.chartInfo.type)) {
             this.state.chart.update(el, this.getChartState());
@@ -57,7 +57,7 @@ class Chart extends React.Component {
     }
 
     componentWillUpdate () {
-        let el = ReactDOM.findDOMNode(this);
+        ReactDOM.findDOMNode(this);
     }
 
     render () {

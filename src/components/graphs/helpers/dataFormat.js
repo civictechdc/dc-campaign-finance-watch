@@ -1,5 +1,7 @@
+import d3 from 'd3';
+
 export function formatDatesByDay(data) {
-  let formatDate = d3.time.format("%Y-%m-%d")
+  let formatDate = d3.time.format('%Y-%m-%d')
 
   for (let k of data) {
     let digits = k.date.match(/^\d+|\d+\b|\d+(?=\w)/g).slice(0,3);
@@ -11,7 +13,7 @@ export function formatDatesByDay(data) {
 }
 
 export function formatDatesByMonth(data) {
-  let formatDate = d3.time.format("%Y-%m-%d")
+  let formatDate = d3.time.format('%Y-%m-%d')
 
   for (let k of data) {
     let digits = k.date.match(/^\d+|\d+\b|\d+(?=\w)/g).slice(0,3);

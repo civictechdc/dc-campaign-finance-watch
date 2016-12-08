@@ -1,11 +1,10 @@
 import React from 'react'
 import { Table, Column, Cell } from 'fixed-data-table';
 import Moment from 'moment';
-import Promise from 'bluebird';
 
 var SortTypes = {
   ASC: 'ASC',
-  DESC: 'DESC',
+  DESC: 'DESC'
 };
 
 function reverseSortDirection(sortDir) {
@@ -71,7 +70,7 @@ class CampaignTable extends React.Component {
 
     this.state = {
       sortedDataList: this._dataList,
-      colSortDirs: {},
+      colSortDirs: {}
     };
 
     this._onSortChange = this._onSortChange.bind(this);
@@ -84,22 +83,21 @@ class CampaignTable extends React.Component {
 
       var valueA, valueB = ''
       switch(columnKey) {
-        case "date":
-        case "amount":
+        case 'date':
+        case 'amount':
           valueA = this._dataList[indexA][columnKey]
           valueB = this._dataList[indexB][columnKey]
           break;
-        case "name":
-        case "contributorType":
+        case 'name':
+        case 'contributorType':
           valueA = this._dataList[indexA]['contributor'][columnKey];
           valueB = this._dataList[indexB]['contributor'][columnKey];
           break;
-        case "address":
+        case 'address':
         valueA = this._dataList[indexA]['contributor'][columnKey]['raw'];
         valueB = this._dataList[indexB]['contributor'][columnKey]['raw'];
           break;
         default:
-          console.log("warning check datatype with _onSortChange")
           valueA = this._dataList[indexA][columnKey]
           valueB = this._dataList[indexB]['contributor'][columnKey];
       }
@@ -119,8 +117,8 @@ class CampaignTable extends React.Component {
     this.setState({
       sortedDataList: new DataListWrapper(sortIndexes, this._dataList),
       colSortDirs: {
-        [columnKey]: sortDir,
-      },
+        [columnKey]: sortDir
+      }
     });
   }
 

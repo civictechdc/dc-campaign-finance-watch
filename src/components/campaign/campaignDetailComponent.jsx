@@ -1,8 +1,6 @@
 import React from 'react';
 import Client from '../api';
 import { Row, Col } from 'react-bootstrap';
-import { Table, Column, Cell } from 'fixed-data-table';
-import Moment from 'moment';
 import CampaignInfo from './campaignScorecard.jsx';
 import Promise from 'bluebird';
 import CampaignTable from './campaignTable.jsx';
@@ -51,7 +49,7 @@ class CampaignDetailComponent extends React.Component {
         const {id} = this.props.params;
         const vizTitle = <span>Visualiations <button style={{padding: '0', paddingLeft: '2px',  paddingRight: '2px'}} onClick={() => this.goFullScreen('visualizer')} disabled={activeTab !== 'visualizer'} className="btn btn-info btn-xs"><i className="fa fa-expand"></i></button></span>
         const tableTitle = <span>Contribution Table</span>
-        
+
         if(fullScreenTab === 'visualizer') {
             return (
                 <Tabs>
@@ -95,8 +93,8 @@ class CampaignDetailComponent extends React.Component {
 
     render() {
         const { contributions, campaignScore, candidate } = this.state;
-        
-        
+
+
         if(contributions && campaignScore) {
             return (
                 <Row>

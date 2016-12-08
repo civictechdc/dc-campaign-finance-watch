@@ -31,10 +31,10 @@ class ContributorDendogramChart {
             .projection(function(d) { return [d.y, d.x]; });
 
         var svg = this.svg
-            .attr("width", width)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            .attr('width', width)
+            .attr('height', height + margin.top + margin.bottom)
+            .append('g')
+            .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
         let root = data;
         root.x0 = height/2;
@@ -50,7 +50,7 @@ class ContributorDendogramChart {
 
         root.children.forEach(collapse);
         update(root);
-        d3.select(self.frameElement).style("height", "800px");
+        d3.select(self.frameElement).style('height', '800px');
 
         function update(source) {
             let nodes = tree.nodes(root).reverse(),
@@ -59,58 +59,58 @@ class ContributorDendogramChart {
             nodes.forEach(function(d) { d.y = d.depth * 180; });
 
             // Update the nodes…
-            var node = svg.selectAll("g.node")
+            var node = svg.selectAll('g.node')
                 .data(nodes, function(d) { return d.id || (d.id = ++i); });
 
             // Enter any new nodes at the parent's previous position.
-            var nodeEnter = node.enter().append("g")
-                .attr("class", "node")
-                .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
-                .on("click", click);
+            var nodeEnter = node.enter().append('g')
+                .attr('class', 'node')
+                .attr('transform', function() { return 'translate(' + source.y0 + ',' + source.x0 + ')'; })
+                .on('click', click);
 
-            nodeEnter.append("circle")
-                .attr("r", 1e-6)
-                .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+            nodeEnter.append('circle')
+                .attr('r', 1e-6)
+                .style('fill', function(d) { return d._children ? 'lightsteelblue' : '#fff'; });
 
-            nodeEnter.append("text")
-                .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
-                .attr("dy", ".35em")
-                .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
+            nodeEnter.append('text')
+                .attr('x', function(d) { return d.children || d._children ? -10 : 10; })
+                .attr('dy', '.35em')
+                .attr('text-anchor', function(d) { return d.children || d._children ? 'end' : 'start'; })
                 .text(function(d) { return d.name; })
-                .style("fill-opacity", 1e-6);
+                .style('fill-opacity', 1e-6);
 
             // Transition nodes to their new position.
             var nodeUpdate = node.transition()
                 .duration(duration)
-                .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+                .attr('transform', function(d) { return 'translate(' + d.y + ',' + d.x + ')'; });
 
-            nodeUpdate.select("circle")
-                .attr("r", 4.5)
-                .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+            nodeUpdate.select('circle')
+                .attr('r', 4.5)
+                .style('fill', function(d) { return d._children ? 'lightsteelblue' : '#fff'; });
 
-            nodeUpdate.select("text")
-                .style("fill-opacity", 1);
+            nodeUpdate.select('text')
+                .style('fill-opacity', 1);
 
             // Transition exiting nodes to the parent's new position.
             var nodeExit = node.exit().transition()
                 .duration(duration)
-                .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+                .attr('transform', function() { return 'translate(' + source.y + ',' + source.x + ')'; })
                 .remove();
 
-            nodeExit.select("circle")
-                .attr("r", 1e-6);
+            nodeExit.select('circle')
+                .attr('r', 1e-6);
 
-            nodeExit.select("text")
-                .style("fill-opacity", 1e-6);
+            nodeExit.select('text')
+                .style('fill-opacity', 1e-6);
 
             // Update the links…
-            var link = svg.selectAll("path.link")
+            var link = svg.selectAll('path.link')
                 .data(links, function(d) { return d.target.id; });
 
             // Enter any new links at the parent's previous position.
-            link.enter().insert("path", "g")
-                .attr("class", "link")
-                .attr("d", function(d) {
+            link.enter().insert('path', 'g')
+                .attr('class', 'link')
+                .attr('d', function() {
                   var o = {x: source.x0, y: source.y0};
                   return diagonal({source: o, target: o});
                 });
@@ -118,12 +118,12 @@ class ContributorDendogramChart {
             // Transition links to their new position.
             link.transition()
                 .duration(duration)
-                .attr("d", diagonal);
+                .attr('d', diagonal);
 
             // Transition exiting nodes to the parent's new position.
             link.exit().transition()
                 .duration(duration)
-                .attr("d", function(d) {
+                .attr('d', function() {
                   var o = {x: source.x, y: source.y};
                   return diagonal({source: o, target: o});
                 })

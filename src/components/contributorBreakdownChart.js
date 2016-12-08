@@ -29,24 +29,24 @@ class ContributorBreakdownChart {
       .rangeRound([height, 0], .9);
 
     let color = d3.scale.ordinal()
-      .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+      .range(['#98abc5', '#8a89a6', '#7b6888', '#6b486b', '#a05d56', '#d0743c', '#ff8c00']);
 
     let xAxis = d3.svg.axis()
       .scale(x)
-      .orient("bottom");
+      .orient('bottom');
 
     let yAxis = d3.svg.axis()
       .scale(y)
-      .orient("left")
-      .tickFormat(d3.format(".2s"));
+      .orient('left')
+      .tickFormat(d3.format('.2s'));
 
     let svg = this.svg
-      .attr("width", width)
-      .attr("height", height + margin.top + margin.bottom + (20 * Object.keys(data[0].contributions).length) -20)
-      .style("padding-top", 20 * Object.keys(data[0].contributions).length)
-      .style("padding-bottom", 20 * Object.keys(data[0].contributions).length)
-      .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .attr('width', width)
+      .attr('height', height + margin.top + margin.bottom + (20 * Object.keys(data[0].contributions).length) -20)
+      .style('padding-top', 20 * Object.keys(data[0].contributions).length)
+      .style('padding-bottom', 20 * Object.keys(data[0].contributions).length)
+      .append('g')
+      .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
     color.domain(d3.keys(data[0].contributions).filter(function(key){
       return key }));
@@ -97,22 +97,22 @@ class ContributorBreakdownChart {
       .attr('class', 'legend')
       .attr('transform', function(d, i){ return 'translate(30,' + ((i*-20)-20) + ')'; });
 
-    legend.append("rect")
-      .attr("x", 551 - 188)
-      .attr("width", 18)
-      .attr("height", 18)
-      .style("fill", color);
+    legend.append('rect')
+      .attr('x', 551 - 188)
+      .attr('width', 18)
+      .attr('height', 18)
+      .style('fill', color);
 
-    legend.append("text")
-      .attr("x", 551 - 194)
-      .attr("y", 9)
-      .attr("dy", ".35em")
-      .style("text-anchor", "end")
+    legend.append('text')
+      .attr('x', 551 - 194)
+      .attr('y', 9)
+      .attr('dy', '.35em')
+      .style('text-anchor', 'end')
       .text(function(d) {
         return d; });
   }
 
-  destroy(el) {
+  destroy() {
     // NOOP
   }
 }
