@@ -38,7 +38,8 @@ class ContributionByWardChart {
             .append('g')
             .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-        var contributorLabels = svg.selectAll('.contributorLabel')
+        // Contributor Labels
+        svg.selectAll('.contributorLabel')
             .data(contributors)
             .enter().append('text')
                 .text(function (d) { return d; })
@@ -48,7 +49,8 @@ class ContributionByWardChart {
                 .attr('transform', 'translate(-6,' + gridSize / 1.5 + ')')
                 .attr('class', 'contributorLabel mono axis');
 
-        var wardLabels = svg.selectAll('.wardLabel')
+        // Ward Labels
+        svg.selectAll('.wardLabel')
             .data(wards)
             .enter().append('text')
                 .text(function(d) { return d; })

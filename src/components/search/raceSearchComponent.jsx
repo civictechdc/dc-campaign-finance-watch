@@ -1,4 +1,7 @@
+/*eslint no-console: ["error", { allow: ["warn", "error"] }] */
+
 import React from 'react';
+import _ from 'lodash';
 import client from '../api';
 import { Input, Row, Col, ButtonToolbar, Button } from 'react-bootstrap';
 import DateRangeComponent from '../dateRange.jsx';
@@ -18,12 +21,8 @@ class RaceSearch extends React.Component {
                 that.setState({races: races});
             })
             .catch(function(err){
-                console.log(err);
+                console.error(err);
             });
-    }
-
-    componentWillUpdate(nextProps, nextState) {
-        let { range } = nextState;
     }
 
     _handleRangeSelected(toDate, fromDate) {

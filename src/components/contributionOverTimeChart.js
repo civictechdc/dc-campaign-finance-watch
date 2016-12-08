@@ -112,8 +112,7 @@ class ContributionOverTimeChart {
       .text(function(d){ return d.name; });
   }
 
-
-  destroy(el) {
+  destroy() {
     // NOOP
   }
 }

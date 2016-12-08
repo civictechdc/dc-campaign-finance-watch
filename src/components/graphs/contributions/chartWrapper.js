@@ -16,7 +16,7 @@ export default class ChartWrapper extends React.Component {
       }
   }
 
-  shouldComponentUpdate (nextProps, nextState) {
+  shouldComponentUpdate (nextProps) {
       if (nextProps.chartInfo === this.props.chartInfo) {
           return false;
       } else {

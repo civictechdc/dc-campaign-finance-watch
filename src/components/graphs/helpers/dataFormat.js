@@ -1,3 +1,5 @@
+import d3 from 'd3';
+
 export function formatDatesByDay(data) {
   let formatDate = d3.time.format('%Y-%m-%d')
 

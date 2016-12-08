@@ -36,7 +36,7 @@ class Dashboard extends React.Component {
     _getCandidates() {
       const {startYear, endYear} = this.state;
       return Client.getCandidates(startYear, endYear)
-        .then((candidates) => {
+        .then(() => {
         })
     }
 
@@ -58,7 +58,6 @@ class Dashboard extends React.Component {
             campaigns: [{campaignId: campaignId}]
         })
         .then((data) => {
-          let campaignData = this.state.campaignData
           let campaignID = data.campaigns[0].campaignId
           let obj = {}
 
@@ -85,7 +84,7 @@ class Dashboard extends React.Component {
           })
 
       }))
-      .then((res) => {
+      .then(() => {
         this.setState({campaignData: data, loading: false})
       })
     }
@@ -105,7 +104,7 @@ class Dashboard extends React.Component {
         }
 
         let style = {
-        color: scoreColor,
+        color: scoreColor
         }
         let header = (
             <div>{candidateName} - <span style={style}>{candidateScore}</span></div>
@@ -115,7 +114,6 @@ class Dashboard extends React.Component {
 
     componentWillMount() {
         let that = this;
-        const {startYear, endYear} = this.state;
         Client
             .getRaces()
             .then((races) => {

@@ -112,7 +112,7 @@ class ContributorBreakdownChart {
         return d; });
   }
 
-  destroy(el) {
+  destroy() {
     // NOOP
   }
 }
