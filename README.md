@@ -27,6 +27,17 @@ npm run serve
 ```
 This will run a local instance of the frontend that will talk to the public API.  Any changes you make to source files should be automatically reloaded in the browser.
 
+### Docker
+Visit https://www.docker.com/products/docker-toolbox and download the docker-toolbox for your system.
+Install docker-toolbox on your machine.
+
+```
+docker-machine start
+eval $(docker-machine env)
+docker build -t romoy/dc-campaign-finance-watch .
+
+```
+
 ### Working on the backend API
 The quickest/simplest way to work on the backend code is through [Vagrant](https://www.vagrantup.com/), which creates and sets up a virtual machine that is ready for development.  It can be found [here](https://www.vagrantup.com/downloads.html) or through various package managers.
 
@@ -40,7 +51,7 @@ npm start
 or if you want to run the front end as well
 
 ```
-gulp serve --env=local
+npm run serve
 ```
 
 The alternative to running vagrant is to install the various tools and technologies locally. Due to the variety in OS, this README just lists what will need to be installed
