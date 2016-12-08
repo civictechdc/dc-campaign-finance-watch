@@ -16,7 +16,7 @@ var all = {
   env: process.env.NODE_ENV,
 
   // Server port
-  port: process.env.PORT || 8001,
+  port: process.env.PORT || 3001,
 
 };
 
