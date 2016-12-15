@@ -31,12 +31,9 @@ This will run a local instance of the frontend that will talk to the public API.
 Visit https://www.docker.com/products/overview
 Download and Install docker based on your current system.
 
-The following config assumes that you are on mac with docker-machine installed.
-Based on your current system, docker-machine will be 'docker'.
+The following assume that you've install docker on your current system.
 
 ```
-docker-machine start
-eval $(docker-machine env)
 docker build -t <username>/dc-campaign-finance-watch .
 ```
 
@@ -49,16 +46,9 @@ docker run -p 80:3001 -d <username>/dc-campaign-finance-watch -e NODE_ENV=dev
 ```
 docker run -p 80:3001 -d <username>/dc-campaign-finance-watch -e NODE_ENV=production
 ```
-#### To view application
-```
-docker-machine ip default
-```
 
-#### Docker Compose
+#### Docker Compose 
 ``` 
-docker-machine start default
-docker-machine env
-eval $(docker-machine env)
 docker-compose up
 ```
 

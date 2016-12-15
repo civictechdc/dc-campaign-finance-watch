@@ -2,7 +2,6 @@
 dc-campaign-ui:
   build: .
   ports:
-  - "80:3000"
   - "3001:3001"
   volumes:
   - .:/usr/src/dc-campaign-finance-watch

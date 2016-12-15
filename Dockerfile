@@ -12,9 +12,7 @@ RUN npm install
 COPY . /usr/src/dc-campaign-finance-watch
 
 ENV NODE_ENV=dev
-ENV PORT=3001
 
 EXPOSE 3001
-EXPOSE "80:3000"
 
 CMD [ "npm", "start" ]
