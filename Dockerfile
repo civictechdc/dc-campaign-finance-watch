@@ -11,6 +11,9 @@ RUN npm install
 # Bundle app source
 COPY . /usr/src/dc-campaign-finance-watch
 
+ENV NODE_ENV=dev
+ENV PORT=3001
+
 EXPOSE 3001
 
 CMD [ "npm", "start" ]

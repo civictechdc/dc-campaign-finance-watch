@@ -1,0 +1,10 @@
+# docker-compose.ml
+dc-campaign-ui:
+  build: .
+  ports:
+  - "80:3001"
+  volumes:
+  - .:/usr/src/dc-campaign-finance-watch
+  environment:
+  - NODE_ENV=dev
+  command: sh -c 'npm install && npm run serve'

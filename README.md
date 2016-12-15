@@ -28,14 +28,38 @@ npm run serve
 This will run a local instance of the frontend that will talk to the public API.  Any changes you make to source files should be automatically reloaded in the browser.
 
 ### Docker
-Visit https://www.docker.com/products/docker-toolbox and download the docker-toolbox for your system.
-Install docker-toolbox on your machine.
+Visit https://www.docker.com/products/overview
+Download and Install docker based on your current system.
+
+The following config assumes that you are on mac with docker-machine installed.
+Based on your current system, docker-machine will be 'docker'.
 
 ```
 docker-machine start
 eval $(docker-machine env)
-docker build -t romoy/dc-campaign-finance-watch .
+docker build -t <username>/dc-campaign-finance-watch .
+```
 
+#### For development
+```
+docker run -p 80:3001 -d <username>/dc-campaign-finance-watch -e NODE_ENV=dev
+
+```
+#### For deployment
+```
+docker run -p 80:3001 -d <username>/dc-campaign-finance-watch -e NODE_ENV=production
+```
+#### To view application
+```
+docker-machine ip default
+```
+
+#### Docker Compose
+``` 
+docker-machine start default
+docker-machine env
+eval $(docker-machine env)
+docker-compose up
 ```
 
 ### Working on the backend API
