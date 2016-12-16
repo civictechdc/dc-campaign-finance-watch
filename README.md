@@ -36,8 +36,15 @@ Download and Install docker-compose based on your current system.
 
 The following assume that you've install docker and docker-compose on your current system.
 
+#### Docker development env
 ``` 
 docker-compose up
+```
+
+#### Docker production env
+```
+docker-compose -f docker-compose.yml -f docker-compose.production.yml up
+
 ```
 
 ### Working on the backend API
