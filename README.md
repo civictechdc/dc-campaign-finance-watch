@@ -40,10 +40,11 @@ The following assume that you've install docker and docker-compose on your curre
 ``` 
 docker-compose up
 ```
+Visit [DC Campaign Finance Local App](http://localhost:3001/) to see running app.
 
 #### Docker production env
 ```
-docker-compose -f docker-compose.yml -f docker-compose.production.yml up
+docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d
 
 ```
 
