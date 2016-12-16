@@ -28,26 +28,14 @@ npm run serve
 This will run a local instance of the frontend that will talk to the public API.  Any changes you make to source files should be automatically reloaded in the browser.
 
 ### Docker
-Visit https://www.docker.com/products/overview
+Get [Docker](https://www.docker.com/products/overview)
 Download and Install docker based on your current system.
 
-The following assume that you've install docker on your current system.
+Get [Docker-Compose](https://docs.docker.com/compose/install/)
+Download and Install docker-compose based on your current system.
 
-```
-docker build -t <username>/dc-campaign-finance-watch .
-```
+The following assume that you've install docker and docker-compose on your current system.
 
-#### For development
-```
-docker run -p 80:3001 -d <username>/dc-campaign-finance-watch -e NODE_ENV=dev
-
-```
-#### For deployment
-```
-docker run -p 80:3001 -d <username>/dc-campaign-finance-watch -e NODE_ENV=production
-```
-
-#### Docker Compose 
 ``` 
 docker-compose up
 ```
