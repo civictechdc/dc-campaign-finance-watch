@@ -7,4 +7,4 @@ dc-campaign-ui:
   - .:/usr/src/dc-campaign-finance-watch
   environment:
   - NODE_ENV=dev
-  command: sh -c 'npm install && npm run serve'
+  command: npm run serve
