@@ -3,8 +3,5 @@ dc-campaign-ui:
   build: .
   ports:
   - "3001:3001"
-  volumes:
-  - .:/usr/src/dc-campaign-finance-watch
   environment:
-  - NODE_ENV=production
-  command: npm run serve:dist
+  - REACT_WEBPACK_ENV=dist
