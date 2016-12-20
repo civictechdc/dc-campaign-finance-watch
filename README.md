@@ -27,6 +27,27 @@ npm run serve
 ```
 This will run a local instance of the frontend that will talk to the public API.  Any changes you make to source files should be automatically reloaded in the browser.
 
+### Docker
+Get [Docker](https://www.docker.com/products/overview)
+Download and Install docker based on your current system.
+
+Get [Docker-Compose](https://docs.docker.com/compose/install/)
+Download and Install docker-compose based on your current system.
+
+The following assume that you've install docker and docker-compose on your current system.
+
+#### Docker development env
+``` 
+docker-compose up
+```
+Visit [DC Campaign Finance Local App](http://localhost:3001/) to see running app.
+
+#### Docker production env
+```
+docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d
+
+```
+
 ### Working on the backend API
 The quickest/simplest way to work on the backend code is through [Vagrant](https://www.vagrantup.com/), which creates and sets up a virtual machine that is ready for development.  It can be found [here](https://www.vagrantup.com/downloads.html) or through various package managers.
 
@@ -40,7 +61,7 @@ npm start
 or if you want to run the front end as well
 
 ```
-gulp serve --env=local
+npm run serve
 ```
 
 The alternative to running vagrant is to install the various tools and technologies locally. Due to the variety in OS, this README just lists what will need to be installed
