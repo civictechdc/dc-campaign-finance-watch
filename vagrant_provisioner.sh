@@ -1,9 +1,3 @@
-#!/usr/bin/env bash
-sudo apt-get update
-
-# Install node and npm
-curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
-sudo apt-get install -y nodejs
 
 # Install and start mongodb
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10

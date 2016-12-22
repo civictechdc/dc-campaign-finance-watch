@@ -1,7 +1,25 @@
 # docker-compose.ml
-dc-campaign-ui:
-  build: .
-  ports:
-  - "3001:3001"
-  environment:
-  - REACT_WEBPACK_ENV=dev
+services:
+  web:
+    build: .
+    ports:
+    - "3001:3001"
+    depends_on:
+    - api
+    environment:
+    - REACT_WEBPACK_ENV=dev
+  node:
+    image: node:boron
+  redis:
+    image: redis
+  db:
+    image: mongo:3.2
+  api:
+    build: ./api/.
+    ports:
+    - "3000:3000"
+    - "3001:3001"
+    depends_on:
+    - node
+    - db
+    - redis
