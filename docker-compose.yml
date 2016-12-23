@@ -8,18 +8,17 @@ services:
     - api
     environment:
     - REACT_WEBPACK_ENV=dev
-  node:
-    image: node:boron
   redis:
     image: redis
   db:
     image: mongo:3.2
   api:
-    build: ./api
+    build:
+      context: .
+      dockerfile: Dockerfile-api
     ports:
-    - "3000"
-    - "3001"
+    - "8000"
+    - "8001"
     depends_on:
     - db
-    - node
     - redis
