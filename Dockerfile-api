@@ -11,4 +11,3 @@ COPY . .
 
 # Wait for redis to be up then start api
 CMD ["./scripts/wait-for-it.sh","redis:6379","--","npm", "run", "dev"]
-#CMD ["npm", "run", "dev"]

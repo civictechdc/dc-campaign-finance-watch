@@ -1,0 +1,7 @@
+FROM  mongo:3.2
+
+CMD ["./scripts/wait-for-it.sh","mongodb:27017"]
+
+RUN mongorestore --host mongodb:27017 --drop dc-campaign-finance-mongodatabase
+RUN unzip dc-campaign-finance-mongodatabase.zip -d dc-campaign-finance-mongodatabase
+RUN mongorestore --host mongodb:27017 --drop ./dc-campaign-finance-mongodatabase

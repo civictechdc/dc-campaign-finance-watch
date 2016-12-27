@@ -49,38 +49,13 @@ docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d
 ```
 
 ### Working on the backend API
-The quickest/simplest way to work on the backend code is through [Vagrant](https://www.vagrantup.com/), which creates and sets up a virtual machine that is ready for development.  It can be found [here](https://www.vagrantup.com/downloads.html) or through various package managers.
-
-After installing vagrant, from the directory of source:
-```
-vagrant up
-vagrant ssh -c 'cd /vagrant'
-npm start
+#### Docker development env
+``` 
+docker-compose up api
 ```
 
-or if you want to run the front end as well
-
-```
-npm run serve
-```
-
-The alternative to running vagrant is to install the various tools and technologies locally. Due to the variety in OS, this README just lists what will need to be installed
-
-* MongoDB
-* NodeJS (version 5)
-* Redis
-
-After all the installations are complete run the following:
-
-```
-unzip dc-campaign-finance-mongodatabase.zip -d dc-campaign-finance-mongodatabase
-mongorestore --host localhost:27017 --drop ./dc-campaign-finance-mongodatabase
-npm install -g gulp
-npm install
-npm start
-```
-
-The API will now be running on https://localhost:3000
+Visit [DC Campaign Finance Local App](http://localhost:3001/) to see running app.
+Visit [DC Campaign Finance Local App API](http://localhost:3000/) to see running app.
 
 
 ## Contributing
