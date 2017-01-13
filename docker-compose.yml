@@ -1,6 +1,6 @@
 version: '2'
 services:
-  web:
+  dc-campaign-finance-ui:
     build: .
     ports:
     - "3001:3001"
@@ -12,9 +12,7 @@ services:
     - "6379"
     command: [redis-server]
   mongodb:
-    build:
-      context: .
-      dockerfile: Dockerfile-mongo
+    image: mongo:3.2
     ports:
     - "27017:27017"
   mongo-seed:
@@ -23,13 +21,14 @@ services:
       dockerfile: Dockerfile-mongo-seed
     links:
      - mongodb
-  api:
+  dc-campaign-finance-api:
     build:
       context: .
       dockerfile: Dockerfile-api
     ports:
     - "8000:8000"
     - "8001:8001"
+    - "3001:3001"
     links:
     - mongodb
     - redis

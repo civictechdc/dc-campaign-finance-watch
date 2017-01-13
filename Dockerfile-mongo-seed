@@ -1,11 +1,13 @@
 FROM  mongo:3.2
 
-RUN mongorestore --host mongodb:27017 --drop dc-campaign-finance-mongodatabase
-RUN unzip dc-campaign-finance-mongodatabase.zip -d dc-campaign-finance-mongodatabase
-CMD ["mongorestore", "--host","mongodb:27017","--drop", "./dc-campaign-finance-mongodatabase"]
+COPY dc-campaign-finance-mongodatabase.zip .
 
-CMD ["./scripts/wait-for-it.sh","mongodb:27017"]
+# update packages and intall unzip
+RUN apt-get update
+RUN apt-get install unzip
 
-# could the the wait for be replaced until the health check, could remove wait-for-it.sh
-# research RUN and how it interacts with the image
-# shouldn't commands run?
+# unzip db .bson files to root dir
+RUN unzip dc-campaign-finance-mongodatabase.zip -d .
+
+# restore mongodb using docker compose name
+CMD mongorestore --host mongodb -d dc-campaign-finance --drop ./dc-campaign-finance-mongodatabase/dc-campaign-finance
