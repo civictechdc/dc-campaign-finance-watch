@@ -14,7 +14,7 @@ server.use(restify.CORS({credentials: true}));
 //Mongoose
 var mongoose = require('mongoose');
 mongoose.connect(config.mongo.uri);
-// mongoose.set('debug', true);
+mongoose.set('debug', true);
 
 // Candidate
 var candidateController = require('./api/candidate/candidate.controller');
