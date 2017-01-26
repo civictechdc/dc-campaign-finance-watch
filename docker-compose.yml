@@ -1,7 +1,38 @@
-# docker-compose.ml
-dc-campaign-ui:
-  build: .
-  ports:
-  - "3001:3001"
-  environment:
-  - REACT_WEBPACK_ENV=dev
+version: '3'
+services:
+  dc-campaign-finance-ui:
+    build: .
+    ports:
+    - "3001:3001"
+    environment:
+    - REACT_WEBPACK_ENV=dev
+  redis:
+    image: redis
+    ports:
+    - "6379"
+    command: [redis-server]
+    healthcheck:
+      test: ["CMD","redis-cli","-h","redis","-p","6379","ping"]
+      interval: 5s
+      timeout: 1s
+      retries: 5
+  mongodb:
+    image: mongo:3.0.7
+    ports:
+    - "27017:27017"
+  mongo-seed:
+    build:
+      context: .
+      dockerfile: Dockerfile-mongo-seed
+    links:
+     - mongodb
+  dc-campaign-finance-api:
+    build:
+      context: .
+      dockerfile: Dockerfile-api
+    ports:
+    - "8001:8001"
+    - "3001:3001"
+    links:
+    - mongodb
+    - redis

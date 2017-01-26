@@ -52,6 +52,7 @@
     "markdown-loader": "^0.1.7",
     "minimist": "^1.2.0",
     "mocha": "^2.2.5",
+    "nodemon": "^1.11.0",
     "null-loader": "^0.1.1",
     "open": "0.0.5",
     "phantomjs-prebuilt": "^2.0.0",

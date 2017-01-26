@@ -4,6 +4,8 @@ var jsonify = require('redis-jsonify');
 bluebird.promisifyAll(redis.RedisClient.prototype);
 bluebird.promisifyAll(redis.Multi.prototype);
 
-client = jsonify(redis.createClient());
+var client = jsonify(redis.createClient({
+  host: 'redis'
+}));
 
 exports.client = client;
