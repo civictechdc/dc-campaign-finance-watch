@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   dc-campaign-finance-ui:
     build: .
@@ -11,8 +11,13 @@ services:
     ports:
     - "6379"
     command: [redis-server]
+    healthcheck:
+      test: ["CMD","redis-cli","-h","redis","-p","6379","ping"]
+      interval: 5s
+      timeout: 1s
+      retries: 5
   mongodb:
-    image: mongo:3.2
+    image: mongo:3.0.7
     ports:
     - "27017:27017"
   mongo-seed:
@@ -26,7 +31,6 @@ services:
       context: .
       dockerfile: Dockerfile-api
     ports:
-    - "8000:8000"
     - "8001:8001"
     - "3001:3001"
     links:
