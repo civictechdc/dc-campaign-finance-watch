@@ -1,8 +1,6 @@
 language: node_js
 node_js:
-    - "6"
-    - "6.1"
-    - "6.2"
+    - "6.9"
 branches:
   only:
     # add your branch here to test it, for now it will test the develop branch.
