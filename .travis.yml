@@ -1,10 +1,6 @@
 language: node_js
 node_js:
     - "6.9"
-branches:
-  only:
-    # add your branch here to test it, for now it will test the develop branch.
-    - develop
 script:
   npm test
 notifications:
