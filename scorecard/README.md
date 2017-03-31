@@ -4,10 +4,10 @@
 This is the outline for a system to evaluate the fundraising integrity of candidates for local office in the District of Columbia. Each campaign has an associated score from 0-100, where 100 is best.
 
 **The score combines indicators encompassing four categories:**
-  <!-- - Location (35 points)
-  - Amount (30 points)
-  - Contributor Type (25 points)
-  - Reporting (10 points) -->
+  <!-- - Location (35 points) -->
+  <!-- - Amount (30 points) -->
+  <!-- - Contributor Type (25 points) -->
+  <!-- - Reporting (10 points) -->
   - Location (40 points)
   - Amount (30 points)
   - Contributor Type (30 points)

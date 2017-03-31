@@ -21,7 +21,7 @@ class ContributionOverTimeChart {
     let width = el.offsetWidth;
     let height = 700;
 
-    let parseDate = d3.time.format("%Y%m%d").parse;
+    let parseDate = d3.time.format('%Y%m%d').parse;
 
     data.forEach(function(d){
       d.date = parseDate(d.date);
@@ -41,25 +41,25 @@ class ContributionOverTimeChart {
       .scale(x)
       .ticks(d3.time.months)
       .tickSize(16, 0)
-      .tickFormat(d3.time.format("%b"))
-      .orient("bottom");
+      .tickFormat(d3.time.format('%b'))
+      .orient('bottom');
 
     let yAxis = d3.svg.axis()
       .scale(y)
-      .tickFormat(function(d){ return "$" + d || 0; })
-      .orient("left");
+      .tickFormat(function(d){ return '$' + d || 0; })
+      .orient('left');
 
     let line = d3.svg.line()
-      .interpolate("basis")
+      .interpolate('basis')
       .x(function(d) { return x(d.date); })
       .y(function(d) { return y(d.amount); });
 
 
     let svg = this.svg
-      .attr("width", width)
-      .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      .attr('width', width)
+      .attr('height', height + margin.top + margin.bottom)
+      .append('g')
+      .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
     let candidates = color.domain().map(function(name){
       return {
@@ -78,9 +78,9 @@ class ContributionOverTimeChart {
         d3.max(candidates, function(c){ return d3.max(c.values, function(v){ return v.amount; }); })
     ]);
 
-    svg.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + (height - margin.top - margin.bottom) + ")")
+    svg.append('g')
+      .attr('class', 'x axis')
+      .attr('transform', 'translate(0,' + (height - margin.top - margin.bottom) + ')')
       .call(xAxis);
 
     svg.append('g')
@@ -112,8 +112,7 @@ class ContributionOverTimeChart {
       .text(function(d){ return d.name; });
   }
 
-
-  destroy(el) {
+  destroy() {
     // NOOP
   }
 }

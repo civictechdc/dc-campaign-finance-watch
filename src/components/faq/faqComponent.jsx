@@ -46,7 +46,7 @@ const FaqComponent = () => (
             <Col xs={12}>
                 <h4>What can you do if the data seems wrong?</h4>
                 <div>
-                    Please contact us with the data that might be incorrect.  We're striving to keep the data as accurate as possible.
+                    Please <a href="mailto:kalishmichael@gmail.com">contact us</a> with the data that might be incorrect.  We're striving to keep the data as accurate as possible.
                 </div>
             </Col>
         </Row>

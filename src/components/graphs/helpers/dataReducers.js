@@ -1,7 +1,6 @@
 
 
 export function reduceDuplicateDates(data) {
-  let prevDate = ''
   let prev = 0
   for (let i = 1; i < data.length; i++) {
     if (data[i].date == data[prev].date) {

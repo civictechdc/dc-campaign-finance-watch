@@ -1,9 +1,5 @@
 import React from 'react';
 import Chart from './chart.jsx';
-import {
-    Button
-} from 'react-bootstrap';
-import Client from './api';
 
 class ChartContainerComponent extends React.Component {
     constructor (props) {
@@ -15,7 +11,6 @@ class ChartContainerComponent extends React.Component {
     }
 
     _downloadChart () {
-        console.info('beginning chart download', this.state.svg);
         alert('This feature is still pending work.');
     }
 
