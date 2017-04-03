@@ -64,7 +64,7 @@ class Client {
 
 let endPoints = {
     local: 'http://localhost:8001/dc-campaign-finance/api',
-    prod: 'https://campaign-finance.codefordc.org/'
+    prod: 'https://campaign-finance.codefordc.org/dc-campaign-finance/api'
 };
 
 let env = 'local';
