@@ -15,7 +15,7 @@
     "serve:aws": "node server.js --env=dist",
     "start": "npm run serve",
     "dev": "npm run api:dev & node server.js --env=dev-api",
-    "test": "karma start",
+    "test": "docker-compose up dc-campaign-finance-api & karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
     "api:dev": "nodemon app.js"
   },

@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import {fetch} from 'whatwg-fetch';
 import { shallow } from 'enzyme';
 import {Row} from 'react-bootstrap';
 import Dashboard from '../../../../src/components/dashboard/dashboardComponent';
