@@ -35,11 +35,15 @@ module.exports = {
             path.join(__dirname, '/../test')
           ]
         )
-      }
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
+      },
     ]
   },
   resolve: {
-    extensions: [ '', '.js', '.jsx' ],
+    extensions: ['', '.js', '.jsx'],
     alias: {
       helpers: path.join(__dirname, '/../test/helpers'),
       components: srcPath + 'components/',
@@ -47,5 +51,10 @@ module.exports = {
       config: srcPath + 'config/' + process.env.REACT_WEBPACK_ENV
     }
   },
-  plugins: []
+  plugins: [],
+  externals: {
+    'react/addons': true,
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true
+  }
 };
