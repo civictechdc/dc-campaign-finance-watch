@@ -7,7 +7,7 @@ node_js:
   - "6.9"
 env:
   global:
-    - DOCKER_VERSION=17.03.1-ce
+    - DOCKER_VERSION=1.12.3
     - DOCKER_COMPOSE_VERSION=1.11.2
 
 before_install:
