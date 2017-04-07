@@ -10,7 +10,12 @@ import LoaderComponent from '../loader.component.jsx';
 class RaceSearch extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {races: [], campaigns: []};
+        this.state = {
+          races: [],
+          campaigns: [],
+          range: {},
+          selectedRace: ''
+        };
     }
 
     componentWillMount() {

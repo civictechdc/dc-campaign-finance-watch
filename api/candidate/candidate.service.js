@@ -9,7 +9,8 @@ var _ = require('lodash');
 // Models
 var Candidate = require('../../models/candidate');
 var Contribution = require('../../models/contribution');
-var oldestDate = Moment(new Date('01/01/2006', 'MM/DD/YYYY'));
+const dateFormat = 'MM/DD/YYYY';
+var oldestDate = Moment('01/01/2006',dateFormat);
 
 exports.findCandidateByRaceAndYear = function(race, fromYear, toYear) {
     return Candidate.find({'campaigns.raceType': race, 'campaigns.year': {'$gte': Number(fromYear), '$lte': Number(toYear)}})
@@ -47,13 +48,13 @@ exports.findAllCandidates = function (toDate, fromDate) {
 
 exports.findCandidate = function (candidateId, campaignIds, toDate, fromDate) {
     if(!!toDate) {
-        toDate = Moment(toDate);
+        toDate = Moment(toDate,dateFormat);
     } else {
-        toDate = Moment();
+        toDate = Moment(new Date().format(dateFormat), dateFormat);
     }
 
     if(!!fromDate) {
-        fromDate = Moment(fromDate);
+        fromDate = Moment(fromDate, dateFormat);
     } else {
         fromDate = oldestDate;
     }

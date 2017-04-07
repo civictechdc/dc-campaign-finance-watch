@@ -15,7 +15,7 @@ exports.getCandidates = function (req, res) {
                     return candidates;
                 });
         })
-        .then(function(candidate){
+        .then(function(candidates){
             res.send(candidates.map(function (candidate) {
                 return {
                     name: candidate.getName(),
