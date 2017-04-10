@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { Router, Route, IndexRoute } from 'react-router';
 import ShellComponent from './layout/shell.jsx';
 import SearchComponent from './searchComponent.jsx';

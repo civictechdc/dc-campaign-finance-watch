@@ -4,7 +4,7 @@ let path = require('path');
 let srcPath = path.join(__dirname, '/../src/');
 
 module.exports = {
-  entry: path.join(__dirname, '/../test/loadtests.js'),
+  entry: [path.join(__dirname, '/../test/loadtests')],
   devtool: 'eval',
   module: {
     rules: [
@@ -21,7 +21,12 @@ module.exports = {
       },
       {
         test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
+        query:
+          {
+            presets:['es2015','react']
+          },
         include:
           [
             path.join(__dirname, '/../src'),
@@ -39,5 +44,10 @@ module.exports = {
       config: srcPath + 'config/' + process.env.REACT_WEBPACK_ENV
     }
   },
-  plugins: []
+  plugins: [],
+  externals: {
+    'react/addons': true,
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true
+  }
 };
