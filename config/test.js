@@ -3,12 +3,8 @@
 let path = require('path');
 let srcPath = path.join(__dirname, '/../src/');
 
-let baseConfig = require('./base');
-
-// Add needed plugins here
-let BowerWebpackPlugin = require('bower-webpack-plugin');
-
 module.exports = {
+  entry: path.join(__dirname, '/../test/loadtests.js'),
   devtool: 'eval',
   module: {
     rules: [
@@ -26,18 +22,16 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
-        include: [].concat(
-          baseConfig.additionalPaths,
+        include:
           [
             path.join(__dirname, '/../src'),
             path.join(__dirname, '/../test')
           ]
-        )
       }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
     alias: {
       helpers: path.join(__dirname, '/../test/helpers'),
       components: srcPath + 'components/',
