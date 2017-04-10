@@ -208,7 +208,7 @@ class Dashboard extends React.Component {
                     <h2>DC Campaign Finance Watch</h2>
                     <Row>
                         <Col xs={12}>
-                            Viewing Years:
+                            Viewing Years :
                             <select name="years" onChange={(evt) => this._changeYearsViewed(evt.target.value)}>
                                 <option value="14-16">2014 - 2016</option>
                                 <option value="12-14">2012 - 2014</option>
