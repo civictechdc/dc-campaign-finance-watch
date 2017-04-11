@@ -12,15 +12,22 @@ All of our data is pulled from the [Office of Campaign Finance](http://ocf.dc.go
 
 The site is very much in a beta status, so if you notice any issues or have any suggestions please open a ticket.
 
-## Development
+## Development (Docker or Local)
 The data is stored in several MongoDB collections on which an express based RESTish API sits and is run on AWS EC2.  
-The front end is built with React and is run through github pages.
+The front end is built with React and is run through github pages
 
+### 1. Fork the repo
+Visit https://github.com/codefordc/dc-campaign-finance-watch repo.
+
+In the top-right corner of the repo, click Fork
+[Github Help](https://help.github.com/articles/fork-a-repo/)
+
+### 2. Clone the repo and access on your local
 ```
-git clone https://github.com/codefordc/dc-campaign-finance-watch
+git clone https://github.com/<your github username>/dc-campaign-finance-watch
 cd dc-campaign-finance-watch
 ```
-
+#### 3a. Continue the following to use docker or skip to 3b for local config
 ### Install Docker and Docker Compose
 Get [Docker](https://www.docker.com/products/overview)
 Download and Install docker based on your current system.
@@ -30,11 +37,27 @@ Download and Install docker-compose based on your current system.
 
 The following assume that you've install docker and docker-compose on your current system.
 
-#### Start front end development
+#### Setup front end development on docker machine
 This will run a local instance of the frontend that will talk to the public API.  
 Any changes you make to source files should be automatically reloaded in the browser.
 ``` 
 docker-compose up dc-campaign-finance-ui
+```
+#### 3b. Setup front end development on local machine
+Install [Node Version Manager](https://github.com/creationix/nvm#installation)
+
+With nvm installed, execute:
+```
+nvm install 6.9.1
+nvm use 6.9.1
+```
+With the above node version set, execute:
+```
+npm install
+```
+After npm install complete, execute:
+```
+npm start
 ```
 
 Visit [DC Campaign Finance Local App](http://localhost:3001/) to see running app.
