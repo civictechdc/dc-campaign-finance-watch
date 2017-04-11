@@ -10,7 +10,7 @@ let config = Object.assign({}, baseConfig, {
   entry: [
     'react-hot-loader/patch',
     'whatwg-fetch',
-    'webpack-dev-server/client?http://localhost:' + defaultSettings.port,
+    'webpack-dev-server/client?http://0.0.0.0:' + defaultSettings.port,
     'webpack/hot/only-dev-server',
     './src/index'
   ],
@@ -32,8 +32,6 @@ let config = Object.assign({}, baseConfig, {
         debug: true
       }
     })
-
-    // enable debug
   ],
   module: defaultSettings.getDefaultModules()
 });

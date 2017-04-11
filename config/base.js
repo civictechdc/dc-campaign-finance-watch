@@ -14,7 +14,9 @@ module.exports = {
     port: defaultSettings.port,
     publicPath: defaultSettings.publicPath,
     noInfo: false,
-    inline: true
+    watchOptions: {
+      poll: true
+    }
   },
   resolve: {
     extensions: [
