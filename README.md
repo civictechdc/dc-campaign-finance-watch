@@ -27,7 +27,7 @@ In the top-right corner of the repo, click Fork
 git clone https://github.com/<your github username>/dc-campaign-finance-watch
 cd dc-campaign-finance-watch
 ```
-#### 3a. Continue the following to use docker or skip to 3b for local config
+#### 3a. Continue the following to use docker or skip to 3b for local, non docker config
 ### Install Docker and Docker Compose
 Get [Docker](https://www.docker.com/products/overview)
 Download and Install docker based on your current system.
