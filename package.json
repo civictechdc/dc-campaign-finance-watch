@@ -1,6 +1,6 @@
 {
   "name": "dcCampaignFinanceWatch",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "scripts": {
     "clean": "rimraf dist/*",
     "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
