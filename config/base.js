@@ -1,11 +1,7 @@
 'use strict';
 let path = require('path');
 let defaultSettings = require('./defaults');
-let additionalPaths = [];
 module.exports = {
-  additionalPaths: additionalPaths,
-  port: defaultSettings.port,
-  debug: true,
   devtool: 'eval',
   output: {
     path: path.join(__dirname, '/../dist/assets'),
@@ -15,14 +11,15 @@ module.exports = {
   devServer: {
     contentBase: './src/',
     historyApiFallback: true,
-    hot: true,
     port: defaultSettings.port,
     publicPath: defaultSettings.publicPath,
-    noInfo: false
+    noInfo: false,
+    watchOptions: {
+      poll: true
+    }
   },
   resolve: {
     extensions: [
-      '',
       '.js',
       '.jsx'
     ],
@@ -35,8 +32,5 @@ module.exports = {
       'react/lib/Object.assign': 'object-assign'
     }
   },
-  module: {},
-  postcss: function () {
-    return [];
-  }
+  module: {}
 };

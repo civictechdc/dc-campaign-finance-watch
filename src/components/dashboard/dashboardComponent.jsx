@@ -60,19 +60,19 @@ class Dashboard extends React.Component {
       campaigns: [{campaignId: campaignId}]
     })
       .then((data) => {
-        let campaignID = data.campaigns[0].campaignId
-        let obj = {}
+        let campaignID = data.campaigns[0].campaignId;
+        let obj = {};
 
-        obj[campaignID] = data
+        obj[campaignID] = data;
         return data;
       })
   }
 
   _loadAllCampaignData(races) {
-    let combinedCampaigns = []
-    let data = []
+    let combinedCampaigns = [];
+    let data = [];
 
-    for (var i = 0; i < races.length; i++) {
+    for (let i = 0; i < races.length; i++) {
       combinedCampaigns = combinedCampaigns.concat(races[i]['campaigns'])
     }
 
@@ -92,26 +92,31 @@ class Dashboard extends React.Component {
   }
 
   _loadPanelHeader(campaignData, campaignID, candidateName) {
-    let candidateScore = campaignData[campaignID]['campaigns'][0]['scores']['total'].toFixed(2)
-    let scoreColor = 'black'
 
-    if (candidateScore < 40) {
-      scoreColor = '#d43f3a'
-    }
-    else if (candidateScore >= 40 && candidateScore < 70) {
-      scoreColor = '#ec971f'
-    }
-    else {
-      scoreColor = '#5cb85c'
-    }
+    if( campaignData[campaignID] !== undefined){
+      let candidateScore = campaignData[campaignID]['campaigns'][0]['scores']['total'].toFixed(2);
+      let scoreColor = 'black';
 
-    let style = {
-      color: scoreColor
+      if (candidateScore < 40) {
+        scoreColor = '#d43f3a'
+      }
+      else if (candidateScore >= 40 && candidateScore < 70) {
+        scoreColor = '#ec971f'
+      }
+      else {
+        scoreColor = '#5cb85c'
+      }
+
+      let style = {
+        color: scoreColor
+      };
+      let header = (
+        <div>{candidateName} - <span style={style}>{candidateScore}</span></div>
+      )
+      return header
+    } else {
+      return(<div>{candidateName} - <span>Score Not Found</span></div>);
     }
-    let header = (
-      <div>{candidateName} - <span style={style}>{candidateScore}</span></div>
-    )
-    return header
   }
 
   componentWillMount() {
@@ -224,11 +229,11 @@ class Dashboard extends React.Component {
                   <h3>{race.type}</h3>
                   <Accordion>
                     {race.campaigns.map((campaign, idx) => {
-                      let candidateName = campaign.candidateName.trim()
-                      let campaignID = campaign.campaign.campaignId
-                      let header = `${candidateName}`
+                      let candidateName = campaign.candidateName.trim();
+                      let campaignID = campaign.campaign.campaignId;
+                      let header = `${candidateName}`;
                       if (scores && scores[campaign.campaign.campaignId]) {
-                        let header = this._loadPanelHeader(campaignData, campaignID, candidateName)
+                        let header = this._loadPanelHeader(campaignData, campaignID, candidateName);
 
                         return (
                           <Panel eventKey={idx} header={header}>
@@ -241,7 +246,7 @@ class Dashboard extends React.Component {
                         )
 
                       } else if (!loading) {
-                        let header = this._loadPanelHeader(campaignData, campaignID, candidateName)
+                        let header = this._loadPanelHeader(campaignData, campaignID, candidateName);
 
                         return (
                           <Panel eventKey={idx} header={header}

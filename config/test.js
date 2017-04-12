@@ -3,44 +3,40 @@
 let path = require('path');
 let srcPath = path.join(__dirname, '/../src/');
 
-let baseConfig = require('./base');
-
 module.exports = {
+  entry: [path.join(__dirname, '/../test/loadtests')],
   devtool: 'eval',
   module: {
-    preLoaders: [
+    rules: [
       {
         test: /\.(js|jsx)$/,
         loader: 'isparta-instrumenter-loader',
         include: [
           path.join(__dirname, '/../src')
         ]
-      }
-    ],
-    loaders: [
+      },
       {
         test: /\.(png|jpg|gif|woff|woff2|css|sass|scss|less|styl)$/,
         loader: 'null-loader'
       },
       {
         test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
-        include: [].concat(
-          baseConfig.additionalPaths,
+        query:
+          {
+            presets:['es2015','react']
+          },
+        include:
           [
             path.join(__dirname, '/../src'),
             path.join(__dirname, '/../test')
           ]
-        )
-      },
-      {
-        test: /\.json$/,
-        loader: 'json'
-      },
+      }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['.js', '.jsx'],
     alias: {
       helpers: path.join(__dirname, '/../test/helpers'),
       components: srcPath + 'components/',
