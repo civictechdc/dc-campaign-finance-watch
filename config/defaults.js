@@ -21,8 +21,8 @@ function getDefaultModules() {
         test: /\.(js|jsx)$/,
         include: srcPath,
         enforce: "pre",
-        use: ['eslint-loader','babel-loader'],
-        exclude: /node_modules/,
+        use: ['babel-loader','eslint-loader'],
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,
