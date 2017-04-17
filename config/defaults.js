@@ -25,6 +25,12 @@ function getDefaultModules() {
         exclude: /node_modules/
       },
       {
+        test: /\.(js|jsx)$/,
+        include: srcPath,
+        use: ['react-hot-loader/webpack','babel-loader'],
+        exclude: /node_modules/
+      },
+      {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
       },
