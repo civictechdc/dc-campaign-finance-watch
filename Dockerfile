@@ -5,7 +5,7 @@ WORKDIR /usr/src/dc-campaign-finance-watch
 
 # Install app dependencies
 COPY package.json .
-RUN npm install
+RUN yarn install
 
 # Copy the contents of current directory to work dir
 COPY . .

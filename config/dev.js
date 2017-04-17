@@ -8,8 +8,9 @@ let defaultSettings = require('./defaults');
 
 let config = Object.assign({}, baseConfig, {
   entry: [
+    'react-hot-loader/patch',
     'whatwg-fetch',
-    'webpack-dev-server/client?http://localhost:' + defaultSettings.port,
+    'webpack-dev-server/client?http://0.0.0.0:' + defaultSettings.port,
     'webpack/hot/only-dev-server',
     './src/index'
   ],
@@ -17,19 +18,22 @@ let config = Object.assign({}, baseConfig, {
   devtool: 'eval-source-map',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    // enable HMR globally
+
+    new webpack.NamedModulesPlugin(),
+    // prints more readable module names in the browser console on HMR updates
+
+    new webpack.NoEmitOnErrorsPlugin(),
+    // do not emit compiled assets that include errors
+
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        port: defaultSettings.port,
+        debug: true
+      }
+    })
   ],
   module: defaultSettings.getDefaultModules()
-});
-
-// Add needed loaders to the defaults here
-config.module.loaders.push({
-  test: /\.(js|jsx)$/,
-  loader: 'react-hot!babel-loader',
-  include: [].concat(
-    config.additionalPaths,
-    [ path.join(__dirname, '/../src') ]
-  )
 });
 
 module.exports = config;
