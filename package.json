@@ -83,6 +83,7 @@
     "moment": "^2.13.0",
     "mongoose": "^4.4.16",
     "normalize.css": "^4.0.0",
+    "npm": "^4.5.0",
     "object-assign": "^4.1.0",
     "react": "^15.5.3",
     "react-bootstrap": "^0.29.4",
@@ -98,6 +99,7 @@
     "restify": "^4.0.4",
     "restler": "^3.4.0",
     "rx": "^4.1.0",
-    "rx-react": "^0.3.0"
+    "rx-react": "^0.3.0",
+    "starring": "^0.1.1"
   }
 }
