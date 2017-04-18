@@ -86,7 +86,7 @@ class Dashboard extends React.Component {
 
   _loadPanelHeader(campaignData, campaignID, candidateName) {
 
-    if( campaignData[campaignID] !== undefined){
+    if (campaignData[campaignID] !== undefined) {
       let candidateScore = campaignData[campaignID]['campaigns'][0]['scores']['total'].toFixed(2);
       let scoreColor = 'black';
 
@@ -108,14 +108,16 @@ class Dashboard extends React.Component {
       );
       return header
     } else {
-      return(<div>{candidateName} - <span>retrieving score</span></div>);
+      return (<div>{candidateName} - <span>retrieving score</span></div>);
     }
   }
+
   componentWillUpdate(nextProps, nextState) {
-    if(this.state.loading == false && nextState.loading == false) {
+    if (this.state.loading == false && nextState.loading == false) {
       this._loadAllCampaignData(nextState.races);
     }
   }
+
   componentWillMount() {
     let that = this;
     Client
