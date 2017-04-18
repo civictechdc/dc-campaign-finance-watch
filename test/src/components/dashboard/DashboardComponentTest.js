@@ -11,4 +11,5 @@ describe('<Dashboard Component />', () => {
     expect(wrapper.find(Row)).to.have.length(3);
   });
 
+
 });

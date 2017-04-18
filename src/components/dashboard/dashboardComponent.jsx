@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Accordion, Button, Col, Panel, Row} from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
 import Client from '../api';
@@ -32,14 +33,6 @@ class Dashboard extends React.Component {
           return {type: race, data: data};
         });
     })
-  }
-
-  // not working on node end.
-  _getCandidates() {
-    const {startDate, endDate} = this.state;
-    return Client.getCandidates(startDate, endDate)
-      .then(() => {
-      })
   }
 
   _loadCampaignData(candidateId, campaignId) {
@@ -112,13 +105,17 @@ class Dashboard extends React.Component {
       };
       let header = (
         <div>{candidateName} - <span style={style}>{candidateScore}</span></div>
-      )
+      );
       return header
     } else {
-      return(<div>{candidateName} - <span>Score Not Found</span></div>);
+      return(<div>{candidateName} - <span>retrieving score</span></div>);
     }
   }
-
+  componentWillUpdate(nextProps, nextState) {
+    if(this.state.loading == false && nextState.loading == false) {
+      this._loadAllCampaignData(nextState.races);
+    }
+  }
   componentWillMount() {
     let that = this;
     Client
@@ -144,7 +141,7 @@ class Dashboard extends React.Component {
         that.setState({races: structuredData})
       })
       .then(() => {
-        let races = this.state.races
+        let races = this.state.races;
         return this._loadAllCampaignData(races)
       })
   }
@@ -236,7 +233,7 @@ class Dashboard extends React.Component {
                         let header = this._loadPanelHeader(campaignData, campaignID, candidateName);
 
                         return (
-                          <Panel eventKey={idx} header={header}>
+                          <Panel key={idx} eventKey={idx} header={header}>
                             <CandidateInfo info={scores[campaign.campaign.campaignId]}/>
                             <LinkContainer
                               to={`candidate/${campaign.candidateId}/campaign/${campaign.campaign.campaignId}`}>
@@ -249,7 +246,7 @@ class Dashboard extends React.Component {
                         let header = this._loadPanelHeader(campaignData, campaignID, candidateName);
 
                         return (
-                          <Panel eventKey={idx} header={header}
+                          <Panel key={idx} eventKey={idx} header={header}
                                  onEnter={() => {
                                    this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)
                                  }
@@ -259,7 +256,7 @@ class Dashboard extends React.Component {
                         )
                       }
                       return (
-                        <Panel eventKey={idx} header={header}
+                        <Panel key={idx} eventKey={idx} header={header}
                                onEnter={() => {
                                  this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)
                                }
@@ -280,3 +277,11 @@ class Dashboard extends React.Component {
 }
 
 export default Dashboard;
+
+Dashboard.propTypes = {
+  races: PropTypes.array,
+  scores: PropTypes.func,
+  startDate: PropTypes.func,
+  endDate: PropTypes.func,
+  campaignData: PropTypes.array
+};
