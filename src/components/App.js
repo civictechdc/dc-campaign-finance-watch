@@ -7,7 +7,7 @@ import FaqComponent from './faq/faqComponent.jsx';
 import AboutComponent from './about/AboutComponent.jsx';
 import NewsComponent from './news/newsComponent.jsx';
 import CampaignDetailComponent from './campaign/campaignDetailComponent.jsx';
-import Dashboard from './dashboard/dashboardComponent.jsx';
+import Dashboard from './dashboard/dashboardContainer.jsx';
 import { browserHistory } from 'react-router';
 import ContributionsGraphContainer from './graphs/contributions/contributionsGraphContainer'
 
