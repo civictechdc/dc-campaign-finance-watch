@@ -13,10 +13,7 @@ module.exports = {
     historyApiFallback: true,
     port: defaultSettings.port,
     publicPath: defaultSettings.publicPath,
-    noInfo: false,
-    watchOptions: {
-      poll: true
-    }
+    noInfo: false
   },
   resolve: {
     extensions: [

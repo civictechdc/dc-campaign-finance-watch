@@ -15,7 +15,7 @@ let config = Object.assign({}, baseConfig, {
     './src/index'
   ],
   cache: true,
-  devtool: 'eval-source-map',
+  devtool: 'eval',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     // enable HMR globally

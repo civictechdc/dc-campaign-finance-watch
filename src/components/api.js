@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 let config = require('config');
+const dateFormat = 'MM/DD/YYYY';
 
 class Client {
     constructor(baseUrl, restClient) {
@@ -16,8 +17,8 @@ class Client {
     }
 
     getCandidates(toDate, fromDate) {
-        let toDateString = toDate.format();
-        let fromDateString = fromDate.format();
+        let toDateString = toDate.format(dateFormat);
+        let fromDateString = fromDate.format(dateFormat);
         return fetch(this.baseUrl + '/candidate' + '?toDate=' + toDateString + '&fromDate=' + fromDateString)
             .then((rsp) => {
                 return rsp.json();
@@ -41,7 +42,7 @@ class Client {
                     return rsp.json();
                 });
         }
-        return fetch(this.baseUrl + '/electionSearch' + '?raceType=' + race + '&fromDate=' + dateRange.fromDate.format() + '&toDate=' + dateRange.toDate.format())
+        return fetch(this.baseUrl + '/electionSearch' + '?raceType=' + race + '&fromDate=' + dateRange.fromDate + '&toDate=' + dateRange.toDate)
             .then((rsp) =>{
                 return rsp.json();
             });

@@ -1,41 +1,39 @@
 import React from 'react';
-import { Row, Col, Accordion, Panel, Button } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import PropTypes from 'prop-types';
+import {Accordion, Button, Col, Panel, Row} from 'react-bootstrap';
+import {LinkContainer} from 'react-router-bootstrap';
 import Client from '../api';
 import Moment from 'moment';
 import Promise from 'bluebird';
 import {CandidateInfo} from '../candidateCard.component.jsx';
+const dateFormat = 'MM/DD/YYYY';
+
 
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          races: [],
-          scores: {},
-          startYear: Moment('01/01/2014'),
-          endYear: Moment('01/01/2016'),
-          campaignData: [],
-          loading: true
-          };
+            races: [],
+            scores: {},
+            startDate: Moment('01/01/2014', dateFormat),
+            endDate: Moment('01/01/2016', dateFormat),
+            campaignData: [],
+            loading: true
+        };
         this._loadCampaignData = this._loadCampaignData.bind(this);
         this._changeYearsViewed = this._changeYearsViewed.bind(this);
     }
 
     _getCampaigns(races) {
-      const {startYear, endYear} = this.state;
-      return races.map((race) => {
-          return Client.getCampaigns(race, {fromDate: startYear, toDate: endYear})
-              .then((data) => {
-                  return {type: race, data: data};
-              });
-      })
-    }
-
-    // not working on node end.
-    _getCandidates() {
-      const {startYear, endYear} = this.state;
-      return Client.getCandidates(startYear, endYear)
-        .then(() => {
+        const {startDate, endDate} = this.state;
+        return races.map((race) => {
+            return Client.getCampaigns(race, {
+                fromDate: startDate.format(dateFormat),
+                toDate: endDate.format(dateFormat)
+            })
+            .then((data) => {
+                return {type: race, data: data};
+            });
         })
     }
 
@@ -57,150 +55,161 @@ class Dashboard extends React.Component {
             campaigns: [{campaignId: campaignId}]
         })
         .then((data) => {
-          let campaignID = data.campaigns[0].campaignId
-          let obj = {}
+            let campaignID = data.campaigns[0].campaignId;
+            let obj = {};
 
-          obj[campaignID]= data
-          return data;
+            obj[campaignID] = data;
+            return data;
         })
     }
 
     _loadAllCampaignData(races) {
-      let combinedCampaigns = []
-      let data = []
+        let combinedCampaigns = [];
+        let data = [];
 
-      for (var i=0; i<races.length; i++) {
-        combinedCampaigns = combinedCampaigns.concat(races[i]['campaigns'])
-      }
+        for (let i = 0; i < races.length; i++) {
+            combinedCampaigns = combinedCampaigns.concat(races[i]['campaigns'])
+        }
 
-      return Promise.all(
-        combinedCampaigns.map((campaign) => {
-        let campaignID = campaign.campaign.campaignId;
-        let candidateID = campaign.candidateId;
-        return this._getCampaignData(candidateID, campaignID)
-          .then((res)=> {
-            data[campaignID] = res
-          })
+        return Promise.all(
+            combinedCampaigns.map((campaign) => {
+                let campaignID = campaign.campaign.campaignId;
+                let candidateID = campaign.candidateId;
+                return this._getCampaignData(candidateID, campaignID)
+                .then((res) => {
+                    data[campaignID] = res
+                })
 
-      }))
-      .then(() => {
-        this.setState({campaignData: data, loading: false})
-      })
+            }))
+        .then(() => {
+            this.setState({campaignData: data, loading: false})
+        })
     }
 
-    _loadPanelHeader(campaignData,campaignID, candidateName) {
-        let candidateScore = campaignData[campaignID]['campaigns'][0]['scores']['total'].toFixed(2)
-        let scoreColor = 'black'
+    _loadPanelHeader(campaignData, campaignID, candidateName) {
 
-        if (candidateScore < 40) {
-        scoreColor = '#d43f3a'
-        }
-        else if (candidateScore >= 40 && candidateScore < 70) {
-        scoreColor = '#ec971f'
-        }
-        else {
-        scoreColor = '#5cb85c'
-        }
+        if (campaignData[campaignID] !== undefined) {
+            let candidateScore = campaignData[campaignID]['campaigns'][0]['scores']['total'].toFixed(2);
+            let scoreColor = 'black';
 
-        let style = {
-        color: scoreColor
+            if (candidateScore < 40) {
+                scoreColor = '#d43f3a'
+            }
+            else if (candidateScore >= 40 && candidateScore < 70) {
+                scoreColor = '#ec971f'
+            }
+            else {
+                scoreColor = '#5cb85c'
+            }
+
+            let style = {
+                color: scoreColor
+            };
+            let header = (
+                <div>{candidateName} - <span style={style}>{candidateScore}</span></div>
+            );
+            return header
+        } else {
+            return (<div>{candidateName} - <span>retrieving score</span></div>);
         }
-        let header = (
-            <div>{candidateName} - <span style={style}>{candidateScore}</span></div>
-        )
-        return header
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+        if (this.state.loading == false && nextState.loading == false) {
+            this._loadAllCampaignData(nextState.races);
+        }
     }
 
     componentWillMount() {
         // let that = this;
         Client
-            .getRaces()
-            .then((races) => {
-              return Promise.all(this._getCampaigns(races));
-            })
-            .then((races) => {
-                const structuredData = races.map((r) => {
-                    return {
-                        type: r.type,
-                        campaigns: r.data.map((c) => {
-                            if(c.campaigns[0]) {
-                                return {
-                                    candidateId: c.id,
-                                    candidateName: c.name,
-                                    campaign: c.campaigns[0]
-                                }
+        .getRaces()
+        .then((races) => {
+            return Promise.all(this._getCampaigns(races));
+        })
+        .then((races) => {
+            const structuredData = races.map((r) => {
+                return {
+                    type: r.type,
+                    campaigns: r.data.map((c) => {
+                        if (c.campaigns[0]) {
+                            return {
+                                candidateId: c.id,
+                                candidateName: c.name,
+                                campaign: c.campaigns[0]
                             }
-                        }).filter(d => d !== undefined)
-                    }
-                });
-                this.setState({races: structuredData})
-            })
-            .then(() => {
-              let races = this.state.races
-              return this._loadAllCampaignData(races)
-            })
+                        }
+                    }).filter(d => d !== undefined)
+                }
+            });
+            that.setState({races: structuredData})
+        })
+        .then(() => {
+            let races = this.state.races;
+            return this._loadAllCampaignData(races)
+        })
     }
 
     _changeYearsViewed(selection) {
-        let startYear, endYear;
-        switch(selection) {
+        let fromDate, toDate;
+        switch (selection) {
             case '14-16':
-                startYear =  Moment('01/01/2014');
-                endYear =   Moment('01/01/2016');
+                fromDate = Moment('01/01/2014', dateFormat);
+                toDate = Moment('01/01/2016', dateFormat);
                 break;
             case '12-14':
-                startYear =  Moment('01/01/2012');
-                endYear =   Moment('01/01/2014');
+                fromDate = Moment('01/01/2012', dateFormat);
+                toDate = Moment('01/01/2014', dateFormat);
                 break;
             case '10-12':
-                startYear =  Moment('01/01/2010');
-                endYear =   Moment('01/01/2012');
+                fromDate = Moment('01/01/2010', dateFormat);
+                toDate = Moment('01/01/2012', dateFormat);
                 break;
             case '08-10':
-                startYear =  Moment('01/01/2008');
-                endYear =   Moment('01/01/2010');
+                fromDate = Moment('01/01/2008', dateFormat);
+                toDate = Moment('01/01/2010', dateFormat);
                 break;
             default:
-                startYear =  Moment('01/01/2014');
-                endYear =   Moment('01/01/2016');
+                fromDate = Moment('01/01/2014', dateFormat);
+                toDate = Moment('01/01/2016', dateFormat);
         }
 
         let that = this;
         Client
-            .getRaces()
-            .then((races) => {
-                return Promise.all(races.map((race) => {
-                    return Client.getCampaigns(race, {fromDate: startYear, toDate: endYear})
-                        .then((data) => {
-                            return {type: race, data: data};
-                        });
-                }));
-            })
-            .then((races) => {
-                const structuredData = races.map((r) => {
-                    return {
-                        type: r.type,
-                        campaigns: r.data.map((c) => {
-                            if(c.campaigns[0]) {
-                                return {
-                                    candidateId: c.id,
-                                    candidateName: c.name,
-                                    campaign: c.campaigns[0]
-                                }
-                            }
-                        }).filter(d => d !== undefined)
-                    }
-
+        .getRaces()
+        .then((races) => {
+            return Promise.all(races.map((race) => {
+                return Client.getCampaigns(race, {
+                    fromDate: fromDate.format(dateFormat),
+                    toDate: toDate.format(dateFormat)
+                })
+                .then((data) => {
+                    return {type: race, data: data};
                 });
-                that.setState({races: structuredData})
+            }));
+        })
+        .then((races) => {
+            const structuredData = races.map((r) => {
+                return {
+                    type: r.type,
+                    campaigns: r.data.map((c) => {
+                        if (c.campaigns[0]) {
+                            return {
+                                candidateId: c.id,
+                                candidateName: c.name,
+                                campaign: c.campaigns[0]
+                            }
+                        }
+                    }).filter(d => d !== undefined)
+                }
             });
+            that.setState({races: structuredData})
+        });
     }
 
 
-
-
     render() {
-        const { races, scores, campaignData, loading } = this.state;
+        const {races, scores, campaignData, loading} = this.state;
         return (
             <Row>
                 <Col xs={12}>
@@ -223,40 +232,41 @@ class Dashboard extends React.Component {
                                     <h3>{race.type}</h3>
                                     <Accordion>
                                         {race.campaigns.map((campaign, idx) => {
-                                          let candidateName = campaign.candidateName.trim()
-                                          let campaignID = campaign.campaign.campaignId
-                                          let header = `${candidateName}`
-                                            if(scores && scores[campaign.campaign.campaignId]) {
-                                                let header = this._loadPanelHeader(campaignData, campaignID, candidateName)
+                                            let candidateName = campaign.candidateName.trim();
+                                            let campaignID = campaign.campaign.campaignId;
+                                            let header = `${candidateName}`;
+                                            if (scores && scores[campaign.campaign.campaignId]) {
+                                                let header = this._loadPanelHeader(campaignData, campaignID, candidateName);
 
                                                 return (
-                                                    <Panel eventKey={idx} header={header}>
+                                                    <Panel key={idx} eventKey={idx} header={header}>
                                                         <CandidateInfo info={scores[campaign.campaign.campaignId]}/>
-                                                        <LinkContainer to={`candidate/${campaign.candidateId}/campaign/${campaign.campaign.campaignId}`}>
+                                                        <LinkContainer
+                                                            to={`candidate/${campaign.candidateId}/campaign/${campaign.campaign.campaignId}`}>
                                                             <Button>Details</Button>
                                                         </LinkContainer>
                                                     </Panel>
                                                 )
 
                                             } else if (!loading) {
-                                              let header = this._loadPanelHeader(campaignData, campaignID, candidateName)
+                                                let header = this._loadPanelHeader(campaignData, campaignID, candidateName);
 
-                                              return (
-                                              <Panel eventKey={idx} header={header}
-                                                onEnter={() => {
-                                                  this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)
-                                                }
-                                                }>
-                                                  Loading...
-                                              </Panel>
-                                              )
+                                                return (
+                                                    <Panel key={idx} eventKey={idx} header={header}
+                                                           onEnter={() => {
+                                                               this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)
+                                                           }
+                                                           }>
+                                                        Loading...
+                                                    </Panel>
+                                                )
                                             }
                                             return (
-                                                <Panel eventKey={idx} header={header}
-                                                  onEnter={() => {
-                                                    this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)
-                                                  }
-                                                  }>
+                                                <Panel key={idx} eventKey={idx} header={header}
+                                                       onEnter={() => {
+                                                           this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)
+                                                       }
+                                                       }>
                                                     Loading...
                                                 </Panel>
                                             )
@@ -273,3 +283,11 @@ class Dashboard extends React.Component {
 }
 
 export default Dashboard;
+
+Dashboard.propTypes = {
+    races: PropTypes.array,
+    scores: PropTypes.func,
+    startDate: PropTypes.func,
+    endDate: PropTypes.func,
+    campaignData: PropTypes.array
+};

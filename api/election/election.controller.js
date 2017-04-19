@@ -1,11 +1,12 @@
-var candidateService = require('../candidate/candidate.service');
-var Moment = require('moment');
-var redis = require('../redisClient').client;
+const candidateService = require('../candidate/candidate.service');
+const Moment = require('moment');
+const redis = require('../redisClient').client;
 
 exports.getCandidateCampaignsByTypeAndDate = function(req, res) {
-    var fromDate = Moment(req.query.fromDate || '2006-01-01');
-    var toDate = Moment(req.query.toDate || new Date());
-    var raceType = req.query.raceType;
+  let dateFormat = 'MM/DD/YYYY';
+  let fromDate = req.query.fromDate !== 'undefined' ? req.query.fromDate :  Moment('01/01/2006', dateFormat);
+  let toDate = req.query.toDate !== 'undefined' ? req.query.toDate :  Moment(new Date(), dateFormat);
+  let raceType = req.query.raceType;
 
     redis.getAsync(req.url)
         .then(function(value){
@@ -27,7 +28,7 @@ exports.getCandidateCampaignsByTypeAndDate = function(req, res) {
             res.send(candidates);
         })
         .catch(function(err){
-            console.log(err, url);
+            console.log(err, req.url);
         });
 };
 
