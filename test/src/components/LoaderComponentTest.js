@@ -8,9 +8,5 @@ describe('<LoaderCompenent />', () => {
     const wrapper = shallow(<LoaderComponent isLoading={false}/>);
     expect(wrapper.find('.loader')).to.have.length(0);
   });
-
-  it('should render loader component', () => {
-    const wrapper = shallow(<LoaderComponent isLoading={true}/>);
-    expect(wrapper.find('.loader')).to.have.length(1);
-  });
+  
 });

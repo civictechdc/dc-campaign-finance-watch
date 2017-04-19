@@ -48,16 +48,18 @@ Install [Node Version Manager](https://github.com/creationix/nvm#installation)
 
 With nvm installed, execute:
 ```
-nvm install 6.9.1
-nvm use 6.9.1
+nvm install 6.10.2
+nvm use 6.10.2
 ```
-With the above node version set, execute:
+Install [Yarn](https://yarnpkg.com/lang/en/docs/install/)
+
+With the above node version set and yarn installed, execute:
 ```
-npm install
+yarn
 ```
 After npm install complete, execute:
 ```
-npm start
+yarn start
 ```
 
 Visit [DC Campaign Finance Local App](http://localhost:3001/) to see running app.
