@@ -73,11 +73,11 @@ class DashboardContainer extends React.Component {
         })
     }
 
-    componentWillUpdate(nextProps, nextState) {
-        if (this.state.loading == false && nextState.loading == false) {
-            this._loadAllCampaignData(nextState.races);
-        }
-    }
+    // componentWillUpdate(nextProps, nextState) {
+    //     if (this.state.loading == false && nextState.loading == false) {
+    //         this._loadAllCampaignData(nextState.races);
+    //     }
+    // }
 
     componentWillMount() {
         // let that = this;

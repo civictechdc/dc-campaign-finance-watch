@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import CandidatePanel from './candidatePanel.jsx'
 import Client from '../../../api';
-import {Accordion, Button, Col, Panel, Row} from 'react-bootstrap';
+import {Accordion, Button, Col, Panel, Row, PanelGroup} from 'react-bootstrap';
 
 class RaceContainer extends Component {
   constructor(props){
@@ -19,7 +19,10 @@ class RaceContainer extends Component {
           campaigns: [{campaignId: campaignId}]
       })
       .then((data) => {
-          const {scores} = this.props;
+        console.log("display data")
+        console.log(data)
+          // const {scores} = this.props;
+          let scores = this.state.scores
           scores[campaignId] = data.campaigns[0];
           this.setState({scores: scores});
       });
@@ -28,28 +31,27 @@ class RaceContainer extends Component {
   render() {
     const { races, loading, campaignData } = this.props;
     let scores = this.state.scores
+    console.log("trying to display scores")
+    console.log(scores)
       return(
         <div>
           {races.map((race, idx) => {
             return(
               <Col key={idx} xs={6}>
                   <h3>{race.type}</h3>
-                  <Accordion>
                       {race.campaigns.map((campaign, idx) => {
-                          return(
-                            <CandidatePanel
-                            campaign={campaign}
-                            idx={idx}
-                            scores={scores}
-                            loading={loading}
-                            onEnterHandler={() => {
-                              console.log("handling onenter")
-                                this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)
-                            }}
-                            />
-                          )
+                        return (
+                          <CandidatePanel
+                          campaign={campaign}
+                          idx={idx}
+                          scores={scores}
+                          loading={loading}
+                          onEnterHandler={() => {
+                            console.log("handling onenter")
+                              this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)
+                          }}/>
+                        )
                       })}
-                  </Accordion>
               </Col>
             )
           })}
@@ -59,11 +61,3 @@ class RaceContainer extends Component {
 }
 
 export default RaceContainer
-
-// <Panel key={idx} eventKey={idx} header={header}>
-//     <CandidateInfo info={scores[campaign.campaign.campaignId]}/>
-//     <LinkContainer
-//         to={`candidate/${campaign.candidateId}/campaign/${campaign.campaign.campaignId}`}>
-//         <Button>Details</Button>
-//     </LinkContainer>
-// </Panel>

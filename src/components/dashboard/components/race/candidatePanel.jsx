@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {Panel} from 'react-bootstrap';
+import {Panel, Button} from 'react-bootstrap';
 import {CandidateInfo} from '../../../candidateCard.component.jsx';
 import {LinkContainer} from 'react-router-bootstrap';
+import Client from '../../../api';
 
 
 function _loadPanelHeader(campaignData, campaignID, candidateName) {
@@ -36,38 +37,25 @@ function _loadPanelHeader(campaignData, campaignID, candidateName) {
 class CandidatePanel extends React.Component {
   constructor(props){
     super(props)
-    this.state = {
-        scores: {}
-    }
-    this._loadCampaignData = this._loadCampaignData.bind(this);
-
-  }
-  _loadCampaignData(candidateId, campaignId) {
-    console.log('loading campaign adata')
-      Client.getCandidate({
-          id: candidateId,
-          campaigns: [{campaignId: campaignId}]
-      })
-      .then((data) => {
-          const {scores} = this.props;
-          scores[campaignId] = data.campaigns[0];
-          this.setState({scores: scores});
-      });
   }
 
   render() {
 
-    const {campaign, idx, scores, loading } = this.props
+    const {campaign, idx, scores, loading, onEnterHandler } = this.props
     let candidateName = campaign.candidateName.trim();
     let campaignID = campaign.campaign.campaignId;
     let header = `${candidateName}`;
-    // let scores = this.props.scores
+
+    const divStyle = {
+      marginBottom: '10px',
+    };
+    console.log("displaying scores")
     console.log(scores)
     if (scores && scores[campaign.campaign.campaignId]) {
         // let header = this._loadPanelHeader(campaignData, campaignID, candidateName);
         console.log("load first case")
         return (
-            <Panel key={idx} eventKey={idx} header={header}>
+            <Panel style={divStyle} collapsible key={idx} eventKey={idx} header={header}>
                 <CandidateInfo info={scores[campaign.campaign.campaignId]}/>
                 <LinkContainer
                     to={`candidate/${campaign.candidateId}/campaign/${campaign.campaign.campaignId}`}>
@@ -82,11 +70,8 @@ class CandidatePanel extends React.Component {
         // let header = this._loadPanelHeader(campaignData, campaignID, candidateName);
 
         return (
-          <Panel key={idx} eventKey={idx} header={header}
-          onEnter={() => {
-
-              this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)
-          }}
+          <Panel style={divStyle} collapsible key={idx} eventKey={idx} header={header}
+          onEnter={onEnterHandler}
                  >
                 Loading...
             </Panel>
@@ -95,12 +80,10 @@ class CandidatePanel extends React.Component {
     console.log("load third case")
 
     return (
-        <Panel key={idx} eventKey={idx} header={header}
-        onEnter={() => {
-            this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)
-        }}
+        <Panel style={divStyle} collapsible key={idx} eventKey={idx} header={header}
+        onEnter={onEnterHandler}
                >
-            Loading...here
+            Loading...
         </Panel>
     )
   }
