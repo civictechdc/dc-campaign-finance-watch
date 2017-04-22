@@ -1,14 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Accordion, Button, Col, Panel, Row} from 'react-bootstrap';
-import {LinkContainer} from 'react-router-bootstrap';
 import Client from '../api';
 import Moment from 'moment';
 import Promise from 'bluebird';
-import {CandidateInfo} from '../candidateCard.component.jsx';
 import Dashboard from './components/dashboard.jsx';
 const dateFormat = 'MM/DD/YYYY';
-
 
 class DashboardContainer extends React.Component {
     constructor(props) {
@@ -53,7 +49,7 @@ class DashboardContainer extends React.Component {
     _loadAllCampaignData(races) {
         let combinedCampaigns = [];
         let data = [];
-
+        this.setState({loading: true})
         for (let i = 0; i < races.length; i++) {
             combinedCampaigns = combinedCampaigns.concat(races[i]['campaigns'])
         }
@@ -73,14 +69,13 @@ class DashboardContainer extends React.Component {
         })
     }
 
-    // componentWillUpdate(nextProps, nextState) {
-    //     if (this.state.loading == false && nextState.loading == false) {
-    //         this._loadAllCampaignData(nextState.races);
-    //     }
-    // }
+    componentWillUpdate(nextProps, nextState) {
+        if (this.state.loading == false && nextState.loading == false) {
+            this._loadAllCampaignData(nextState.races);
+        }
+    }
 
     componentWillMount() {
-        // let that = this;
         Client
         .getRaces()
         .then((races) => {
@@ -172,6 +167,7 @@ class DashboardContainer extends React.Component {
 
         return (
           <Dashboard
+          changeYears = {this._changeYearsViewed}
           races={races}
           campaignData={campaignData}
           loading={loading}
@@ -186,5 +182,6 @@ DashboardContainer.propTypes = {
     races: PropTypes.array,
     startDate: PropTypes.func,
     endDate: PropTypes.func,
-    campaignData: PropTypes.array
+    campaignData: PropTypes.array,
+    loading: PropTypes.bool
 };

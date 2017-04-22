@@ -36,7 +36,7 @@ class Client {
     }
 
     getCampaigns(race, dateRange) {
-        if(!dateRange) {
+        if(Object.keys(dateRange).length === 0) {
             return fetch(this.baseUrl + '/electionSearch' + '?raceType=' + race)
                 .then((rsp) =>{
                     return rsp.json();

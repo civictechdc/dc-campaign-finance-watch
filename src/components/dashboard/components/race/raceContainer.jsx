@@ -1,38 +1,37 @@
 import React, {Component} from 'react'
 import CandidatePanel from './candidatePanel.jsx'
 import Client from '../../../api';
-import {Accordion, Button, Col, Panel, Row, PanelGroup} from 'react-bootstrap';
+import {Col} from 'react-bootstrap';
 
 class RaceContainer extends Component {
   constructor(props){
     super(props)
     this.state = {
-        scores: {}
+        scores: {},
+        selectedCampaign: 0
     }
     this._loadCampaignData = this._loadCampaignData.bind(this);
   }
 
   _loadCampaignData(candidateId, campaignId) {
-    console.log('loading campaign adata')
       Client.getCandidate({
           id: candidateId,
           campaigns: [{campaignId: campaignId}]
       })
       .then((data) => {
-        console.log("display data")
-        console.log(data)
-          // const {scores} = this.props;
           let scores = this.state.scores
           scores[campaignId] = data.campaigns[0];
-          this.setState({scores: scores});
+          this.setState({
+            scores: scores,
+            selectedCampaign: campaignId
+          });
       });
   }
 
   render() {
     const { races, loading, campaignData } = this.props;
     let scores = this.state.scores
-    console.log("trying to display scores")
-    console.log(scores)
+    let selectedCampaign = this.state.selectedCampaign
       return(
         <div>
           {races.map((race, idx) => {
@@ -42,12 +41,13 @@ class RaceContainer extends Component {
                       {race.campaigns.map((campaign, idx) => {
                         return (
                           <CandidatePanel
+                          selectedCampaign={selectedCampaign}
+                          campaignData={campaignData}
                           campaign={campaign}
                           idx={idx}
                           scores={scores}
                           loading={loading}
-                          onEnterHandler={() => {
-                            console.log("handling onenter")
+                          loadCampaignData={() => {
                               this._loadCampaignData(campaign.candidateId, campaign.campaign.campaignId)
                           }}/>
                         )
