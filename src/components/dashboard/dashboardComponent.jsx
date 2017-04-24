@@ -22,7 +22,6 @@ class Dashboard extends React.Component {
         };
         this._loadCampaignData = this._loadCampaignData.bind(this);
         this._changeYearsViewed = this._changeYearsViewed.bind(this);
-
     }
 
     _getCampaigns(races) {
@@ -122,7 +121,6 @@ class Dashboard extends React.Component {
     }
 
     componentWillMount() {
-        let that = this;
         Client
         .getRaces()
         .then((races) => {
@@ -211,7 +209,6 @@ class Dashboard extends React.Component {
 
     render() {
         const {races, scores, campaignData, loading} = this.state;
-
         return (
             <Row>
                 <Col xs={12}>

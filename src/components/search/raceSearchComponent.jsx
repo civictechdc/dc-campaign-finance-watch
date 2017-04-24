@@ -3,7 +3,7 @@
 import React from 'react';
 import _ from 'lodash';
 import client from '../api';
-import { Input, Row, Col, ButtonToolbar, Button } from 'react-bootstrap';
+import { Row, Col, ButtonToolbar, Button, FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 import DateRangeComponent from '../dateRange.jsx';
 import LoaderComponent from '../loader.component.jsx';
 
@@ -42,8 +42,8 @@ class RaceSearch extends React.Component {
         }
     }
 
-    _handleRaceSelection() {
-        let race = this.refs.raceType.getValue();
+    _handleRaceSelection(evt) {
+        let race = evt.target.value
         var that = this;
         client.getCampaigns(race, this.state.range)
             .then((campaigns) => {
@@ -60,13 +60,16 @@ class RaceSearch extends React.Component {
                 <LoaderComponent isLoading={this.state.loading}></LoaderComponent>
                 <Row>
                     <Col md={6} xs={12}>
-                        <Input ref="raceType" type="select" label="Select a race type" onChange={this._handleRaceSelection.bind(this)}>
-                            {
-                                races.map((r, idx) => {
-                                    return <option key={idx} value={r}>{r}</option>;
-                                })
-                            }
-                        </Input>
+                      <FormGroup controlId="formControlsSelect">
+                        <ControlLabel>Select a race type</ControlLabel>
+                        <FormControl ref="raceType" componentClass="select" placeholder="select" onChange={this._handleRaceSelection.bind(this)}>
+                        {
+                          races.map((r, idx) => {
+                              return <option key={idx} value={r}>{r}</option>;
+                          })
+                        }
+                        </FormControl>
+                      </FormGroup>
                         <h3>Filter by a date range</h3>
                         <DateRangeComponent onRangeInput={this._handleRangeSelected.bind(this)}/>
                     </Col>
