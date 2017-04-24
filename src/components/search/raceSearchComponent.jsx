@@ -113,11 +113,3 @@ class RaceSearch extends React.Component {
 }
 
 export default RaceSearch;
-
-// <Input ref="raceType" type="select" label="Select a race type" onChange={this._handleRaceSelection.bind(this)}>
-//     // {
-    //     races.map((r, idx) => {
-    //         return <option key={idx} value={r}>{r}</option>;
-    //     })
-//     }
-// </Input>

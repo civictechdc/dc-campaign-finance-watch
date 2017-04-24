@@ -121,7 +121,6 @@ class Dashboard extends React.Component {
     }
 
     componentWillMount() {
-        // let that = this;
         Client
         .getRaces()
         .then((races) => {

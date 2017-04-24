@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import YearFilter from './yearFilter/yearFilter.jsx'
+import YearFilter from './yearFilter.jsx'
 import RaceContainer from './race/raceContainer.jsx'
 import {Col, Row} from 'react-bootstrap';
 
