@@ -5,7 +5,6 @@ let webpack = require('webpack');
 let baseConfig = require('./base');
 let defaultSettings = require('./defaults');
 
-
 let config = Object.assign({}, baseConfig, {
   entry: [
     'react-hot-loader/patch',

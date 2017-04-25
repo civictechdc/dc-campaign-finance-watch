@@ -10,7 +10,10 @@ mongoose.connect('mongodb://localhost/dc-campaign-finance-new');
 //TODO: delete this later
 //Used only to transition initial values
 var pmongo = require('promised-mongo');
-var oldDb = pmongo('mongodb://localhost/dc-campaign-finance', ['candidates', 'contributions']);
+var oldDb = pmongo('mongodb://localhost/dc-campaign-finance', [
+  'candidates',
+  'contributions'
+]);
 
 //Models
 var Award = require('../models/award');
@@ -23,20 +26,20 @@ Promise.promisifyAll(Contribution);
 
 var db = mongoose.connection;
 
-db.once('open', function(){
+db.once('open', function() {
   console.log('connection established');
 });
 
 var missingCandidate = 0;
 
-db.on('disconnected', function(){
+db.on('disconnected', function() {
   console.log('mongoose disconnected');
-  console.log('missing candidate count', missingCandidate)
+  console.log('missing candidate count', missingCandidate);
   process.exit(0);
 });
 
-process.on("unhandledRejection", function(reason, promise) {
-    console.log(reason);
+process.on('unhandledRejection', function(reason, promise) {
+  console.log(reason);
 });
 
 // oldDb
@@ -57,100 +60,100 @@ process.on("unhandledRejection", function(reason, promise) {
 //     })
 //   });
 
-  // oldDb
-  //   .contributions
-  //   .find({})
-  //   .toArray()
-  //   .then(function(records){
-  //     var saves = _.map(records, function(record){
-  //       var saveFunction = function(callback) {
-  //         processCompany(record, callback);
-  //       }
-  //       return saveFunction;
-  //     });
-  //
-  //     async.parallel(saves, function(err){
-  //       console.log('finish processing');
-  //       mongoose.disconnect();
-  //     })
-  //   });
+// oldDb
+//   .contributions
+//   .find({})
+//   .toArray()
+//   .then(function(records){
+//     var saves = _.map(records, function(record){
+//       var saveFunction = function(callback) {
+//         processCompany(record, callback);
+//       }
+//       return saveFunction;
+//     });
+//
+//     async.parallel(saves, function(err){
+//       console.log('finish processing');
+//       mongoose.disconnect();
+//     })
+//   });
 
-  oldDb
-    .contributions
-    .find({})
-    .toArray()
-    .then(function(records){
-      var saves = _.map(records, function(record){
-        var saveFunction = function(callback){
-          processContribution(record, callback)
-        }
-        return saveFunction;
-      });
+oldDb.contributions.find({}).toArray().then(function(records) {
+  var saves = _.map(records, function(record) {
+    var saveFunction = function(callback) {
+      processContribution(record, callback);
+    };
+    return saveFunction;
+  });
 
-      async.parallelLimit(saves, 20, function(err){
-        console.log('finish procesing');
-        mongoose.disconnect();
-      })
-    })
+  async.parallelLimit(saves, 20, function(err) {
+    console.log('finish procesing');
+    mongoose.disconnect();
+  });
+});
 
 function processOldCandidateRecord(record, callback) {
   var name = record._id;
 
-  Candidate
-    .findOne({'name.first': name.first, 'name.last': name.last})
+  Candidate.findOne({ 'name.first': name.first, 'name.last': name.last })
     .exec()
-    .then(function(candidate) {
-      if(!candidate) {
-        var newName = {first: name.first_name, last: name.last_name};
-        if(name.middle_name) {
-          newName.middle = name.middle_name;
+    .then(
+      function(candidate) {
+        if (!candidate) {
+          var newName = { first: name.first_name, last: name.last_name };
+          if (name.middle_name) {
+            newName.middle = name.middle_name;
+          }
+          candidate = new Candidate({ name: newName });
         }
-        candidate = new Candidate({name: newName});
+
+        //Merge in campaigns
+        var campaigns = _.map(record.campaigns, function(campaign) {
+          campaign.individualDonorCount = record.individual_donor_count;
+          campaign.corporateDonorCount =
+            record.other_donor_count + record.corporate_donor_count;
+          campaign.committee = record.committee_name[0];
+          return campaign;
+        });
+
+        candidate.campaigns = _.union(candidate.campaigns || [], campaigns);
+
+        //Merge in held office
+        var positions = _.map(record.held_office, function(office) {
+          var fixedOffice = {};
+          if (office.chairman) {
+            fixedOffice.position = 'Council Chairman';
+          } else {
+            fixedOffice.postion = office.position;
+          }
+          fixedOffice.period = { from: office.elected_year };
+          fixedOffice.individualDonorCount = record.individual_donor_count;
+          fixedOffice.corporateDonorCount =
+            record.other_donor_count + record.corporate_donor_count;
+          return fixedOffice;
+        });
+
+        candidate.positions = _.union(candidate.positions || [], positions);
+
+        candidate.save(function(err) {
+          if (err) {
+            console.log(err);
+          }
+          callback(null);
+        });
+      },
+      function(err) {
+        console.log(err);
       }
-
-      //Merge in campaigns
-      var campaigns = _.map(record.campaigns, function(campaign){
-        campaign.individualDonorCount = record.individual_donor_count;
-        campaign.corporateDonorCount = record.other_donor_count + record.corporate_donor_count;
-        campaign.committee = record.committee_name[0];
-        return campaign;
-      });
-
-      candidate.campaigns = _.union(candidate.campaigns || [], campaigns);
-
-      //Merge in held office
-      var positions = _.map(record.held_office, function(office){
-        var fixedOffice = {};
-        if(office.chairman) {
-          fixedOffice.position = 'Council Chairman';
-        } else {
-          fixedOffice.postion = office.position;
-        }
-        fixedOffice.period = {from: office.elected_year};
-        fixedOffice.individualDonorCount = record.individual_donor_count;
-        fixedOffice.corporateDonorCount = record.other_donor_count + record.corporate_donor_count;
-        return fixedOffice;
-      });
-
-      candidate.positions = _.union(candidate.positions || [], positions);
-
-      candidate.save(function(err) {
-        if(err) {console.log(err)};
-        callback(null);
-      });
-    }, function(err){
-      console.log(err);
-    });
+    );
 }
 
 function processCompany(record, callback) {
-  if(record.type !== 'Individual') {
-    Company
-      .findOne({name: record.contributor})
-      .exec()
-      .then(function(company){
-        if(!company) {
-          company = new Company({name: record.contributor});
+  if (record.type !== 'Individual') {
+    Company.findOne({ name: record.contributor }).exec().then(
+      function(company) {
+        if (!company) {
+          company = new Company({ name: record.contributor });
         }
 
         company.address = {};
@@ -159,13 +162,14 @@ function processCompany(record, callback) {
         company.address.state = record.address.state;
         company.address.city = record.address.city;
 
-        company.save(function(err){
+        company.save(function(err) {
           callback(null);
         });
-
-      }, function(err){
-        console.log(err, ' found a duplicate.')
-      });
+      },
+      function(err) {
+        console.log(err, ' found a duplicate.');
+      }
+    );
   } else {
     callback(null);
   }
@@ -176,8 +180,11 @@ function processContribution(record, callback) {
   contribution.date = record.date;
   contribution.amount = record.amount;
 
-  var candidatePromise = findCandidatePromise(record.candidate, record.candidate_committee);
-  if(record.type === 'Individual') {
+  var candidatePromise = findCandidatePromise(
+    record.candidate,
+    record.candidate_committee
+  );
+  if (record.type === 'Individual') {
     contribution.contributorType = 'Individual';
     var companyPromise = Promise.resolve(record.contributor);
   } else {
@@ -186,37 +193,45 @@ function processContribution(record, callback) {
   }
 
   companyPromise
-    .then(function(company) {
-      contribution.contributorName = company._id ? company._id : company;
-      return candidatePromise;
-    }, function(err){
-      console.log('Error', err);
-      callback(null);
-    })
-    .then(function(candidate){
-      if(candidate) {
-        contribution.candidate = candidate._id;
-        if(candidate.campaigns && candidate.campaigns[0]) {
-          contribution.contributionType = { _id: candidate.campaigns[0]._id, name: 'campaign'};
-        }
-        if(contribution.candidate) {
-          console.log('attempting save');
-          contribution.save(function(err) {
-            console.log('saved');
-            callback(null);
-          });
-        } else {
-          callback(null);
-        }
-      } else {
-        missingCandidate++;
+    .then(
+      function(company) {
+        contribution.contributorName = company._id ? company._id : company;
+        return candidatePromise;
+      },
+      function(err) {
+        console.log('Error', err);
         callback(null);
       }
-    }, function(err){
-      console.log(err);
-      callback(null);
-    });
-
+    )
+    .then(
+      function(candidate) {
+        if (candidate) {
+          contribution.candidate = candidate._id;
+          if (candidate.campaigns && candidate.campaigns[0]) {
+            contribution.contributionType = {
+              _id: candidate.campaigns[0]._id,
+              name: 'campaign'
+            };
+          }
+          if (contribution.candidate) {
+            console.log('attempting save');
+            contribution.save(function(err) {
+              console.log('saved');
+              callback(null);
+            });
+          } else {
+            callback(null);
+          }
+        } else {
+          missingCandidate++;
+          callback(null);
+        }
+      },
+      function(err) {
+        console.log(err);
+        callback(null);
+      }
+    );
 
   // Promise.join(candidatePromise, companyPromise, function(candidate, company) {
   //   console.log('got here');
@@ -247,8 +262,6 @@ function processContribution(record, callback) {
   //     });
   // }
 
-
-
   // Candidate
   //   .find({})
   //   .exec()
@@ -267,19 +280,19 @@ function processContribution(record, callback) {
   // .finally(function(){
   //   console.log('promises finished');
   // });
-
-
 }
 
 function findCandidatePromise(oldName, committee) {
-    return Candidate
-            .findOne({'name.first': oldName.first_name, 'name.last': oldName.last_name})
-            //.or({'name.first': oldName.first_name, 'name.last': oldName.last_name}, {'campaigns.committee': committee})
-            .exec();
+  return (
+    Candidate.findOne({
+      'name.first': oldName.first_name,
+      'name.last': oldName.last_name
+    })
+      //.or({'name.first': oldName.first_name, 'name.last': oldName.last_name}, {'campaigns.committee': committee})
+      .exec()
+  );
 }
 
 function findCompanyPromise(lookup) {
-  return Company
-          .findOne({name: lookup})
-          .exec();
+  return Company.findOne({ name: lookup }).exec();
 }

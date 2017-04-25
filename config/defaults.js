@@ -20,14 +20,14 @@ function getDefaultModules() {
       {
         test: /\.(js|jsx)$/,
         include: srcPath,
-        enforce: "pre",
-        use: ['babel-loader','eslint-loader'],
+        enforce: 'pre',
+        use: ['babel-loader', 'eslint-loader'],
         exclude: /node_modules/
       },
       {
         test: /\.(js|jsx)$/,
         include: srcPath,
-        use: ['react-hot-loader/webpack','babel-loader'],
+        use: ['react-hot-loader/webpack', 'babel-loader'],
         exclude: /node_modules/
       },
       {

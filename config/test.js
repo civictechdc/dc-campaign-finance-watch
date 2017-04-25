@@ -11,9 +11,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         loader: 'isparta-instrumenter-loader',
-        include: [
-          path.join(__dirname, '/../src')
-        ]
+        include: [path.join(__dirname, '/../src')]
       },
       {
         test: /\.(png|jpg|gif|woff|woff2|css|sass|scss|less|styl)$/,
@@ -23,15 +21,13 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        query:
-          {
-            presets:['es2015','react']
-          },
-        include:
-          [
-            path.join(__dirname, '/../src'),
-            path.join(__dirname, '/../test')
-          ]
+        query: {
+          presets: ['es2015', 'react']
+        },
+        include: [
+          path.join(__dirname, '/../src'),
+          path.join(__dirname, '/../test')
+        ]
       }
     ]
   },
