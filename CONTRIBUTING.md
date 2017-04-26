@@ -14,7 +14,7 @@ Note: [An extended version of project setup is available.](https://github.com/co
 1. Fork and clone the repo
 2. Run `yarn` in the repo directory to install dependencies
 3. Create a branch for your PR
-4. Run `yarn start` to start then open app at http://localhost:3001
+4. Run `yarn start` to start then open app at [localhost](http://localhost:3001)
 
 ## Add yourself as a contributor
 
