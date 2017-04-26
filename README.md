@@ -1,4 +1,5 @@
 
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 ### Status
 [![Build Status](https://travis-ci.org/codefordc/dc-campaign-finance-watch.png)](https://travis-ci.org/codefordc/dc-campaign-finance-watch/)
 # DC Campaign Finance Watch
@@ -88,3 +89,14 @@ docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d
 
 ## Contributing
 Contributions are always welcome!  We are in the process of pulling together a checklist for submitting a PR, but for now the only thing to keep in mind is to avoid adding a PR with linting errors.  There is an .eslintrc file included in the repo that should help out with that.
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+| [<img src="https://avatars2.githubusercontent.com/u/7241408?v=3" width="100px;"/><br /><sub>Romoy Headley</sub>](https://twitter.com/RomoyHeadley)<br />[💻](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=romoy "Code") [🔧](#tool-romoy "Tools") [📖](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=romoy "Documentation") [🐛](https://github.com/codefordc/dc-campaign-finance-watch/issues?q=author%3Aromoy "Bug reports") [⚠️](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=romoy "Tests") |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

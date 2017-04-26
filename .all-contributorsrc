@@ -1,0 +1,24 @@
+{
+  "projectName": "dc-campaign-finance-watch",
+  "projectOwner": "codefordc",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "romoy",
+      "name": "Romoy Headley",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7241408?v=3",
+      "profile": "https://twitter.com/RomoyHeadley",
+      "contributions": [
+        "code",
+        "tool",
+        "doc",
+        "bug",
+        "test"
+      ]
+    }
+  ]
+}
