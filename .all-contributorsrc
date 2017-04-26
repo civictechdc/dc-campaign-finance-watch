@@ -139,6 +139,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "sdotson",
+      "name": "Stuart Dotson",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5664775?v=3",
+      "profile": "http://stuartdotson.com",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ]
 }
