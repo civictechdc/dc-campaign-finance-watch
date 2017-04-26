@@ -8,16 +8,14 @@
   "commit": true,
   "contributors": [
     {
-      "login": "romoy",
-      "name": "Romoy Headley",
-      "avatar_url": "https://avatars2.githubusercontent.com/u/7241408?v=3",
-      "profile": "https://twitter.com/RomoyHeadley",
+      "login": "jkoul",
+      "name": "Jeremy Koulish",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/12779671?v=3",
+      "profile": "https://github.com/jkoul",
       "contributions": [
         "code",
-        "tool",
         "doc",
-        "bug",
-        "test"
+        "design"
       ]
     },
     {
@@ -35,6 +33,19 @@
       ]
     },
     {
+      "login": "romoy",
+      "name": "Romoy Headley",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7241408?v=3",
+      "profile": "https://twitter.com/RomoyHeadley",
+      "contributions": [
+        "code",
+        "tool",
+        "doc",
+        "bug",
+        "test"
+      ]
+    },
+    {
       "login": "tingaloo",
       "name": "Lew",
       "avatar_url": "https://avatars1.githubusercontent.com/u/8662824?v=3",
@@ -43,17 +54,6 @@
         "code",
         "bug",
         "test"
-      ]
-    },
-    {
-      "login": "jkoul",
-      "name": "Jeremy Koulish",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/12779671?v=3",
-      "profile": "https://github.com/jkoul",
-      "contributions": [
-        "code",
-        "doc",
-        "design"
       ]
     }
   ]
