@@ -44,6 +44,17 @@
         "bug",
         "test"
       ]
+    },
+    {
+      "login": "jkoul",
+      "name": "Jeremy Koulish",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/12779671?v=3",
+      "profile": "https://github.com/jkoul",
+      "contributions": [
+        "code",
+        "doc",
+        "design"
+      ]
     }
   ]
 }
