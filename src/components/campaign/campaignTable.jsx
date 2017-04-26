@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Table, Column, Cell } from 'fixed-data-table';
 import Moment from 'moment';
 
@@ -18,14 +18,14 @@ class SortHeaderCell extends React.Component {
   }
 
   render() {
-    var {sortDir, children, ...props} = this.props;
+    var { sortDir, children, ...props } = this.props;
     return (
       <Cell {...props}>
         <a onClick={this._onSortChange}>
-          {children} {sortDir ? (sortDir === SortTypes.DESC ? '↓' : '↑') : ''}
+          {children} {sortDir ? sortDir === SortTypes.DESC ? '↓' : '↑' : ''}
         </a>
       </Cell>
-    )
+    );
   }
 
   _onSortChange(e) {
@@ -33,9 +33,9 @@ class SortHeaderCell extends React.Component {
     if (this.props.onSortChange) {
       this.props.onSortChange(
         this.props.columnKey,
-        this.props.sortDir ?
-          reverseSortDirection(this.props.sortDir) :
-          SortTypes.DESC
+        this.props.sortDir
+          ? reverseSortDirection(this.props.sortDir)
+          : SortTypes.DESC
       );
     }
   }
@@ -43,14 +43,14 @@ class SortHeaderCell extends React.Component {
 
 class DataListWrapper {
   constructor(indexMap, data) {
-    return this.createArray(indexMap, data)
+    return this.createArray(indexMap, data);
   }
 
   createArray(indexMap, data) {
-    let sortedArr = []
-    for (var i=0; i<data.length; i++) {
-      let next = data[indexMap[i]]
-      sortedArr.push(next)
+    let sortedArr = [];
+    for (var i = 0; i < data.length; i++) {
+      let next = data[indexMap[i]];
+      sortedArr.push(next);
     }
     return sortedArr;
   }
@@ -60,7 +60,7 @@ class CampaignTable extends React.Component {
   constructor(props) {
     super(props);
 
-    this._dataList = this.props.contributions
+    this._dataList = this.props.contributions;
 
     this._defaultSortIndexes = [];
     var size = this._dataList.length;
@@ -80,13 +80,12 @@ class CampaignTable extends React.Component {
     var sortIndexes = this._defaultSortIndexes.slice();
 
     sortIndexes.sort((indexA, indexB) => {
-
-      var valueA, valueB = ''
-      switch(columnKey) {
+      var valueA, valueB = '';
+      switch (columnKey) {
         case 'date':
         case 'amount':
-          valueA = this._dataList[indexA][columnKey]
-          valueB = this._dataList[indexB][columnKey]
+          valueA = this._dataList[indexA][columnKey];
+          valueB = this._dataList[indexB][columnKey];
           break;
         case 'name':
         case 'contributorType':
@@ -94,11 +93,11 @@ class CampaignTable extends React.Component {
           valueB = this._dataList[indexB]['contributor'][columnKey];
           break;
         case 'address':
-        valueA = this._dataList[indexA]['contributor'][columnKey]['raw'];
-        valueB = this._dataList[indexB]['contributor'][columnKey]['raw'];
+          valueA = this._dataList[indexA]['contributor'][columnKey]['raw'];
+          valueB = this._dataList[indexB]['contributor'][columnKey]['raw'];
           break;
         default:
-          valueA = this._dataList[indexA][columnKey]
+          valueA = this._dataList[indexA][columnKey];
           valueB = this._dataList[indexB]['contributor'][columnKey];
       }
       var sortVal = 0;
@@ -122,99 +121,116 @@ class CampaignTable extends React.Component {
     });
   }
 
-  render () {
-    var {sortedDataList, colSortDirs} = this.state;
+  render() {
+    var { sortedDataList, colSortDirs } = this.state;
     return (
-      <Table rowsCount={sortedDataList.length}
-          rowHeight={50}
-          headerHeight={50}
-          width={900}
-          height={500}
-          {...this.props}>
-              <Column
-                  columnKey="name"
-                  header={
-                    <SortHeaderCell
-                      onSortChange={this._onSortChange}
-                      sortDir={colSortDirs.name}>
-                      Name
-                    </SortHeaderCell>
-                  }
-
-                  cell={props => (
-                            <Cell {...props}>{sortedDataList[props.rowIndex].contributor.name}</Cell>
-                        )}
-                  width={200}
-                  fixed={true}
-              />
-              <Column
-                columnKey="amount"
-                header = {
-                <SortHeaderCell
-                  onSortChange={this._onSortChange}
-                  sortDir={colSortDirs.amount}>
-                  Amount
-                </SortHeaderCell>
-                }
-                cell={props => (
-                          <Cell {...props}>${sortedDataList[props.rowIndex].amount}</Cell>
-                      )}
-                  width={100}
-                  fixed={true}
-              />
-              <Column
-                columnKey="address"
-                header= {
-                  <SortHeaderCell
-                    onSortChange={this._onSortChange}
-                    sortDir={colSortDirs.address}>
-                    Address
-                  </SortHeaderCell>
-                }
-                cell={props => (
-                          <Cell {...props}>{sortedDataList[props.rowIndex].contributor.address.street + ' '
-                                            + sortedDataList[props.rowIndex].contributor.address.city + ' '
-                                            + sortedDataList[props.rowIndex].contributor.address.state + ' '
-                                            + String(sortedDataList[props.rowIndex].contributor.address.zip.slice(0, 5))}</Cell>
-                      )}
-
-                width={300}
-              />
-              <Column
-                columnKey="contributorType"
-                header= {
-                  <SortHeaderCell
-                    onSortChange={this._onSortChange}
-                    sortDir={colSortDirs.contributorType}>
-                    Contributor Type
-                  </SortHeaderCell>
-                }
-                cell={props => (
-                        <Cell {...props}>{sortedDataList[props.rowIndex].contributor.contributorType}</Cell>
-                    )}
-
-                width={100}
-              />
-              <Column
-                columnKey="date"
-
-                header= {
-                  <SortHeaderCell
-                    onSortChange={this._onSortChange}
-                    sortDir={colSortDirs.date}>
-                    Date
-                  </SortHeaderCell>
-                }
-                cell={props => (
-                        <Cell {...props}>{Moment(sortedDataList[props.rowIndex].date).format('MM/DD/YYYY')}</Cell>
+      <Table
+        rowsCount={sortedDataList.length}
+        rowHeight={50}
+        headerHeight={50}
+        width={900}
+        height={500}
+        {...this.props}
+      >
+        <Column
+          columnKey="name"
+          header={
+            <SortHeaderCell
+              onSortChange={this._onSortChange}
+              sortDir={colSortDirs.name}
+            >
+              Name
+            </SortHeaderCell>
+          }
+          cell={props => (
+            <Cell {...props}>
+              {sortedDataList[props.rowIndex].contributor.name}
+            </Cell>
+          )}
+          width={200}
+          fixed={true}
+        />
+        <Column
+          columnKey="amount"
+          header={
+            <SortHeaderCell
+              onSortChange={this._onSortChange}
+              sortDir={colSortDirs.amount}
+            >
+              Amount
+            </SortHeaderCell>
+          }
+          cell={props => (
+            <Cell {...props}>${sortedDataList[props.rowIndex].amount}</Cell>
+          )}
+          width={100}
+          fixed={true}
+        />
+        <Column
+          columnKey="address"
+          header={
+            <SortHeaderCell
+              onSortChange={this._onSortChange}
+              sortDir={colSortDirs.address}
+            >
+              Address
+            </SortHeaderCell>
+          }
+          cell={props => (
+            <Cell {...props}>
+              {sortedDataList[props.rowIndex].contributor.address.street +
+                ' ' +
+                sortedDataList[props.rowIndex].contributor.address.city +
+                ' ' +
+                sortedDataList[props.rowIndex].contributor.address.state +
+                ' ' +
+                String(
+                  sortedDataList[props.rowIndex].contributor.address.zip.slice(
+                    0,
+                    5
+                  )
                 )}
-
-                width={200}
-              />
+            </Cell>
+          )}
+          width={300}
+        />
+        <Column
+          columnKey="contributorType"
+          header={
+            <SortHeaderCell
+              onSortChange={this._onSortChange}
+              sortDir={colSortDirs.contributorType}
+            >
+              Contributor Type
+            </SortHeaderCell>
+          }
+          cell={props => (
+            <Cell {...props}>
+              {sortedDataList[props.rowIndex].contributor.contributorType}
+            </Cell>
+          )}
+          width={100}
+        />
+        <Column
+          columnKey="date"
+          header={
+            <SortHeaderCell
+              onSortChange={this._onSortChange}
+              sortDir={colSortDirs.date}
+            >
+              Date
+            </SortHeaderCell>
+          }
+          cell={props => (
+            <Cell {...props}>
+              {Moment(sortedDataList[props.rowIndex].date).format('MM/DD/YYYY')}
+            </Cell>
+          )}
+          width={200}
+        />
       </Table>
-    )
+    );
   }
-
 }
 
 export default CampaignTable;

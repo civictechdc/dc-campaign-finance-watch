@@ -3,7 +3,7 @@
 import baseConfig from './base';
 
 let config = {
-  appEnv: 'dev',  // feel free to remove the appEnv property here
+  appEnv: 'dev', // feel free to remove the appEnv property here
   api: 'production'
 };
 
