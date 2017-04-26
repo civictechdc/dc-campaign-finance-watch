@@ -9,7 +9,7 @@ Contributions are always welcome!
 
 You're going to need [`git`](https://git-scm.com/) to get the project, and [`node`](https://nodejs.org/en/) and
 [`yarn`](https://yarnpkg.com/) to install dependencies and run scripts. 
-Note: [An extended version of project setup is available.](https://github.com/codefordc/dc-campaign-finance-watch/blob/develop/CONTRIBUTING.md#)
+Note: [An extended version of project setup is available.](https://github.com/codefordc/dc-campaign-finance-watch/blob/develop/CONTRIBUTING.md#project-setup-front-end-docker-or-local-extended-version)
 
 1. Fork and clone the repo
 2. Run `yarn` in the repo directory to install dependencies
