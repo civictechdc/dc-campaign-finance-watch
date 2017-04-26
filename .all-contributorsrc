@@ -121,6 +121,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "jamesfe",
+      "name": "jimmy",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3836461?v=3",
+      "profile": "https://github.com/jamesfe",
+      "contributions": [
+        "infra"
+      ]
     }
   ]
 }
