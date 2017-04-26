@@ -103,6 +103,15 @@
         "doc",
         "infra"
       ]
+    },
+    {
+      "login": "donaldbraman",
+      "name": "Donald Braman",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/4620925?v=3",
+      "profile": "https://github.com/donaldbraman",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }
