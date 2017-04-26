@@ -30,7 +30,19 @@
         "tool",
         "doc",
         "bug",
-        "review"
+        "review",
+        "infra"
+      ]
+    },
+    {
+      "login": "tingaloo",
+      "name": "Lew",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8662824?v=3",
+      "profile": "https://github.com/tingaloo",
+      "contributions": [
+        "code",
+        "bug",
+        "test"
       ]
     }
   ]
