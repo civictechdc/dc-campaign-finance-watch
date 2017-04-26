@@ -19,6 +19,19 @@
         "bug",
         "test"
       ]
+    },
+    {
+      "login": "mkalish",
+      "name": "Michael Kalish",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1225895?v=3",
+      "profile": "https://github.com/mkalish",
+      "contributions": [
+        "code",
+        "tool",
+        "doc",
+        "bug",
+        "review"
+      ]
     }
   ]
 }

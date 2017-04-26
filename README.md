@@ -1,5 +1,5 @@
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 ### Status
 [![Build Status](https://travis-ci.org/codefordc/dc-campaign-finance-watch.png)](https://travis-ci.org/codefordc/dc-campaign-finance-watch/)
 # DC Campaign Finance Watch
@@ -95,8 +95,8 @@ Contributions are always welcome!  We are in the process of pulling together a c
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars2.githubusercontent.com/u/7241408?v=3" width="100px;"/><br /><sub>Romoy Headley</sub>](https://twitter.com/RomoyHeadley)<br />[💻](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=romoy "Code") [🔧](#tool-romoy "Tools") [📖](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=romoy "Documentation") [🐛](https://github.com/codefordc/dc-campaign-finance-watch/issues?q=author%3Aromoy "Bug reports") [⚠️](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=romoy "Tests") |
-| :---: |
+| [<img src="https://avatars2.githubusercontent.com/u/7241408?v=3" width="100px;"/><br /><sub>Romoy Headley</sub>](https://twitter.com/RomoyHeadley)<br />[💻](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=romoy "Code") [🔧](#tool-romoy "Tools") [📖](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=romoy "Documentation") [🐛](https://github.com/codefordc/dc-campaign-finance-watch/issues?q=author%3Aromoy "Bug reports") [⚠️](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=romoy "Tests") | [<img src="https://avatars0.githubusercontent.com/u/1225895?v=3" width="100px;"/><br /><sub>Michael Kalish</sub>](https://github.com/mkalish)<br />[💻](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=mkalish "Code") [🔧](#tool-mkalish "Tools") [📖](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=mkalish "Documentation") [🐛](https://github.com/codefordc/dc-campaign-finance-watch/issues?q=author%3Amkalish "Bug reports") [👀](#review-mkalish "Reviewed Pull Requests") |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
