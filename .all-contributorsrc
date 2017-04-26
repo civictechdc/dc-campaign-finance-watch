@@ -93,6 +93,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "JoshData",
+      "name": "Joshua Tauberer",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/445875?v=3",
+      "profile": "https://razor.occams.info",
+      "contributions": [
+        "doc",
+        "infra"
+      ]
     }
   ]
 }
