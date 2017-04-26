@@ -130,6 +130,15 @@
       "contributions": [
         "infra"
       ]
+    },
+    {
+      "login": "pythagoraswitch",
+      "name": "Kiwako Sakamoto",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4925075?v=3",
+      "profile": "https://github.com/pythagoraswitch",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }
