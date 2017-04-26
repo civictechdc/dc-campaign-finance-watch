@@ -65,6 +65,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "matthewringer",
+      "name": "Matthew Ringer",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/2614536?v=3",
+      "profile": "https://github.com/matthewringer",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ]
 }
