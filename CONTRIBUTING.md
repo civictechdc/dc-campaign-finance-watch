@@ -29,8 +29,7 @@ Follow the prompt. If you've already added yourself to the list and are making a
 it again and select the added contribution type.
 
 ## Communicate
-
-*Second opinion is always important.*
+**Slack** Join [Code For DC Slack](https://codefordc.org/joinslack/) and join us in the [campaign_finance channel](https://codefordc.slack.com/messages/C02GGK72S)
 
 **Bug fixing**. If you have a fix for a bug, please attach your patch in the corresponding issue in the [issue tracker](https://github.com/codefordc/dc-campaign-finance-watch/issues). If there is no entry for the bug yet, then please create a new one. See the Get Ready section below on how to submit your change.
 
