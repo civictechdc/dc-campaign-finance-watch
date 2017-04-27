@@ -3,7 +3,7 @@ Contributions are always welcome!
 ([See the following emoji key for contribution ideas](https://github.com/kentcdodds/all-contributors#emoji-key))
 
 **Working on your first Pull Request?** You can learn how from this *free* series
-[How to Contribute to an Open Source Project on GitHub][egghead]
+[How to Contribute to an Open Source Project on GitHub](https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github)
 
 ## Project setup short version
 
