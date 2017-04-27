@@ -1,4 +1,5 @@
 
+[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors)
 ### Status
 [![Build Status](https://travis-ci.org/codefordc/dc-campaign-finance-watch.png)](https://travis-ci.org/codefordc/dc-campaign-finance-watch/)
 # DC Campaign Finance Watch
@@ -12,79 +13,17 @@ All of our data is pulled from the [Office of Campaign Finance](http://ocf.dc.go
 
 The site is very much in a beta status, so if you notice any issues or have any suggestions please open a ticket.
 
-## Development (Docker or Local)
-The data is stored in several MongoDB collections on which an express based RESTish API sits and is run on AWS EC2.  
-The front end is built with React and is run through github pages
-
-### 1. Fork the repo
-Visit https://github.com/codefordc/dc-campaign-finance-watch repo.
-
-In the top-right corner of the repo, click Fork
-[Github Help](https://help.github.com/articles/fork-a-repo/)
-
-### 2. Clone the repo and access on your local
-```
-git clone https://github.com/<your github username>/dc-campaign-finance-watch
-cd dc-campaign-finance-watch
-```
-#### 3a. Continue the following to use docker or skip to 3b for local, non docker config
-### Install Docker and Docker Compose
-Get [Docker](https://www.docker.com/products/overview)
-Download and Install docker based on your current system.
-
-Get [Docker-Compose](https://docs.docker.com/compose/install/)
-Download and Install docker-compose based on your current system.
-
-The following assume that you've install docker and docker-compose on your current system.
-
-#### Setup front end development on docker machine
-This will run a local instance of the frontend that will talk to the public API.  
-Any changes you make to source files should be automatically reloaded in the browser.
-``` 
-docker-compose up dc-campaign-finance-ui
-```
-#### 3b. Setup front end development on local machine
-Install [Node Version Manager](https://github.com/creationix/nvm#installation)
-
-With nvm installed, execute:
-```
-nvm install 6.10.2
-nvm use 6.10.2
-```
-Install [Yarn](https://yarnpkg.com/lang/en/docs/install/)
-
-With the above node version set and yarn installed, execute:
-```
-yarn
-```
-After npm install complete, execute:
-```
-yarn start
-```
-
-Visit [DC Campaign Finance Local App](http://localhost:3001/) to see running app.
-
-## Working on the backend API
-#### Docker development env
-This will start a mongodb and seed it with dc-campaign-finance-mongodatabase.zip content.
-Each call to mongo-seed will drop the existing database.
-``` 
-docker-compose up mongo-seed
-```
-The following assume that you've seeded your mongodb. It will start a web app connected to your local api.
-``` 
-docker-compose up dc-campaign-finance-api
-```
-
-Visit [DC Campaign Finance Local App](http://localhost:3001/) to see running app.
-
-
-#### Docker production env
-This will run a production instance of the frontend that will talk to the public API.  
-```
-docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d
-
-```
-
 ## Contributing
-Contributions are always welcome!  We are in the process of pulling together a checklist for submitting a PR, but for now the only thing to keep in mind is to avoid adding a PR with linting errors.  There is an .eslintrc file included in the repo that should help out with that.
+[Contributions are always welcome!](https://github.com/codefordc/dc-campaign-finance-watch/blob/develop/CONTRIBUTING.md)
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+| [<img src="https://avatars0.githubusercontent.com/u/1225895?v=3" width="100px;"/><br /><sub>Michael Kalish</sub>](https://github.com/mkalish)<br />[💻](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=mkalish "Code") [🔧](#tool-mkalish "Tools") [📖](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=mkalish "Documentation") [🐛](https://github.com/codefordc/dc-campaign-finance-watch/issues?q=author%3Amkalish "Bug reports") [👀](#review-mkalish "Reviewed Pull Requests") [🚇](#infra-mkalish "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars0.githubusercontent.com/u/12779671?v=3" width="100px;"/><br /><sub>Jeremy Koulish</sub>](https://github.com/jkoul)<br />[💻](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=jkoul "Code") [📖](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=jkoul "Documentation") [🎨](#design-jkoul "Design") | [<img src="https://avatars2.githubusercontent.com/u/7241408?v=3" width="100px;"/><br /><sub>Romoy Headley</sub>](https://twitter.com/RomoyHeadley)<br />[💻](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=romoy "Code") [🔧](#tool-romoy "Tools") [📖](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=romoy "Documentation") [🐛](https://github.com/codefordc/dc-campaign-finance-watch/issues?q=author%3Aromoy "Bug reports") [⚠️](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=romoy "Tests") [🚇](#infra-romoy "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars1.githubusercontent.com/u/8662824?v=3" width="100px;"/><br /><sub>Lew</sub>](https://github.com/tingaloo)<br />[💻](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=tingaloo "Code") [🐛](https://github.com/codefordc/dc-campaign-finance-watch/issues?q=author%3Atingaloo "Bug reports") | [<img src="https://avatars0.githubusercontent.com/u/7322903?v=3" width="100px;"/><br /><sub>bcell</sub>](https://github.com/bcell)<br />[💻](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=bcell "Code") [📖](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=bcell "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/2614536?v=3" width="100px;"/><br /><sub>Matthew Ringer</sub>](https://github.com/matthewringer)<br />[💻](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=matthewringer "Code") [🐛](https://github.com/codefordc/dc-campaign-finance-watch/issues?q=author%3Amatthewringer "Bug reports") | [<img src="https://avatars1.githubusercontent.com/u/16108167?v=3" width="100px;"/><br /><sub>Funmi</sub>](http://funmiojo.com)<br />[📖](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=FunmiOjo "Documentation") |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| [<img src="https://avatars2.githubusercontent.com/u/30691?v=3" width="100px;"/><br /><sub>Mike Chelen</sub>](https://twitter.com/mchelen)<br />[📖](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=mchelen "Documentation") | [<img src="https://avatars1.githubusercontent.com/u/445875?v=3" width="100px;"/><br /><sub>Joshua Tauberer</sub>](https://razor.occams.info)<br />[📖](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=JoshData "Documentation") [🚇](#infra-JoshData "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars3.githubusercontent.com/u/4620925?v=3" width="100px;"/><br /><sub>Donald Braman</sub>](https://github.com/donaldbraman)<br />[💻](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=donaldbraman "Code") | [<img src="https://avatars0.githubusercontent.com/u/6662612?v=3" width="100px;"/><br /><sub>Elisabeth Ericson</sub>](https://github.com/Elieri)<br />[💻](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=Elieri "Code") | [<img src="https://avatars1.githubusercontent.com/u/3836461?v=3" width="100px;"/><br /><sub>jimmy</sub>](https://github.com/jamesfe)<br />[🚇](#infra-jamesfe "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars2.githubusercontent.com/u/4925075?v=3" width="100px;"/><br /><sub>Kiwako Sakamoto</sub>](https://github.com/pythagoraswitch)<br />[💻](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=pythagoraswitch "Code") | [<img src="https://avatars3.githubusercontent.com/u/5664775?v=3" width="100px;"/><br /><sub>Stuart Dotson</sub>](http://stuartdotson.com)<br />[💻](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=sdotson "Code") [📖](https://github.com/codefordc/dc-campaign-finance-watch/commits?author=sdotson "Documentation") |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

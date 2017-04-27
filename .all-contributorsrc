@@ -1,0 +1,154 @@
+{
+  "projectName": "dc-campaign-finance-watch",
+  "projectOwner": "codefordc",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "mkalish",
+      "name": "Michael Kalish",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1225895?v=3",
+      "profile": "https://github.com/mkalish",
+      "contributions": [
+        "code",
+        "tool",
+        "doc",
+        "bug",
+        "review",
+        "infra"
+      ]
+    },
+    {
+      "login": "jkoul",
+      "name": "Jeremy Koulish",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/12779671?v=3",
+      "profile": "https://github.com/jkoul",
+      "contributions": [
+        "code",
+        "doc",
+        "design"
+      ]
+    },
+    {
+      "login": "romoy",
+      "name": "Romoy Headley",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/7241408?v=3",
+      "profile": "https://twitter.com/RomoyHeadley",
+      "contributions": [
+        "code",
+        "tool",
+        "doc",
+        "bug",
+        "test",
+        "infra"
+      ]
+    },
+    {
+      "login": "tingaloo",
+      "name": "Lew",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8662824?v=3",
+      "profile": "https://github.com/tingaloo",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "bcell",
+      "name": "bcell",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7322903?v=3",
+      "profile": "https://github.com/bcell",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "matthewringer",
+      "name": "Matthew Ringer",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/2614536?v=3",
+      "profile": "https://github.com/matthewringer",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "FunmiOjo",
+      "name": "Funmi",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/16108167?v=3",
+      "profile": "http://funmiojo.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "mchelen",
+      "name": "Mike Chelen",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/30691?v=3",
+      "profile": "https://twitter.com/mchelen",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "JoshData",
+      "name": "Joshua Tauberer",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/445875?v=3",
+      "profile": "https://razor.occams.info",
+      "contributions": [
+        "doc",
+        "infra"
+      ]
+    },
+    {
+      "login": "donaldbraman",
+      "name": "Donald Braman",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/4620925?v=3",
+      "profile": "https://github.com/donaldbraman",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Elieri",
+      "name": "Elisabeth Ericson",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6662612?v=3",
+      "profile": "https://github.com/Elieri",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "jamesfe",
+      "name": "jimmy",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3836461?v=3",
+      "profile": "https://github.com/jamesfe",
+      "contributions": [
+        "infra"
+      ]
+    },
+    {
+      "login": "pythagoraswitch",
+      "name": "Kiwako Sakamoto",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4925075?v=3",
+      "profile": "https://github.com/pythagoraswitch",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "sdotson",
+      "name": "Stuart Dotson",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5664775?v=3",
+      "profile": "http://stuartdotson.com",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    }
+  ]
+}
