@@ -149,6 +149,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "adilyalcin",
+      "name": "Adil Yalcin",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2327953?v=3",
+      "profile": "http://www.adilyalcin.me",
+      "contributions": [
+        "code",
+        "tool"
+      ]
     }
   ]
 }
