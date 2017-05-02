@@ -83,7 +83,7 @@ class CampaignDetailComponent extends React.Component {
               <iframe
                 style={fullScreenStyle}
                 src={
-                  'http://adilyalcin.me/campaign-finance-explorer/index.html?' +
+                  'https://codefordc.org/campaign-finance-explorer/index.html?' +
                     id
                 }
               />
@@ -125,7 +125,7 @@ class CampaignDetailComponent extends React.Component {
             <iframe
               style={fullScreenTab === 'visualizer' ? fullScreenStyle : {}}
               src={
-                'http://adilyalcin.me/campaign-finance-explorer/index.html?' +
+                'https://codefordc.org/campaign-finance-explorer/index.html?' +
                   id
               }
             />
