@@ -13,7 +13,7 @@ const CampaignInfo = props => {
   return (
     <div>
       <Col sm={12}>
-        <h4>fd Statistics</h4>
+        <h4>Campaign Statistics</h4>
         <div>Total Raised: ${_.round(info.total, 0)}</div>
         <div>Average Contribution: ${_.round(info.averageContribution, 0)}</div>
         <div>
