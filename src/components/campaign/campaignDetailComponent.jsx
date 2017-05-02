@@ -1,7 +1,7 @@
 import React from 'react';
 import Client from '../api';
 import { Row, Col } from 'react-bootstrap';
-import CampaignInfo from './campaignScorecard.jsx';
+import CampaignInfo from './campaignInfo';
 import Promise from 'bluebird';
 import CampaignTable from './campaignTable.jsx';
 import { Tabs, Tab } from 'react-bootstrap';

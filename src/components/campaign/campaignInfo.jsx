@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import {Col} from 'react-bootstrap'
 import { Link } from 'react-router';
 
 const CampaignInfo = props => {
@@ -11,8 +12,8 @@ const CampaignInfo = props => {
     : false;
   return (
     <div>
-      <div className="col-sm-12">
-        <h4>Campaign Statistics</h4>
+      <Col sm={12}>
+        <h4>fd Statistics</h4>
         <div>Total Raised: ${_.round(info.total, 0)}</div>
         <div>Average Contribution: ${_.round(info.averageContribution, 0)}</div>
         <div>
@@ -49,8 +50,8 @@ const CampaignInfo = props => {
         <div>
           Ward Concentration Score: {_.round(info.wardConcentrationScore, 5)}
         </div>
-      </div>
-      <div className="col-sm-12">
+      </Col>
+      <Col sm={12}>
         <h4>Campaign Scores</h4>
         <h4>
           Combined Score: {_.round(info.scores.total, 2)} (out of 100 points)
@@ -138,7 +139,7 @@ const CampaignInfo = props => {
           {' '}
           (out of 20 points)
         </div>
-      </div>
+      </Col>
     </div>
   );
 };
