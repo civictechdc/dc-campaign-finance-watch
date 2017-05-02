@@ -1,43 +1,50 @@
-var candidateService = require('../candidate/candidate.service');
-var Moment = require('moment');
-var redis = require('../redisClient').client;
+const candidateService = require('../candidate/candidate.service');
+const Moment = require('moment');
+const redis = require('../redisClient').client;
 
 exports.getCandidateCampaignsByTypeAndDate = function(req, res) {
-    var fromDate = Moment(req.query.fromDate || '2006-01-01');
-    var toDate = Moment(req.query.toDate || new Date());
-    var raceType = req.query.raceType;
+  let dateFormat = 'MM/DD/YYYY';
+  let fromDate = req.query.fromDate !== 'undefined'
+    ? req.query.fromDate
+    : Moment('01/01/2006', dateFormat);
+  let toDate = req.query.toDate !== 'undefined'
+    ? req.query.toDate
+    : Moment(new Date(), dateFormat);
+  let raceType = req.query.raceType;
 
-    redis.getAsync(req.url)
-        .then(function(value){
-            if(value) {
-                return value.candidates;
-            }
-            return candidateService.findCandidateByRaceAndYear(raceType, fromDate.year(), toDate.year())
-                .then(function(candidates){
-                    if(candidates) {
-                        redis.setAsync(req.url, {candidates: candidates});
-                    }
-                    return candidates;
-                })
-                .catch(function(err){
-                    console.log(err);
-                });
+  redis
+    .getAsync(req.url)
+    .then(function(value) {
+      if (value) {
+        return value.candidates;
+      }
+      return candidateService
+        .findCandidateByRaceAndYear(raceType, fromDate.year(), toDate.year())
+        .then(function(candidates) {
+          if (candidates) {
+            redis.setAsync(req.url, { candidates: candidates });
+          }
+          return candidates;
         })
-        .then(function(candidates){
-            res.send(candidates);
-        })
-        .catch(function(err){
-            console.log(err, url);
+        .catch(function(err) {
+          console.log(err);
         });
+    })
+    .then(function(candidates) {
+      res.send(candidates);
+    })
+    .catch(function(err) {
+      console.log(err, req.url);
+    });
 };
 
 exports.getRaces = function(req, res) {
-    res.send([
-        'Council',
-        'Mayor',
-        'Attorney General',
-        'School Board',
-        'Statehood Delegation',
-        'Partisan Positions'
-    ]);
+  res.send([
+    'Council',
+    'Mayor',
+    'Attorney General',
+    'School Board',
+    'Statehood Delegation',
+    'Partisan Positions'
+  ]);
 };

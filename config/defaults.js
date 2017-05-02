@@ -16,14 +16,20 @@ const dfltPort = 3001;
  */
 function getDefaultModules() {
   return {
-    preLoaders: [
+    rules: [
       {
         test: /\.(js|jsx)$/,
         include: srcPath,
-        loader: 'eslint-loader'
-      }
-    ],
-    loaders: [
+        enforce: 'pre',
+        use: ['babel-loader', 'eslint-loader'],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(js|jsx)$/,
+        include: srcPath,
+        use: ['react-hot-loader/webpack', 'babel-loader'],
+        exclude: /node_modules/
+      },
       {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
@@ -58,7 +64,7 @@ function getDefaultModules() {
       },
       {
         test: /\.md/,
-        loader: 'html!markdown'
+        loader: 'html-loader!markdown-loader'
       }
     ]
   };

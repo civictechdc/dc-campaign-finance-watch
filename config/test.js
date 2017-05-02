@@ -3,43 +3,36 @@
 let path = require('path');
 let srcPath = path.join(__dirname, '/../src/');
 
-let baseConfig = require('./base');
-
-// Add needed plugins here
-let BowerWebpackPlugin = require('bower-webpack-plugin');
-
 module.exports = {
+  entry: [path.join(__dirname, '/../test/loadtests')],
   devtool: 'eval',
   module: {
-    preLoaders: [
+    rules: [
       {
         test: /\.(js|jsx)$/,
         loader: 'isparta-instrumenter-loader',
-        include: [
-          path.join(__dirname, '/../src')
-        ]
-      }
-    ],
-    loaders: [
+        include: [path.join(__dirname, '/../src')]
+      },
       {
         test: /\.(png|jpg|gif|woff|woff2|css|sass|scss|less|styl)$/,
         loader: 'null-loader'
       },
       {
         test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
-        include: [].concat(
-          baseConfig.additionalPaths,
-          [
-            path.join(__dirname, '/../src'),
-            path.join(__dirname, '/../test')
-          ]
-        )
+        query: {
+          presets: ['es2015', 'react']
+        },
+        include: [
+          path.join(__dirname, '/../src'),
+          path.join(__dirname, '/../test')
+        ]
       }
     ]
   },
   resolve: {
-    extensions: [ '', '.js', '.jsx' ],
+    extensions: ['.js', '.jsx'],
     alias: {
       helpers: path.join(__dirname, '/../test/helpers'),
       components: srcPath + 'components/',
@@ -47,5 +40,10 @@ module.exports = {
       config: srcPath + 'config/' + process.env.REACT_WEBPACK_ENV
     }
   },
-  plugins: []
+  plugins: [],
+  externals: {
+    'react/addons': true,
+    'react/lib/ExecutionEnvironment': true,
+    'react/lib/ReactContext': true
+  }
 };
