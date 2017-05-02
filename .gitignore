@@ -31,7 +31,6 @@ bower_components/
 
 # Lib
 lib
-dist/
 .vagrant
 .bundle
 .idea/
