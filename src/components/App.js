@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
-import ShellComponent from './layout/shell.jsx';
+import ShellComponent from './layout/shellComponent.jsx';
 import SearchComponent from './searchComponent.jsx';
 import DataComponent from './data/dataComponent.jsx';
 import FaqComponent from './faq/faqComponent.jsx';
