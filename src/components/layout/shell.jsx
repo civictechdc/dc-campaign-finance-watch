@@ -38,13 +38,13 @@ const ShellComponent = (props) => {
               href="https://www.codefordc.org/"
               className="code-for-dc-logo"
             >
-              <img src="images/logo_100px.png" alt="Code For DC"/>
+              <img src="/images/logo_100px.png" alt="Code For DC"/>
             </NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
       <div className="container">
-        <img src="images/dc_flag.svg" className="background"/>
+        <img src="/images/dc_flag.svg" className="background"/>
         {props.children}
       </div>
     </div>
