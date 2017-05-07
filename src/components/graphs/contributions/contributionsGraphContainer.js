@@ -76,7 +76,7 @@ class ContributionsGraphContainer extends React.Component {
     ]).join(':');
     const vizTitle = (
       <span>
-        Visualiations
+        Visualizations
         {' '}
         <button
           style={{ padding: '0', paddingLeft: '2px', paddingRight: '2px' }}

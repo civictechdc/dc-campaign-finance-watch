@@ -5,7 +5,7 @@ import Client from '../api';
 import CandidateCard from '../candidateCard.component.jsx';
 import LoaderComponent from '../loader.component.jsx';
 import { Grid, Row, Col, Button } from 'react-bootstrap';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 class DataComponent extends React.Component {
   constructor(props) {

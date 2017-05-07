@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import {Col} from 'react-bootstrap'
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const CampaignInfo = props => {
   const { info } = props;
