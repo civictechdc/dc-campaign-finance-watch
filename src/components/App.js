@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router';
 import ShellComponent from './layout/shellComponent.jsx';
 import SearchComponent from './searchComponent.jsx';
-import DataComponent from './data/dataComponent.jsx';
+import DataContainer from './data/dataContainer.jsx';
 import FaqComponent from './faq/faqComponent.jsx';
 import AboutComponent from './about/AboutComponent.jsx';
 import NewsComponent from './news/newsComponent.jsx';
@@ -23,7 +23,7 @@ const App = () => (
       <Route path="compare" component={SearchComponent} />
       <Route path="faq" component={FaqComponent} />
       <Route path="about" component={AboutComponent} />
-      <Route path="data" component={DataComponent} />
+      <Route path="data" component={DataContainer} />
       <Route path="news" component={NewsComponent} />
       <Route
         path="contribution_graph"
