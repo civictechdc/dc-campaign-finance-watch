@@ -51,10 +51,9 @@ class CampaignTabs extends Component {
 
     const { activeTab,  fullScreenTab } = this.state;
     const { id } = this.props
-    // change when react router 4 comes in
     const vizTitle = (
       <span>
-        Visualiations
+        Visualizations
         {' '}
         <button
           style={{ padding: '0', paddingLeft: '2px', paddingRight: '2px' }}

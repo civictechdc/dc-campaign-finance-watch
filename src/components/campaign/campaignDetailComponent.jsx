@@ -1,6 +1,6 @@
 import React from 'react';
 import Client from '../api';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Tabs, Tab } from 'react-bootstrap';
 import CampaignInfo from './campaignInfo';
 import CampaignTable from './campaignTable.jsx';
 import Promise from 'bluebird';
@@ -13,7 +13,8 @@ class CampaignDetailComponent extends React.Component {
   }
 
   componentWillMount() {
-    const { id, candidateId } = this.props.params;
+    const { id, candidateId } = this.props.match.params;
+
     let that = this;
     const detailsPromise = Client.getCampaignData(id);
     const scorePromise = Client.getCandidate({
@@ -32,8 +33,7 @@ class CampaignDetailComponent extends React.Component {
   render() {
     const { contributions, campaignScore, candidate } = this.state;
 
-    // change when react router 4 comes in
-    const { id } = this.props.params;
+    const { id } = this.props.match.params;
 
     if (contributions && campaignScore) {
       return (

@@ -4,6 +4,8 @@ let path = require('path');
 let webpack = require('webpack');
 let baseConfig = require('./base');
 let defaultSettings = require('./defaults');
+let DashboardPlugin = require('webpack-dashboard/plugin');
+
 
 let config = Object.assign({}, baseConfig, {
   entry: [
@@ -16,6 +18,8 @@ let config = Object.assign({}, baseConfig, {
   cache: true,
   devtool: 'eval',
   plugins: [
+    new DashboardPlugin({ port: defaultSettings.port }),
+
     new webpack.HotModuleReplacementPlugin(),
     // enable HMR globally
 

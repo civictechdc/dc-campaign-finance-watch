@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import _ from 'lodash';
 import CandidateCard from '../candidateCard.component.jsx';
 import { Grid, Row, Col, Button } from 'react-bootstrap';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 class DataComponent extends Component {
   constructor(props) {
