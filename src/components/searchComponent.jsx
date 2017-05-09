@@ -9,7 +9,7 @@ import {
   Button,
   Badge
 } from 'react-bootstrap';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import RaceSearch from './search/raceSearchComponent.jsx';
 import _ from 'lodash';
 

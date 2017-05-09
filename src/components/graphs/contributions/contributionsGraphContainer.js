@@ -56,6 +56,7 @@ class ContributionsGraphContainer extends React.Component {
         return can.data.campaigns.map(campaign => campaign.campaignId);
       })
     ]).join(':');
+
     const { chartData, chartType } = this.state;
 
     // check for data integrity

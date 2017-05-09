@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Navbar } from 'react-bootstrap';
 
-import ShellComponent from '../../../../src/components/layout/shellComponent';
+import NavbarComponent from '../../../../src/components/layout/NavbarComponent';
 
-describe('<ShellComponent />', () => {
+describe('<NavbarComponent />', () => {
   it('should render Navbar', () => {
-    const wrapper = shallow(<ShellComponent/>);
+    const wrapper = shallow(<NavbarComponent/>);
     expect(wrapper.find(Navbar)).to.have.length(1);
   });
 });
