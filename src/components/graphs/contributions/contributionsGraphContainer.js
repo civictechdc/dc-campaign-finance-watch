@@ -10,15 +10,31 @@ class ContributionsGraphContainer extends React.Component {
     this.state = {
       chartData: [],
       successfulFetches: 0,
-      chartType: 'default'
+      chartType: 'default',
+      loading: true
     };
   }
 
-  componentWillMount() {
+  // asyncFetch(candidates, async) {
+  //   for (let candidate of candidates) {
+  //     for (let campaign of candidate.data.campaigns) {
+  //       Client.getCampaignData(campaign.campaignId).then(data => {
+  //         dataArray.push(data);
+  //         this.setState({
+  //           chartData: dataArray,
+  //           successfulFetches: (successfulFetches += 1)
+  //         });
+  //       });
+  //     }
+  //   }
+  // }
+
+  componentDidMount() {
     let dataArray = [],
       candidates = this.props.location.state,
       successfulFetches = this.state.successfulFetches;
 
+    // asyncFetch(candidates)
     for (let candidate of candidates) {
       for (let campaign of candidate.data.campaigns) {
         Client.getCampaignData(campaign.campaignId).then(data => {
