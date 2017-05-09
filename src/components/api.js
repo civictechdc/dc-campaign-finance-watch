@@ -57,7 +57,7 @@ class Client {
 
     const toDateString = dateRange.toDate.format(dateFormat);
     const fromDateString = dateRange.fromDate.format(dateFormat);
-
+    
     return fetch(
       this.baseUrl +
         '/electionSearch' +
