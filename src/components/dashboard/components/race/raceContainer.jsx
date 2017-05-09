@@ -13,18 +13,36 @@ class RaceContainer extends Component {
     this._loadCampaignData = this._loadCampaignData.bind(this);
   }
 
-  _loadCampaignData(candidateId, campaignId) {
-    Client.getCandidate({
+  // _loadCampaignData(candidateId, campaignId) {
+  //
+  //   Client.getCandidate({
+  //     id: candidateId,
+  //     campaigns: [{ campaignId: campaignId }]
+  //   }).then(data => {
+  //     let scores = this.state.scores;
+  //     scores[campaignId] = data.campaigns[0];
+  //     this.setState({
+  //       scores: scores,
+  //       selectedCampaign: campaignId
+  //     });
+  //   });
+  // }
+
+  async _loadCampaignData(candidateId, campaignId) {
+
+    const json = await Client.getCandidate({
       id: candidateId,
       campaigns: [{ campaignId: campaignId }]
-    }).then(data => {
-      let scores = this.state.scores;
-      scores[campaignId] = data.campaigns[0];
-      this.setState({
-        scores: scores,
-        selectedCampaign: campaignId
-      });
-    });
+    })
+
+    let scores = this.state.scores;
+    scores[campaignId] = json.campaigns[0]
+
+    this.setState({
+      scores: scores,
+      selectedCampaign: campaignId
+    })
+
   }
 
   render() {

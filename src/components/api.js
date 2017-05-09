@@ -9,50 +9,50 @@ class Client {
     this.Rest = restClient;
   }
 
-  getCampaignData(campaignId) {
-    return fetch(this.baseUrl + '/contributions/' + campaignId).then(rsp => {
-      return rsp.json();
-    });
+  async getCampaignData(campaignId) {
+    const res = await fetch(this.baseUrl + '/contributions/' + campaignId)
+    const json = await res.json()
+    return json
   }
 
-  getCandidates(toDate, fromDate) {
+  async getCandidates(toDate, fromDate) {
     const toDateString = toDate.format(dateFormat);
     const fromDateString = fromDate.format(dateFormat);
-    return fetch(
+    const res = await fetch(
       this.baseUrl +
         '/candidate' +
         '?toDate=' +
         toDateString +
         '&fromDate=' +
         fromDateString
-    ).then(rsp => {
-      return rsp.json();
-    });
+    )
+    const json = await res.json()
+    return json
   }
 
-  getCandidate(candidate) {
+  async getCandidate(candidate) {
     const campaignSearch = _.join(
       candidate.campaigns.map(ca => {
         return 'campaigns=' + ca.campaignId;
       }),
       '&'
     );
-    return fetch(
+    const res = await fetch(
       this.baseUrl + '/candidate/' + candidate.id + '?' + campaignSearch
-    ).then(rsp => {
-      return rsp.json();
-    });
+    )
+    const json = await res.json()
+    return json
   }
 
-  getCampaigns(race, dateRange) {
+  async getCampaigns(race, dateRange) {
     if (Object.keys(dateRange).length === 0) {
-      return fetch(
+      const res = await fetch(
         this.baseUrl + '/electionSearch' + '?raceType=' + race
-      ).then(rsp => {
-        return rsp.json();
-      });
+      )
+      const json = await res.json();
+      return json;
     }
-    return fetch(
+    const res = await fetch(
       this.baseUrl +
         '/electionSearch' +
         '?raceType=' +
@@ -61,21 +61,21 @@ class Client {
         dateRange.fromDate +
         '&toDate=' +
         dateRange.toDate
-    ).then(rsp => {
-      return rsp.json();
-    });
+    )
+    const json = await res.json();
+    return json;
   }
 
-  getRaces() {
-    return fetch(this.baseUrl + '/races').then(rsp => {
-      return rsp.json();
-    });
+  async getRaces() {
+    const res = await fetch(this.baseUrl + '/races')
+    const json = await res.json();
+    return json;
   }
 
-  search(value) {
-    return fetch(this.baseUrl + '/candidate?search=' + value).then(rsp => {
-      return rsp.json();
-    });
+  async search(value) {
+    const res = await fetch(this.baseUrl + '/candidate?search=' + value)
+    const json = await res.json();
+    return json;
   }
 }
 
