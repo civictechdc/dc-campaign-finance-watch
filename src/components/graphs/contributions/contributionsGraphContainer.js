@@ -9,35 +9,26 @@ class ContributionsGraphContainer extends React.Component {
     super(props);
     this.state = {
       chartData: [],
-      successfulFetches: 0,
       chartType: 'default',
       loading: true
     };
   }
 
-  componentWillMount() {
+  async componentWillMount() {
     let dataArray = [],
       candidates = this.props.location.state,
       successfulFetches = this.state.successfulFetches;
 
     for (let candidate of candidates) {
       for (let campaign of candidate.data.campaigns) {
-        Client.getCampaignData(campaign.campaignId).then(data => {
-          dataArray.push(data);
-          this.setState({
-            chartData: dataArray,
-            successfulFetches: (successfulFetches += 1)
-          });
-        });
+        dataArray.push(await Client.getCampaignData(campaign.campaignId))
       }
     }
-  }
+    this.setState({
+      chartData: dataArray,
+      loading: false
+    })
 
-  shouldComponentUpdate(nextProps, nextState) {
-    if (nextState.successfulFetches === this.props.location.state.length) {
-      return true;
-    }
-    return false;
   }
 
   _setSvg(svg) {
@@ -46,6 +37,7 @@ class ContributionsGraphContainer extends React.Component {
 
   render() {
     let candidates = this.props.location.state
+    let loading = this.state.loading
 
     let candidateCampaigns = candidates.map(candidate => {
       for (let campaign of candidate.data.campaigns) {
@@ -61,6 +53,9 @@ class ContributionsGraphContainer extends React.Component {
     const { chartData, chartType } = this.state;
 
     // check for data integrity
+    if (loading) {
+      return <h1> Loading Comparison Chart </h1>
+    }
     if (chartData.length === candidates.length) {
       return (
         <CampaignTabs id = {ids}>
@@ -77,8 +72,6 @@ class ContributionsGraphContainer extends React.Component {
           </div>
         </CampaignTabs>
       )
-    } else {
-      return <h1> Loading Comparison Chart </h1>;
     }
   }
 }
