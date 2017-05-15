@@ -4,7 +4,6 @@ import moment from 'moment';
 import React from 'react';
 import DayPicker, { DateUtils } from 'react-day-picker';
 import { Button, Col, ButtonGroup, Row } from 'react-bootstrap';
-import 'react-day-picker/lib/style.css';
 
 class DateRangeComponent extends React.Component {
   constructor(props) {
@@ -102,5 +101,4 @@ class DateRangeComponent extends React.Component {
   }
 }
 
-// export default DateRangeComponent;
 export default DateRangeComponent;
