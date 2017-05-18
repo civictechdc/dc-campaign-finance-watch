@@ -4425,7 +4425,7 @@ lodash@^3.5.0, lodash@^3.8.0:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.0.0, lodash@^4.0.1, lodash@^4.11.2, lodash@^4.12.0, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.6.1:
+lodash@^4.0.0, lodash@^4.0.1, lodash@^4.11.2, lodash@^4.12.0, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.2, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.6.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -5168,6 +5168,10 @@ object-is@^1.0.1:
 object-keys@^1.0.10, object-keys@^1.0.8:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.0.11.tgz#c54601778ad560f1142ce0e01bcca8b56d13426d"
+
+object-unfreeze@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/object-unfreeze/-/object-unfreeze-1.1.0.tgz#69628bea1f3c9d29f4eb0ba63b38002d70ea3ce9"
 
 object.assign@^4.0.4:
   version "4.0.4"
@@ -6010,9 +6014,19 @@ react-bootstrap@^0.30:
     uncontrollable "^4.0.1"
     warning "^3.0.0"
 
-react-day-picker@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/react-day-picker/-/react-day-picker-1.3.2.tgz#7db9e6d708b40944ee0c82b9b5b8706626c9ff58"
+react-css-modules@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/react-css-modules/-/react-css-modules-4.0.5.tgz#1b46bdda34d43dae077babb309b775356c94a6cb"
+  dependencies:
+    hoist-non-react-statics "^1.2.0"
+    lodash "^4.16.6"
+    object-unfreeze "^1.1.0"
+
+react-day-picker@^5.4.3:
+  version "5.4.3"
+  resolved "https://registry.yarnpkg.com/react-day-picker/-/react-day-picker-5.4.3.tgz#0cc5b17532d9c3e7380cd070cb57f2b299c8f6d7"
+  dependencies:
+    prop-types "^15.5.8"
 
 react-deep-force-update@^2.0.1:
   version "2.0.1"
