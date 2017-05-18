@@ -58,9 +58,9 @@ class Client {
         '?raceType=' +
         race +
         '&fromDate=' +
-        dateRange.fromDate +
+        dateRange.fromDate.format(dateFormat) +
         '&toDate=' +
-        dateRange.toDate
+        dateRange.toDate.format(dateFormat)
     ).then(rsp => {
       return rsp.json();
     });
