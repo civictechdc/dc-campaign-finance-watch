@@ -8,7 +8,7 @@ const NavbarComponent = () => {
     <Navbar staticTop={true}>
       <Navbar.Header>
         <Navbar.Brand>
-          <Link to="/">
+          <Link to="/dc-campaign-finance-watch/">
             DC Campaign Finance
           </Link>
         </Navbar.Brand>
@@ -16,19 +16,19 @@ const NavbarComponent = () => {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav eventKey={1}>
-          <IndexLinkContainer to="/">
+          <IndexLinkContainer to="/dc-campaign-finance-watch/">
             <NavItem eventKey={1.1}>Home</NavItem>
           </IndexLinkContainer>
-          <LinkContainer to="/compare">
+          <LinkContainer to="/dc-campaign-finance-watch/compare">
             <NavItem eventKey={1.2}>Compare</NavItem>
           </LinkContainer>
-          <LinkContainer to="/about">
+          <LinkContainer to="/dc-campaign-finance-watch/about">
             <NavItem eventKey={1.3}>About</NavItem>
           </LinkContainer>
-          <LinkContainer to="/faq">
+          <LinkContainer to="/dc-campaign-finance-watch/faq">
             <NavItem eventKey={1.4}>FAQ</NavItem>
           </LinkContainer>
-          <LinkContainer to="/news">
+          <LinkContainer to="/dc-campaign-finance-watch/news">
             <NavItem eventKey={1.5}>News</NavItem>
           </LinkContainer>
         </Nav>

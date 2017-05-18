@@ -24,12 +24,12 @@ const App = () => (
       <NavbarComponent />
       <div className="container">
         <img src="/images/dc_flag.svg" className="background"/>
-        <Route exact path="/" component={DashboardContainer} />
-        <Route path="/compare" component={SearchComponent} />
-        <Route path="/faq" component={FaqComponent} />
-        <Route path="/about" component={AboutComponent} />
-        <Route path="/data" component={DataContainer} />
-        <Route path="/news" component={NewsComponent} />
+        <Route exact path="/dc-campaign-finance-watch/" component={DashboardContainer} />
+        <Route path="/dc-campaign-finance-watch/compare" component={SearchComponent} />
+        <Route path="/dc-campaign-finance-watch/faq" component={FaqComponent} />
+        <Route path="/dc-campaign-finance-watch/about" component={AboutComponent} />
+        <Route path="/dc-campaign-finance-watch/data" component={DataContainer} />
+        <Route path="/dc-campaign-finance-watch/news" component={NewsComponent} />
         <Route
           path="/contribution_graph"
           component={ContributionsGraphContainer}
