@@ -23,8 +23,8 @@ class DashboardContainer extends React.Component {
     const { startDate, endDate } = this.state;
     return races.map(race => {
       return Client.getCampaigns(race, {
-        fromDate: startDate.format(dateFormat),
-        toDate: endDate.format(dateFormat)
+        fromDate: startDate,
+        toDate: endDate
       }).then(data => {
         return { type: race, data: data };
       });
@@ -131,8 +131,8 @@ class DashboardContainer extends React.Component {
         return Promise.all(
           races.map(race => {
             return Client.getCampaigns(race, {
-              fromDate: fromDate.format(dateFormat),
-              toDate: toDate.format(dateFormat)
+              fromDate: fromDate,
+              toDate: toDate
             }).then(data => {
               return { type: race, data: data };
             });
