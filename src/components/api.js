@@ -18,6 +18,7 @@ class Client {
   getCandidates(toDate, fromDate) {
     const toDateString = toDate.format(dateFormat);
     const fromDateString = fromDate.format(dateFormat);
+
     return fetch(
       this.baseUrl +
         '/candidate' +
@@ -45,6 +46,7 @@ class Client {
   }
 
   getCampaigns(race, dateRange) {
+
     if (Object.keys(dateRange).length === 0) {
       return fetch(
         this.baseUrl + '/electionSearch' + '?raceType=' + race
@@ -52,6 +54,7 @@ class Client {
         return rsp.json();
       });
     }
+
     return fetch(
       this.baseUrl +
         '/electionSearch' +

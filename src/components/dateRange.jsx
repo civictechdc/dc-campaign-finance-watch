@@ -14,20 +14,16 @@ class DateRangeComponent extends React.Component {
     };
   }
 
-  handleStartDateClick(event, day, modifiers) {
+  handleStartDateClick(day, modifiers) {
     this.setState({
-      startDate: modifiers.indexOf('selected') > -1
-        ? null
-        : moment(day.toISOString())
+      startDate: moment(day.toISOString())
     });
     this.props.onRangeInput(this.state.endDate, this.state.startDate);
   }
 
-  handleEndDateClick(event, day, modifiers) {
+  handleEndDateClick(day) {
     this.setState({
-      endDate: modifiers.indexOf('selected') > -1
-        ? null
-        : moment(day.toISOString())
+      endDate: moment(day.toISOString())
     });
     this.props.onRangeInput(this.state.endDate, this.state.startDate);
   }
