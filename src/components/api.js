@@ -55,18 +55,15 @@ class Client {
       });
     }
 
-    const toDateString = dateRange.toDate.format(dateFormat);
-    const fromDateString = dateRange.fromDate.format(dateFormat);
-    
     return fetch(
       this.baseUrl +
         '/electionSearch' +
         '?raceType=' +
         race +
         '&fromDate=' +
-        fromDateString +
+        dateRange.fromDate.format(dateFormat) +
         '&toDate=' +
-        toDateString
+        dateRange.toDate.format(dateFormat)
     ).then(rsp => {
       return rsp.json();
     });

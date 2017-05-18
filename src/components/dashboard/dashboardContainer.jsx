@@ -131,8 +131,8 @@ class DashboardContainer extends React.Component {
         return Promise.all(
           races.map(race => {
             return Client.getCampaigns(race, {
-              fromDate: fromDate.format(dateFormat),
-              toDate: toDate.format(dateFormat)
+              fromDate: fromDate,
+              toDate: toDate
             }).then(data => {
               return { type: race, data: data };
             });
