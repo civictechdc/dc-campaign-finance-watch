@@ -34,7 +34,7 @@ const NavbarComponent = () => {
         </Nav>
         <Nav pullRight>
           <NavItem
-            href="https://www.codefordc.org/"
+            href="https://www.codefordc.org/dc-campaign-finance-watch/"
             className="code-for-dc-logo"
           >
             <img src="/images/logo_100px.png" alt="Code For DC"/>
