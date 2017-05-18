@@ -2,7 +2,7 @@ import React from 'react';
 import ChartSelectorComponent from './chartSelector.jsx';
 import ChartContainerComponent from './chartContainerComponent.jsx';
 import _ from 'lodash';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import Client from './api';
 import { Image, Panel, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';

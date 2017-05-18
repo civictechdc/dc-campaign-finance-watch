@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-
 import GraphDefault from './graphDefault';
 
-export default class ChartWrapper extends React.Component {
+class ChartWrapper extends Component {
   constructor(props) {
     super(props);
   }
@@ -48,3 +47,5 @@ export default class ChartWrapper extends React.Component {
     );
   }
 }
+
+export default ChartWrapper
