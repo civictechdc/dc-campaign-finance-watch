@@ -13,21 +13,26 @@ class RaceContainer extends Component {
     this._loadCampaignData = this._loadCampaignData.bind(this);
   }
 
+  setStateAsync(state) {
+    return new Promise((resolve) => {
+      this.setState(state, resolve)
+    });
+  }
+
   async _loadCampaignData(candidateId, campaignId) {
+
+    let scores = this.state.scores;
+    scores[campaignId] = json.campaigns[0]
 
     const json = await Client.getCandidate({
       id: candidateId,
       campaigns: [{ campaignId: campaignId }]
     })
 
-    let scores = this.state.scores;
-    scores[campaignId] = json.campaigns[0]
-
-    this.setState({
+    async this.setStateAsync({
       scores: scores,
       selectedCampaign: campaignId
     })
-
   }
 
   render() {

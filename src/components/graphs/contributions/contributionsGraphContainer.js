@@ -14,6 +14,12 @@ class ContributionsGraphContainer extends React.Component {
     };
   }
 
+  setStateAsync(state) {
+    return new Promise((resolve) => {
+      this.setState(state, resolve)
+    });
+  }
+
   async componentWillMount() {
     let dataArray = [],
       candidates = this.props.location.state,
@@ -24,7 +30,8 @@ class ContributionsGraphContainer extends React.Component {
         dataArray.push(await Client.getCampaignData(campaign.campaignId))
       }
     }
-    this.setState({
+
+    async this.setStateAsync({
       chartData: dataArray,
       loading: false
     })
@@ -52,10 +59,10 @@ class ContributionsGraphContainer extends React.Component {
 
     const { chartData, chartType } = this.state;
 
-    // check for data integrity
     if (loading) {
       return <h1> Loading Comparison Chart </h1>
     }
+    // check for data integrity
     if (chartData.length === candidates.length) {
       return (
         <CampaignTabs id = {ids}>
