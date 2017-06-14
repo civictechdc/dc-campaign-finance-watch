@@ -58,12 +58,13 @@ class Client {
         '?raceType=' +
         race +
         '&fromDate=' +
-        dateRange.fromDate +
+        dateRange.fromDate.format(dateFormat) +
         '&toDate=' +
-        dateRange.toDate
+        dateRange.toDate.format(dateFormat)
     )
     const json = await res.json();
     return json;
+
   }
 
   async getRaces() {
