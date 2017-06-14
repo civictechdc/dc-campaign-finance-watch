@@ -30,8 +30,7 @@ class ContributionsGraphContainer extends React.Component {
         dataArray.push(await Client.getCampaignData(campaign.campaignId))
       }
     }
-
-    async this.setStateAsync({
+    await this.setStateAsync({
       chartData: dataArray,
       loading: false
     })

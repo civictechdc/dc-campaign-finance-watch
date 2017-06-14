@@ -21,18 +21,19 @@ class RaceContainer extends Component {
 
   async _loadCampaignData(candidateId, campaignId) {
 
-    let scores = this.state.scores;
-    scores[campaignId] = json.campaigns[0]
-
     const json = await Client.getCandidate({
       id: candidateId,
       campaigns: [{ campaignId: campaignId }]
     })
 
-    async this.setStateAsync({
+    let scores = this.state.scores;
+    scores[campaignId] = json.campaigns[0]
+
+    await this.setStateAsync({
       scores: scores,
       selectedCampaign: campaignId
     })
+
   }
 
   render() {
