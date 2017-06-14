@@ -62,7 +62,6 @@ class ContributionsGraphContainer extends React.Component {
       return <h1> Loading Comparison Chart </h1>
     }
 
-    if (chartData.length === candidates.length) {
       return (
         <CampaignTabs id = {ids}>
           <div>
@@ -78,8 +77,6 @@ class ContributionsGraphContainer extends React.Component {
           </div>
         </CampaignTabs>
       )
-    }
-      return <h1> Loading Comparison Chart </h1>
 
   }
 }
