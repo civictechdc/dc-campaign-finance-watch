@@ -15,6 +15,7 @@ class ContributionsGraphContainer extends React.Component {
   }
 
   setStateAsync(state) {
+    console.log(state)
     return new Promise((resolve) => {
       this.setState(state, resolve)
     });
@@ -34,7 +35,6 @@ class ContributionsGraphContainer extends React.Component {
       chartData: dataArray,
       loading: false
     })
-
   }
 
   _setSvg(svg) {
@@ -61,7 +61,7 @@ class ContributionsGraphContainer extends React.Component {
     if (loading) {
       return <h1> Loading Comparison Chart </h1>
     }
-    // check for data integrity
+
     if (chartData.length === candidates.length) {
       return (
         <CampaignTabs id = {ids}>
@@ -79,6 +79,8 @@ class ContributionsGraphContainer extends React.Component {
         </CampaignTabs>
       )
     }
+      return <h1> Loading Comparison Chart </h1>
+
   }
 }
 
