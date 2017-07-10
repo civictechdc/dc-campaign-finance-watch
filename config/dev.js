@@ -9,6 +9,7 @@ let DashboardPlugin = require('webpack-dashboard/plugin');
 
 let config = Object.assign({}, baseConfig, {
   entry: [
+    'babel-polyfill',
     'react-hot-loader/patch',
     'whatwg-fetch',
     'webpack-dev-server/client?http://0.0.0.0:' + defaultSettings.port,
