@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom'
 import NavbarComponent from './layout/NavbarComponent.jsx';
 import SearchComponent from './searchComponent.jsx';
@@ -25,6 +26,7 @@ const App = () => (
       <div className="container">
         <img src="/images/dc_flag.svg" className="background"/>
         <Route exact path="/" component={DashboardContainer} />
+        <Redirect from="/dist" to="/" />
         <Route path="/compare" component={SearchComponent} />
         <Route path="/faq" component={FaqComponent} />
         <Route path="/about" component={AboutComponent} />
